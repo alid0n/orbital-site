@@ -2,15 +2,15 @@
    Asking to be a tester.
 
    A static site cannot send email, so the form posts to a form service and the
-   service forwards it. Formspree is the one it is written for: make a form
-   there against alid0ndev@gmail.com and paste its id into the form's `action`
-   in index.html, in place of PASTE_FORM_ID.
+   service forwards it. That service is Formspree, and the form's endpoint is the
+   `action` on the form in index.html; submissions arrive as mail.
 
-   Until that is done the form does not pretend to work. It says what is missing
-   and offers the one thing that needs no service at all — a mail to the same
-   address, composed in whatever the visitor writes mail in. That is deliberate:
-   a form that swallows an address and delivers it nowhere is worse than no form,
-   because the person leaves believing they have signed up.
+   The two ways out are both still here. If the endpoint is ever put back to
+   PASTE_FORM_ID, or the post fails — the service down, the month's quota spent,
+   no network — the page says so and offers a mail to the same address, composed
+   in whatever the visitor writes mail in. A form that swallows an address and
+   delivers it nowhere is worse than no form, because the person leaves believing
+   they have signed up.
    ========================================================================== */
 
 (function () {
