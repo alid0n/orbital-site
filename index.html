@@ -159,11 +159,18 @@
         <div class="p-date">Saturday, September 20</div>
         <div class="p-card a"></div>
         <div class="p-card b"></div>
-        <div class="p-dock"></div>
-        <div class="p-app" style="left:12%;bottom:14%"></div>
-        <div class="p-app" style="left:34%;bottom:7%"></div>
-        <div class="p-app" style="left:56%;bottom:7%"></div>
-        <div class="p-app" style="left:76%;bottom:14%"></div>
+        <!-- The orbit and the apps on it are drawn from the same four numbers: an ellipse
+             centred just below the foot of the screen, and five apps placed on it by angle.
+             They were two separate guesses before, which is why the apps sat under a line
+             that ran across the middle of the phone. -->
+        <svg class="p-dock" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <ellipse cx="50" cy="103" rx="45" ry="20" />
+        </svg>
+        <div class="p-app" style="left:16%;top:90%"></div>
+        <div class="p-app" style="left:31%;top:85%"></div>
+        <div class="p-app is-front" style="left:50%;top:83%"></div>
+        <div class="p-app" style="left:69%;top:85%"></div>
+        <div class="p-app" style="left:84%;top:90%"></div>
       </div>
     </div>
 
@@ -218,11 +225,34 @@
       </div>
     </div>
 
-    <h2>Getting it</h2>
+    <h2 id="testers">Getting it</h2>
     <p>
       Orbital is in closed testing on Google Play while the last of the release work is
-      finished. If you would like to be one of the testers, or want to know when it is
-      out, get in touch through <a href="https://alid0n.com">alid0n.com</a>.
+      finished. Leave an address and you will get an email with the download.
+    </p>
+
+    <form class="ask" id="ask" method="POST" action="https://formspree.io/f/PASTE_FORM_ID">
+      <label class="sr-only" for="email">Your email address</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        autocomplete="email"
+        placeholder="you@example.com"
+        spellcheck="false"
+      >
+      <!-- What the mail says when it arrives, rather than a subject line reading "New form
+           submission". -->
+      <input type="hidden" name="_subject" value="Orbital tester signup">
+      <!-- Left empty by people and filled in by robots, which is the whole of the trick. -->
+      <input class="sr-only" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit">Ask to test it</button>
+    </form>
+    <p class="ask-said small muted" id="ask-said" role="status"></p>
+    <p class="small muted">
+      Your address is used for one thing: sending you the test build and telling you when it
+      is out. It is not passed on, and one line back asking to be taken off is enough.
     </p>
 
     <p class="small muted">
@@ -241,10 +271,10 @@
 </main>
 
 <footer class="foot">
-  <p>Orbital Launcher is made by <a href="https://alid0n.com">Alid0n</a>.</p>
   <p><a href="privacy.html">Privacy policy</a> &middot; <a href="guide.html">Guide</a></p>
 </footer>
 
 <script src="assets/orbit.js"></script>
+<script src="assets/ask.js"></script>
 </body>
 </html>

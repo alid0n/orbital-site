@@ -422,23 +422,36 @@ dl.rows dd {
 .phone .p-card.a { top: 30%; height: 9%; }
 .phone .p-card.b { top: 41%; height: 22%; }
 
+/* The ellipse and the apps on it share one set of numbers — see the comment beside the
+   markup. The svg is stretched to the box rather than fitted to it, so the line it draws is
+   the same curve the apps are placed against. */
 .phone .p-dock {
   position: absolute;
-  left: -14%;
-  right: -14%;
-  bottom: -14%;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 255, 170, 0.35);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: rgba(0, 255, 170, 0.4);
+  stroke-width: 0.4;
+  vector-effect: non-scaling-stroke;
 }
 
 .phone .p-app {
   position: absolute;
   width: 15%;
   aspect-ratio: 1;
+  /* Placed by its centre, because that is what riding a line means. */
+  transform: translate(-50%, -50%);
   border-radius: 8px;
   background: rgba(0, 255, 170, 0.16);
   border: 1px solid var(--card-edge);
+}
+
+/* The one at the front of the wheel, which is the one a thumb is about to press. */
+.phone .p-app.is-front {
+  width: 18%;
+  background: rgba(0, 255, 170, 0.26);
+  border-color: var(--accent);
 }
 
 .side-by-side {
@@ -450,6 +463,55 @@ dl.rows dd {
 }
 
 .side-by-side > div { flex: 1 1 18rem; min-width: 0; }
+
+/* ---- asking to test it -------------------------------------------------- */
+
+.ask {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.2rem 0 0.6rem;
+}
+
+.ask input[type='email'] {
+  flex: 1 1 16rem;
+  min-width: 0;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--card-edge);
+  border-radius: 10px;
+}
+
+.ask input[type='email']::placeholder { color: var(--muted); }
+
+.ask input[type='email']:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.ask button {
+  padding: 12px 20px;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #04120c;
+  background: var(--accent);
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.ask button:hover { background: var(--accent-dim); }
+
+.ask button[disabled] { opacity: 0.6; cursor: default; }
+
+/* Empty until there is something to say, so it takes no room on the page it sits in. */
+.ask-said:empty { display: none; }
+
+.ask-said.is-good { color: var(--accent); }
 
 /* ---- footer ------------------------------------------------------------ */
 
