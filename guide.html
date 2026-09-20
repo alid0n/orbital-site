@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The guide &mdash; Orbital Launcher</title>
+
+<meta name="description" content="Every part of Orbital Launcher and every setting behind it: the orbit dock, widgets and pages, themes, the app drawer, the glance hub, the assistant bar, foldables, backups.">
+<meta name="theme-color" content="#07090e">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitallauncher.com/guide.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Orbital Launcher &mdash; the guide">
+<meta property="og:description" content="Every part of the launcher and every setting behind it.">
+<meta property="og:url" content="https://orbitallauncher.com/guide.html">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+
+<header class="top">
+  <a class="mark" href="./">&gt; ORBITAL</a>
+  <nav>
+    <a href="guide.html" aria-current="page">Guide</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+</header>
+
+<div class="guide">
+
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#start">Getting started</a></li>
+      <li><a href="#dock">The orbit dock</a></li>
+      <li><a href="#home">The home screen</a></li>
+      <li><a href="#widgets">Widgets</a></li>
+      <li><a href="#look">Look &amp; feel</a></li>
+      <li><a href="#drawer">The app drawer</a></li>
+      <li><a href="#hub">The glance hub</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#assistant">The assistant bar</a></li>
+      <li><a href="#foldable">Foldables</a></li>
+      <li><a href="#phone">Backups &amp; starting over</a></li>
+      <li><a href="#gestures">Every gesture</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <h1>The guide</h1>
+    <p class="lede">
+      Everything Orbital does and every setting behind it, in the order the settings
+      themselves are listed. Hold an empty part of the home screen to reach any of it.
+    </p>
+
+    <!-- ============================================================ -->
+    <h2 id="start">Getting started</h2>
+    <p>
+      Set Orbital as your home app and it will offer to fill the dock in from your
+      default apps and what you already open most. Nothing is taken from you to do
+      that &mdash; it suggests, you accept.
+    </p>
+    <p>
+      From there, three gestures open everything: <strong>hold</strong> an empty part of
+      the background for the home menu, <strong>swipe up</strong> for the app drawer, and
+      <strong>swipe sideways</strong> to move between pages.
+    </p>
+
+    <!-- ============================================================ -->
+    <h2 id="dock">The orbit dock</h2>
+    <p>
+      The dock is the reason the launcher exists. Apps ride an ellipse along the bottom
+      of the screen; you turn it with a thumb and tap what comes round to the front. It
+      holds fifteen apps on the first orbit, with two more orbits behind it.
+    </p>
+
+    <h3>Shape and feel</h3>
+    <dl class="rows">
+      <dt>The dock</dt>
+      <dd>The orbit, a flat row, or nothing at all &mdash; for somebody who wants everything else about Orbital and reaches for apps by swiping up.</dd>
+      <dt>Anchored to</dt>
+      <dd>The bottom, or either side. Down a side the flat row becomes a column.</dd>
+      <dt>Shape</dt>
+      <dd>How flat the ellipse is, from a shallow arc to a full circle that shows every slot at once.</dd>
+      <dt>Position, size, icon size, icon spacing</dt>
+      <dd>Where it sits along its edge, how far it reaches, and how much room each app takes on it.</dd>
+      <dt>Sensitivity, snap to slots, snap strength</dt>
+      <dd>How far a drag turns it, whether it settles on each app or spins freely, and how hard it is pulled into place.</dd>
+      <dt>Keep icons upright</dt>
+      <dd>Turn the phone and only the icons turn, if the phone is set to rotate.</dd>
+      <dt>Orbit when idle, wind back when idle</dt>
+      <dd>The dock can drift slowly by itself when untouched, and return to where it started after a few seconds.</dd>
+      <dt>Haptics</dt>
+      <dd>A tick each time a slot passes the front, with its own strength.</dd>
+      <dt>Names under the icons</dt>
+      <dd>Every icon, only the one in front, or none.</dd>
+    </dl>
+
+    <h3>What is on it</h3>
+    <dl class="rows">
+      <dt>Orbital's own buttons</dt>
+      <dd>A slot that opens the app drawer, and one that opens the settings.</dd>
+      <dt>The middle of the orbit</dt>
+      <dd>Which app the dock rests on, and where winding back returns to.</dd>
+      <dt>The orbits behind the first</dt>
+      <dd>One, two or three orbits. The ones behind sit tucked in until you drag outward from an icon; how deliberate that pull has to be, and how far apart the orbits sit, are both yours.</dd>
+      <dt>Dynamic dock</dt>
+      <dd>Fills the dock with the apps you open most, keeps the outer orbits on the ones you use next, and can put the last three apps you opened on the end. Anything you hold in place stays put. Needs usage access.</dd>
+    </dl>
+
+    <h3>Inside other apps</h3>
+    <p>
+      The dock can stay on the screen edge while another app is in front, resting flat
+      until you touch it and climbing back out when you do. It can learn to stay away
+      from apps you keep pushing it out of, and the handle it leaves behind can sit left,
+      centre or right. Needs permission to draw over other apps.
+    </p>
+
+    <!-- ============================================================ -->
+    <h2 id="home">The home screen</h2>
+    <p>
+      Pages are a lattice rather than a strip: you can add one to the left, the right,
+      above or below, and every page can be named. Widgets are placed as fractions of the
+      page, so they keep their arrangement whatever screen they end up on.
+    </p>
+
+    <h3>Arranging it</h3>
+    <p>
+      Hold the background and choose <em>Edit mode</em> (or pinch, if you would rather).
+      The page steps back, the edges of the page and the dock are drawn faintly so you
+      can see where things will land, and a tap chooses one widget at a time. The chosen
+      one wears a row of chips: lock it, make it smaller or larger, and open its own
+      settings. Drag an edge or a corner to stretch it. Drag it to the bin at the top to
+      take it off.
+    </p>
+
+    <h3>Settings</h3>
+    <dl class="rows">
+      <dt>Icon size, names under them</dt>
+      <dd>How large app shortcuts are drawn on the page, and whether they are labelled.</dd>
+      <dt>How the pages are marked</dt>
+      <dd>Dots above the dock, named tabs across the screen, or nothing. Tabs can sit at the top or the bottom, and tapping the page's name in edit mode renames it.</dd>
+      <dt>Drawer chevron</dt>
+      <dd>The little mark above the dock pointing at the swipe up.</dd>
+      <dt>Lock the layout</dt>
+      <dd>Nothing on your pages moves. New things can still be added.</dd>
+      <dt>Line up on a grid, places to land on</dt>
+      <dd>Widgets snap into place when you let go, on a grid from coarse to finest. Anything narrower than a cell &mdash; the app scroller's rail, for one &mdash; can also stand halfway between the lines.</dd>
+      <dt>The clock</dt>
+      <dd>Face, size, weight, colour, how far down the screen it sits, which way it lines up, what the date under it says, seconds, 24-hour, and a leading zero.</dd>
+    </dl>
+
+    <!-- ============================================================ -->
+    <h2 id="widgets">Widgets</h2>
+    <p>
+      Hold the background and choose <em>Widgets</em>. Orbital draws nineteen kinds
+      itself, and any widget from any app on your phone can go on a page beside them.
+    </p>
+
+    <div class="grid">
+      <div class="card"><h3>Calendar</h3><p class="small muted">A month, with what is on each day. A week version too.</p></div>
+      <div class="card"><h3>Up next</h3><p class="small muted">The next few things you have to be somewhere for.</p></div>
+      <div class="card"><h3>Clock</h3><p class="small muted">The time and the date, where you want them, with a face of its own.</p></div>
+      <div class="card"><h3>Weather</h3><p class="small muted">What it is doing outside, from a place you name or a rough location.</p></div>
+      <div class="card"><h3>Now playing</h3><p class="small muted">What is playing, with the buttons to steer it.</p></div>
+      <div class="card"><h3>News</h3><p class="small muted">Headlines from topics you follow, or feeds you paste in.</p></div>
+      <div class="card"><h3>Feed</h3><p class="small muted">Your Bluesky and Mastodon timelines, together in one place.</p></div>
+      <div class="card"><h3>People</h3><p class="small muted">The people you actually call, one tap away.</p></div>
+      <div class="card"><h3>Note</h3><p class="small muted">Something to remember, with a reminder if you want one.</p></div>
+      <div class="card"><h3>Pinned</h3><p class="small muted">Short notes that clear themselves after a week.</p></div>
+      <div class="card"><h3>App scroller</h3><p class="small muted">The alphabet down the side of a page: run a thumb down it and every app on the phone arrives under it.</p></div>
+      <div class="card"><h3>Folder</h3><p class="small muted">Several apps under one name.</p></div>
+      <div class="card"><h3>Battery, torch, calculator</h3><p class="small muted">Small things worth not opening an app for.</p></div>
+      <div class="card"><h3>Any Android widget</h3><p class="small muted">Everything the phone already has, placed and sized the same way.</p></div>
+    </div>
+
+    <p>
+      Every widget's own settings are a chip away: select it in edit mode and press
+      <em>Settings</em>. Its size and whether it is held in place belong to that widget;
+      anything shared with others of its kind says so on the sheet.
+    </p>
+
+    <h3>How widgets look</h3>
+    <p>
+      The panel behind a widget is yours: card, bracketed corners, ruled lines, a solid
+      block or nothing at all, with its own corner radius, how solid it is, how heavy its
+      edge, how much of your accent colour is in it, and whether it lifts off the
+      wallpaper with a shadow. Text inside widgets has a size of its own, which no theme
+      touches.
+    </p>
+
+    <!-- ============================================================ -->
+    <h2 id="look">Look &amp; feel</h2>
+
+    <h3>Themes</h3>
+    <p>
+      Eight of them, and each one sets everything below it at once &mdash; anything you
+      change afterwards stays changed. They are also the quickest way to meet a feature
+      you had not found:
+    </p>
+    <dl class="rows">
+      <dt>Android</dt><dd>As the phone came. Demonstrates nothing, deliberately.</dd>
+      <dt>Orbital</dt><dd>Mint on deep space, and the dock drifts on its own.</dd>
+      <dt>Sleek</dt><dd>Monochrome and stripped back: no names under anything.</dd>
+      <dt>Dusk</dt><dd>Warm amber over plum, with the clock off to one side.</dd>
+      <dt>Professional</dt><dd>Restrained blue and square corners; the drawer becomes a list.</dd>
+      <dt>Cybernetic</dt><dd>Cyan on black, a pulse up the screen, seconds on the clock.</dd>
+      <dt>Galactic</dt><dd>Violet nebula, nothing labelled.</dd>
+      <dt>Terminal</dt><dd>Monospaced phosphor green, scan lines, named tabs across the top, a drawer that lists and a clock that counts.</dd>
+    </dl>
+
+    <h3>Everything else</h3>
+    <dl class="rows">
+      <dt>Colour</dt>
+      <dd>Take the theme's accent or pick your own, at whatever strength.</dd>
+      <dt>Lettering and shape</dt>
+      <dd>The font, how round the corners are, and small capitals for labels and headings.</dd>
+      <dt>Icons</dt>
+      <dd>Cut every app icon to one outline &mdash; squircle, circle, rounded, square or tiled &mdash; and either keep each app's own colours or put them through the theme's. Installed icon packs appear here too.</dd>
+      <dt>Tiled</dt>
+      <dd>A shape of its own: the artwork fills its whole box and the name is written across the foot of it, on the same surface.</dd>
+      <dt>The orbit</dt>
+      <dd>The notches around it, the thin line the apps ride, and a glow along it.</dd>
+      <dt>Over the whole screen</dt>
+      <dd>Scan lines, and a slow pulse of light up the screen.</dd>
+      <dt>Wallpaper</dt>
+      <dd>Dim it as much as you like, at the top, the bottom, both ends or evenly.</dd>
+    </dl>
+
+    <!-- ============================================================ -->
+    <h2 id="drawer">The app drawer</h2>
+    <p>
+      Swipe up anywhere on the home screen. It can slide in from the bottom, the top or
+      either side, and be laid out as a grid or a list with the columns and icon size you
+      want. Down one edge is the alphabet: drag it and the list follows your thumb.
+    </p>
+    <dl class="rows">
+      <dt>Order</dt>
+      <dd>By name, or by what you actually open. Without usage access it counts only the apps you have opened from Orbital.</dd>
+      <dt>Recently installed</dt>
+      <dd>The newest apps first, above the rest.</dd>
+      <dt>The search bar</dt>
+      <dd>At the top or the bottom, where it sits above the keyboard. It searches apps and, once you allow contacts, your address book. It can hand a line it cannot place to the assistant.</dd>
+      <dt>Hidden apps</dt>
+      <dd>Off the list, still found by searching.</dd>
+    </dl>
+
+    <!-- ============================================================ -->
+    <h2 id="hub">The glance hub</h2>
+    <p>
+      One line inside the orbit, cycling through what matters now: how many notifications
+      are waiting and the most recent, what is playing, the next calendar event or note
+      reminder, notes you have marked, the weather, and the battery when it is charging
+      or running low. You choose which of those appear, how many seconds each one gets,
+      and what counts as leading &mdash; with apps and contacts that jump the queue.
+    </p>
+
+    <!-- ============================================================ -->
+    <h2 id="notifications">Notifications</h2>
+    <dl class="rows">
+      <dt>The newest message</dt>
+      <dd>Who wrote last and what they said, across the top of the screen, from any app that sends messages or only the ones you pick. One, two or three lines, gone after a while.</dd>
+      <dt>Notification dots</dt>
+      <dd>Marks dock icons that have something waiting.</dd>
+      <dt>Your own notes</dt>
+      <dd>Every note can also appear as a silent notification &mdash; no sound, no vibration, no badge &mdash; and Done on the notification deletes the note.</dd>
+    </dl>
+    <p class="small muted">All three need notification access, which you grant in system settings and can take back there at any time.</p>
+
+    <!-- ============================================================ -->
+    <h2 id="assistant">The assistant bar</h2>
+    <p>
+      A line you type an errand into, and it does it: reminders, notes, messages, emails,
+      calls, calendar entries, apps and searches. Begin a line with &ldquo;todo&rdquo;,
+      &ldquo;to do&rdquo; or &ldquo;later&rdquo; and it asks when to remind you.
+      &ldquo;Clear Friday&rdquo; opens that day with a way to delete each event.
+    </p>
+    <dl class="rows">
+      <dt>Put events straight in</dt>
+      <dd>Skips the calendar app. Without permission to write, it opens the calendar with everything filled in instead.</dd>
+      <dt>Where notes go</dt>
+      <dd>A note widget on the page you are on, Google Keep, or both. Keep is on out of the box &mdash; see the <a href="privacy.html">privacy policy</a>.</dd>
+      <dt>Pinned notes</dt>
+      <dd>A line with no time on it, which clears itself after as long as you say.</dd>
+      <dt>What it searches</dt>
+      <dd>Apps and contacts. Not your photos, music, files or messages &mdash; there is nothing else it is able to search.</dd>
+      <dt>When it cannot read a line</dt>
+      <dd>Without a key, it becomes a web search. Paste in a key for Claude, ChatGPT or Gemini and the line is sent there instead, with the date and time and nothing else.</dd>
+    </dl>
+
+    <!-- ============================================================ -->
+    <h2 id="foldable">Foldables</h2>
+    <p>
+      Unfolding gives Orbital a screen about twice as wide. You decide what it does with
+      it:
+    </p>
+    <dl class="rows">
+      <dt>Same layout</dt>
+      <dd>The folded screen's arrangement, stretched &mdash; either filling the width, or with two pages side by side so a swipe crosses both.</dd>
+      <dt>A layout of its own</dt>
+      <dd>The two screens part company: their own pages, their own widgets, and settings of their own. Orbital shows a picture of each, and either can be arranged from the settings whichever way the phone happens to be open.</dd>
+    </dl>
+    <p>
+      With a layout of its own, syncing is turned off: a change made in the ordinary
+      settings reaches only the screen in your hand. Turn syncing back on and a change
+      reaches both &mdash; and says so, along the bottom, with an undo for the screen you
+      are not looking at.
+    </p>
+    <p>
+      The dock gets the same treatment. A wheel sized for a thumb on a folded phone is a
+      small arc adrift on an unfolded one, so the big screen can have its own size, edge
+      and position.
+    </p>
+
+    <!-- ============================================================ -->
+    <h2 id="phone">Backups &amp; starting over</h2>
+    <dl class="rows">
+      <dt>Save a backup</dt>
+      <dd>Every setting, both screens' worth, your dock, your pages and your widgets, as one file you keep.</dd>
+      <dt>Save this layout to share</dt>
+      <dd>The arrangement without what is written on it, with a list of exactly what is going before it is written.</dd>
+      <dt>Save a full copy</dt>
+      <dd>Everything, notes and all &mdash; for moving to a new phone, not for handing to anybody.</dd>
+      <dt>Load a layout</dt>
+      <dd>Replaces your pages, widgets and dock. Orbital lists what goes first, and keeps one copy of what it replaced so you can put it back.</dd>
+      <dt>Restore defaults</dt>
+      <dd>Clears every setting, the docks, the home screen and what Orbital has learned. Your assistant key and saved backups stay.</dd>
+    </dl>
+
+    <!-- ============================================================ -->
+    <h2 id="gestures">Every gesture</h2>
+    <dl class="rows">
+      <dt>Swipe up</dt><dd>The app drawer.</dd>
+      <dt>Swipe down</dt><dd>Nothing, the glance, or the assistant bar &mdash; your choice.</dd>
+      <dt>Swipe sideways</dt><dd>The page next door. Up and down too, where you have added one.</dd>
+      <dt>Hold the background</dt><dd>The home menu: widgets, edit mode, wallpaper, the clock, settings.</dd>
+      <dt>Pinch</dt><dd>Edit mode, if you would rather reach it that way.</dd>
+      <dt>Double tap the background</dt><dd>Turns the screen off, if you turn that on.</dd>
+      <dt>Turn the dock</dt><dd>Drag along it. Drag outward from an icon to pull the orbits behind it out.</dd>
+      <dt>Hold an app</dt><dd>Everything you can do with it: open, keep it where it is, hide it, rename it, its own shortcuts, uninstall.</dd>
+    </dl>
+
+    <hr>
+    <p class="small muted">
+      This guide describes Orbital as it stands today. Settings are added and renamed as
+      the launcher is built; the app's own settings search is always the last word.
+    </p>
+  </main>
+</div>
+
+<footer class="foot">
+  <p>Orbital Launcher is made by <a href="https://alid0n.com">Alid0n</a>.</p>
+  <p><a href="./">Home</a> &middot; <a href="privacy.html">Privacy policy</a></p>
+</footer>
+
+<script src="assets/toc.js"></script>
+</body>
+</html>

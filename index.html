@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Orbital Launcher &mdash; an Android home screen that turns</title>
+
+<meta name="description" content="Orbital Launcher is an Android home screen built around a dock you turn with your thumb: widgets you place yourself, an assistant bar that does errands, and no account, no analytics and no server.">
+<meta name="theme-color" content="#07090e">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitallauncher.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Orbital Launcher">
+<meta property="og:description" content="An Android home screen built around a dock you turn with your thumb. No account, no analytics, no server.">
+<meta property="og:url" content="https://orbitallauncher.com/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+
+<header class="top">
+  <a class="mark" href="./">&gt; ORBITAL</a>
+  <nav>
+    <a href="guide.html">Guide</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ====================================================================
+       The menu, as the dock. Every slot below is a plain anchor; the script
+       places them on an ellipse and turns it. With no script they are the
+       row of links underneath, which is the same menu without the motion.
+       ==================================================================== -->
+  <section class="hero">
+    <p class="tag">Android home screen</p>
+    <h1>A home screen you turn</h1>
+    <p class="lede">
+      Your apps ride an orbit along the bottom of the screen, under your thumb, where
+      a row of icons at the top of a grid has never been. Everything else &mdash; the
+      widgets, the pages, the assistant, the way the whole thing looks &mdash; is yours
+      to put where you want it.
+    </p>
+
+    <div class="orbit" data-orbit tabindex="0" role="navigation" aria-label="Main menu">
+      <svg class="orbit-line" viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <ellipse cx="150" cy="84" rx="132" ry="60"
+                 fill="none" stroke="rgba(0,255,170,0.3)" stroke-width="0.7" />
+      </svg>
+
+      <a class="orbit-item" href="guide.html#dock" data-name="The orbit dock" data-blurb="What rides it, how it turns, and where else it appears">
+        <span class="sr-only">The orbit dock</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <ellipse cx="12" cy="14" rx="10" ry="6" />
+          <circle cx="12" cy="8" r="2.4" fill="currentColor" stroke="none" />
+          <circle cx="3.4" cy="15.4" r="1.8" fill="currentColor" stroke="none" />
+          <circle cx="20.6" cy="15.4" r="1.8" fill="currentColor" stroke="none" />
+        </svg>
+      </a>
+
+      <a class="orbit-item" href="guide.html#home" data-name="Widgets and pages" data-blurb="Nineteen kinds of widget, dropped where you want them">
+        <span class="sr-only">Widgets and pages</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <rect x="3" y="3" width="8" height="8" rx="2" />
+          <rect x="13" y="3" width="8" height="5" rx="2" />
+          <rect x="3" y="13" width="8" height="8" rx="2" />
+          <rect x="13" y="10" width="8" height="11" rx="2" />
+        </svg>
+      </a>
+
+      <a class="orbit-item" href="guide.html#assistant" data-name="The assistant bar" data-blurb="Type an errand and it does it">
+        <span class="sr-only">The assistant bar</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <circle cx="12" cy="12" r="8.4" stroke-dasharray="3 2.4" />
+          <circle cx="12" cy="12" r="2.6" fill="currentColor" stroke="none" />
+        </svg>
+      </a>
+
+      <a class="orbit-item" href="guide.html#look" data-name="Themes" data-blurb="Eight looks, each one showing off something the launcher can do">
+        <span class="sr-only">Themes</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 1.4-2.1-.7-1.3.2-2.9 1.7-2.9H18a4 4 0 0 0 4-4.2C21.6 6.7 17.3 3 12 3Z" />
+          <circle cx="8" cy="10" r="1.2" fill="currentColor" stroke="none" />
+          <circle cx="12.5" cy="7.5" r="1.2" fill="currentColor" stroke="none" />
+        </svg>
+      </a>
+
+      <a class="orbit-item" href="guide.html#drawer" data-name="The app drawer" data-blurb="Every app, sorted the way you actually use them">
+        <span class="sr-only">The app drawer</span>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <circle cx="6" cy="6" r="1.8" /><circle cx="12" cy="6" r="1.8" /><circle cx="18" cy="6" r="1.8" />
+          <circle cx="6" cy="12" r="1.8" /><circle cx="12" cy="12" r="1.8" /><circle cx="18" cy="12" r="1.8" />
+          <circle cx="6" cy="18" r="1.8" /><circle cx="12" cy="18" r="1.8" /><circle cx="18" cy="18" r="1.8" />
+        </svg>
+      </a>
+
+      <a class="orbit-item" href="guide.html#foldable" data-name="Foldables" data-blurb="Two screens, two layouts, and settings that can differ">
+        <span class="sr-only">Foldables</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <rect x="2.5" y="4" width="8" height="16" rx="1.6" />
+          <rect x="13.5" y="4" width="8" height="16" rx="1.6" />
+          <path d="M12 2.5v19" stroke-dasharray="2 2" />
+        </svg>
+      </a>
+
+      <a class="orbit-item" href="privacy.html" data-name="Privacy" data-blurb="No account, no analytics, no server. The whole list of what leaves">
+        <span class="sr-only">Privacy</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M12 3 4.5 6v6.2c0 4.3 3.1 7.6 7.5 8.8 4.4-1.2 7.5-4.5 7.5-8.8V6Z" />
+          <path d="m8.6 12.2 2.4 2.3 4.4-4.5" />
+        </svg>
+      </a>
+
+      <div class="orbit-name" aria-hidden="true">
+        <strong></strong>
+        <span></span>
+      </div>
+    </div>
+
+    <p class="orbit-hint">Scroll on the orbit to spin it &mdash; up goes back. Drag it, or use the arrow keys.</p>
+
+    <nav class="orbit-fallback" aria-label="Main menu">
+      <a href="guide.html#dock">The orbit dock</a>
+      <a href="guide.html#home">Widgets and pages</a>
+      <a href="guide.html#assistant">The assistant bar</a>
+      <a href="guide.html#look">Themes</a>
+      <a href="guide.html#drawer">The app drawer</a>
+      <a href="guide.html#foldable">Foldables</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </section>
+
+  <div class="wrap wide">
+
+    <h2>What it is</h2>
+    <div class="side-by-side">
+      <div>
+        <p>
+          Orbital replaces your home screen. The apps you reach for constantly ride an
+          ellipse along the bottom of the screen: turn it with a thumb, tap what comes
+          round. Behind it are your pages &mdash; a lattice you can extend left, right,
+          up and down &mdash; with widgets dropped exactly where you put them.
+        </p>
+        <p>
+          It asks for nothing at install time. Every permission is requested by the
+          feature that needs it, and whatever you decline simply goes quiet.
+        </p>
+      </div>
+      <div class="phone" aria-hidden="true">
+        <div class="p-clock">9:41</div>
+        <div class="p-date">Saturday, September 20</div>
+        <div class="p-card a"></div>
+        <div class="p-card b"></div>
+        <div class="p-dock"></div>
+        <div class="p-app" style="left:12%;bottom:14%"></div>
+        <div class="p-app" style="left:34%;bottom:7%"></div>
+        <div class="p-app" style="left:56%;bottom:7%"></div>
+        <div class="p-app" style="left:76%;bottom:14%"></div>
+      </div>
+    </div>
+
+    <h2>The short list</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>A dock you turn</h3>
+        <p class="small muted">
+          One orbit or three, anchored to the bottom or either side, or a plain flat row
+          if the wheel is not for you. It can turn slowly by itself, wind back to where it
+          started, and stay within reach inside other apps.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Nineteen widgets</h3>
+        <p class="small muted">
+          Clock, calendar, week, up next, weather, now playing, news, feeds, people,
+          notes, pinned notes, battery, torch, calculator, folders, app shortcuts, an
+          app scroller, and any Android widget you already have.
+        </p>
+      </div>
+      <div class="card">
+        <h3>An assistant bar</h3>
+        <p class="small muted">
+          Type an errand and it does it: reminders, notes, messages, emails, calls,
+          calendar entries, apps and searches. A key for Claude, ChatGPT or Gemini is
+          optional and only used for lines it cannot read itself.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Themes that do something</h3>
+        <p class="small muted">
+          Eight looks, each demonstrating a feature you might never have found: Terminal
+          brings named tabs and a drawer that lists, Orbital sets the dock drifting,
+          Sleek takes the words off.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Built for foldables</h3>
+        <p class="small muted">
+          The open screen can share the folded one's layout, spread two pages side by
+          side, or keep a layout of its own &mdash; with its own theme, dock and settings.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Nothing phones home</h3>
+        <p class="small muted">
+          No account, no sign-in, no Orbital server, no analytics library, no crash
+          reporter, no ad network. The five kinds of request that can leave your phone
+          are each listed, with what is in them.
+        </p>
+      </div>
+    </div>
+
+    <h2>Getting it</h2>
+    <p>
+      Orbital is in closed testing on Google Play while the last of the release work is
+      finished. If you would like to be one of the testers, or want to know when it is
+      out, get in touch through <a href="https://alid0n.com">alid0n.com</a>.
+    </p>
+
+    <p class="small muted">
+      Android 8.0 and later. Works on phones, foldables and tablets.
+    </p>
+
+    <hr>
+
+    <h2>Read on</h2>
+    <ul>
+      <li><a href="guide.html">The guide</a> &mdash; every setting and what it does, page by page.</li>
+      <li><a href="privacy.html">The privacy policy</a> &mdash; what Orbital reads, what stays on the phone, and everything that leaves it.</li>
+    </ul>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <p>Orbital Launcher is made by <a href="https://alid0n.com">Alid0n</a>.</p>
+  <p><a href="privacy.html">Privacy policy</a> &middot; <a href="guide.html">Guide</a></p>
+</footer>
+
+<script src="assets/orbit.js"></script>
+</body>
+</html>
