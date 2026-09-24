@@ -1,17 +1,17 @@
 /* ============================================================================
    Sending a form: asking to be a tester, and feedback.
 
-   A static site cannot send email, so each form posts to a form service and
-   the service forwards it. That service is Formspree, and each form's endpoint
-   is its `action`; submissions arrive as mail. The address they arrive at lives
-   only in the Formspree account, never in this site, so nobody reading the page
-   or its source can find it.
+   A static site cannot send email, so each form posts to Orbital's own small
+   server at forms.orbitallauncher.com (the orbital-forms repo), which emails
+   it to OrbitalLauncher@gmail.com. No third-party form service is involved.
 
    Any form marked data-send is handled here. data-said names the element that
-   reports back, and data-thanks is what it says when the post succeeds. If the
-   post fails — the service down, the month's quota spent, no network — the page
-   says so, keeps what was typed, and offers the same message as an email to
-   Orbital's public address instead.
+   reports back, and data-thanks is what it says when the post succeeds. The
+   post is sent URL-encoded, which keeps it a simple cross-site request with no
+   preflight. The server allows each visitor two messages a day and answers 429
+   past that. If the post fails for any other reason — the server down, no
+   network — the page says so, keeps what was typed, and offers the same
+   message as an email to Orbital's public address instead.
    ========================================================================== */
 
 (function () {
@@ -64,9 +64,13 @@
 
       fetch(form.action, {
         method: 'POST',
-        body: new FormData(form),
+        body: new URLSearchParams(new FormData(form)),
         headers: { Accept: 'application/json' },
       }).then(function (answer) {
+        if (answer.status === 429) {
+          say("You've reached today's limit of two messages. Please try again tomorrow.");
+          return;
+        }
         if (!answer.ok) throw new Error('rejected');
         form.reset();
         say(form.getAttribute('data-thanks') || 'Thank you!', true);

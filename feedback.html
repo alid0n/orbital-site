@@ -38,9 +38,9 @@
     <a href="mailto:OrbitalLauncher@gmail.com">OrbitalLauncher@gmail.com</a>.
   </p>
 
-  <!-- Posts to the same Formspree form as the tester sign-up, which forwards to
-       OrbitalLauncher@gmail.com; the destination is set in the Formspree account. -->
-  <form class="fb" method="POST" action="https://formspree.io/f/xdekarzy"
+  <!-- Posts to Orbital's own forms server (the orbital-forms repo), which emails it to
+       OrbitalLauncher@gmail.com and allows each visitor two messages a day. -->
+  <form class="fb" method="POST" action="https://forms.orbitallauncher.com/send"
         data-send data-said="fb-said" data-thanks="Thank you! Your feedback has been sent.">
 
     <fieldset class="seg">
@@ -60,7 +60,7 @@
     </label>
 
     <div class="fb-row">
-      <!-- Required: the Formspree form this posts to is set to refuse a post with no email. -->
+      <!-- Required: the forms server refuses a post with no email, so there is someone to reply to. -->
       <label class="fb-field">
         <span>Your email <em>so you can get a reply</em></span>
         <input type="email" name="email" required autocomplete="email" spellcheck="false" placeholder="you@example.com">
@@ -90,6 +90,6 @@
   <p><a href="./">Home</a> &middot; <a href="features.html">Features</a> &middot; <a href="guide.html">Guide</a> &middot; <a href="privacy.html">Privacy policy</a></p>
 </footer>
 
-<script src="assets/ask.js?v=3"></script>
+<script src="assets/ask.js?v=4"></script>
 </body>
 </html>
