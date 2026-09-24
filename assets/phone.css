@@ -41,6 +41,11 @@
 
 .scr.fresh { animation: scr-in 0.35s ease; }
 
+/* Set by phone.js on a phone that has scrolled out of view. */
+.scr.asleep *,
+.scr.asleep *::before,
+.scr.asleep *::after { animation-play-state: paused !important; }
+
 @keyframes scr-in { from { opacity: 0.35; } to { opacity: 1; } }
 
 .scr * { box-sizing: border-box; }
@@ -256,28 +261,39 @@
 
 .light.w-card .card { box-shadow: 0 1.5cqw 5cqw -2cqw rgba(40, 30, 20, 0.25); border-color: color-mix(in srgb, var(--text) 10%, transparent); }
 
-/* A light running round every card, the way Fluid draws them. */
-@property --edge {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
+/* A light running round every card, the way Fluid draws them. A large conic
+   gradient turns behind the card and a fill covers all but a thin rim of it.
+   Turning is a transform, which the compositor does on its own; animating the
+   gradient's angle instead would repaint every card on every frame. */
+.fx-flow .card { isolation: isolate; overflow: hidden; }
 
 .fx-flow .card::before {
   content: '';
   position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  padding: 0.5cqw;
-  background: conic-gradient(from var(--edge), transparent 0 62%, var(--a) 80%, var(--b) 88%, transparent 96%);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  z-index: -2;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  aspect-ratio: 1;
+  background: conic-gradient(transparent 0 62%, var(--a) 80%, var(--b) 88%, transparent 96%);
   animation: edge-run 3.6s linear infinite;
   pointer-events: none;
 }
 
-@keyframes edge-run { to { --edge: 360deg; } }
+.fx-flow .card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0.5cqw;
+  border-radius: inherit;
+  background: color-mix(in srgb, var(--panel) 92%, var(--bg));
+  pointer-events: none;
+}
+
+@keyframes edge-run {
+  from { transform: translate(-50%, -50%) rotate(0turn); }
+  to { transform: translate(-50%, -50%) rotate(1turn); }
+}
 
 .ask-pill { display: flex; align-items: center; gap: 2.6cqw; border-radius: 8cqw !important; padding: 3.2cqw 4.4cqw; font-size: 3.4cqw; }
 .ask-dot { width: 4.4cqw; height: 4.4cqw; border-radius: 50%; border: 0.5cqw dashed var(--a); flex: none; }
@@ -300,8 +316,8 @@
 .np-art { width: 11cqw; height: 11cqw; border-radius: calc(var(--r) * 0.6 + 0.6cqw); flex: none; background: linear-gradient(135deg, var(--a), var(--b)); }
 .np-txt { flex: 1; min-width: 0; }
 .np-bar { display: block; height: 0.7cqw; border-radius: 1cqw; margin-top: 1.8cqw; background: color-mix(in srgb, var(--text) 18%, transparent); overflow: hidden; }
-.np-bar i { display: block; height: 100%; width: 38%; background: var(--a); animation: np 14s linear infinite; }
-@keyframes np { from { width: 30%; } to { width: 70%; } }
+.np-bar i { display: block; height: 100%; width: 100%; background: var(--a); transform-origin: left; animation: np 14s linear infinite; }
+@keyframes np { from { transform: scaleX(0.3); } to { transform: scaleX(0.7); } }
 .np-ctl { display: flex; gap: 1.2cqw; }
 .np-ctl svg { width: 4.4cqw; height: 4.4cqw; fill: none; stroke: var(--text); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 
@@ -476,6 +492,7 @@
   width: 280%;
   height: 190%;
   animation: roam 16s ease-in-out infinite;
+  will-change: transform;
 }
 
 .canvas::before {
@@ -514,16 +531,15 @@
   border-radius: 28%;
   background: color-mix(in srgb, var(--panel) 75%, transparent);
   border: 1px solid color-mix(in srgb, var(--a) 40%, transparent);
-  backdrop-filter: blur(4px);
 }
 .fold-lid .ic { --is: 100%; }
 .fold-lid .fold-card { display: none; }
 
 .fold-b .fold-lid { animation: fold-open 16s ease-in-out infinite; }
 @keyframes fold-open {
-  0%, 30% { transform: scale(1); box-shadow: none; }
-  36% { transform: scale(1.12); box-shadow: 0 0 0 1.2cqw color-mix(in srgb, var(--a) 25%, transparent); }
-  42%, 100% { transform: scale(1); box-shadow: none; }
+  0%, 30% { transform: scale(1); }
+  36% { transform: scale(1.14); }
+  42%, 100% { transform: scale(1); }
 }
 
 /* Two fingertips spreading over a folder, which is how you go into it. */
@@ -570,13 +586,15 @@
 .mm { position: relative; width: 12.6cqw; height: 8.55cqw; flex: none; border-radius: 0.8cqw; background: color-mix(in srgb, var(--text) 8%, transparent); overflow: hidden; }
 .mm i { position: absolute; background: color-mix(in srgb, var(--text) 35%, transparent); border-radius: 0.3cqw; }
 .mm i.f { background: color-mix(in srgb, var(--a) 70%, transparent); }
+/* Moved by transform, in fractions of the frame's own size: 38% of the map
+   is 106% of a frame 35.7% wide, and so on for each stop of the pan. */
 .mm-frame { position: absolute; left: 0; top: 0; width: 35.7%; height: 52.6%; border: 1px solid var(--a); border-radius: 0.4cqw; animation: mm 16s ease-in-out infinite; }
 @keyframes mm {
-  0%, 8% { left: 0; top: 0; }
-  28%, 42% { left: 38%; top: 8%; }
-  60%, 70% { left: 40%; top: 40%; }
-  86%, 94% { left: 3%; top: 36%; }
-  100% { left: 0; top: 0; }
+  0%, 8% { transform: translate(0, 0); }
+  28%, 42% { transform: translate(106.4%, 15.2%); }
+  60%, 70% { transform: translate(112%, 76%); }
+  86%, 94% { transform: translate(8.4%, 68.4%); }
+  100% { transform: translate(0, 0); }
 }
 .path em { font-style: normal; color: var(--muted); }
 .path b { color: var(--a); font-weight: 600; }
@@ -672,7 +690,7 @@
 .fx-glow .orb ellipse { stroke-opacity: 0.75; filter: drop-shadow(0 0 1.5px var(--a)); }
 
 .ring { position: absolute; inset: 0; }
-.ri { position: absolute; left: 50%; top: 110%; width: var(--is); will-change: transform, left, top; }
+.ri { position: absolute; left: 0; top: 0; width: var(--is); will-change: transform; }
 .ri .ic { --is: 100%; width: 100%; }
 .ri-far { width: 9.5cqw; }
 .ri.is-front .ic-face { box-shadow: 0 1.4cqw 4cqw -1cqw rgba(0, 0, 0, 0.6); }
@@ -913,3 +931,190 @@
 .sc-count { font-size: 0.82rem; color: var(--muted); min-width: 3.4em; font-variant-numeric: tabular-nums; }
 .sc-bar { height: 2px; margin: 14px auto 0; width: 140px; background: var(--rule); border-radius: 2px; overflow: hidden; }
 .sc-bar i { display: block; height: 100%; background: var(--accent); transform-origin: left; transform: scaleX(0); }
+
+/* ---- foldables ---------------------------------------------------------------- */
+
+.fold-stage { display: flex; justify-content: center; align-items: center; }
+
+.fdev {
+  --fw: 150px;
+  display: flex;
+  padding: 7px;
+  border-radius: 24px;
+  background: linear-gradient(150deg, #2a3140 0%, #10141c 40%, #0a0d13 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.09), 0 40px 80px -30px rgba(0, 0, 0, 0.85);
+}
+
+.fhalf { flex: none; width: var(--fw); overflow: hidden; transition: width 0.7s cubic-bezier(0.5, 0, 0.2, 1), opacity 0.5s; }
+.fhalf .scr { width: var(--fw); border-radius: 16px / 7.4%; }
+.fr { width: 0; opacity: 0; }
+.fr .scr { transform-origin: left center; transform: perspective(600px) rotateY(-75deg); transition: transform 0.7s cubic-bezier(0.5, 0, 0.2, 1); }
+
+.fdev.is-open .fr { width: var(--fw); opacity: 1; }
+.fdev.is-open .fr .scr { transform: none; border-radius: 3px 16px 16px 3px / 3px 7.4% 7.4% 3px; }
+.fdev.is-open .fl .scr { border-radius: 16px 3px 3px 16px / 7.4% 3px 3px 7.4%; }
+.fdev.is-open .fl { box-shadow: 1px 0 0 rgba(255, 255, 255, 0.07); }
+
+/* One dock across both halves of the open screen. The layer is twice a
+   phone's width, so its sizes are halved to match the pages under it. */
+.fdev { position: relative; }
+.fhalf { position: relative; z-index: 1; }
+.scr.bare { background: transparent; }
+
+/* One wallpaper and one status bar behind both halves when open. It appears
+   at once rather than fading, because the halves stop drawing their own
+   backgrounds the moment the phone opens. */
+.fback { position: absolute; inset: 7px; z-index: 0; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.fdev.is-open .fback { opacity: 1; transition: none; }
+.fback .scr { position: absolute; inset: 0; aspect-ratio: auto; border-radius: 16px / 7.4%; }
+.fback .sb { height: 3%; padding: 0 4cqw; font-size: 1.6cqw; top: 1.5%; }
+.fback .sb::after { left: 75%; width: 1.7cqw; height: 1.7cqw; }
+.fback .sb-r { gap: 0.6cqw; }
+.fback .sb-r i { width: 1.2cqw; height: 1.2cqw; }
+.fback .sb-r b { width: 2.2cqw; height: 1.15cqw; border-width: 0.18cqw; }
+.fback .sb-r b::after { inset: 0.15cqw; right: 0.6cqw; }
+.fdock .gbar { width: 15%; height: 0.45cqw; }
+
+.fdock { position: absolute; inset: 7px; z-index: 2; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.fdev.is-open .fdock { opacity: 1; transition: opacity 0.4s 0.45s; }
+.fdock .scr { position: absolute; inset: 0; aspect-ratio: auto; background: transparent; border-radius: 16px / 7.4%; overflow: hidden; --is: 6.5cqw; }
+.fdock .ri-far { width: 4.8cqw; }
+.fdock .dk-flat .row { --is: 5.2cqw; left: 12cqw; right: 12cqw; }
+
+/* ---- a phone with a keyboard ---------------------------------------------------- */
+
+.kbdev {
+  width: 210px;
+  margin: 0 auto;
+  padding: 10px 10px 14px;
+  border-radius: 22px 22px 32px 32px;
+  background: linear-gradient(160deg, #2a3140 0%, #10141c 45%, #0a0d13 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.09), 0 40px 80px -30px rgba(0, 0, 0, 0.85);
+}
+
+.kb-scr { aspect-ratio: 1 / 1.05; border-radius: 12px; }
+.kb-home { position: absolute; z-index: 3; top: 12%; left: 0; right: 0; transition: opacity 0.3s; }
+.kb-home .clk-center { margin-top: 0; }
+.kb-home .clk-center b { font-size: 17cqw; }
+.kb-line {
+  position: absolute;
+  z-index: 3;
+  left: 5cqw;
+  right: 5cqw;
+  top: 47%;
+  display: flex;
+  align-items: center;
+  gap: 2.4cqw;
+  padding: 2.6cqw 4cqw;
+  border-radius: 8cqw;
+  background: color-mix(in srgb, var(--panel), var(--text) 7%);
+  font-size: 4.4cqw;
+  transition: top 0.35s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+.kb-line svg { width: 4.8cqw; height: 4.8cqw; flex: none; fill: none; stroke: var(--muted); stroke-width: 2.2; stroke-linecap: round; }
+.kb-typed { white-space: pre; }
+.kb-caret { width: 0.5cqw; height: 5cqw; background: var(--a); animation: caret 1s steps(1) infinite; }
+.kb-out { position: absolute; z-index: 3; left: 5cqw; right: 5cqw; top: 27%; display: flex; flex-direction: column; gap: 1.6cqw; }
+.kb-hit { display: flex; align-items: center; gap: 3cqw; padding: 1.6cqw 2.4cqw; border-radius: 3cqw; font-size: 4.4cqw; --is: 10.5cqw; }
+.kb-hit.on { background: color-mix(in srgb, var(--a) 15%, transparent); }
+.kb-hit b { color: var(--a); font-weight: 700; }
+.kb-card { display: flex; flex-direction: column; padding: 3.4cqw 4cqw; border-radius: 4cqw; background: color-mix(in srgb, var(--panel), var(--a) 8%); border: 1px solid color-mix(in srgb, var(--a) 30%, transparent); font-size: 3.4cqw; }
+.kb-card em { font-style: normal; color: var(--muted); font-size: 3.2cqw; }
+.kb-card b { font-size: 5cqw; margin: 0.6cqw 0 2cqw; }
+.kb-card i { align-self: flex-end; font-style: normal; padding: 1.4cqw 5cqw; border-radius: 6cqw; background: var(--a); color: var(--bg); font-weight: 600; font-size: 3.6cqw; }
+.kb-toast { align-self: center; margin-top: 14cqw; padding: 3cqw 6cqw; border-radius: 8cqw; background: var(--a); color: var(--bg); font-weight: 600; font-size: 4.4cqw; display: flex; align-items: center; gap: 2cqw; }
+.kb-toast b { display: inline-grid; place-items: center; width: 7cqw; height: 7cqw; border-radius: 2cqw; background: var(--bg); color: var(--a); }
+.kb-dock { position: absolute; z-index: 3; left: 5cqw; right: 5cqw; bottom: 6%; display: flex; justify-content: space-between; --is: 13cqw; transition: opacity 0.3s; }
+.is-typing .kb-home, .is-typing .kb-dock { opacity: 0; }
+.is-typing .kb-line { top: 11%; }
+.is-done .kb-line { opacity: 0.4; }
+
+.kb-keys { margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }
+.kb-row { display: flex; gap: 3px; }
+.key {
+  flex: 1;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 5px 5px 8px 8px;
+  background: linear-gradient(#2c3341, #1a1f29);
+  box-shadow: 0 2px 0 #06080c, inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  font: 600 9px/1 system-ui, sans-serif;
+  color: #d5dce6;
+  transition: transform 0.08s, background 0.08s, color 0.08s;
+}
+.key-fn { color: var(--accent); font-size: 8px; }
+.key-space { flex: 4; }
+.key.down, .key.held { transform: translateY(2px); background: var(--accent); color: #062019; box-shadow: none; }
+.key.held { box-shadow: 0 0 0 3px rgba(127, 231, 196, 0.35); }
+.kb-say { text-align: center; min-height: 3.2em; margin: 12px 0 0; }
+
+/* ---- Kids mode ------------------------------------------------------------------ */
+
+.kid-top { position: absolute; z-index: 3; top: 8%; left: 6cqw; right: 6cqw; display: flex; justify-content: space-between; align-items: center; font-size: 5.4cqw; }
+.kid-lock { width: 9cqw; height: 9cqw; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--panel), var(--text) 12%); }
+.kid-lock svg { width: 52%; height: 52%; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linejoin: round; }
+.kid-grid { position: absolute; z-index: 3; top: 19%; left: 5cqw; right: 5cqw; display: grid; grid-template-columns: repeat(3, 1fr); gap: 7cqw 2cqw; justify-items: center; }
+.kid-app { display: flex; flex-direction: column; align-items: center; gap: 2.2cqw; --is: 21cqw; }
+.kid-app b { font-size: 4.2cqw; font-weight: 600; text-align: center; line-height: 1.15; }
+
+.pin { position: absolute; inset: 0; z-index: 7; background: color-mix(in srgb, var(--bg) 95%, transparent); opacity: 0; animation: pin-show 10s infinite; }
+.pin > b { position: absolute; top: 24%; left: 0; right: 0; text-align: center; font-size: 4.8cqw; }
+.pin-dots { position: absolute; top: 33%; left: 0; right: 0; display: flex; justify-content: center; gap: 4.5cqw; }
+.pin-dots i { width: 3.8cqw; height: 3.8cqw; border-radius: 50%; border: 0.6cqw solid var(--a); animation: pin-dot 10s infinite; }
+.pin-dots i:nth-child(2) { animation-name: pin-dot2; }
+.pin-dots i:nth-child(3) { animation-name: pin-dot3; }
+.pin-dots i:nth-child(4) { animation-name: pin-dot4; }
+.pin-k { position: absolute; width: 16cqw; height: 16cqw; margin: -8cqw 0 0 -8cqw; border-radius: 50%; display: grid; place-items: center; font-size: 6.4cqw; background: color-mix(in srgb, var(--panel), var(--text) 9%); }
+
+@keyframes pin-show { 0%, 36% { opacity: 0; } 40%, 76% { opacity: 1; } 82%, 100% { opacity: 0; } }
+@keyframes pin-dot { 0%, 45% { background: transparent; } 46%, 78% { background: var(--a); } 84%, 100% { background: transparent; } }
+@keyframes pin-dot2 { 0%, 52% { background: transparent; } 53%, 78% { background: var(--a); } 84%, 100% { background: transparent; } }
+@keyframes pin-dot3 { 0%, 59% { background: transparent; } 60%, 78% { background: var(--a); } 84%, 100% { background: transparent; } }
+@keyframes pin-dot4 { 0%, 66% { background: transparent; } 67%, 78% { background: var(--a); } 84%, 100% { background: transparent; } }
+
+/* A fingertip, moved as a screen-sized layer so its path can be written in
+   fractions of the screen: the lock, then 2, 5, 8 and 3 on the pad. */
+.kid-finger { position: absolute; z-index: 8; inset: 0; pointer-events: none; animation: kid-finger 10s infinite; }
+.kid-finger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10cqw;
+  height: 10cqw;
+  margin: -5cqw 0 0 -5cqw;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 1cqw 3cqw rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: kid-tip 10s infinite;
+}
+
+@keyframes kid-finger {
+  0%, 28% { transform: translate(89.5%, 10%); }
+  42% { transform: translate(50%, 50%); }
+  49% { transform: translate(50%, 60%); }
+  56% { transform: translate(50%, 70%); }
+  63%, 100% { transform: translate(74%, 50%); }
+}
+
+@keyframes kid-tip {
+  0%, 27% { opacity: 0; transform: scale(1); }
+  29%, 36% { opacity: 1; transform: scale(0.85); }
+  38% { opacity: 0.2; }
+  43%, 45% { opacity: 1; transform: scale(0.85); }
+  47% { transform: scale(1); }
+  50%, 52% { transform: scale(0.85); }
+  54% { transform: scale(1); }
+  57%, 59% { transform: scale(0.85); }
+  61% { transform: scale(1); }
+  64%, 66% { opacity: 1; transform: scale(0.85); }
+  70%, 100% { opacity: 0; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fhalf, .fr .scr { transition: none; }
+  .kid-finger, .pin { display: none; }
+}

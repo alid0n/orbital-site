@@ -56,6 +56,8 @@
     torch: 'M8 3h8v4l-2 3v11h-4V10L8 7z',
     wifi: 'M3 9.5a13 13 0 0 1 18 0 M6.5 13a8 8 0 0 1 11 0 M10 16.5a3 3 0 0 1 4 0',
     moon: 'M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z',
+    tube: 'M3.5 8a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-11a3 3 0 0 1-3-3z M10 9v6l5-3z',
+    game: 'M7.5 8h9a4.5 4.5 0 0 1 4.5 4.5v.5a3 3 0 0 1-5.3 1.9L14.5 13.5h-5l-1.2 1.4A3 3 0 0 1 3 13v-.5A4.5 4.5 0 0 1 7.5 8z M8 10v3.5 M6.25 11.75h3.5 M15.5 11h.01 M17.5 12.5h.01',
   };
 
   function glyph(name) {
@@ -414,12 +416,15 @@
     left: { cx: -0.05, cy: 0.56, rx: 0.34, ry: 0.28, front: 0, grow: [0.4, 0.25] },
   };
 
-  function geom(anchor, level) {
+  /* narrow shrinks the width of the ellipse: an open foldable showing the
+     folded screen's layout keeps a wheel the width of the folded phone,
+     sitting in the middle of a screen twice as wide. */
+  function geom(anchor, level, narrow) {
     var g = GEOM[anchor] || GEOM.bottom;
     var L = level || 0;
     return {
       cx: g.cx, cy: g.cy, front: g.front,
-      rx: g.rx * (1 + g.grow[0] * L),
+      rx: g.rx * (1 + g.grow[0] * L) * (narrow || 1),
       ry: g.ry * (1 + g.grow[1] * L),
     };
   }
@@ -432,7 +437,7 @@
     var lines = '';
     var rings = '';
     for (var L = 0; L < levels; L++) {
-      var g = geom(cfg.anchor, L);
+      var g = geom(cfg.anchor, L, cfg.narrow);
       lines += '<ellipse cx="' + (g.cx * 100).toFixed(2) + '" cy="' + (g.cy * H).toFixed(2) + '" rx="' + (g.rx * 100).toFixed(2) + '" ry="' + (g.ry * H).toFixed(2) + '"' + (L ? ' class="outer"' : '') + '/>';
       var items = '';
       if (letters) {
@@ -462,7 +467,7 @@
     if (cfg.holds === 'letters') {
       return '<div class="dk dk-flat is-letters"><div class="band"></div>' + stripOf() + '</div>';
     }
-    var n = cfg.icons === 'tile' ? 5 : 5;
+    var n = cfg.dockCount || 5;
     var list = DOCK_APPS.slice(0, n);
     return '<div class="dk dk-flat"><div class="row">' +
       list.map(function (x) { return icon(app(x), cfg, { name: cfg.names === 'all' }); }).join('') +
@@ -554,22 +559,41 @@
       ';--r:' + cfg.radius + 'cqw;--pt:' + ins.t + '%;--pb:' + ins.b + '%;--pl:' + ins.l + '%;--pr:' + ins.r + '%' +
       ';--pw:' + (100 - ins.l - ins.r) + 'cqw';
 
+    /* An open foldable is two screens with one dock across both: the pages
+       are drawn with room left for a dock they do not draw (hideDock), and
+       the dock is drawn alone on a layer spanning the pair (dockOnly). */
+    if (cfg.dockOnly) {
+      scr.classList.add('dock-only');
+      scr.innerHTML = dockHtml(cfg) + '<span class="gbar"></span>';
+      mount(scr, cfg);
+      return;
+    }
+    /* And the wallpaper and status bar are drawn once, behind both halves, so
+       the open screen reads as one screen rather than two phones side by side. */
+    if (cfg.backOnly) {
+      scr.innerHTML = '<div class="wall' + (t.wall ? ' wall-' + t.wall : '') + '"></div>' +
+        '<div class="sb"><span data-now="hm"></span><span class="sb-r"><i></i><i></i><b></b></span></div>';
+      freshen(scr);
+      return;
+    }
+
     var page;
     if (cfg.layout === 'roam') page = pageRoam(cfg);
     else if (cfg.layout === 'list') page = pageList(cfg);
     else if (cfg.layout === 'app') page = pageApp(cfg);
     else page = pagePages(cfg);
 
-    var dock = dockHtml(cfg);
+    var dock = cfg.hideDock ? '' : dockHtml(cfg);
     if (cfg.layout === 'app') {
       dock = '<div class="ov">' + dock + '</div><span class="handle"></span><span class="touch"></span>';
     }
 
+    if (cfg.bare) scr.classList.add('bare');
     scr.innerHTML =
-      '<div class="wall' + (t.wall ? ' wall-' + t.wall : '') + '"></div>' + fxLayers(cfg) +
-      '<div class="sb"><span data-now="hm"></span><span class="sb-r"><i></i><i></i><b></b></span></div>' +
+      (cfg.bare ? '' : '<div class="wall' + (t.wall ? ' wall-' + t.wall : '') + '"></div>') + fxLayers(cfg) +
+      (cfg.bare ? '' : '<div class="sb"><span data-now="hm"></span><span class="sb-r"><i></i><i></i><b></b></span></div>') +
       page + dock + (cfg.fx.indexOf('scan') >= 0 ? '<div class="fxl-scan" aria-hidden="true"></div>' : '') +
-      '<span class="gbar"></span>';
+      (cfg.bare ? '' : '<span class="gbar"></span>');
     freshen(scr);
     mount(scr, cfg);
   }
@@ -582,7 +606,7 @@
     this.items = Array.prototype.filter.call(el.children, function (c) { return c.classList.contains('ri'); });
     this.n = this.items.length;
     this.anchor = o.anchor;
-    this.g = geom(o.anchor, o.level);
+    this.g = geom(o.anchor, o.level, o.narrow);
     this.step = TAU / this.n;
     this.angle = this.g.front - (o.start || 0) * this.step;
     this.v = 0;
@@ -631,21 +655,25 @@
     this.place();
   };
 
-  Ring.prototype.place = function () {
+  /* Placed with transforms alone, in pixels from the screen's cached size, so
+     turning a dock never asks the browser to lay the page out again. A dock
+     that has not moved since the last frame is not touched at all. */
+  Ring.prototype.place = function (force) {
+    if (!force && this.angle === this.placed) return;
+    this.placed = this.angle;
+    var size = sizeOf(this.scr);
     var g = this.g;
     var best = -2;
     var bi = 0;
     for (var i = 0; i < this.n; i++) {
       var a = this.angle + i * this.step;
       var depth = Math.cos(a - g.front);
-      var x = (g.cx + g.rx * Math.cos(a)) * 100;
-      var y = (g.cy + g.ry * Math.sin(a)) * 100;
+      var x = (g.cx + g.rx * Math.cos(a)) * size.w;
+      var y = (g.cy + g.ry * Math.sin(a)) * size.h;
       var s = 0.66 + 0.34 * Math.max(0, depth);
       var op = Math.max(0, Math.min(1, (depth + 0.2) / 0.45));
       var el = this.items[i];
-      el.style.left = x.toFixed(2) + '%';
-      el.style.top = y.toFixed(2) + '%';
-      el.style.transform = 'translate(-50%,-50%) scale(' + s.toFixed(3) + ')';
+      el.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px) translate(-50%,-50%) scale(' + s.toFixed(3) + ')';
       el.style.opacity = op.toFixed(2);
       el.style.zIndex = String(60 + Math.round(depth * 40));
       if (depth > best) { best = depth; bi = i; }
@@ -675,8 +703,8 @@
     });
     hit.addEventListener('pointermove', function (e) {
       if (!self.dragging || !last) return;
-      var w = self.scr.clientWidth;
-      var h = self.scr.clientHeight;
+      var w = sizeOf(self.scr).w;
+      var h = sizeOf(self.scr).h;
       var dx = e.clientX - last.x;
       var dy = e.clientY - last.y;
       var da;
@@ -750,15 +778,36 @@
   }
 
   var live = new Map();
+
+  /* A phone off screen is asleep: its docks are not ticked, and the .asleep
+     class pauses every CSS animation inside it. */
   var seen = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       var rec = live.get(e.target);
       if (rec) rec.visible = e.isIntersecting;
+      e.target.classList.toggle('asleep', !e.isIntersecting);
     });
   }, { rootMargin: '80px' }) : null;
 
+  /* Each screen's size, measured once and then kept current by an observer,
+     so nothing that runs every frame has to ask for it. */
+  function sizeOf(scr) {
+    if (!scr._size) scr._size = { w: scr.clientWidth, h: scr.clientHeight };
+    return scr._size;
+  }
+
+  var resized = 'ResizeObserver' in window ? new ResizeObserver(function (entries) {
+    entries.forEach(function (e) {
+      var scr = e.target;
+      scr._size = { w: scr.clientWidth, h: scr.clientHeight };
+      var rec = live.get(scr);
+      if (rec) rec.movers.forEach(function (m) { if (m.place) m.place(true); });
+    });
+  }) : null;
+
   function mount(scr, cfg) {
     unmount(scr);
+    scr._size = null;
     var movers = [];
     var rec = { movers: movers, visible: !seen };
 
@@ -772,6 +821,7 @@
       var ring = new Ring(el, scr, {
         anchor: cfg.anchor,
         level: level,
+        narrow: cfg.narrow,
         drift: cfg.drift && level === 0,
         dir: level === 1 ? -1 : 1,
         every: level ? 3600 + level * 900 : (letters ? 2000 : 2600),
@@ -816,12 +866,14 @@
 
     live.set(scr, rec);
     if (seen) seen.observe(scr);
+    if (resized) resized.observe(scr);
   }
 
   function unmount(scr) {
     if (!live.has(scr)) return;
     live.delete(scr);
     if (seen) seen.unobserve(scr);
+    if (resized) resized.unobserve(scr);
   }
 
   var tickers = [];
@@ -1093,47 +1145,58 @@
   function Builder(root) {
     var id = 'bld' + (++uid);
     var cfg = preset('orbital');
-    var swatches = THEME_ORDER.map(function (k) {
+
+    /* Twenty-six themes are too many to lay out as buttons, so they are a
+       dropdown: free ones first, then Premium, each with its two colours. */
+    function chip(t) {
+      return '<span class="sw-chip" style="--a:' + t.a + ';--b:' + t.b + ';--bg:' + t.bg + ';--panel:' + t.panel + '"><i></i><i></i></span>';
+    }
+    function option(k) {
       var t = THEMES[k];
-      return '<button type="button" class="sw' + (t.light ? ' sw-light' : '') + '" data-theme="' + k + '" aria-pressed="false" style="--a:' + t.a + ';--b:' + t.b + ';--bg:' + t.bg + ';--panel:' + t.panel + '">' +
-        '<span class="sw-chip"><i></i><i></i></span><span class="sw-name">' + t.name + (t.free ? '' : ' <em title="Orbital Premium">&#10022;</em>') + '</span></button>';
-    }).join('');
+      return '<li role="option" id="' + id + '-' + k + '" data-theme="' + k + '" aria-selected="false">' + chip(t) +
+        '<span>' + t.name + '</span>' + (t.free ? '' : '<em title="Orbital Premium">&#10022;</em>') + '</li>';
+    }
+    var free = THEME_ORDER.filter(function (k) { return THEMES[k].free; });
+    var paid = THEME_ORDER.filter(function (k) { return !THEMES[k].free; });
 
     root.innerHTML =
       '<div class="b-phone">' + device() + '<p class="b-note small muted">Drag the orbit to turn it.</p></div>' +
       '<div class="b-ctl">' +
-      '<div class="b-group"><p class="b-label">Theme <span class="b-theme-name"></span></p><div class="swatches">' + swatches + '</div></div>' +
+      '<div class="b-group"><p class="b-label" id="' + id + '-lbl">Theme</p><div class="tsel">' +
+      '<button type="button" class="tsel-btn" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="' + id + '-lbl ' + id + '-cur">' +
+      '<span class="tsel-chip"></span><span class="tsel-name" id="' + id + '-cur"></span><span class="tsel-tag"></span>' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>' +
+      '<ul class="tsel-list" role="listbox" tabindex="-1" aria-labelledby="' + id + '-lbl" hidden>' +
+      '<li class="tsel-h" role="presentation">Free</li>' + free.map(option).join('') +
+      '<li class="tsel-h" role="presentation">Orbital Premium</li>' + paid.map(option).join('') +
+      '</ul></div></div>' +
       segmented(id + 'l', 'Home layout', [['pages', 'Traditional pages'], ['roam', 'Free roam'], ['list', 'Drawer']], cfg.layout) +
       segmented(id + 'd', 'Dock', [['orbit', 'Orbit'], ['flat', 'Flat row'], ['container', 'Container'], ['none', 'None']], cfg.dock) +
       segmented(id + 'h', 'The dock holds', [['apps', 'Apps'], ['letters', 'Letters (drawer mode)']], cfg.holds) +
       segmented(id + 'e', 'Edge', [['bottom', 'Bottom'], ['left', 'Left'], ['right', 'Right'], ['top', 'Top']], cfg.anchor) +
       segmented(id + 'i', 'Icons', SHAPES.map(function (s) { return [s[0], s[0] === 'made' ? 'As made' : s[1]]; }), cfg.icons) +
-      segmented(id + 'x', 'Effect', [['none', 'None'], ['scan', 'Scan lines'], ['pulse', 'Pulse'], ['matrix', 'Matrix'], ['flow', 'Flowing edges']], 'none') +
       '</div>';
 
     var scr = root.querySelector('.scr');
-    var nameEl = root.querySelector('.b-theme-name');
     var noteEl = root.querySelector('.b-note');
+    var btn = root.querySelector('.tsel-btn');
+    var list = root.querySelector('.tsel-list');
+    var opts = Array.prototype.slice.call(list.querySelectorAll('[role="option"]'));
     var KEYS = { l: 'layout', d: 'dock', h: 'holds', e: 'anchor', i: 'icons' };
-
-    function effectOf(c) {
-      var fx = ['scan', 'pulse', 'matrix', 'flow'];
-      for (var i = 0; i < fx.length; i++) if (c.fx.indexOf(fx[i]) >= 0) return fx[i];
-      return 'none';
-    }
 
     function sync() {
       Object.keys(KEYS).forEach(function (k) {
         var inp = root.querySelector('input[name="' + id + k + '"][value="' + cfg[KEYS[k]] + '"]');
         if (inp) inp.checked = true;
       });
-      var fx = root.querySelector('input[name="' + id + 'x"][value="' + effectOf(cfg) + '"]');
-      if (fx) fx.checked = true;
-      Array.prototype.forEach.call(root.querySelectorAll('.sw'), function (b) {
-        b.setAttribute('aria-pressed', String(b.getAttribute('data-theme') === cfg.theme));
+      opts.forEach(function (o) {
+        o.setAttribute('aria-selected', String(o.getAttribute('data-theme') === cfg.theme));
       });
+      list.setAttribute('aria-activedescendant', id + '-' + cfg.theme);
       var t = THEMES[cfg.theme];
-      nameEl.textContent = t.name + (t.free ? ' · Free' : ' · Premium');
+      btn.querySelector('.tsel-chip').innerHTML = chip(t);
+      btn.querySelector('.tsel-name').textContent = t.name;
+      btn.querySelector('.tsel-tag').textContent = t.free ? 'Free' : 'Premium';
       noteEl.textContent = cfg.dock === 'orbit' && cfg.holds === 'apps'
         ? 'Drag the orbit to turn it.'
         : 'Every combination here is a real setting.';
@@ -1145,21 +1208,63 @@
       sync();
     }
 
-    root.addEventListener('click', function (e) {
-      var b = e.target.closest('.sw');
-      if (!b) return;
-      cfg = preset(b.getAttribute('data-theme'));
+    function pick(k) {
+      if (!THEMES[k] || k === cfg.theme) return;
+      cfg = preset(k);
       draw();
+      var o = document.getElementById(id + '-' + k);
+      if (o && !list.hidden) o.scrollIntoView({ block: 'nearest' });
+    }
+
+    function open(yes) {
+      list.hidden = !yes;
+      btn.setAttribute('aria-expanded', String(yes));
+      root.querySelector('.tsel').classList.toggle('is-open', yes);
+      if (yes) {
+        list.focus();
+        var o = document.getElementById(id + '-' + cfg.theme);
+        if (o) o.scrollIntoView({ block: 'nearest' });
+      }
+    }
+
+    btn.addEventListener('click', function () { open(list.hidden); });
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); open(true); }
+    });
+
+    list.addEventListener('click', function (e) {
+      var o = e.target.closest('[role="option"]');
+      if (!o) return;
+      pick(o.getAttribute('data-theme'));
+      open(false);
+      btn.focus();
+    });
+
+    /* The arrow keys move through the themes and show each one as they go;
+       Enter or Escape closes the list on whichever is showing. */
+    list.addEventListener('keydown', function (e) {
+      var order = free.concat(paid);
+      var at = order.indexOf(cfg.theme);
+      if (e.key === 'ArrowDown') pick(order[Math.min(order.length - 1, at + 1)]);
+      else if (e.key === 'ArrowUp') pick(order[Math.max(0, at - 1)]);
+      else if (e.key === 'Home') pick(order[0]);
+      else if (e.key === 'End') pick(order[order.length - 1]);
+      else if (e.key === 'Enter' || e.key === 'Escape' || e.key === 'Tab') {
+        open(false);
+        if (e.key !== 'Tab') btn.focus();
+        if (e.key === 'Tab') return;
+      } else return;
+      e.preventDefault();
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!list.hidden && !root.querySelector('.tsel').contains(e.target)) open(false);
     });
 
     root.addEventListener('change', function (e) {
       var n = e.target.name;
       var k = n.slice(id.length);
       if (KEYS[k]) cfg[KEYS[k]] = e.target.value;
-      if (k === 'x') {
-        cfg.fx = cfg.fx.filter(function (f) { return ['scan', 'pulse', 'matrix', 'flow'].indexOf(f) < 0; });
-        if (e.target.value !== 'none') cfg.fx.push(e.target.value);
-      }
       if (k === 'i' && cfg.icons === 'made') cfg.style = 'original';
       draw();
     });
@@ -1247,6 +1352,257 @@
     wait(600, run);
   }
 
+  /* A wait that holds still while its element is off screen or the tab is in
+     the background, so a scripted demo never runs where nobody can see it. */
+  function patient(el) {
+    var visible = true;
+    if (seen) new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }).observe(el);
+    return function wait(ms, fn) {
+      window.setTimeout(function again() {
+        if (!visible || document.hidden) { window.setTimeout(again, 400); return; }
+        fn();
+      }, ms);
+    };
+  }
+
+  /* ---- foldables: the same phone folded and open ---------------------------- */
+
+  /* Folded, the cover screen is an ordinary phone with its own dock. Open,
+     the two pages leave room for a dock they do not draw, and one dock is
+     drawn across both: the same orbit, centred over the hinge, for "two pages
+     side by side"; a longer flat row of its own for "a layout of its own". */
+  var FOLD = {
+    cover: { theme: 'orbital', cards: ['ask', 'cal'] },
+    pairBack: { theme: 'orbital', backOnly: true },
+    pairLeft: { theme: 'orbital', cards: ['ask', 'cal'], hideDock: true, bare: true, marks: 'none' },
+    pairRight: { theme: 'orbital', cards: ['weather', 'next'], clock: 'none', appGrid: true, hideDock: true, bare: true, marks: 'none' },
+    pairDock: { theme: 'orbital', names: 'none', lite: true, dockOnly: true, narrow: 0.5 },
+    ownBack: { theme: 'dusk', backOnly: true },
+    ownLeft: { theme: 'dusk', dock: 'flat', names: 'none', cards: ['next', 'play', 'note'], hideDock: true, bare: true, marks: 'none' },
+    ownRight: { theme: 'dusk', dock: 'flat', names: 'none', clock: 'none', cards: ['weather', 'cal'], hideDock: true, bare: true, marks: 'none' },
+    ownDock: { theme: 'dusk', dock: 'flat', names: 'none', dockCount: 8, dockOnly: true },
+  };
+
+  function Foldable(root) {
+    var id = 'fld' + (++uid);
+    root.innerHTML =
+      '<div class="fold-stage"><div class="fdev">' +
+      '<div class="fback"><div class="scr"></div></div>' +
+      '<div class="fhalf fl"><div class="scr"></div></div>' +
+      '<div class="fhalf fr"><div class="scr"></div></div>' +
+      '<div class="fdock"><div class="scr"></div></div>' +
+      '</div></div>' +
+      '<div class="fold-ctl">' +
+      segmented(id + 's', 'Phone', [['closed', 'Folded'], ['open', 'Open']], 'closed') +
+      segmented(id + 'm', 'The open screen', [['pair', 'Two pages side by side'], ['own', 'A layout of its own ✦']], 'pair') +
+      '</div>';
+    var dev = root.querySelector('.fdev');
+    var left = root.querySelector('.fl .scr');
+    var right = root.querySelector('.fr .scr');
+    var across = root.querySelector('.fdock .scr');
+    var back = root.querySelector('.fback .scr');
+    var state = { open: false, mode: 'pair' };
+    var drawn = '';
+    var auto = !still.matches;
+    var wait = patient(root);
+
+    function draw() {
+      var key = state.open ? state.mode : 'closed';
+      dev.classList.toggle('is-open', state.open);
+      root.querySelector('input[name="' + id + 's"][value="' + (state.open ? 'open' : 'closed') + '"]').checked = true;
+      root.querySelector('input[name="' + id + 'm"][value="' + state.mode + '"]').checked = true;
+      if (key === drawn) return;
+      drawn = key;
+      if (key === 'own') {
+        render(back, scene(FOLD.ownBack));
+        render(left, scene(FOLD.ownLeft));
+        render(right, scene(FOLD.ownRight));
+        render(across, scene(FOLD.ownDock));
+      } else if (key === 'pair') {
+        render(back, scene(FOLD.pairBack));
+        render(left, scene(FOLD.pairLeft));
+        render(right, scene(FOLD.pairRight));
+        render(across, scene(FOLD.pairDock));
+      } else {
+        render(left, scene(FOLD.cover));
+      }
+    }
+
+    root.addEventListener('change', function (e) {
+      if (e.target.name === id + 's') state.open = e.target.value === 'open';
+      if (e.target.name === id + 'm') { state.mode = e.target.value; state.open = true; }
+      auto = false;
+      draw();
+    });
+
+    var CYCLE = [{ open: false, mode: 'pair' }, { open: true, mode: 'pair' }, { open: true, mode: 'own' }];
+    var ci = 0;
+    draw();
+    render(right, scene(FOLD.pairRight));
+    render(across, scene(FOLD.pairDock));
+    (function next() {
+      wait(ci === 0 ? 2600 : 4200, function () {
+        if (!auto) return;
+        ci = (ci + 1) % CYCLE.length;
+        state.open = CYCLE[ci].open;
+        state.mode = CYCLE[ci].mode;
+        draw();
+        next();
+      });
+    })();
+  }
+
+  /* ---- a phone with a keyboard: type on the home screen ----------------------- */
+
+  var KEYROWS = [
+    ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+    ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'del'],
+    ['alt', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'sym', 'enter'],
+    ['shift', '0', 'space', '@', 'shift2'],
+  ];
+  var KEYFACE = { del: '⌫', alt: 'alt', sym: 'sym', enter: '↵', shift: '⇧', shift2: '⇧', space: '', '0': '0', '@': '@' };
+
+  function Keyboard(root) {
+    var t = THEMES.orbital;
+    var keys = KEYROWS.map(function (row) {
+      return '<div class="kb-row">' + row.map(function (k) {
+        return '<span class="key' + (k.length > 1 && k !== 'space' ? ' key-fn' : '') + (k === 'space' ? ' key-space' : '') + '" data-k="' + k + '">' + (KEYFACE[k] !== undefined ? KEYFACE[k] : k) + '</span>';
+      }).join('') + '</div>';
+    }).join('');
+    var dock = ['Phone', 'Messages', 'Browser', 'Camera', 'Mail'].map(function (n) { return icon(app(n), { icons: 'squircle', style: 'original' }); }).join('');
+    root.innerHTML =
+      '<div class="kbdev">' +
+      '<div class="scr kb-scr" style="--a:' + t.a + ';--b:' + t.b + ';--bg:' + t.bg + ';--panel:' + t.panel + ';--r:4cqw">' +
+      '<div class="wall"></div>' +
+      '<div class="sb"><span data-now="hm"></span><span class="sb-r"><i></i><i></i><b></b></span></div>' +
+      '<div class="kb-home"><div class="clk clk-center"><b data-now="hm"></b><span data-now="date"></span></div></div>' +
+      '<div class="kb-line">' + glyph('search') + '<span class="kb-typed"></span><span class="kb-caret"></span></div>' +
+      '<div class="kb-out"></div>' +
+      '<div class="kb-dock">' + dock + '</div>' +
+      '</div>' +
+      '<div class="kb-keys">' + keys + '</div>' +
+      '</div>' +
+      '<p class="kb-say small muted" aria-live="polite"></p>';
+    freshen(root);
+
+    var scr = root.querySelector('.kb-scr');
+    var typed = root.querySelector('.kb-typed');
+    var out = root.querySelector('.kb-out');
+    var say = root.querySelector('.kb-say');
+    var wait = patient(root);
+
+    function press(ch, hold) {
+      var k = ch === ' ' ? 'space' : ch === '\n' ? 'enter' : ch.toUpperCase();
+      var el = root.querySelector('.key[data-k="' + k + '"]');
+      if (!el) return;
+      el.classList.add(hold ? 'held' : 'down');
+      window.setTimeout(function () { el.classList.remove('down', 'held'); }, hold ? 1100 : 150);
+    }
+
+    function results(q) {
+      var hits = APPS.filter(function (a) { return a[0].toLowerCase().indexOf(q) >= 0; }).slice(0, 3);
+      return hits.map(function (a, i) {
+        var n = a[0];
+        var at = n.toLowerCase().indexOf(q);
+        var label = n.slice(0, at) + '<b>' + n.slice(at, at + q.length) + '</b>' + n.slice(at + q.length);
+        return '<span class="kb-hit' + (i === 0 ? ' on' : '') + '">' + icon(a, { icons: 'squircle', style: 'original' }) + '<span>' + label + '</span></span>';
+      }).join('');
+    }
+
+    var SCRIPT = [
+      { line: 'ma', say: 'Start typing anywhere on the home screen to find an app.', show: function (q) { return results(q); }, done: '<span class="kb-toast">Opening Maps</span>' },
+      { line: '@sam running late', say: 'Start with a shortcut mark to hand the line to Orbital Assistant.', show: function (q) {
+        return q.length > 4 ? '<span class="kb-card"><em>Text &middot; To Sam</em><b>' + (q.slice(5) ? q.slice(5).charAt(0).toUpperCase() + q.slice(6) : '&nbsp;') + '</b><i>Send</i></span>' : '';
+      }, done: '<span class="kb-toast">Sent to Sam</span>' },
+      { hold: 'C', say: 'Hold a key for a shortcut you choose.', done: '<span class="kb-toast"><b>C</b> Opening Camera</span>' },
+    ];
+    var si = 0;
+
+    function reset() {
+      typed.textContent = '';
+      out.innerHTML = '';
+      scr.classList.remove('is-typing');
+    }
+
+    function run() {
+      var s = SCRIPT[si];
+      si = (si + 1) % SCRIPT.length;
+      say.textContent = s.say;
+      if (s.hold) {
+        press(s.hold, true);
+        wait(900, function () {
+          out.innerHTML = s.done;
+          scr.classList.add('is-typing', 'is-done');
+          wait(1700, function () { scr.classList.remove('is-done'); reset(); wait(700, run); });
+        });
+        return;
+      }
+      scr.classList.add('is-typing');
+      var n = 0;
+      (function type() {
+        if (n < s.line.length) {
+          var ch = s.line.charAt(n++);
+          press(ch);
+          typed.textContent = s.line.slice(0, n);
+          out.innerHTML = s.show(s.line.slice(0, n));
+          wait(110 + Math.random() * 70, type);
+        } else {
+          wait(900, function () {
+            press('\n');
+            out.innerHTML = s.done;
+            scr.classList.add('is-done');
+            wait(1500, function () { scr.classList.remove('is-done'); reset(); wait(900, run); });
+          });
+        }
+      })();
+    }
+
+    if (still.matches) {
+      scr.classList.add('is-typing');
+      typed.textContent = 'ma';
+      out.innerHTML = results('ma');
+      say.textContent = SCRIPT[0].say;
+      return;
+    }
+    wait(900, run);
+  }
+
+  /* ---- Kids mode: big named apps, and a PIN to leave ------------------------- */
+
+  function Kids(root) {
+    var t = THEMES.bubble;
+    /* The apps a parent might pick. YouTube Kids is named, but drawn with a
+       plain play button rather than its maker's logo. */
+    var apps = [
+      ['YouTube Kids', 'tube', '#E62117', 'rounded'],
+      app('Music'),
+      ['Games', 'game', '#7C5CFF', 'squircle'],
+      app('Camera'),
+      app('Photos'),
+      app('Clock'),
+    ];
+    var cfg = { icons: 'squircle', style: 'original' };
+    var pad = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', ''].map(function (d, i) {
+      var x = 26 + (i % 3) * 24;
+      var y = 50 + Math.floor(i / 3) * 10;
+      return d ? '<span class="pin-k" style="left:' + x + '%;top:' + y + '%">' + d + '</span>' : '';
+    }).join('');
+    root.innerHTML = device('is-small') + '';
+    var scr = root.querySelector('.scr');
+    scr.className = 'scr kids';
+    scr.style.cssText = '--a:' + t.a + ';--b:' + t.b + ';--bg:' + t.bg + ';--panel:' + t.panel + ';--r:6cqw';
+    scr.innerHTML =
+      '<div class="wall"></div>' +
+      '<div class="sb"><span data-now="hm"></span><span class="sb-r"><i></i><i></i><b></b></span></div>' +
+      '<div class="kid-top"><b>Kids mode</b><span class="kid-lock"><svg viewBox="0 0 24 24"><path d="M7 11V8a5 5 0 0 1 10 0v3 M5.5 11h13v9h-13z"/></svg></span></div>' +
+      '<div class="kid-grid">' + apps.map(function (a) { return '<span class="kid-app">' + icon(a, cfg) + '<b>' + a[0] + '</b></span>'; }).join('') + '</div>' +
+      '<div class="pin"><b>Enter your PIN to leave</b><span class="pin-dots"><i></i><i></i><i></i><i></i></span>' + pad + '</div>' +
+      '<span class="kid-finger"></span>' +
+      '<span class="gbar"></span>';
+    freshen(scr);
+    mount(scr, preset('bubble'));
+  }
+
   /* ---- start everything that is on this page ------------------------------ */
 
   function each(sel, fn) {
@@ -1259,4 +1615,7 @@
   each('[data-shapes]', Shapes);
   each('[data-builder]', Builder);
   each('[data-ask]', Ask);
+  each('[data-foldable]', Foldable);
+  each('[data-keyboard]', Keyboard);
+  each('[data-kids]', Kids);
 })();

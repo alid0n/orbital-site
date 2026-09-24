@@ -214,8 +214,19 @@
      nobody can see it is a phone getting warm for no reason. */
   document.addEventListener('visibilitychange', function () {
     if (document.hidden) stop();
-    else if (!still.matches) start();
+    else if (!still.matches && onScreen) start();
   });
+
+  /* Nor while it is scrolled out of view, which on the front page is most of
+     the time: it sits at the very bottom. */
+  var onScreen = true;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      onScreen = entries[0].isIntersecting;
+      if (!onScreen) stop();
+      else if (!still.matches && !document.hidden) start();
+    }).observe(root);
+  }
 
   window.addEventListener('resize', place);
 
