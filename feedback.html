@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Feedback &mdash; Orbital Launcher</title>
+
+<meta name="description" content="Send feedback about Orbital Launcher: an idea, something that isn't working, or a question.">
+<meta name="theme-color" content="#07090e">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitallauncher.com/feedback.html">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="mark" href="./">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="19" rx="12" ry="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="12.5" r="3.4" fill="currentColor"/><circle cx="4.6" cy="20.4" r="2.1" fill="currentColor"/><circle cx="27.4" cy="20.4" r="2.1" fill="currentColor"/></svg>
+    <span>Orbital</span>
+  </a>
+  <nav aria-label="Site">
+    <a href="features.html">Features</a>
+    <a href="guide.html">Guide</a>
+    <a class="nav-cta" href="./#get">Get early access</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <h1>Send feedback</h1>
+  <p class="lede">
+    Ideas, something that isn't working, a question about privacy, or anything else.
+    Every message is read. You can also email
+    <a href="mailto:OrbitalLauncher@gmail.com">OrbitalLauncher@gmail.com</a>.
+  </p>
+
+  <!-- Posts to the same Formspree form as the tester sign-up, which forwards to
+       OrbitalLauncher@gmail.com; the destination is set in the Formspree account. -->
+  <form class="fb" method="POST" action="https://formspree.io/f/xdekarzy"
+        data-send data-said="fb-said" data-thanks="Thank you! Your feedback has been sent.">
+
+    <fieldset class="seg">
+      <legend>What is it about?</legend>
+      <div class="seg-opts">
+        <label><input type="radio" name="kind" value="Idea" checked><span>An idea</span></label>
+        <label><input type="radio" name="kind" value="Something isn't working"><span>Something isn't working</span></label>
+        <label><input type="radio" name="kind" value="Question"><span>A question</span></label>
+        <label><input type="radio" name="kind" value="Other"><span>Something else</span></label>
+      </div>
+    </fieldset>
+
+    <label class="fb-field">
+      <span>Your message</span>
+      <textarea name="message" rows="7" required maxlength="5000"
+                placeholder="What's on your mind? If something isn't working, what you did just before it helps a lot."></textarea>
+    </label>
+
+    <div class="fb-row">
+      <!-- Required: the Formspree form this posts to is set to refuse a post with no email. -->
+      <label class="fb-field">
+        <span>Your email <em>so you can get a reply</em></span>
+        <input type="email" name="email" required autocomplete="email" spellcheck="false" placeholder="you@example.com">
+      </label>
+      <label class="fb-field">
+        <span>Your phone <em>optional</em></span>
+        <input type="text" name="phone model" autocomplete="off" maxlength="80" placeholder="e.g. Pixel 9, Galaxy Z Fold 6">
+      </label>
+    </div>
+
+    <input type="hidden" name="_subject" value="Orbital feedback">
+    <!-- Left empty by people and filled in by robots. -->
+    <input class="sr-only" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <button type="submit" class="btn">Send feedback</button>
+    <p class="ask-said small muted" id="fb-said" role="status"></p>
+  </form>
+
+  <p class="small muted">
+    What you send is used only to read and answer your message, and is never shared. See the
+    <a href="privacy.html">privacy policy</a>.
+  </p>
+</main>
+
+<footer class="foot">
+  <p class="foot-mark">Orbital Launcher</p>
+  <p><a href="./">Home</a> &middot; <a href="features.html">Features</a> &middot; <a href="guide.html">Guide</a> &middot; <a href="privacy.html">Privacy policy</a></p>
+</footer>
+
+<script src="assets/ask.js?v=3"></script>
+</body>
+</html>
