@@ -65,7 +65,7 @@
     }).then(function (answer) {
       if (!answer.ok) throw new Error('rejected');
       form.reset();
-      say('Thank you. You will get an email with the download.', true);
+      say("Thank you! You'll get an email with the download link soon.", true);
     }).catch(function () {
       offerMail(address);
     }).then(function () {

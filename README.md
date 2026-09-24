@@ -4,12 +4,18 @@ The site for Orbital Launcher. Three pages, no build step, no dependencies: what
 is in this folder is what gets served.
 
 ```
-index.html      the front page, with the dock as the menu
+index.html      the front page: the turning phone, every feature, and the tester form
 guide.html      every feature and every setting, page by page
 privacy.html    the privacy policy
 assets/
   site.css      one stylesheet for index and guide
-  orbit.js      the wheel: idle turn, scroll to spin, drag, arrow keys
+  phone.js      draws every phone on the front page from a plain description
+                (theme, home layout, dock, edge, icon shape); the hero's
+                turning showcase, the edge and icon demos, the theme builder
+                and the Ask Orbital demo all live here
+  phone.css     how those phones look, sized in cqw so one drawing scales
+  orbit.js      the guide's contents as a wheel: idle turn, scroll, drag, keys
+  ask.js        the tester form, with a mail fallback
   toc.js        marks the section you are reading in the guide's rail
   favicon.svg
 CNAME           orbitallauncher.com, for GitHub Pages
