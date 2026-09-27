@@ -1,0 +1,66 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "neon_80s",
+  "name": "80s Neon",
+  "description": "Hot pink and electric cyan over a glowing grid that runs to the horizon.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "era:80s",
+    "vibe:retro",
+    "vibe:energetic",
+    "color:pink",
+    "color:neon",
+    "color:blue"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FF3FA4",
+    "accentAlt": "#29E6FF",
+    "ink": "#FFE9F6",
+    "dim": "#B58DC0",
+    "drawer": "#0B0214",
+    "surface": "#12041E",
+    "elevated": "#220A34",
+    "veil": "#55000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "ROUNDED",
+    "iconStyle": "DUOTONE",
+    "widgetLook": "OUTLINE",
+    "widgetCorner": "SLIGHT",
+    "widgetEdge": "FINE",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "audiowide",
+    "clockFace": "LINE",
+    "uppercase": true,
+    "panelLook": "LINES",
+    "notch": "RUNG",
+    "glow": true,
+    "flow": true
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "HORIZON",
+      "colors": [
+        "#1A0433",
+        "#000000",
+        "#FF3FA4",
+        "#29E6FF",
+        "#6B3CFF"
+      ],
+      "light": false
+    }
+  },
+  "effect": "twinkle-stars"
+}

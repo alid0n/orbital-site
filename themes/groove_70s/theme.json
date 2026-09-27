@@ -1,0 +1,62 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "groove_70s",
+  "name": "70s Groove",
+  "description": "Burnt orange, mustard and chocolate brown, with soft rounded shapes and a warm glow.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "era:70s",
+    "vibe:retro",
+    "vibe:cozy",
+    "color:orange",
+    "color:yellow"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFB347",
+    "accentAlt": "#E8743B",
+    "ink": "#FFF1DC",
+    "dim": "#C9A27E",
+    "drawer": "#1E120A",
+    "surface": "#28180D",
+    "elevated": "#3A2414",
+    "veil": "#33140A04",
+    "light": false
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "PILL",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.3,
+    "widgetSolid": 0.9,
+    "font": "baloo_2",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "DOT",
+    "glow": false
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "DUNES",
+      "colors": [
+        "#3B1F0E",
+        "#E8743B",
+        "#FFB347",
+        "#D9A441",
+        "#1A0F08"
+      ],
+      "light": false
+    }
+  }
+}

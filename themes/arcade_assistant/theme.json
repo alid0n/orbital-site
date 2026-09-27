@@ -1,0 +1,39 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "arcade_assistant",
+  "name": "Arcade Assistant",
+  "description": "A glowing retro terminal for Orbital Assistant, with answers that type themselves out.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:assistant",
+    "vibe:retro",
+    "era:80s",
+    "color:green",
+    "color:black"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "TERMINAL",
+  "colors": {
+    "accent": "#4BE35A",
+    "accentAlt": "#A8FF60",
+    "ink": "#E8FFE9",
+    "dim": "#86A889",
+    "drawer": "#030603",
+    "surface": "#070C07",
+    "elevated": "#102012",
+    "veil": "#55000000",
+    "light": false
+  },
+  "look": {
+    "font": "vt323"
+  },
+  "assistant": {
+    "look": "RETRO"
+  }
+}

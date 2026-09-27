@@ -1,0 +1,65 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "disco",
+  "name": "Disco",
+  "description": "Mirror-ball lights sweep the page in magenta, gold and blue. The party starts on your home screen.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "era:70s",
+    "vibe:energetic",
+    "vibe:playful",
+    "color:purple",
+    "color:gold",
+    "color:neon"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFCC4D",
+    "accentAlt": "#FF4FD8",
+    "ink": "#FFF6E6",
+    "dim": "#C0A3C8",
+    "drawer": "#0C0412",
+    "surface": "#14081C",
+    "elevated": "#241030",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "FINE",
+    "widgetTint": 0.3,
+    "widgetSolid": 0.7,
+    "font": "outfit",
+    "clockFace": "LINE",
+    "uppercase": true,
+    "panelLook": "CARD",
+    "notch": "DOT",
+    "glow": true
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "ARCS",
+      "colors": [
+        "#1E0A2A",
+        "#08030C",
+        "#FFCC4D",
+        "#FF4FD8",
+        "#4FC3FF"
+      ],
+      "light": false
+    }
+  },
+  "effect": "disco-lights"
+}

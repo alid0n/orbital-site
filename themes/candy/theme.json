@@ -1,0 +1,61 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "candy",
+  "name": "Candy Shop",
+  "description": "Bubblegum pink, mint and lemon on a soft cream page. Sweet, bright and easy to read.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:kids",
+    "vibe:playful",
+    "color:pink",
+    "color:pastel",
+    "style:easy to see"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#D6337A",
+    "accentAlt": "#2E9E86",
+    "ink": "#3A1830",
+    "dim": "#8A6A80",
+    "drawer": "#FFF6FA",
+    "surface": "#FFF9FB",
+    "elevated": "#FFE8F2",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "PILL",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.35,
+    "widgetSolid": 0.95,
+    "widgetShadow": true,
+    "font": "fredoka",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "DOT"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "BUBBLES",
+      "colors": [
+        "#FFE3F0",
+        "#FFF7E6",
+        "#FF8FC7",
+        "#8FE3C8",
+        "#FFE27A"
+      ],
+      "light": true
+    }
+  }
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Theme catalog &mdash; Orbital Launcher</title>
+
+<meta name="description" content="Themes for Orbital Launcher: retro decades, cozy evenings, bright colors, animated sparkles and more. Download them from the theme store in the app.">
+<meta name="theme-color" content="#07090e">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://orbitallauncher.com/themes.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Orbital Launcher theme catalog">
+<meta property="og:description" content="Themes for Orbital Launcher, ready to download from the theme store in the app.">
+<meta property="og:url" content="https://orbitallauncher.com/themes.html">
+<meta property="og:image" content="https://orbitallauncher.com/assets/og-image.jpg?v=3">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Orbital Launcher">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=7">
+<script src="assets/theme.js"></script>
+<style>
+  .catalog-tools { display: flex; flex-wrap: wrap; gap: 10px; margin: 1.5rem 0 0.5rem; }
+  .catalog-tools input {
+    flex: 1 1 16rem; min-width: 0; padding: 0.7rem 0.9rem; border-radius: 12px;
+    border: 1px solid var(--card-edge); background: var(--bg-lift); color: var(--text); font: inherit;
+  }
+  .catalog-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+  .catalog-tabs button {
+    font: inherit; font-size: 0.9rem; padding: 0.5rem 0.9rem; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--card-edge); background: var(--card); color: var(--text);
+  }
+  .catalog-tabs button[aria-pressed='true'] { background: var(--accent); color: #07130f; border-color: var(--accent); }
+  :root[data-theme='light'] .catalog-tabs button[aria-pressed='true'] { color: #ffffff; }
+  .catalog-grid {
+    display: grid; gap: 16px; margin: 1.25rem 0 2.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  }
+  .theme-card {
+    display: flex; gap: 14px; padding: 14px; border-radius: var(--radius);
+    background: var(--card); border: 1px solid var(--card-edge);
+  }
+  .theme-card img { width: 72px; height: 144px; object-fit: cover; border-radius: 10px; flex: none; background: var(--bg-lift); }
+  .theme-card h2 { font-size: 1.05rem; margin: 0 0 0.25rem; }
+  .theme-card p { font-size: 0.88rem; margin: 0 0 0.5rem; color: var(--muted); }
+  .theme-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .theme-tags span { font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--rule); color: var(--muted); }
+  .premium-mark { color: var(--accent); font-weight: 700; }
+  .catalog-empty { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="mark" href="./">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="19" rx="12" ry="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="12.5" r="3.4" fill="currentColor"/><circle cx="4.6" cy="20.4" r="2.1" fill="currentColor"/><circle cx="27.4" cy="20.4" r="2.1" fill="currentColor"/></svg>
+    <span>Orbital</span>
+  </a>
+  <nav aria-label="Site">
+    <a href="features.html">Features</a>
+    <a href="guide.html">Guide</a>
+    <a class="nav-cta" href="./#get">Get early access</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <h1>Theme catalog</h1>
+  <p class="lede">New looks for your home screen, from retro decades to cozy evenings. Open the theme store in Orbital, find one you like and tap Get, then choose which parts of it to use.</p>
+
+  <div class="catalog-tools">
+    <input id="q" type="search" placeholder="Search themes: beach, 80s, neon…" aria-label="Search themes">
+  </div>
+  <div class="catalog-tabs" role="group" aria-label="Theme groups">
+    <button type="button" data-group="all" aria-pressed="true">All</button>
+    <button type="button" data-group="general" aria-pressed="false">General</button>
+    <button type="button" data-group="kids" aria-pressed="false">Kids</button>
+    <button type="button" data-group="assistant" aria-pressed="false">Orbital Assistant</button>
+  </div>
+
+  <div id="grid" class="catalog-grid" aria-live="polite"></div>
+  <p class="small muted">Themes marked <span class="premium-mark">&#10022;</span> are part of Orbital Premium. Downloading any theme is free, and no personal data is sent when you do.</p>
+</main>
+
+<footer class="foot">
+  <p class="foot-mark">Orbital Launcher</p>
+  <p><a href="./">Home</a> &middot; <a href="features.html">Features</a> &middot; <a href="guide.html">Guide</a> &middot; <a href="themes.html">Themes</a> &middot; <a href="privacy.html">Privacy policy</a> &middot; <a href="feedback.html">Feedback</a></p>
+</footer>
+
+<script>
+(function () {
+  var grid = document.getElementById('grid');
+  var query = document.getElementById('q');
+  var group = 'all';
+  var themes = [];
+
+  function audience(theme) {
+    var tag = (theme.tags || []).filter(function (t) { return t.indexOf('audience:') === 0; })[0];
+    return tag ? tag.slice(9) : 'general';
+  }
+
+  function words(theme) {
+    return [theme.name, theme.description].concat((theme.tags || []).map(function (t) { return t.split(':')[1]; }))
+      .join(' ').toLowerCase();
+  }
+
+  function card(theme) {
+    var el = document.createElement('article');
+    el.className = 'theme-card';
+    var img = document.createElement('img');
+    img.src = 'themes/' + theme.thumbnail;
+    img.alt = 'A preview of ' + theme.name;
+    img.loading = 'lazy';
+    img.width = 72;
+    img.height = 144;
+    var body = document.createElement('div');
+    var title = document.createElement('h2');
+    title.textContent = theme.name;
+    if (theme.premium) {
+      var mark = document.createElement('span');
+      mark.className = 'premium-mark';
+      mark.textContent = ' ✦';
+      mark.title = 'Part of Orbital Premium';
+      title.appendChild(mark);
+    }
+    var line = document.createElement('p');
+    line.textContent = theme.description;
+    var tags = document.createElement('div');
+    tags.className = 'theme-tags';
+    (theme.tags || []).filter(function (t) { return t.indexOf('audience:') !== 0; }).forEach(function (t) {
+      var chip = document.createElement('span');
+      chip.textContent = t.split(':')[1];
+      tags.appendChild(chip);
+    });
+    body.appendChild(title);
+    body.appendChild(line);
+    body.appendChild(tags);
+    el.appendChild(img);
+    el.appendChild(body);
+    return el;
+  }
+
+  function render() {
+    var typed = query.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    var shown = themes.filter(function (theme) {
+      if (group !== 'all' && audience(theme) !== group) return false;
+      var hay = words(theme);
+      return typed.every(function (w) { return hay.indexOf(w) !== -1; });
+    });
+    grid.textContent = '';
+    if (!shown.length) {
+      var none = document.createElement('p');
+      none.className = 'catalog-empty';
+      none.textContent = themes.length ? 'No themes match yet. Try another word.' : 'The catalog is loading.';
+      grid.appendChild(none);
+      return;
+    }
+    shown.forEach(function (theme) { grid.appendChild(card(theme)); });
+  }
+
+  document.querySelectorAll('.catalog-tabs button').forEach(function (button) {
+    button.addEventListener('click', function () {
+      group = button.getAttribute('data-group');
+      document.querySelectorAll('.catalog-tabs button').forEach(function (b) {
+        b.setAttribute('aria-pressed', b === button ? 'true' : 'false');
+      });
+      render();
+    });
+  });
+  query.addEventListener('input', render);
+
+  render();
+  fetch('themes/index.json').then(function (r) { return r.json(); }).then(function (index) {
+    themes = index.themes || [];
+    render();
+  }).catch(function () {
+    grid.textContent = '';
+    var p = document.createElement('p');
+    p.className = 'catalog-empty';
+    p.textContent = 'The catalog could not be loaded. Please try again later.';
+    grid.appendChild(p);
+  });
+})();
+</script>
+</body>
+</html>

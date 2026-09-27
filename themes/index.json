@@ -1,0 +1,500 @@
+{
+  "kind": "orbital-theme-index",
+  "format": 1,
+  "themes": [
+    {
+      "id": "groove_70s",
+      "name": "70s Groove",
+      "description": "Burnt orange, mustard and chocolate brown, with soft rounded shapes and a warm glow.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "era:70s",
+        "vibe:retro",
+        "vibe:cozy",
+        "color:orange",
+        "color:yellow"
+      ],
+      "thumbnail": "groove_70s/preview.png",
+      "file": "groove_70s/theme.json",
+      "premium": false,
+      "size": 1249,
+      "sha256": "13e8183b5cfd2de64e42c9ab9556a7c7e22bf0359cb21d4a703e135f11c58c2a",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFB347",
+        "accentAlt": "#E8743B",
+        "ink": "#FFF1DC",
+        "dim": "#C9A27E",
+        "drawer": "#1E120A",
+        "surface": "#28180D",
+        "elevated": "#3A2414",
+        "veil": "#33140A04",
+        "light": false
+      }
+    },
+    {
+      "id": "neon_80s",
+      "name": "80s Neon",
+      "description": "Hot pink and electric cyan over a glowing grid that runs to the horizon.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "era:80s",
+        "vibe:retro",
+        "vibe:energetic",
+        "color:pink",
+        "color:neon",
+        "color:blue"
+      ],
+      "thumbnail": "neon_80s/preview.png",
+      "file": "neon_80s/theme.json",
+      "premium": true,
+      "size": 1333,
+      "sha256": "3233f90eb390a8c63fc10989ff6f24f6c377bbe62efbd1e7e121f70afcc78958",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF3FA4",
+        "accentAlt": "#29E6FF",
+        "ink": "#FFE9F6",
+        "dim": "#B58DC0",
+        "drawer": "#0B0214",
+        "surface": "#12041E",
+        "elevated": "#220A34",
+        "veil": "#55000000",
+        "light": false
+      }
+    },
+    {
+      "id": "bright_90s",
+      "name": "90s Bright",
+      "description": "Bold teal, purple and sunshine yellow, with playful shapes and a light, friendly page.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "era:90s",
+        "vibe:playful",
+        "vibe:energetic",
+        "color:purple",
+        "color:yellow"
+      ],
+      "thumbnail": "bright_90s/preview.png",
+      "file": "bright_90s/theme.json",
+      "premium": false,
+      "size": 1248,
+      "sha256": "52401dd3b58122e4cdfe45f68684f5a41ad6e925067d7f2d739a23452d6c2ca9",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#7B2FBF",
+        "accentAlt": "#0E9C9C",
+        "ink": "#1D1230",
+        "dim": "#6A5C80",
+        "drawer": "#FFF8E8",
+        "surface": "#FFFBF0",
+        "elevated": "#F2ECFF",
+        "veil": "#11FFFFFF",
+        "light": true
+      }
+    },
+    {
+      "id": "y2k_chrome",
+      "name": "Y2K Chrome",
+      "description": "Liquid silver, icy blue and frosted glass, straight out of the new millennium.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "era:2000s",
+        "vibe:futuristic",
+        "vibe:dreamy",
+        "color:blue",
+        "color:white"
+      ],
+      "thumbnail": "y2k_chrome/preview.png",
+      "file": "y2k_chrome/theme.json",
+      "premium": true,
+      "size": 1245,
+      "sha256": "d19601bde44d8bf75db1b8f96f4f51ef447c9f3080f7e7d67b9097df2da59beb",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#9FD8FF",
+        "accentAlt": "#D5C8FF",
+        "ink": "#F2F7FF",
+        "dim": "#9AA7BA",
+        "drawer": "#0A0F18",
+        "surface": "#101826",
+        "elevated": "#1B2638",
+        "veil": "#33060A14",
+        "light": false
+      }
+    },
+    {
+      "id": "candy",
+      "name": "Candy Shop",
+      "description": "Bubblegum pink, mint and lemon on a soft cream page. Sweet, bright and easy to read.",
+      "version": 1,
+      "tags": [
+        "audience:kids",
+        "vibe:playful",
+        "color:pink",
+        "color:pastel",
+        "style:easy to see"
+      ],
+      "thumbnail": "candy/preview.png",
+      "file": "candy/theme.json",
+      "premium": false,
+      "size": 1243,
+      "sha256": "7537d727c98c627954589f361657f9cee1d3c09b6628de1a13573d5e1f5fab3d",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#D6337A",
+        "accentAlt": "#2E9E86",
+        "ink": "#3A1830",
+        "dim": "#8A6A80",
+        "drawer": "#FFF6FA",
+        "surface": "#FFF9FB",
+        "elevated": "#FFE8F2",
+        "veil": "#11FFFFFF",
+        "light": true
+      }
+    },
+    {
+      "id": "road_trip",
+      "name": "Road Trip",
+      "description": "Asphalt grey with sunset orange and dashed-line yellow, ready for the open road.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:sporty",
+        "vibe:energetic",
+        "color:orange",
+        "color:black"
+      ],
+      "thumbnail": "road_trip/preview.png",
+      "file": "road_trip/theme.json",
+      "premium": false,
+      "size": 1318,
+      "sha256": "a4c1f88dcc4ddd5e56284b54e5791bce5ad58ff700729ec4b66dbd429d702765",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF8A3D",
+        "accentAlt": "#FFD23F",
+        "ink": "#FFF3E6",
+        "dim": "#B39C88",
+        "drawer": "#111214",
+        "surface": "#17191C",
+        "elevated": "#24272B",
+        "veil": "#44000000",
+        "light": false
+      }
+    },
+    {
+      "id": "beach",
+      "name": "Beach",
+      "description": "Sea-glass turquoise, warm sand and a bright summer sky.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:chill",
+        "vibe:calm",
+        "color:blue",
+        "color:yellow",
+        "color:pastel"
+      ],
+      "thumbnail": "beach/preview.png",
+      "file": "beach/theme.json",
+      "premium": false,
+      "size": 1203,
+      "sha256": "398f0b400424cd8f069e03d7298fc04903364de6af0ff669145c7936f2c8b754",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#0B7F8C",
+        "accentAlt": "#D9822B",
+        "ink": "#10303A",
+        "dim": "#5E7B80",
+        "drawer": "#F4FBFA",
+        "surface": "#F8FCFB",
+        "elevated": "#E3F4F2",
+        "veil": "#11FFFFFF",
+        "light": true
+      }
+    },
+    {
+      "id": "sparkles",
+      "name": "Sparkles",
+      "description": "Midnight violet scattered with shimmering stars that sparkle across your home screen.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dreamy",
+        "vibe:elegant",
+        "color:purple",
+        "color:gold"
+      ],
+      "thumbnail": "sparkles/preview.png",
+      "file": "sparkles/theme.json",
+      "premium": true,
+      "size": 1260,
+      "sha256": "0af0afcca97c5bacdb1533eabc4eef163d77643c2a3c31593d73a628ebd50153",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#F5C8FF",
+        "accentAlt": "#FFD98A",
+        "ink": "#FCF3FF",
+        "dim": "#B49BC4",
+        "drawer": "#0E0718",
+        "surface": "#150A22",
+        "elevated": "#241236",
+        "veil": "#33000000",
+        "light": false
+      }
+    },
+    {
+      "id": "disco",
+      "name": "Disco",
+      "description": "Mirror-ball lights sweep the page in magenta, gold and blue. The party starts on your home screen.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "era:70s",
+        "vibe:energetic",
+        "vibe:playful",
+        "color:purple",
+        "color:gold",
+        "color:neon"
+      ],
+      "thumbnail": "disco/preview.png",
+      "file": "disco/theme.json",
+      "premium": true,
+      "size": 1328,
+      "sha256": "d6c38e373ed8b572f1c22333ceff3126019eaeb0c2329227ddaf70102a9addb2",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFCC4D",
+        "accentAlt": "#FF4FD8",
+        "ink": "#FFF6E6",
+        "dim": "#C0A3C8",
+        "drawer": "#0C0412",
+        "surface": "#14081C",
+        "elevated": "#241030",
+        "veil": "#44000000",
+        "light": false
+      }
+    },
+    {
+      "id": "gaming_90s",
+      "name": "90s Gaming System",
+      "description": "Classic grey plastic, a deep purple accent and chunky pixel lettering, like an evening of couch co-op.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "era:90s",
+        "vibe:retro",
+        "vibe:playful",
+        "color:purple",
+        "style:power user"
+      ],
+      "thumbnail": "gaming_90s/preview.png",
+      "file": "gaming_90s/theme.json",
+      "premium": false,
+      "size": 1360,
+      "sha256": "c46a7032996b2b0f8f2c848a4eaf6e0bb25885438ff6e32ad59ec78eea2da076",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#8C7BFF",
+        "accentAlt": "#E0503C",
+        "ink": "#EDEBF2",
+        "dim": "#9C98A8",
+        "drawer": "#1A1A20",
+        "surface": "#222229",
+        "elevated": "#302F3A",
+        "veil": "#33000000",
+        "light": false
+      }
+    },
+    {
+      "id": "gaming_future",
+      "name": "Futuristic Gaming System",
+      "description": "Ice-white panels, neon cyan edges and a quiet hum of starlight. Next generation, today.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:futuristic",
+        "vibe:energetic",
+        "color:blue",
+        "color:neon",
+        "color:white",
+        "style:power user"
+      ],
+      "thumbnail": "gaming_future/preview.png",
+      "file": "gaming_future/theme.json",
+      "premium": true,
+      "size": 1381,
+      "sha256": "73d6ced02d987c7530678b4afbaeaca40ed8f430661c7c9bd4403787e3f5d033",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#34F5FF",
+        "accentAlt": "#7B6CFF",
+        "ink": "#EAFBFF",
+        "dim": "#86A6B3",
+        "drawer": "#03070C",
+        "surface": "#060D14",
+        "elevated": "#0D1A26",
+        "veil": "#55000000",
+        "light": false
+      }
+    },
+    {
+      "id": "gaming_green",
+      "name": "Green Gaming System",
+      "description": "Deep black with bright green highlights and a crisp monospace readout.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dark",
+        "vibe:energetic",
+        "color:green",
+        "color:black",
+        "style:power user"
+      ],
+      "thumbnail": "gaming_green/preview.png",
+      "file": "gaming_green/theme.json",
+      "premium": false,
+      "size": 1339,
+      "sha256": "7008d67bbbf6abda01e5365c64f65ae3010676e9ce1edff95bc4ef10208952df",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#4BE35A",
+        "accentAlt": "#A8FF60",
+        "ink": "#E8FFE9",
+        "dim": "#86A889",
+        "drawer": "#030603",
+        "surface": "#070C07",
+        "elevated": "#102012",
+        "veil": "#55000000",
+        "light": false
+      }
+    },
+    {
+      "id": "cozy_cabin",
+      "name": "Cozy Cabin",
+      "description": "Firelight amber, pine green and warm wood. A blanket-and-cocoa kind of home screen.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:cozy",
+        "vibe:calm",
+        "color:orange",
+        "color:green"
+      ],
+      "thumbnail": "cozy_cabin/preview.png",
+      "file": "cozy_cabin/theme.json",
+      "premium": false,
+      "size": 1218,
+      "sha256": "d84b67b62ac9700a389d11341208b1d10cf984ae9f400bb92ce5799757950361",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#F0A35E",
+        "accentAlt": "#8DB38B",
+        "ink": "#FBEFE2",
+        "dim": "#B59C85",
+        "drawer": "#140E0A",
+        "surface": "#1C140E",
+        "elevated": "#2A1F16",
+        "veil": "#33120A04",
+        "light": false
+      }
+    },
+    {
+      "id": "midnight_jazz",
+      "name": "Midnight Jazz",
+      "description": "Smoky navy, brass and a single spotlight. Elegant, late and unhurried.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:elegant",
+        "vibe:chill",
+        "vibe:dark",
+        "color:blue",
+        "color:gold"
+      ],
+      "thumbnail": "midnight_jazz/preview.png",
+      "file": "midnight_jazz/theme.json",
+      "premium": true,
+      "size": 1270,
+      "sha256": "495250265a7ab87d26311e1276899ffe59f97d83ce96ce31784e537ea932a9ef",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E0B865",
+        "accentAlt": "#8FA9E0",
+        "ink": "#F5EEDC",
+        "dim": "#A39C8C",
+        "drawer": "#070A12",
+        "surface": "#0C1120",
+        "elevated": "#161E33",
+        "veil": "#44000000",
+        "light": false
+      }
+    },
+    {
+      "id": "crayon_box",
+      "name": "Crayon Box",
+      "description": "Big, bright crayon colors, rounded shapes and friendly handwriting for young explorers.",
+      "version": 1,
+      "tags": [
+        "audience:kids",
+        "vibe:playful",
+        "color:red",
+        "color:blue",
+        "color:yellow",
+        "style:easy to see"
+      ],
+      "thumbnail": "crayon_box/preview.png",
+      "file": "crayon_box/theme.json",
+      "premium": false,
+      "size": 1246,
+      "sha256": "37f43359df04740cc8ddcac649880a3f2a3926a15f19f6c13e65cef2acb9a9da",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#1F6FD1",
+        "accentAlt": "#E0402F",
+        "ink": "#1E1A14",
+        "dim": "#6F665A",
+        "drawer": "#FFFBF2",
+        "surface": "#FFFDF7",
+        "elevated": "#FFF1D6",
+        "veil": "#11FFFFFF",
+        "light": true
+      }
+    },
+    {
+      "id": "arcade_assistant",
+      "name": "Arcade Assistant",
+      "description": "A glowing retro terminal for Orbital Assistant, with answers that type themselves out.",
+      "version": 1,
+      "tags": [
+        "audience:assistant",
+        "vibe:retro",
+        "era:80s",
+        "color:green",
+        "color:black"
+      ],
+      "thumbnail": "arcade_assistant/preview.png",
+      "file": "arcade_assistant/theme.json",
+      "premium": false,
+      "size": 783,
+      "sha256": "bbb8b2fa2d1971d167e15d8ae753fc97b2f2aff20ec77ec56a6764ccf3f1cfd1",
+      "base": "TERMINAL",
+      "colors": {
+        "accent": "#4BE35A",
+        "accentAlt": "#A8FF60",
+        "ink": "#E8FFE9",
+        "dim": "#86A889",
+        "drawer": "#030603",
+        "surface": "#070C07",
+        "elevated": "#102012",
+        "veil": "#55000000",
+        "light": false
+      }
+    }
+  ]
+}

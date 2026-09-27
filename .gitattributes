@@ -1,0 +1,2 @@
+# Theme files are checked by their SHA-256 in themes/index.json, so they are stored byte for byte.
+themes/** -text

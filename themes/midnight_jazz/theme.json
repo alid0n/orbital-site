@@ -1,0 +1,62 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "midnight_jazz",
+  "name": "Midnight Jazz",
+  "description": "Smoky navy, brass and a single spotlight. Elegant, late and unhurried.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:elegant",
+    "vibe:chill",
+    "vibe:dark",
+    "color:blue",
+    "color:gold"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#E0B865",
+    "accentAlt": "#8FA9E0",
+    "ink": "#F5EEDC",
+    "dim": "#A39C8C",
+    "drawer": "#070A12",
+    "surface": "#0C1120",
+    "elevated": "#161E33",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "CIRCLE",
+    "iconStyle": "MONOCHROME",
+    "widgetLook": "BARE",
+    "widgetCorner": "SLIGHT",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.1,
+    "widgetSolid": 0.3,
+    "font": "playfair_display",
+    "clockFace": "ANALOGUE",
+    "panelLook": "FADE",
+    "notch": "TAPER"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "SILK",
+      "colors": [
+        "#141B33",
+        "#05070E",
+        "#E0B865",
+        "#C9A6C3",
+        "#2B3358"
+      ],
+      "light": false
+    }
+  },
+  "effect": "twinkle-stars"
+}

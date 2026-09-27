@@ -1,0 +1,62 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "sparkles",
+  "name": "Sparkles",
+  "description": "Midnight violet scattered with shimmering stars that sparkle across your home screen.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:elegant",
+    "color:purple",
+    "color:gold"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#F5C8FF",
+    "accentAlt": "#FFD98A",
+    "ink": "#FCF3FF",
+    "dim": "#B49BC4",
+    "drawer": "#0E0718",
+    "surface": "#150A22",
+    "elevated": "#241236",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "PILL",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.3,
+    "widgetSolid": 0.45,
+    "font": "cormorant",
+    "clockFace": "STACK",
+    "panelLook": "FADE",
+    "notch": "DOT",
+    "glow": true
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "NEBULA",
+      "colors": [
+        "#1C0B30",
+        "#07030F",
+        "#F5C8FF",
+        "#FFD98A",
+        "#9B8CFF"
+      ],
+      "light": false
+    }
+  },
+  "effect": "sparkles"
+}

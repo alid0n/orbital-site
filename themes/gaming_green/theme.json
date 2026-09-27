@@ -1,0 +1,66 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "gaming_green",
+  "name": "Green Gaming System",
+  "description": "Deep black with bright green highlights and a crisp monospace readout.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:dark",
+    "vibe:energetic",
+    "color:green",
+    "color:black",
+    "style:power user"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#4BE35A",
+    "accentAlt": "#A8FF60",
+    "ink": "#E8FFE9",
+    "dim": "#86A889",
+    "drawer": "#030603",
+    "surface": "#070C07",
+    "elevated": "#102012",
+    "veil": "#55000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SQUARE",
+    "iconShape": "SQUARE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "OUTLINE",
+    "widgetCorner": "SQUARE",
+    "widgetEdge": "FINE",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.5,
+    "font": "share_tech_mono",
+    "clockFace": "LINE",
+    "uppercase": true,
+    "panelLook": "LINES",
+    "notch": "RUNG",
+    "glow": true
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "HEX",
+      "colors": [
+        "#0A1A0B",
+        "#000000",
+        "#4BE35A",
+        "#A8FF60",
+        "#135C1A"
+      ],
+      "light": false
+    }
+  },
+  "layout": {
+    "drawerLayout": "LIST"
+  }
+}

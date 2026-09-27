@@ -1,0 +1,61 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "crayon_box",
+  "name": "Crayon Box",
+  "description": "Big, bright crayon colors, rounded shapes and friendly handwriting for young explorers.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:kids",
+    "vibe:playful",
+    "color:red",
+    "color:blue",
+    "color:yellow",
+    "style:easy to see"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#1F6FD1",
+    "accentAlt": "#E0402F",
+    "ink": "#1E1A14",
+    "dim": "#6F665A",
+    "drawer": "#FFFBF2",
+    "surface": "#FFFDF7",
+    "elevated": "#FFF1D6",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "PILL",
+    "widgetEdge": "BOLD",
+    "widgetTint": 0.3,
+    "widgetSolid": 1.0,
+    "font": "patrick_hand",
+    "clockFace": "DIGITS",
+    "panelLook": "CARD",
+    "notch": "DOT"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "MOSAIC",
+      "colors": [
+        "#FFF4D6",
+        "#FFFDF7",
+        "#E0402F",
+        "#1F6FD1",
+        "#FFC928"
+      ],
+      "light": true
+    }
+  }
+}

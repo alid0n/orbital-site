@@ -1,0 +1,65 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "road_trip",
+  "name": "Road Trip",
+  "description": "Asphalt grey with sunset orange and dashed-line yellow, ready for the open road.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:sporty",
+    "vibe:energetic",
+    "color:orange",
+    "color:black"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FF8A3D",
+    "accentAlt": "#FFD23F",
+    "ink": "#FFF3E6",
+    "dim": "#B39C88",
+    "drawer": "#111214",
+    "surface": "#17191C",
+    "elevated": "#24272B",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "SLIGHT",
+    "widgetEdge": "FINE",
+    "widgetTint": 0.15,
+    "widgetSolid": 0.95,
+    "font": "rajdhani",
+    "clockFace": "LINE",
+    "uppercase": true,
+    "panelLook": "LINES",
+    "notch": "CHEVRON"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "HORIZON",
+      "colors": [
+        "#2A1A12",
+        "#0C0D0F",
+        "#FF8A3D",
+        "#FFD23F",
+        "#C2452D"
+      ],
+      "light": false
+    }
+  },
+  "layout": {
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM"
+  }
+}

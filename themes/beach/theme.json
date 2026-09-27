@@ -1,0 +1,61 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "beach",
+  "name": "Beach",
+  "description": "Sea-glass turquoise, warm sand and a bright summer sky.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:chill",
+    "vibe:calm",
+    "color:blue",
+    "color:yellow",
+    "color:pastel"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#0B7F8C",
+    "accentAlt": "#D9822B",
+    "ink": "#10303A",
+    "dim": "#5E7B80",
+    "drawer": "#F4FBFA",
+    "surface": "#F8FCFB",
+    "elevated": "#E3F4F2",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.6,
+    "font": "quicksand",
+    "clockFace": "STACK",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "DUNES",
+      "colors": [
+        "#BFEFF2",
+        "#F3DDB0",
+        "#FFF4D6",
+        "#5FC7C9",
+        "#E8C58C"
+      ],
+      "light": true
+    }
+  }
+}

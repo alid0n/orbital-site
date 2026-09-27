@@ -1,0 +1,60 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "cozy_cabin",
+  "name": "Cozy Cabin",
+  "description": "Firelight amber, pine green and warm wood. A blanket-and-cocoa kind of home screen.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:cozy",
+    "vibe:calm",
+    "color:orange",
+    "color:green"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#F0A35E",
+    "accentAlt": "#8DB38B",
+    "ink": "#FBEFE2",
+    "dim": "#B59C85",
+    "drawer": "#140E0A",
+    "surface": "#1C140E",
+    "elevated": "#2A1F16",
+    "veil": "#33120A04",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "PAPER",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.9,
+    "font": "lora",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "DOT"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "GEARS",
+      "colors": [
+        "#2A1C12",
+        "#0D0906",
+        "#F0A35E",
+        "#8DB38B",
+        "#6B4426"
+      ],
+      "light": false
+    }
+  }
+}
