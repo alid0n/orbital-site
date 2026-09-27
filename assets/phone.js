@@ -1169,7 +1169,8 @@
       '<ul class="tsel-list" role="listbox" tabindex="-1" aria-labelledby="' + id + '-lbl" hidden>' +
       '<li class="tsel-h" role="presentation">Free</li>' + free.map(option).join('') +
       '<li class="tsel-h" role="presentation">Orbital Premium</li>' + paid.map(option).join('') +
-      '</ul></div></div>' +
+      '</ul></div>' +
+      '<a class="b-guide small" href="guide.html#look">What each theme does, in the guide</a></div>' +
       segmented(id + 'l', 'Home layout', [['pages', 'Traditional pages'], ['roam', 'Free roam'], ['list', 'Drawer']], cfg.layout) +
       segmented(id + 'd', 'Dock', [['orbit', 'Orbit'], ['flat', 'Flat row'], ['container', 'Container'], ['none', 'None']], cfg.dock) +
       segmented(id + 'h', 'The dock holds', [['apps', 'Apps'], ['letters', 'Letters (drawer mode)']], cfg.holds) +
@@ -1609,13 +1610,33 @@
     Array.prototype.forEach.call(document.querySelectorAll(sel), function (el) { fn(el); });
   }
 
+  /* Everything but the hero is built only when it is about to scroll into
+     view, so the first load draws one phone instead of a dozen. */
+  var soon = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      soon.unobserve(e.target);
+      var fn = e.target._build;
+      e.target._build = null;
+      if (fn) fn(e.target);
+    });
+  }, { rootMargin: '600px 0px' }) : null;
+
+  function later(sel, fn) {
+    if (!soon) return each(sel, fn);
+    Array.prototype.forEach.call(document.querySelectorAll(sel), function (el) {
+      el._build = fn;
+      soon.observe(el);
+    });
+  }
+
   each('[data-showcase]', Showcase);
-  each('[data-mini]', Mini);
-  each('[data-anchors]', Anchors);
-  each('[data-shapes]', Shapes);
-  each('[data-builder]', Builder);
-  each('[data-ask]', Ask);
-  each('[data-foldable]', Foldable);
-  each('[data-keyboard]', Keyboard);
-  each('[data-kids]', Kids);
+  later('[data-mini]', Mini);
+  later('[data-anchors]', Anchors);
+  later('[data-shapes]', Shapes);
+  later('[data-builder]', Builder);
+  later('[data-ask]', Ask);
+  later('[data-foldable]', Foldable);
+  later('[data-keyboard]', Keyboard);
+  later('[data-kids]', Kids);
 })();

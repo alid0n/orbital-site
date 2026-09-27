@@ -12,22 +12,49 @@
   <meta property="og:title" content="Orbital Launcher privacy policy">
   <meta property="og:description" content="What Orbital Launcher reads, what stays on the phone, and everything that leaves it.">
   <meta property="og:url" content="https://orbitallauncher.com/privacy.html">
+<meta property="og:image" content="https://orbitallauncher.com/assets/og-image.jpg?v=3">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Orbital Launcher">
   <link rel="canonical" href="https://orbitallauncher.com/privacy.html">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307090e'/%3E%3Ctext x='16' y='23' font-family='monospace' font-size='20' fill='%2300ffaa' text-anchor='middle'%3E%3E%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="assets/theme.js"></script>
   <style>
     :root {
       --bg: #07090e;
       --card-bg: rgba(13, 17, 27, 0.88);
-      --card-border: rgba(0, 255, 170, 0.25);
-      --accent: #00ffaa;
+      --card-border: rgba(127, 231, 196, 0.25);
+      --accent: #7fe7c4;
       --text: #f0f4f8;
       --muted: #94a3b8;
       --rule: rgba(255, 255, 255, 0.1);
     }
+
+    /* Light mode, as on the rest of the site (assets/theme.js). */
+    :root[data-theme='light'] {
+      --bg: #f6f7f9;
+      --card-bg: #ffffff;
+      --card-border: rgba(15, 138, 106, 0.22);
+      --accent: #0b7d60;
+      --text: #1c2430;
+      --muted: #566273;
+      --rule: rgba(15, 23, 42, 0.1);
+    }
+    :root[data-theme='light'] strong,
+    :root[data-theme='light'] tbody th { color: #0b1017; }
+    :root[data-theme='light'] .site-top { background: var(--bg); }
+    :root[data-theme='light'] .site-mark { color: #0b1017; }
+    :root[data-theme='light'] .site-mark svg { color: var(--accent); }
+
+    .mode-btn { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border-radius: 50%; border: 1px solid var(--rule); background: transparent; color: var(--muted); cursor: pointer; }
+    .mode-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .mode-btn svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
     * { box-sizing: border-box; }
 
@@ -73,10 +100,11 @@
     }
 
     .eyebrow {
-      font-family: 'Press Start 2P', monospace;
-      font-size: 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
       line-height: 1.6;
-      letter-spacing: 1px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       color: var(--accent);
       margin: 0 0 22px;
     }
@@ -125,8 +153,8 @@
       font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
       font-size: 0.875em;
       color: var(--accent);
-      background: rgba(0, 255, 170, 0.08);
-      border: 1px solid rgba(0, 255, 170, 0.2);
+      background: rgba(127, 231, 196, 0.08);
+      border: 1px solid rgba(127, 231, 196, 0.2);
       border-radius: 4px;
       padding: 0.1em 0.4em;
       overflow-wrap: anywhere;
@@ -310,12 +338,13 @@
       <a href="./">Home</a>
       <a href="features.html">Features</a>
       <a href="guide.html">Guide</a>
+      <a href="feedback.html">Feedback</a>
       <a href="privacy.html" aria-current="page">Privacy</a>
     </nav>
   </header>
   <div class="wrap">
     <header class="doc-header">
-      <p class="eyebrow">&gt; ORBITAL_LAUNCHER</p>
+      <p class="eyebrow">Orbital Launcher</p>
       <h1>Orbital Launcher privacy policy</h1>
       <p class="updated">Last updated: 24 September 2026</p>
     </header>

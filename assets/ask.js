@@ -67,13 +67,20 @@
         body: new URLSearchParams(new FormData(form)),
         headers: { Accept: 'application/json' },
       }).then(function (answer) {
-        if (answer.status === 429) {
-          say("You've reached today's limit of two messages. Please try again tomorrow.");
-          return;
-        }
-        if (!answer.ok) throw new Error('rejected');
-        form.reset();
-        say(form.getAttribute('data-thanks') || 'Thank you!', true);
+        return answer.json().catch(function () { return {}; }).then(function (data) {
+          if (answer.status === 429) {
+            /* Feedback is once every three days, a sign-up twice a day; the
+               server says how many hours are left. */
+            var h = data.retryHours || 24;
+            var when = h < 24 ? 'in about ' + h + (h === 1 ? ' hour' : ' hours')
+              : 'in about ' + Math.round(h / 24) + (Math.round(h / 24) === 1 ? ' day' : ' days');
+            say("You've already sent this recently. You can send again " + when + '.');
+            return;
+          }
+          if (!answer.ok) throw new Error('rejected');
+          form.reset();
+          say(form.getAttribute('data-thanks') || 'Thank you!', true);
+        });
       }).catch(function () {
         offerMail();
       }).then(function () {

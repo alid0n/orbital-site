@@ -14,14 +14,22 @@
 <meta property="og:title" content="Orbital Launcher features">
 <meta property="og:description" content="Every dock style, three home layouts, hexagon and tiled icons, Orbital Assistant and more.">
 <meta property="og:url" content="https://orbitallauncher.com/features.html">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://orbitallauncher.com/assets/og-image.jpg?v=3">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Orbital Launcher">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/phone.css">
+<link rel="stylesheet" href="assets/site.css?v=7">
+<script src="assets/theme.js"></script>
+<link rel="stylesheet" href="assets/phone.css?v=5">
 <script>document.documentElement.classList.remove('no-js');</script>
 </head>
 <body>
@@ -51,9 +59,29 @@
         <a href="#more">Details</a>
         <a href="#privacy">Privacy</a>
         <a href="#premium">Premium</a>
+        <a href="#faq">FAQ</a>
+        <a href="changelog.html">What's new</a>
       </nav>
     </div>
   </header>
+
+  <!-- ====================================================================== -->
+  <section class="band-section" id="screens">
+    <div class="wrap wide">
+      <p class="eyebrow">The real thing</p>
+      <h2>Straight from the app</h2>
+      <p class="intro">Screenshots from Orbital itself. Scroll sideways to see more.</p>
+      <div class="shots" tabindex="0" aria-label="Screenshots of Orbital">
+        <figure><img src="assets/shots/02-dusk.jpg" width="540" height="960" loading="lazy" alt="The orbit dock along the bottom, under a calendar and a music widget"></figure>
+        <figure><img src="assets/shots/03-orbit-menu.jpg" width="540" height="960" loading="lazy" alt="Edit mode, with widgets, wallpaper, clock and settings on a ring around the thumb"></figure>
+        <figure><img src="assets/shots/05-terminal.jpg" width="540" height="960" loading="lazy" alt="The Terminal theme, with named tabs, an alphabet rail and a green monospaced look"></figure>
+        <figure><img src="assets/shots/06-cybernetic.jpg" width="540" height="960" loading="lazy" alt="The Cybernetic theme, with a seconds clock and a calendar in bracketed corners"></figure>
+        <figure><img src="assets/shots/01-orbital.jpg" width="540" height="960" loading="lazy" alt="Ask Orbital above a calendar, with the orbit dock of colorful apps"></figure>
+        <figure><img src="assets/shots/04-tiles.jpg" width="540" height="960" loading="lazy" alt="The Tiles theme: live calendar and clock tiles, a calculator and app tiles edge to edge"></figure>
+        <figure><img src="assets/shots/07-themes.jpg" width="540" height="960" loading="lazy" alt="The theme picker in Look and Feel, with the five free themes"></figure>
+      </div>
+    </div>
+  </section>
 
   <!-- ====================================================================== -->
   <section class="band-section" id="docks">
@@ -308,6 +336,48 @@
   </section>
 
   <!-- ====================================================================== -->
+  <section class="band-section" id="faq">
+    <div class="wrap">
+      <p class="eyebrow">Questions</p>
+      <h2>Frequently asked</h2>
+      <div class="faq">
+        <details>
+          <summary>Is Orbital free?</summary>
+          <p>Yes. Orbital is free to download, and the free version is a complete launcher: every dock style on any edge, the dock over other apps, five themes, Traditional pages, core widgets, Ask Orbital, Kids mode and every accessibility setting. Orbital Premium is optional.</p>
+        </details>
+        <details>
+          <summary>What does Orbital Premium include, and how do I pay for it?</summary>
+          <p>Premium adds every theme, the Free roam and Drawer layouts, more orbits and drawer mode, effects, icon shapes and packs, extra widgets and more. You can choose monthly, yearly with a 7-day free trial, or a single one-time purchase that's yours for life, all through Google Play. See <a href="#premium">Free and Premium</a> for the full list.</p>
+        </details>
+        <details>
+          <summary>Will it work on my phone?</summary>
+          <p>Orbital runs on Android 8.0 and later, on phones, foldables, tablets and phones with a physical keyboard.</p>
+        </details>
+        <details>
+          <summary>Can I try Premium themes before paying?</summary>
+          <p>Yes. Any Premium theme can be tried on your own home screen for a minute, with your own apps and widgets.</p>
+        </details>
+        <details>
+          <summary>What happens if my subscription ends?</summary>
+          <p>Orbital goes back to the free look, and nothing is deleted. Every choice you made is kept and comes back the moment Premium does.</p>
+        </details>
+        <details>
+          <summary>How do I switch back to my old home screen?</summary>
+          <p>Open your phone's Settings, go to Apps, then Default apps, then Home app, and choose the launcher you'd like. You can switch between them whenever you like.</p>
+        </details>
+        <details>
+          <summary>Does Orbital collect my data?</summary>
+          <p>Orbital has no account, no ads and no analytics. Your layout, notes and contacts stay on your phone. The <a href="privacy.html">privacy policy</a> lists every request that can leave your phone and exactly what's in it.</p>
+        </details>
+        <details>
+          <summary>How do I report a problem or suggest something?</summary>
+          <p>Use the <a href="feedback.html">feedback form</a> or email <a href="mailto:OrbitalLauncher@gmail.com">OrbitalLauncher@gmail.com</a>. Every message is read.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================== -->
   <section class="band-section">
     <div class="wrap">
       <div class="get-card">
@@ -432,8 +502,9 @@
   <p><a href="./">Home</a> &middot; <a href="guide.html">Guide</a> &middot; <a href="privacy.html">Privacy policy</a> &middot; <a href="./#get">Early access</a> &middot; <a href="feedback.html">Feedback</a></p>
 </footer>
 
-<script src="assets/phone.js"></script>
+<script src="assets/phone.js?v=5"></script>
 <script src="assets/orbit.js"></script>
 
+<script src="assets/feedback.js"></script>
 </body>
 </html>

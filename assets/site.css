@@ -23,6 +23,69 @@
   --radius: 16px;
 }
 
+/* Light mode, chosen by assets/theme.js from the system setting or the header
+   button. The mint accent is too pale to read on white, so it deepens to a teal
+   that keeps text and buttons at a readable contrast. */
+:root[data-theme='light'] {
+  --bg: #f6f7f9;
+  --bg-lift: #ffffff;
+  --card: rgba(255, 255, 255, 0.92);
+  --card-edge: rgba(15, 138, 106, 0.22);
+  --accent: #0b7d60;
+  --accent-deep: #0a6b53;
+  --accent-dim: #0f9a77;
+  --text: #1c2430;
+  --text-strong: #0b1017;
+  --muted: #566273;
+  --rule: rgba(15, 23, 42, 0.1);
+}
+
+:root[data-theme='light'] body {
+  background-image:
+    radial-gradient(1000px 640px at 80% -10%, rgba(15, 138, 106, 0.1), transparent 70%),
+    radial-gradient(800px 560px at 5% 2%, rgba(90, 110, 255, 0.07), transparent 70%);
+}
+
+:root[data-theme='light'] .btn,
+:root[data-theme='light'] .top nav .nav-cta,
+:root[data-theme='light'] .ask button,
+:root[data-theme='light'] .seg input:checked + span { color: #ffffff; }
+:root[data-theme='light'] .btn:hover,
+:root[data-theme='light'] .top nav .nav-cta:hover { color: #ffffff; background: var(--accent-deep); }
+:root[data-theme='light'] .btn.ghost { color: var(--text-strong); border-color: rgba(15, 23, 42, 0.2); }
+:root[data-theme='light'] .ask input[type='email'],
+:root[data-theme='light'] .fb textarea,
+:root[data-theme='light'] .fb input[type='email'],
+:root[data-theme='light'] .fb input[type='text'] { background: #ffffff; border-color: rgba(15, 23, 42, 0.18); }
+:root[data-theme='light'] .seg span,
+:root[data-theme='light'] .jump a,
+:root[data-theme='light'] .tsel-btn { background: #ffffff; }
+:root[data-theme='light'] .tsel-list,
+:root[data-theme='light'] .music-ask { background: #ffffff; box-shadow: 0 24px 60px -24px rgba(15, 23, 42, 0.35); }
+:root[data-theme='light'] .tsel-list [role='option']:hover { background: rgba(15, 23, 42, 0.05); }
+:root[data-theme='light'] .device,
+:root[data-theme='light'] .fdev,
+:root[data-theme='light'] .kbdev,
+:root[data-theme='light'] .mz-dev { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.09), 0 30px 60px -28px rgba(15, 23, 42, 0.55); }
+:root[data-theme='light'] .orbit-item { background: #ffffff; }
+:root[data-theme='light'] .band-section.alt { background: linear-gradient(180deg, rgba(15, 23, 42, 0.03), rgba(15, 23, 42, 0)); }
+
+/* The sun or moon in the header that switches between the two. */
+.mode-btn {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+.mode-btn:hover { color: var(--accent); border-color: var(--accent); }
+.mode-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
 * { box-sizing: border-box; }
 
 html {
@@ -259,6 +322,17 @@ hr {
 
 .hero .lede { max-width: 34rem; }
 
+/* The line straight under the headline: "Built around your thumb. Shaped around you." */
+.hero-sub {
+  margin: -0.2rem 0 1.1rem;
+  font-size: clamp(1.25rem, 2.6vw, 1.7rem);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+  text-wrap: balance;
+}
+
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 22px; }
 
 .facts {
@@ -318,6 +392,12 @@ hr {
 .feature p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
 .mini { width: min(58%, 150px); margin: 0 auto; }
+
+/* Demos are built as they near the screen; until then they hold their space so
+   the page does not jump as they appear. */
+.mini:empty { aspect-ratio: 9 / 20.2; }
+.anchors:empty, [data-foldable]:empty, [data-keyboard]:empty, .kids-demo:empty { min-height: 380px; }
+.builder:empty { min-height: 640px; }
 
 .feature.row { flex-direction: row; align-items: center; gap: 24px; }
 .feature.row .mini { width: 150px; flex: none; margin: 0; }
@@ -467,6 +547,8 @@ hr {
 .b-note { text-align: center; margin: 14px 0 0; }
 
 .b-group { margin-bottom: 18px; }
+
+.b-guide { display: inline-block; margin-top: 8px; }
 
 /* The theme dropdown. */
 .tsel { position: relative; max-width: 26rem; }
@@ -627,6 +709,42 @@ hr {
 @media (max-width: 640px) {
   .more-link { flex-direction: column; align-items: flex-start; padding: 22px; }
 }
+
+/* ---- screenshots, scrolled sideways -------------------------------------------- */
+
+.shots {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 4px 4px 18px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--card-edge) transparent;
+}
+
+.shots figure { flex: 0 0 auto; width: min(62vw, 250px); margin: 0; scroll-snap-align: start; }
+.shots img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--rule); background: var(--bg-lift); }
+.shots:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 12px; }
+
+/* ---- what's new -------------------------------------------------------------------- */
+
+.release { padding: 24px 0 8px; border-top: 1px solid var(--rule); }
+.release h2 { display: flex; align-items: center; gap: 12px; margin: 0 0 12px; font-size: 1.5rem; }
+.release-tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--card-edge); border-radius: 999px; padding: 2px 10px; }
+.release li { margin: 0.6rem 0; color: var(--muted); }
+.release li strong { color: var(--text-strong); }
+
+/* ---- FAQ ------------------------------------------------------------------------- */
+
+.faq { display: flex; flex-direction: column; gap: 10px; margin-top: 1.4rem; }
+.faq details { border-radius: var(--radius); background: var(--card); border: 1px solid var(--rule); }
+.faq details[open] { border-color: var(--card-edge); }
+.faq summary { cursor: pointer; list-style: none; padding: 16px 48px 16px 20px; font-weight: 600; color: var(--text-strong); position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 1.3rem; color: var(--accent); transition: transform 0.2s; }
+.faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+.faq summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; border-radius: var(--radius); }
+.faq details p { margin: 0; padding: 0 20px 18px; color: var(--muted); }
 
 /* ---- the features page's header ------------------------------------------------ */
 
@@ -1073,6 +1191,63 @@ hr {
 .music-ask { --mx: -50%; }
 
 @media (prefers-reduced-motion: reduce) { .music-ask, .music-card { animation: none; } }
+
+/* ---- feedback from the header (feedback.js) ------------------------------------- */
+
+.fb-open {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.fb-open:hover { color: var(--accent); border-color: var(--accent); }
+
+.fbd {
+  width: min(calc(100% - 32px), 34rem);
+  max-height: calc(100vh - 48px);
+  padding: 0;
+  border: 1px solid var(--card-edge);
+  border-radius: calc(var(--radius) + 6px);
+  background: var(--bg-lift);
+  color: var(--text);
+  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.9);
+}
+.fbd::backdrop { background: rgba(3, 5, 9, 0.6); backdrop-filter: blur(3px); }
+.fbd-form { display: flex; flex-direction: column; gap: 16px; padding: 24px; }
+.fbd-head { display: flex; align-items: center; justify-content: space-between; }
+.fbd-head h2 { margin: 0; font-size: 1.4rem; }
+.fbd-x { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--rule); background: transparent; color: var(--muted); font-size: 1.3rem; line-height: 1; cursor: pointer; }
+.fbd-x:hover { color: var(--accent); border-color: var(--accent); }
+.fbd-lede { margin: -6px 0 0; color: var(--muted); font-size: 0.95rem; }
+.fbd .seg { margin: 0; }
+.fbd textarea, .fbd input[type='email'] {
+  width: 100%;
+  padding: 11px 13px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  resize: vertical;
+}
+:root[data-theme='light'] .fbd textarea, :root[data-theme='light'] .fbd input[type='email'] { background: #ffffff; border-color: rgba(15, 23, 42, 0.18); }
+.fbd textarea:focus-visible, .fbd input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.fbd-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.fbd .btn { cursor: pointer; font: inherit; font-weight: 600; }
+.fbd .btn[disabled] { opacity: 0.6; cursor: default; }
+.fbd-said { margin: 0; color: var(--muted); }
+.fbd-said:empty { display: none; }
+.fbd-said.is-good { color: var(--accent); }
+
+@media (max-width: 480px) {
+  .fb-open { padding: 5px 10px; font-size: 0.84rem; }
+  .fbd-form { padding: 18px; }
+}
 
 /* ---- the feedback form ----------------------------------------------------- */
 
