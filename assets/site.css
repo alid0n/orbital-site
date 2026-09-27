@@ -866,6 +866,214 @@ hr {
 
 .ask button[disabled] { opacity: 0.6; cursor: default; }
 
+/* ---- the optional soundtrack (music.js) -------------------------------------- */
+
+.music-ask {
+  position: fixed;
+  z-index: 60;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  width: min(calc(100% - 32px), 30rem);
+  padding: 20px 22px;
+  border-radius: calc(var(--radius) + 4px);
+  background: #0f141d;
+  border: 1px solid var(--card-edge);
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  animation: music-in 0.4s ease;
+}
+
+.music-ask p { margin: 0 0 14px; color: var(--text-strong); font-weight: 500; }
+.music-ask-btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.music-ask .btn { cursor: pointer; font: inherit; font-weight: 600; padding: 10px 18px; }
+
+.music-card {
+  position: fixed;
+  z-index: 60;
+  right: 16px;
+  bottom: 16px;
+  width: 240px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0f141d;
+  border: 1px solid var(--card-edge);
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.9);
+  animation: music-in 0.4s ease;
+}
+
+.music-frame { aspect-ratio: 16 / 9; }
+.music-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.music-row { display: flex; align-items: center; gap: 8px; padding: 8px 10px; font-size: 0.85rem; color: var(--muted); }
+.music-row span { flex: 1; }
+.music-row button { font: inherit; font-size: 0.82rem; color: var(--text); background: rgba(255, 255, 255, 0.06); border: 1px solid var(--rule); border-radius: 8px; padding: 4px 10px; cursor: pointer; }
+.music-row button:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---- the zoomed phone the soundtrack plays on ----------------------------------
+   The lower half of a red home screen, enlarged so the Now playing widget shows
+   at its real size (YouTube asks for a player of at least 200 by 200 pixels).
+   The widget fills the open space under the calendar. */
+
+/* While music plays, the hero makes room so the music phone stands right beside
+   the flipping demo phone. On narrow screens it drops underneath instead. */
+.hero-demo { align-items: center; gap: 28px; }
+.has-music .hero { max-width: 84rem; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr); }
+.has-music .hero-demo { justify-content: center; }
+.has-music .hero-demo .showcase { width: auto; flex: 0 0 290px; }
+
+.mz {
+  --a: #ff3347;
+  --panel: #150607;
+  flex: 0 1 430px;
+  min-width: 300px;
+  animation: music-in 0.5s ease;
+}
+
+@media (max-width: 1100px) {
+  .has-music .hero { grid-template-columns: minmax(0, 1fr); text-align: center; }
+  .has-music .hero .lede { margin-inline: auto; }
+  .has-music .cta-row, .has-music .facts { justify-content: center; }
+}
+
+@media (max-width: 760px) {
+  .hero-demo { flex-direction: column; }
+  .mz { flex-basis: auto; width: min(100%, 430px); }
+  .has-music .hero-demo .showcase { flex-basis: auto; width: 100%; }
+}
+
+.mz-dev {
+  padding: 0 9px 9px;
+  border-radius: 0 0 44px 44px;
+  background: linear-gradient(150deg, #2a3140 0%, #10141c 40%, #0a0d13 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.09), 0 40px 80px -30px rgba(0, 0, 0, 0.85);
+  -webkit-mask: linear-gradient(transparent, #000 34px);
+  mask: linear-gradient(transparent, #000 34px);
+}
+
+.mz-scr {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(210px, 1.2fr) minmax(0, 0.8fr);
+  grid-template-rows: auto auto;
+  gap: 14px 16px;
+  padding: 26px 16px 0;
+  border-radius: 0 0 36px 36px;
+  overflow: hidden;
+  background: radial-gradient(120% 60% at 50% 40%, #2a0508 0%, #070203 60%);
+  color: #f3e9ea;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  text-align: left;
+}
+
+/* The glowing grid floor running off to a horizon. */
+.mz-floor {
+  position: absolute;
+  left: -40%;
+  right: -40%;
+  top: 46%;
+  bottom: -10%;
+  background-image:
+    linear-gradient(rgba(255, 51, 71, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 51, 71, 0.4) 1px, transparent 1px);
+  background-size: 38px 38px;
+  transform: perspective(260px) rotateX(58deg);
+  transform-origin: top;
+  -webkit-mask: linear-gradient(transparent, #000 40%);
+  mask: linear-gradient(transparent, #000 40%);
+  pointer-events: none;
+}
+
+.mz-glow { position: absolute; left: 0; right: 0; top: 46%; height: 2px; background: linear-gradient(90deg, transparent, rgba(255, 51, 71, 0.8), transparent); box-shadow: 0 0 24px 6px rgba(255, 51, 71, 0.35); pointer-events: none; }
+
+.mz-left, .mz-right, .mz-dock { position: relative; z-index: 1; }
+.mz-left { display: flex; flex-direction: column; gap: 14px; }
+
+.mz-cal {
+  padding: 0 12px 12px;
+  border: 1.5px solid var(--a);
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  background: rgba(21, 6, 7, 0.9);
+  box-shadow: 0 0 18px -6px rgba(255, 51, 71, 0.6);
+}
+
+.mz-cal-g { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px 0; padding-top: 6px; font-size: 0.78rem; text-align: center; }
+.mz-cal-g i { font-style: normal; }
+.mz-cal-g i.on { background: var(--a); border-radius: 50%; width: 1.9em; line-height: 1.9em; margin: -0.35em auto; font-weight: 700; }
+.mz-cal-ev { display: block; margin-top: 12px; font-size: 0.74rem; color: #c9b2b4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mz-cal-ev em { font-style: normal; color: #9c8587; margin-right: 6px; }
+
+.mz-right { display: flex; flex-direction: column; gap: 10px; padding: 0 16px 0 0; container-type: inline-size; }
+
+/* Too narrow for names beside the icons: show the icons alone. */
+@container (max-width: 150px) {
+  .mz-app b { display: none; }
+}
+.mz-app { display: flex; align-items: center; justify-content: flex-end; gap: 12px; font-size: 0.98rem; }
+.mz-app b { font-weight: 400; }
+.mz-ic { width: 46px; height: 46px; flex: none; display: grid; place-items: center; border-radius: 12px; background: rgba(40, 8, 10, 0.95); color: var(--a); }
+.mz-ic svg, .mz-d svg { width: 55%; height: 55%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.mz-rail { position: absolute; right: -8px; top: 0; bottom: 0; width: 10px; font-size: 0.6rem; color: #b39598; line-height: 2.1; word-break: break-all; text-align: center; }
+
+.mz-dock { grid-column: 1 / -1; height: 150px; margin: 0 -16px; }
+.mz-orb { position: absolute; inset: 0; width: 100%; height: 100%; }
+.mz-orb ellipse { fill: none; stroke: rgba(255, 51, 71, 0.45); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.mz-d { position: absolute; width: 50px; height: 50px; margin: -25px 0 0 -25px; display: grid; place-items: center; border-radius: 13px; background: rgba(40, 8, 10, 0.95); color: var(--a); }
+.mz-d.is-front { width: 58px; height: 58px; margin: -29px 0 0 -29px; box-shadow: 0 0 18px -4px rgba(255, 51, 71, 0.7); }
+.mz-wx { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); font-size: 0.86rem; white-space: nowrap; }
+
+/* The widget itself, in the space under the calendar. */
+.music-card.mz-np {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  border-radius: 12px;
+  border: 1.5px solid var(--a);
+  background: rgba(21, 6, 7, 0.95);
+  box-shadow: 0 0 18px -6px rgba(255, 51, 71, 0.6);
+  animation: none;
+}
+
+.mz-np .music-frame { aspect-ratio: auto; height: 200px; background: #000; }
+.mz .music-np-k, .mz .music-np-bar i { color: var(--a); }
+.mz .music-np-bar i { background: var(--a); }
+.mz .music-np-ctl [data-m='toggle'] { background: var(--a); color: #fff; }
+.mz .music-np-ctl [data-m='toggle']:hover { background: #ff5c6c; color: #fff; }
+.mz .music-np-ctl button:hover { color: var(--a); }
+
+/* On a narrow screen the widget needs the whole width to keep 200 pixels of
+   player, so the app list moves under it. */
+@media (max-width: 480px) {
+  .mz-scr { grid-template-columns: minmax(0, 1fr); }
+  .mz-right { display: none; }
+}
+
+/* The widget part, matching the phones' Now playing card. */
+.music-np { position: relative; display: flex; flex-direction: column; padding: 10px 14px 12px; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; }
+.music-np-k { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.music-np-t { margin-top: 3px; font-size: 0.86rem; font-weight: 600; color: var(--text-strong); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.music-np-s { font-size: 0.74rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.music-np-bar { display: block; height: 3px; margin: 8px 0 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.14); overflow: hidden; }
+.music-np-bar i { display: block; height: 100%; background: var(--accent); transform-origin: left; transform: scaleX(0); transition: transform 1s linear; }
+.music-np-ctl { display: flex; align-items: center; justify-content: center; gap: 14px; }
+.music-np-ctl button { display: grid; place-items: center; width: 30px; height: 30px; padding: 0; border: 0; border-radius: 50%; background: none; color: var(--text-strong); cursor: pointer; }
+.music-np-ctl button:hover { background: rgba(255, 255, 255, 0.08); color: var(--accent); }
+.music-np-ctl svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.music-np-ctl [data-m='toggle'] { width: 36px; height: 36px; background: var(--accent); color: #062019; }
+.music-np-ctl [data-m='toggle']:hover { background: var(--accent-dim); color: #062019; }
+.music-np-ctl [data-m='toggle'] svg { fill: currentColor; }
+.music-np-x { position: absolute; top: 6px; right: 6px; font-size: 1.1rem; color: var(--muted) !important; }
+
+/* While the soundtrack plays, the demo phones' Now playing widgets follow the
+   real song instead of running their own pretend progress bar. */
+.has-music .card.np .np-bar i { animation: none; width: 100%; transition: transform 1s linear; }
+
+@keyframes music-in { from { opacity: 0; transform: translate(var(--mx, 0), 12px); } }
+.music-ask { --mx: -50%; }
+
+@media (prefers-reduced-motion: reduce) { .music-ask, .music-card { animation: none; } }
+
 /* ---- the feedback form ----------------------------------------------------- */
 
 .fb {
