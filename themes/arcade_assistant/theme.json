@@ -13,7 +13,8 @@
     "vibe:retro",
     "era:80s",
     "color:green",
-    "color:black"
+    "color:black",
+    "style:power user"
   ],
   "previews": [
     "preview.png"
@@ -32,6 +33,29 @@
   },
   "look": {
     "font": "vt323"
+  },
+  "layout": {
+    "homeLayout": "DRAWER",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "LIST",
+    "drawerWidgets": [
+      {
+        "kind": "COMMAND",
+        "end": "TOP",
+        "tint": 0
+      },
+      {
+        "kind": "CLOCK",
+        "end": "SIDE",
+        "tint": 0
+      },
+      {
+        "kind": "CALENDAR",
+        "end": "SIDE",
+        "tint": 0
+      }
+    ]
   },
   "assistant": {
     "look": "RETRO"

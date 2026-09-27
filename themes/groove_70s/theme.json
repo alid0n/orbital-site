@@ -14,7 +14,8 @@
     "vibe:retro",
     "vibe:cozy",
     "color:orange",
-    "color:yellow"
+    "color:yellow",
+    "style:one-handed"
   ],
   "previews": [
     "preview.png"
@@ -58,5 +59,43 @@
       ],
       "light": false
     }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.04,
+        "y": 0.33,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
   }
 }

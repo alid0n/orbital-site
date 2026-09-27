@@ -13,7 +13,8 @@
     "vibe:sporty",
     "vibe:energetic",
     "color:orange",
-    "color:black"
+    "color:black",
+    "style:one-handed"
   ],
   "previews": [
     "preview.png"
@@ -59,7 +60,42 @@
     }
   },
   "layout": {
+    "homeLayout": "PAGES",
     "dockStyle": "ROW",
-    "anchor": "BOTTOM"
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.06,
+        "y": 0.33,
+        "col": 0,
+        "row": 0,
+        "w": 0.88,
+        "tint": 1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "VOICE"
   }
 }

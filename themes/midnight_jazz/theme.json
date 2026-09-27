@@ -14,7 +14,8 @@
     "vibe:chill",
     "vibe:dark",
     "color:blue",
-    "color:gold"
+    "color:gold",
+    "style:minimal"
   ],
   "previews": [
     "preview.png"
@@ -57,6 +58,27 @@
       ],
       "light": false
     }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "LIST",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.08,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.2
+      }
+    ]
+  },
+  "assistant": {
+    "look": "MINIMAL_LINE"
   },
   "effect": "twinkle-stars"
 }

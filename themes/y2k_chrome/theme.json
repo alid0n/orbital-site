@@ -14,7 +14,8 @@
     "vibe:futuristic",
     "vibe:dreamy",
     "color:blue",
-    "color:white"
+    "color:white",
+    "style:big screen"
   ],
   "previews": [
     "preview.png"
@@ -58,5 +59,43 @@
       ],
       "light": false
     }
+  },
+  "layout": {
+    "homeLayout": "FREE_ROAM",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.06,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.42
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.04,
+        "y": 0.36,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
   }
 }

@@ -13,13 +13,14 @@
         "vibe:retro",
         "vibe:cozy",
         "color:orange",
-        "color:yellow"
+        "color:yellow",
+        "style:one-handed"
       ],
       "thumbnail": "groove_70s/preview.png",
       "file": "groove_70s/theme.json",
       "premium": false,
-      "size": 1249,
-      "sha256": "13e8183b5cfd2de64e42c9ab9556a7c7e22bf0359cb21d4a703e135f11c58c2a",
+      "size": 1936,
+      "sha256": "26f3920295259dfc575a13af7ca20c4ace63a36a8432766326aa0d4b0f7addef",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FFB347",
@@ -45,13 +46,14 @@
         "vibe:energetic",
         "color:pink",
         "color:neon",
-        "color:blue"
+        "color:blue",
+        "style:one-handed"
       ],
       "thumbnail": "neon_80s/preview.png",
       "file": "neon_80s/theme.json",
       "premium": true,
-      "size": 1333,
-      "sha256": "3233f90eb390a8c63fc10989ff6f24f6c377bbe62efbd1e7e121f70afcc78958",
+      "size": 1866,
+      "sha256": "d8101760fa22546f9fb0551a13b1923838a1d6bb457f6370c1f3d993733fe771",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FF3FA4",
@@ -76,13 +78,14 @@
         "vibe:playful",
         "vibe:energetic",
         "color:purple",
-        "color:yellow"
+        "color:yellow",
+        "style:one-handed"
       ],
       "thumbnail": "bright_90s/preview.png",
       "file": "bright_90s/theme.json",
       "premium": false,
-      "size": 1248,
-      "sha256": "52401dd3b58122e4cdfe45f68684f5a41ad6e925067d7f2d739a23452d6c2ca9",
+      "size": 1933,
+      "sha256": "d3a9f229f5595430342b333b2462d09935053a66e11060f241e20f2c11403e68",
       "base": "ORBITAL",
       "colors": {
         "accent": "#7B2FBF",
@@ -107,13 +110,14 @@
         "vibe:futuristic",
         "vibe:dreamy",
         "color:blue",
-        "color:white"
+        "color:white",
+        "style:big screen"
       ],
       "thumbnail": "y2k_chrome/preview.png",
       "file": "y2k_chrome/theme.json",
       "premium": true,
-      "size": 1245,
-      "sha256": "d19601bde44d8bf75db1b8f96f4f51ef447c9f3080f7e7d67b9097df2da59beb",
+      "size": 1937,
+      "sha256": "6864c032158a5e02b1299fe4abb3f39f08b32c8f1338a41d2d490d594864a4eb",
       "base": "ORBITAL",
       "colors": {
         "accent": "#9FD8FF",
@@ -142,8 +146,8 @@
       "thumbnail": "candy/preview.png",
       "file": "candy/theme.json",
       "premium": false,
-      "size": 1243,
-      "sha256": "7537d727c98c627954589f361657f9cee1d3c09b6628de1a13573d5e1f5fab3d",
+      "size": 1656,
+      "sha256": "a5646d67d20b789b2485613c9a314ca5cc9ef39bd01bbaf710ec2ced58e4435f",
       "base": "ORBITAL",
       "colors": {
         "accent": "#D6337A",
@@ -167,13 +171,14 @@
         "vibe:sporty",
         "vibe:energetic",
         "color:orange",
-        "color:black"
+        "color:black",
+        "style:one-handed"
       ],
       "thumbnail": "road_trip/preview.png",
       "file": "road_trip/theme.json",
       "premium": false,
-      "size": 1318,
-      "sha256": "a4c1f88dcc4ddd5e56284b54e5791bce5ad58ff700729ec4b66dbd429d702765",
+      "size": 1954,
+      "sha256": "877b7c8cf11bdb8c57ea5930faa8afc7603eaab2aa3b9dc328cafda0a881ce6e",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FF8A3D",
@@ -198,13 +203,14 @@
         "vibe:calm",
         "color:blue",
         "color:yellow",
-        "color:pastel"
+        "color:pastel",
+        "style:one-handed"
       ],
       "thumbnail": "beach/preview.png",
       "file": "beach/theme.json",
       "premium": false,
-      "size": 1203,
-      "sha256": "398f0b400424cd8f069e03d7298fc04903364de6af0ff669145c7936f2c8b754",
+      "size": 1887,
+      "sha256": "82da4a12fa99b2a08684e632f730031defe8de522e365c2c62e2144f9a3527c1",
       "base": "ORBITAL",
       "colors": {
         "accent": "#0B7F8C",
@@ -228,13 +234,14 @@
         "vibe:dreamy",
         "vibe:elegant",
         "color:purple",
-        "color:gold"
+        "color:gold",
+        "style:one-handed"
       ],
       "thumbnail": "sparkles/preview.png",
       "file": "sparkles/theme.json",
       "premium": true,
-      "size": 1260,
-      "sha256": "0af0afcca97c5bacdb1533eabc4eef163d77643c2a3c31593d73a628ebd50153",
+      "size": 1829,
+      "sha256": "8d61a12b9b2f6fd2921408c6bab51d4cebe3581b28c7c589c1cdb56f1010bd51",
       "base": "ORBITAL",
       "colors": {
         "accent": "#F5C8FF",
@@ -260,13 +267,14 @@
         "vibe:playful",
         "color:purple",
         "color:gold",
-        "color:neon"
+        "color:neon",
+        "style:one-handed"
       ],
       "thumbnail": "disco/preview.png",
       "file": "disco/theme.json",
       "premium": true,
-      "size": 1328,
-      "sha256": "d6c38e373ed8b572f1c22333ceff3126019eaeb0c2329227ddaf70102a9addb2",
+      "size": 1867,
+      "sha256": "189cb84fcac73ba45a1dbe814dacbbffd70f71aad6657fff88108a00c7235e78",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FFCC4D",
@@ -291,13 +299,13 @@
         "vibe:retro",
         "vibe:playful",
         "color:purple",
-        "style:power user"
+        "style:one-handed"
       ],
       "thumbnail": "gaming_90s/preview.png",
       "file": "gaming_90s/theme.json",
       "premium": false,
-      "size": 1360,
-      "sha256": "c46a7032996b2b0f8f2c848a4eaf6e0bb25885438ff6e32ad59ec78eea2da076",
+      "size": 1806,
+      "sha256": "c6d403bb731efd9c83e68c8a5ec89ffa1f59669637472734b65468e4cc2c09b4",
       "base": "ORBITAL",
       "colors": {
         "accent": "#8C7BFF",
@@ -323,13 +331,13 @@
         "color:blue",
         "color:neon",
         "color:white",
-        "style:power user"
+        "style:one-handed"
       ],
       "thumbnail": "gaming_future/preview.png",
       "file": "gaming_future/theme.json",
       "premium": true,
-      "size": 1381,
-      "sha256": "73d6ced02d987c7530678b4afbaeaca40ed8f430661c7c9bd4403787e3f5d033",
+      "size": 2055,
+      "sha256": "d8c771e7be0047fb5e0f7e4f7d53a92fc198dc8ccce16e66e7a6534d8f8fa4f8",
       "base": "ORBITAL",
       "colors": {
         "accent": "#34F5FF",
@@ -359,8 +367,8 @@
       "thumbnail": "gaming_green/preview.png",
       "file": "gaming_green/theme.json",
       "premium": false,
-      "size": 1339,
-      "sha256": "7008d67bbbf6abda01e5365c64f65ae3010676e9ce1edff95bc4ef10208952df",
+      "size": 1747,
+      "sha256": "b5caaeec5ddf711147df38c6bd3d954156f973caeaaf881e90f8128587a418f4",
       "base": "ORBITAL",
       "colors": {
         "accent": "#4BE35A",
@@ -384,13 +392,14 @@
         "vibe:cozy",
         "vibe:calm",
         "color:orange",
-        "color:green"
+        "color:green",
+        "style:one-handed"
       ],
       "thumbnail": "cozy_cabin/preview.png",
       "file": "cozy_cabin/theme.json",
       "premium": false,
-      "size": 1218,
-      "sha256": "d84b67b62ac9700a389d11341208b1d10cf984ae9f400bb92ce5799757950361",
+      "size": 1905,
+      "sha256": "c3273784c4175192dc5c290fb6ef69cedf814275f83910711065fcdcd981f7ce",
       "base": "ORBITAL",
       "colors": {
         "accent": "#F0A35E",
@@ -415,13 +424,14 @@
         "vibe:chill",
         "vibe:dark",
         "color:blue",
-        "color:gold"
+        "color:gold",
+        "style:minimal"
       ],
       "thumbnail": "midnight_jazz/preview.png",
       "file": "midnight_jazz/theme.json",
       "premium": true,
-      "size": 1270,
-      "sha256": "495250265a7ab87d26311e1276899ffe59f97d83ce96ce31784e537ea932a9ef",
+      "size": 1663,
+      "sha256": "7caee7bdbf52bf4f4d7c87b75d9f4e23fe79467f501d63b63bbb38373cf37f8a",
       "base": "ORBITAL",
       "colors": {
         "accent": "#E0B865",
@@ -451,8 +461,8 @@
       "thumbnail": "crayon_box/preview.png",
       "file": "crayon_box/theme.json",
       "premium": false,
-      "size": 1246,
-      "sha256": "37f43359df04740cc8ddcac649880a3f2a3926a15f19f6c13e65cef2acb9a9da",
+      "size": 1819,
+      "sha256": "44868565443766b8d4388cdc38e8fe2ff216093f71d6d0df57795a0ba863c5e0",
       "base": "ORBITAL",
       "colors": {
         "accent": "#1F6FD1",
@@ -476,13 +486,14 @@
         "vibe:retro",
         "era:80s",
         "color:green",
-        "color:black"
+        "color:black",
+        "style:power user"
       ],
       "thumbnail": "arcade_assistant/preview.png",
       "file": "arcade_assistant/theme.json",
       "premium": false,
-      "size": 783,
-      "sha256": "bbb8b2fa2d1971d167e15d8ae753fc97b2f2aff20ec77ec56a6764ccf3f1cfd1",
+      "size": 1211,
+      "sha256": "bcd131a554671e5bccfc5e8a676159feb8df81dbeeea5339dcac48a84e5a4ee2",
       "base": "TERMINAL",
       "colors": {
         "accent": "#4BE35A",

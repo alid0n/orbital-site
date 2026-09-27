@@ -43,7 +43,9 @@
     "font": "fredoka",
     "clockFace": "STACK",
     "panelLook": "CARD",
-    "notch": "DOT"
+    "notch": "DOT",
+    "homeIconScale": 1.3,
+    "homeLabels": true
   },
   "wallpaper": {
     "drawn": {
@@ -57,5 +59,26 @@
       ],
       "light": true
     }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.2
+      }
+    ]
+  },
+  "assistant": {
+    "look": "VOICE"
   }
 }

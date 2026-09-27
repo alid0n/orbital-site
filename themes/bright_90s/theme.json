@@ -14,7 +14,8 @@
     "vibe:playful",
     "vibe:energetic",
     "color:purple",
-    "color:yellow"
+    "color:yellow",
+    "style:one-handed"
   ],
   "previews": [
     "preview.png"
@@ -57,5 +58,43 @@
       ],
       "light": true
     }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "week",
+        "kind": "CALENDAR_WEEK",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.04,
+        "y": 0.42,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
   }
 }

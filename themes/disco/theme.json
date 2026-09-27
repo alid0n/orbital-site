@@ -15,7 +15,8 @@
     "vibe:playful",
     "color:purple",
     "color:gold",
-    "color:neon"
+    "color:neon",
+    "style:one-handed"
   ],
   "previews": [
     "preview.png"
@@ -60,6 +61,36 @@
       ],
       "light": false
     }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.06,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.88,
+        "tint": 1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
   },
   "effect": "disco-lights"
 }

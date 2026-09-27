@@ -61,6 +61,29 @@
     }
   },
   "layout": {
-    "drawerLayout": "LIST"
+    "homeLayout": "DRAWER",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "LIST",
+    "drawerWidgets": [
+      {
+        "kind": "CLOCK",
+        "end": "SIDE",
+        "tint": 0
+      },
+      {
+        "kind": "CALENDAR",
+        "end": "SIDE",
+        "tint": 0
+      },
+      {
+        "kind": "MEDIA",
+        "end": "SIDE",
+        "tint": 1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "COMMAND_PROMPT"
   }
 }
