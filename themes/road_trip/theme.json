@@ -14,7 +14,9 @@
     "vibe:energetic",
     "color:orange",
     "color:black",
-    "style:one-handed"
+    "style:one-handed",
+    "topic:cars",
+    "topic:travel"
   ],
   "previews": [
     "preview.png"

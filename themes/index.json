@@ -14,13 +14,15 @@
         "vibe:cozy",
         "color:orange",
         "color:yellow",
-        "style:one-handed"
+        "style:one-handed",
+        "topic:music",
+        "topic:retro"
       ],
       "thumbnail": "groove_70s/preview.png",
       "file": "groove_70s/theme.json",
       "premium": false,
-      "size": 1936,
-      "sha256": "26f3920295259dfc575a13af7ca20c4ace63a36a8432766326aa0d4b0f7addef",
+      "size": 1974,
+      "sha256": "6a737072066bdc18ebb449dcd9220e34b2e80c82ea3ca289e4aa0508bc1fccad",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FFB347",
@@ -47,13 +49,15 @@
         "color:pink",
         "color:neon",
         "color:blue",
-        "style:one-handed"
+        "style:one-handed",
+        "topic:music",
+        "topic:retro"
       ],
       "thumbnail": "neon_80s/preview.png",
       "file": "neon_80s/theme.json",
       "premium": true,
-      "size": 1866,
-      "sha256": "d8101760fa22546f9fb0551a13b1923838a1d6bb457f6370c1f3d993733fe771",
+      "size": 1904,
+      "sha256": "5d7e30c78d597665553654413096a57b0fb18d22e60c31c1e0a666dcb7ec3f06",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FF3FA4",
@@ -79,13 +83,14 @@
         "vibe:energetic",
         "color:purple",
         "color:yellow",
-        "style:one-handed"
+        "style:one-handed",
+        "topic:retro"
       ],
       "thumbnail": "bright_90s/preview.png",
       "file": "bright_90s/theme.json",
       "premium": false,
-      "size": 1933,
-      "sha256": "d3a9f229f5595430342b333b2462d09935053a66e11060f241e20f2c11403e68",
+      "size": 1952,
+      "sha256": "bffd6b8907ebc9fb74b0bffd9a1e9be52ed508f3699ba150661498ad877323ed",
       "base": "ORBITAL",
       "colors": {
         "accent": "#7B2FBF",
@@ -111,13 +116,14 @@
         "vibe:dreamy",
         "color:blue",
         "color:white",
-        "style:big screen"
+        "style:big screen",
+        "topic:retro"
       ],
       "thumbnail": "y2k_chrome/preview.png",
       "file": "y2k_chrome/theme.json",
       "premium": true,
-      "size": 1937,
-      "sha256": "6864c032158a5e02b1299fe4abb3f39f08b32c8f1338a41d2d490d594864a4eb",
+      "size": 1956,
+      "sha256": "0fa0749516b939da8342e16bb7892593826b233eb646c3b1c9b1610e6b41cf13",
       "base": "ORBITAL",
       "colors": {
         "accent": "#9FD8FF",
@@ -141,13 +147,14 @@
         "vibe:playful",
         "color:pink",
         "color:pastel",
-        "style:easy to see"
+        "style:easy to see",
+        "topic:family"
       ],
       "thumbnail": "candy/preview.png",
       "file": "candy/theme.json",
       "premium": false,
-      "size": 1656,
-      "sha256": "a5646d67d20b789b2485613c9a314ca5cc9ef39bd01bbaf710ec2ced58e4435f",
+      "size": 1676,
+      "sha256": "80b946d53a4fd1d35e681c94ae91e1d78ab0b7afa8be04e59b734f0d756ef1f5",
       "base": "ORBITAL",
       "colors": {
         "accent": "#D6337A",
@@ -172,13 +179,15 @@
         "vibe:energetic",
         "color:orange",
         "color:black",
-        "style:one-handed"
+        "style:one-handed",
+        "topic:cars",
+        "topic:travel"
       ],
       "thumbnail": "road_trip/preview.png",
       "file": "road_trip/theme.json",
       "premium": false,
-      "size": 1954,
-      "sha256": "877b7c8cf11bdb8c57ea5930faa8afc7603eaab2aa3b9dc328cafda0a881ce6e",
+      "size": 1992,
+      "sha256": "4300105757154a30a537ba339a8847b94ebc814730aa257472d4debbbc1bbe33",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FF8A3D",
@@ -204,13 +213,15 @@
         "color:blue",
         "color:yellow",
         "color:pastel",
-        "style:one-handed"
+        "style:one-handed",
+        "topic:beach",
+        "topic:travel"
       ],
       "thumbnail": "beach/preview.png",
       "file": "beach/theme.json",
       "premium": false,
-      "size": 1887,
-      "sha256": "82da4a12fa99b2a08684e632f730031defe8de522e365c2c62e2144f9a3527c1",
+      "size": 1926,
+      "sha256": "c58ea11af25db9a7288d6c99ec0502507b006994a5250d824dab1f4b104dcc2c",
       "base": "ORBITAL",
       "colors": {
         "accent": "#0B7F8C",
@@ -235,13 +246,14 @@
         "vibe:elegant",
         "color:purple",
         "color:gold",
-        "style:one-handed"
+        "style:one-handed",
+        "topic:space"
       ],
       "thumbnail": "sparkles/preview.png",
       "file": "sparkles/theme.json",
       "premium": true,
-      "size": 1829,
-      "sha256": "8d61a12b9b2f6fd2921408c6bab51d4cebe3581b28c7c589c1cdb56f1010bd51",
+      "size": 1848,
+      "sha256": "399104d96d0442c1a1137e93a9465c33bef2803669b83d5880aab27fdc994f53",
       "base": "ORBITAL",
       "colors": {
         "accent": "#F5C8FF",
@@ -268,13 +280,14 @@
         "color:purple",
         "color:gold",
         "color:neon",
-        "style:one-handed"
+        "style:one-handed",
+        "topic:music"
       ],
       "thumbnail": "disco/preview.png",
       "file": "disco/theme.json",
       "premium": true,
-      "size": 1867,
-      "sha256": "189cb84fcac73ba45a1dbe814dacbbffd70f71aad6657fff88108a00c7235e78",
+      "size": 1886,
+      "sha256": "48bcfaeb653b24e7486f539efb4968508661d8004593aaf77bc6bb8de3811e5b",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FFCC4D",
@@ -299,13 +312,15 @@
         "vibe:retro",
         "vibe:playful",
         "color:purple",
-        "style:one-handed"
+        "style:one-handed",
+        "topic:gaming",
+        "topic:retro"
       ],
       "thumbnail": "gaming_90s/preview.png",
       "file": "gaming_90s/theme.json",
       "premium": false,
-      "size": 1806,
-      "sha256": "c6d403bb731efd9c83e68c8a5ec89ffa1f59669637472734b65468e4cc2c09b4",
+      "size": 1845,
+      "sha256": "e1f2d7b8e4bd642699f27066e66db193552f8b2d53e8e80ea033ea3fd6627eac",
       "base": "ORBITAL",
       "colors": {
         "accent": "#8C7BFF",
@@ -331,13 +346,15 @@
         "color:blue",
         "color:neon",
         "color:white",
-        "style:one-handed"
+        "style:one-handed",
+        "topic:gaming",
+        "topic:space"
       ],
       "thumbnail": "gaming_future/preview.png",
       "file": "gaming_future/theme.json",
       "premium": true,
-      "size": 2055,
-      "sha256": "d8c771e7be0047fb5e0f7e4f7d53a92fc198dc8ccce16e66e7a6534d8f8fa4f8",
+      "size": 2094,
+      "sha256": "dda09131732d7671fd8d9f0eb43e7fd0e459101483face517b79d74b51cd1a9f",
       "base": "ORBITAL",
       "colors": {
         "accent": "#34F5FF",
@@ -362,13 +379,14 @@
         "vibe:energetic",
         "color:green",
         "color:black",
-        "style:power user"
+        "style:power user",
+        "topic:gaming"
       ],
       "thumbnail": "gaming_green/preview.png",
       "file": "gaming_green/theme.json",
       "premium": false,
-      "size": 1747,
-      "sha256": "b5caaeec5ddf711147df38c6bd3d954156f973caeaaf881e90f8128587a418f4",
+      "size": 1767,
+      "sha256": "a360177d62bf470ccf73f0c8d41fbf91085fa5a154d941114b4f3ce426eb1b93",
       "base": "ORBITAL",
       "colors": {
         "accent": "#4BE35A",
@@ -393,13 +411,14 @@
         "vibe:calm",
         "color:orange",
         "color:green",
-        "style:one-handed"
+        "style:one-handed",
+        "topic:nature"
       ],
       "thumbnail": "cozy_cabin/preview.png",
       "file": "cozy_cabin/theme.json",
       "premium": false,
-      "size": 1905,
-      "sha256": "c3273784c4175192dc5c290fb6ef69cedf814275f83910711065fcdcd981f7ce",
+      "size": 1925,
+      "sha256": "01813cfa6bf1e63bbddaff23c1a3a279c5ade72c4d5e0a17449cb8584311a072",
       "base": "ORBITAL",
       "colors": {
         "accent": "#F0A35E",
@@ -425,13 +444,14 @@
         "vibe:dark",
         "color:blue",
         "color:gold",
-        "style:minimal"
+        "style:minimal",
+        "topic:music"
       ],
       "thumbnail": "midnight_jazz/preview.png",
       "file": "midnight_jazz/theme.json",
       "premium": true,
-      "size": 1663,
-      "sha256": "7caee7bdbf52bf4f4d7c87b75d9f4e23fe79467f501d63b63bbb38373cf37f8a",
+      "size": 1682,
+      "sha256": "7ebe45f92fee70c6cca8e31d44df1f1bd1e118beb747d8f507e2d205875362ee",
       "base": "ORBITAL",
       "colors": {
         "accent": "#E0B865",
@@ -456,13 +476,14 @@
         "color:red",
         "color:blue",
         "color:yellow",
-        "style:easy to see"
+        "style:easy to see",
+        "topic:family"
       ],
       "thumbnail": "crayon_box/preview.png",
       "file": "crayon_box/theme.json",
       "premium": false,
-      "size": 1819,
-      "sha256": "44868565443766b8d4388cdc38e8fe2ff216093f71d6d0df57795a0ba863c5e0",
+      "size": 1839,
+      "sha256": "5f688e77ece97b5b1dd738a518bb55b77064f19369e75f030b2091194e479e71",
       "base": "ORBITAL",
       "colors": {
         "accent": "#1F6FD1",
@@ -487,13 +508,15 @@
         "era:80s",
         "color:green",
         "color:black",
-        "style:power user"
+        "style:power user",
+        "topic:gaming",
+        "topic:retro"
       ],
       "thumbnail": "arcade_assistant/preview.png",
       "file": "arcade_assistant/theme.json",
       "premium": false,
-      "size": 1211,
-      "sha256": "bcd131a554671e5bccfc5e8a676159feb8df81dbeeea5339dcac48a84e5a4ee2",
+      "size": 1250,
+      "sha256": "4aecc6c5d59e0234fba3969ee56d4ef51918e71d007565e2a1f4746bb63dae05",
       "base": "TERMINAL",
       "colors": {
         "accent": "#4BE35A",
@@ -506,6 +529,367 @@
         "veil": "#55000000",
         "light": false
       }
+    },
+    {
+      "id": "halloween_night",
+      "name": "Halloween Night",
+      "description": "Pumpkin orange and deep violet under a starry October sky.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:spooky",
+        "vibe:dark",
+        "color:orange",
+        "color:purple",
+        "style:one-handed",
+        "topic:halloween",
+        "topic:space"
+      ],
+      "thumbnail": "halloween_night/preview.png",
+      "file": "halloween_night/theme.json",
+      "premium": true,
+      "size": 1835,
+      "sha256": "c46d09f0b2976a4f52c33c545045c82cc9e2e52faec48ad0144304b014f234b9",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF8C2B",
+        "accentAlt": "#B06CFF",
+        "ink": "#FFF0E0",
+        "dim": "#B89A8C",
+        "drawer": "#0C0710",
+        "surface": "#140B1A",
+        "elevated": "#23122C",
+        "veil": "#44000000",
+        "light": false
+      }
+    },
+    {
+      "id": "pumpkin_patch",
+      "name": "Pumpkin Patch",
+      "description": "Friendly pumpkins, falling leaves and big, easy-to-read letters for autumn.",
+      "version": 1,
+      "tags": [
+        "audience:kids",
+        "vibe:playful",
+        "color:orange",
+        "color:yellow",
+        "style:easy to see",
+        "topic:halloween",
+        "topic:family"
+      ],
+      "thumbnail": "pumpkin_patch/preview.png",
+      "file": "pumpkin_patch/theme.json",
+      "premium": false,
+      "size": 1837,
+      "sha256": "40ab6baf622d67e8848b76936827e4f0f11b9fe5fa76eaeefe2eb7fcaf7c8092",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#C2410C",
+        "accentAlt": "#15803D",
+        "ink": "#2A160A",
+        "dim": "#7A5A44",
+        "drawer": "#FFF7EC",
+        "surface": "#FFFAF3",
+        "elevated": "#FFEBD2",
+        "veil": "#11FFFFFF",
+        "light": true
+      }
+    },
+    {
+      "id": "winter_snow",
+      "name": "Winter Snow",
+      "description": "Crisp snow white, frosted blue and a quiet, sparkling winter light.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:cozy",
+        "color:white",
+        "color:blue",
+        "color:pastel",
+        "style:one-handed",
+        "topic:winter",
+        "topic:nature",
+        "topic:family"
+      ],
+      "thumbnail": "winter_snow/preview.png",
+      "file": "winter_snow/theme.json",
+      "premium": false,
+      "size": 1971,
+      "sha256": "0d9ee98d990f1fb96204e1f30476a15be0847b24a9bca58d44549b10a57c2692",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#2F6FB3",
+        "accentAlt": "#7FA8D6",
+        "ink": "#12263A",
+        "dim": "#5B7189",
+        "drawer": "#F5F9FD",
+        "surface": "#F9FBFE",
+        "elevated": "#E6EFF8",
+        "veil": "#11FFFFFF",
+        "light": true
+      }
+    },
+    {
+      "id": "valentines_day",
+      "name": "Valentine's",
+      "description": "Rose red, soft blush and warm gold, with rounded shapes and a gentle glow.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dreamy",
+        "vibe:elegant",
+        "color:red",
+        "color:pink",
+        "color:gold",
+        "style:one-handed",
+        "topic:valentines"
+      ],
+      "thumbnail": "valentines_day/preview.png",
+      "file": "valentines_day/theme.json",
+      "premium": true,
+      "size": 1865,
+      "sha256": "a3560418999fdb0c59e4b19f345e6b212a7f41bc144b7d0109b265ea2a6743da",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E0245E",
+        "accentAlt": "#F2B45A",
+        "ink": "#FFF0F4",
+        "dim": "#C79AA8",
+        "drawer": "#1A070D",
+        "surface": "#230A12",
+        "elevated": "#36111D",
+        "veil": "#33000000",
+        "light": false
+      }
+    },
+    {
+      "id": "summer_splash",
+      "name": "Summer Splash",
+      "description": "Pool blue, lemon yellow and watermelon pink on a bright summer page.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:playful",
+        "color:blue",
+        "color:yellow",
+        "color:pink",
+        "style:one-handed",
+        "topic:summer",
+        "topic:beach",
+        "topic:sports",
+        "topic:family"
+      ],
+      "thumbnail": "summer_splash/preview.png",
+      "file": "summer_splash/theme.json",
+      "premium": false,
+      "size": 1996,
+      "sha256": "75d3b7a3f918a79ca8125ee2ec6db409ab959a856e516fd0c63ebfab8fbca42b",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#0A74C9",
+        "accentAlt": "#E8436E",
+        "ink": "#0F2A3D",
+        "dim": "#557184",
+        "drawer": "#F2FAFF",
+        "surface": "#F7FCFF",
+        "elevated": "#E0F1FC",
+        "veil": "#11FFFFFF",
+        "light": true
+      }
+    },
+    {
+      "id": "spring_bloom",
+      "name": "Spring Bloom",
+      "description": "Fresh leaf green, blossom pink and morning light, for the first warm days of the year.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dreamy",
+        "color:green",
+        "color:pink",
+        "color:pastel",
+        "style:one-handed",
+        "topic:spring",
+        "topic:nature",
+        "topic:family"
+      ],
+      "thumbnail": "spring_bloom/preview.png",
+      "file": "spring_bloom/theme.json",
+      "premium": false,
+      "size": 1999,
+      "sha256": "840ffeffd9d66cf1b43ae4b1acb430873462a5fa4e863b85b8255c0f8ce84c03",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#2E8B57",
+        "accentAlt": "#D94F8A",
+        "ink": "#1B2E22",
+        "dim": "#62786A",
+        "drawer": "#F6FBF4",
+        "surface": "#FAFDF8",
+        "elevated": "#E7F4E4",
+        "veil": "#11FFFFFF",
+        "light": true
+      }
     }
-  ]
+  ],
+  "featured": {
+    "weeks": [
+      {
+        "id": "groove_70s",
+        "start": "2026-09-21",
+        "end": "2026-09-27"
+      },
+      {
+        "id": "neon_80s",
+        "start": "2026-09-28",
+        "end": "2026-10-04"
+      },
+      {
+        "id": "cozy_cabin",
+        "start": "2026-10-05",
+        "end": "2026-10-11"
+      },
+      {
+        "id": "midnight_jazz",
+        "start": "2026-10-12",
+        "end": "2026-10-18"
+      },
+      {
+        "id": "halloween_night",
+        "start": "2026-10-19",
+        "end": "2026-10-25"
+      },
+      {
+        "id": "pumpkin_patch",
+        "start": "2026-10-26",
+        "end": "2026-11-01"
+      },
+      {
+        "id": "sparkles",
+        "start": "2026-11-02",
+        "end": "2026-11-08"
+      },
+      {
+        "id": "road_trip",
+        "start": "2026-11-09",
+        "end": "2026-11-15"
+      },
+      {
+        "id": "gaming_future",
+        "start": "2026-11-16",
+        "end": "2026-11-22"
+      },
+      {
+        "id": "y2k_chrome",
+        "start": "2026-11-23",
+        "end": "2026-11-29"
+      },
+      {
+        "id": "winter_snow",
+        "start": "2026-11-30",
+        "end": "2026-12-06"
+      }
+    ],
+    "drops": [
+      {
+        "id": "retro_week",
+        "name": "Retro Week",
+        "description": "Four decades of style: 70s warmth, 80s neon, 90s colour and a classic games console.",
+        "themes": [
+          "groove_70s",
+          "neon_80s",
+          "bright_90s",
+          "gaming_90s"
+        ],
+        "premiumFrom": "2026-09-24",
+        "publicFrom": "2026-09-27",
+        "until": "2026-10-11"
+      },
+      {
+        "id": "spooky_week",
+        "name": "Spooky Week",
+        "description": "A starry Halloween night, and a friendly pumpkin patch for younger fans.",
+        "themes": [
+          "halloween_night",
+          "pumpkin_patch"
+        ],
+        "premiumFrom": "2026-10-23",
+        "publicFrom": "2026-10-26",
+        "until": "2026-11-01"
+      },
+      {
+        "id": "winter_pack",
+        "name": "Winter Pack",
+        "description": "Fresh snow and frosted blue for the cold months.",
+        "themes": [
+          "winter_snow"
+        ],
+        "premiumFrom": "2026-11-27",
+        "publicFrom": "2026-11-30",
+        "until": "2026-12-13"
+      }
+    ],
+    "seasonal": [
+      {
+        "id": "halloween",
+        "name": "Halloween",
+        "themes": [
+          "halloween_night",
+          "pumpkin_patch"
+        ],
+        "from": "10-15",
+        "until": "10-31"
+      },
+      {
+        "id": "winter",
+        "name": "Winter",
+        "themes": [
+          "winter_snow"
+        ],
+        "from": "12-01",
+        "until": "02-28"
+      },
+      {
+        "id": "new_year",
+        "name": "New Year",
+        "themes": [
+          "sparkles",
+          "disco"
+        ],
+        "from": "12-30",
+        "until": "01-02"
+      },
+      {
+        "id": "valentines",
+        "name": "Valentine's",
+        "themes": [
+          "valentines_day"
+        ],
+        "from": "02-07",
+        "until": "02-14"
+      },
+      {
+        "id": "spring",
+        "name": "Spring",
+        "themes": [
+          "spring_bloom"
+        ],
+        "from": "03-20",
+        "until": "04-30"
+      },
+      {
+        "id": "summer",
+        "name": "Summer",
+        "themes": [
+          "summer_splash",
+          "beach"
+        ],
+        "from": "06-21",
+        "until": "08-31"
+      }
+    ]
+  }
 }

@@ -55,6 +55,22 @@
   .theme-tags span { font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--rule); color: var(--muted); }
   .premium-mark { color: var(--accent); font-weight: 700; }
   .catalog-empty { color: var(--muted); }
+  .featured { margin: 1.75rem 0 0.5rem; }
+  .featured h2 { font-size: 1.2rem; margin: 0 0 0.75rem; }
+  .featured-row {
+    display: grid; gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  }
+  .featured-card {
+    padding: 16px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--card-edge);
+  }
+  .featured-card .eyebrow { margin: 0 0 0.35rem; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent); }
+  .featured-card h3 { font-size: 1.05rem; margin: 0 0 0.35rem; }
+  .featured-card p { font-size: 0.88rem; margin: 0 0 0.5rem; color: var(--muted); }
+  .featured-card .when { font-size: 0.82rem; color: var(--text); }
+  .featured-thumbs { display: flex; gap: 8px; margin-top: 0.6rem; flex-wrap: wrap; }
+  .featured-thumbs img { width: 44px; height: 88px; object-fit: cover; border-radius: 8px; background: var(--bg-lift); }
+  .featured[hidden] { display: none; }
 </style>
 </head>
 <body>
@@ -74,6 +90,17 @@
 <main class="wrap">
   <h1>Theme catalog</h1>
   <p class="lede">New looks for your home screen, from retro decades to cozy evenings. Open the theme store in Orbital, find one you like and tap Get, then choose which parts of it to use.</p>
+
+  <section class="featured" id="featured" aria-labelledby="featured-title" hidden>
+    <h2 id="featured-title">Featured</h2>
+    <div class="featured-row" id="featured-row"></div>
+  </section>
+
+  <section class="featured" id="drops" aria-labelledby="drops-title" hidden>
+    <h2 id="drops-title">Drops</h2>
+    <p class="small muted">New collections arrive in the theme store for a limited time. Orbital Premium members can get each drop a few days early.</p>
+    <div class="featured-row" id="drops-row"></div>
+  </section>
 
   <div class="catalog-tools">
     <input id="q" type="search" placeholder="Search themes: beach, 80s, neon…" aria-label="Search themes">
@@ -134,9 +161,13 @@
     line.textContent = theme.description;
     var tags = document.createElement('div');
     tags.className = 'theme-tags';
+    var seen = {};
     (theme.tags || []).filter(function (t) { return t.indexOf('audience:') !== 0; }).forEach(function (t) {
+      var word = t.split(':')[1];
+      if (seen[word]) return;
+      seen[word] = true;
       var chip = document.createElement('span');
-      chip.textContent = t.split(':')[1];
+      chip.textContent = word;
       tags.appendChild(chip);
     });
     body.appendChild(title);
@@ -176,10 +207,99 @@
   });
   query.addEventListener('input', render);
 
+  // THE FEATURED SECTION. Dates in the index are calendar days in the reader's own time zone, and
+  // "until" is the last day, as the app reads them.
+  function day(text) {
+    var p = String(text || '').split('-').map(Number);
+    return p.length === 3 ? new Date(p[0], p[1] - 1, p[2]) : null;
+  }
+  function after(date) { return date ? new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1) : null; }
+  function said(date) { return date.toLocaleDateString(undefined, { month: 'long', day: 'numeric' }); }
+  function byId(id) { return themes.filter(function (t) { return t.id === id; })[0]; }
+
+  function featuredCard(eyebrow, title, line, when, ids) {
+    var el = document.createElement('article');
+    el.className = 'featured-card';
+    var top = document.createElement('p');
+    top.className = 'eyebrow';
+    top.textContent = eyebrow;
+    var h = document.createElement('h3');
+    h.textContent = title;
+    el.appendChild(top);
+    el.appendChild(h);
+    if (line) {
+      var p = document.createElement('p');
+      p.textContent = line;
+      el.appendChild(p);
+    }
+    var w = document.createElement('p');
+    w.className = 'when';
+    w.textContent = when;
+    el.appendChild(w);
+    var row = document.createElement('div');
+    row.className = 'featured-thumbs';
+    ids.map(byId).filter(Boolean).forEach(function (theme) {
+      var img = document.createElement('img');
+      img.src = 'themes/' + theme.thumbnail;
+      img.alt = theme.name;
+      img.loading = 'lazy';
+      img.width = 44;
+      img.height = 88;
+      row.appendChild(img);
+    });
+    el.appendChild(row);
+    return el;
+  }
+
+  function seasonWindow(season, now) {
+    var from = String(season.from).split('-').map(Number);
+    var until = String(season.until).split('-').map(Number);
+    for (var y = now.getFullYear() - 1; y <= now.getFullYear() + 1; y++) {
+      var start = new Date(y, from[0] - 1, from[1]);
+      var endYear = (until[0] * 100 + until[1] < from[0] * 100 + from[1]) ? y + 1 : y;
+      var end = new Date(endYear, until[0] - 1, until[1] + 1);
+      if (now < end) return { start: start, end: end };
+    }
+    return null;
+  }
+
+  function renderFeatured(featured) {
+    if (!featured) return;
+    var now = new Date();
+    var row = document.getElementById('featured-row');
+    var weeks = featured.weeks || (featured.week ? [featured.week] : []);
+    weeks.forEach(function (week) {
+      var start = day(week.start), end = after(day(week.end));
+      var theme = byId(week.id);
+      if (!theme || !start || now < start || now >= end) return;
+      row.appendChild(featuredCard('Theme of the week', theme.name, theme.description,
+        'Featured until ' + said(day(week.end)) + '.', [week.id]));
+    });
+    (featured.seasonal || []).forEach(function (season) {
+      var w = seasonWindow(season, now);
+      if (!w || now < w.start) return;
+      row.appendChild(featuredCard('In season', season.name, null,
+        'Available until ' + said(new Date(w.end.getTime() - 86400000)) + '.', season.themes || []));
+    });
+    document.getElementById('featured').hidden = !row.children.length;
+
+    var drops = document.getElementById('drops-row');
+    (featured.drops || []).forEach(function (drop) {
+      var early = day(drop.premiumFrom), open = day(drop.publicFrom), end = after(day(drop.until));
+      if (!open || !end || now >= end) return;
+      var when = now >= open ? 'Available now, until ' + said(day(drop.until)) + '.'
+        : (early && now >= early ? 'Available now with Orbital Premium, and for everyone on ' + said(open) + '.'
+          : 'Coming ' + said(open) + '.');
+      drops.appendChild(featuredCard(now >= open ? 'New drop' : 'Coming soon', drop.name, drop.description, when, drop.themes || []));
+    });
+    document.getElementById('drops').hidden = !drops.children.length;
+  }
+
   render();
   fetch('themes/index.json').then(function (r) { return r.json(); }).then(function (index) {
     themes = index.themes || [];
     render();
+    renderFeatured(index.featured);
   }).catch(function () {
     grid.textContent = '';
     var p = document.createElement('p');

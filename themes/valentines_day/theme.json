@@ -1,0 +1,96 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "valentines_day",
+  "name": "Valentine's",
+  "description": "Rose red, soft blush and warm gold, with rounded shapes and a gentle glow.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:elegant",
+    "color:red",
+    "color:pink",
+    "color:gold",
+    "style:one-handed",
+    "topic:valentines"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#E0245E",
+    "accentAlt": "#F2B45A",
+    "ink": "#FFF0F4",
+    "dim": "#C79AA8",
+    "drawer": "#1A070D",
+    "surface": "#230A12",
+    "elevated": "#36111D",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "PILL",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.3,
+    "widgetSolid": 0.5,
+    "font": "cormorant",
+    "clockFace": "STACK",
+    "panelLook": "FADE",
+    "notch": "DOT",
+    "glow": true
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "PETALS",
+      "colors": [
+        "#3A0D1C",
+        "#12040A",
+        "#E0245E",
+        "#FF8FB1",
+        "#F2B45A"
+      ],
+      "light": false
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.06,
+        "y": 0.24,
+        "col": 0,
+        "row": 0,
+        "w": 0.88,
+        "tint": 1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
+  },
+  "effect": "sparkles"
+}

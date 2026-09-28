@@ -1,0 +1,104 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "summer_splash",
+  "name": "Summer Splash",
+  "description": "Pool blue, lemon yellow and watermelon pink on a bright summer page.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:playful",
+    "color:blue",
+    "color:yellow",
+    "color:pink",
+    "style:one-handed",
+    "topic:summer",
+    "topic:beach",
+    "topic:sports",
+    "topic:family"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#0A74C9",
+    "accentAlt": "#E8436E",
+    "ink": "#0F2A3D",
+    "dim": "#557184",
+    "drawer": "#F2FAFF",
+    "surface": "#F7FCFF",
+    "elevated": "#E0F1FC",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.9,
+    "font": "baloo_2",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "PIP"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "DUNES",
+      "colors": [
+        "#BFE8FF",
+        "#FFF6C7",
+        "#FF8FAB",
+        "#39B7F0",
+        "#FFD84D"
+      ],
+      "light": true
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.04,
+        "y": 0.33,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  }
+}

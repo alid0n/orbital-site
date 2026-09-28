@@ -14,7 +14,9 @@
     "vibe:retro",
     "vibe:playful",
     "color:purple",
-    "style:one-handed"
+    "style:one-handed",
+    "topic:gaming",
+    "topic:retro"
   ],
   "previews": [
     "preview.png"

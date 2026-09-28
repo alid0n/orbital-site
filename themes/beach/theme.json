@@ -15,7 +15,9 @@
     "color:blue",
     "color:yellow",
     "color:pastel",
-    "style:one-handed"
+    "style:one-handed",
+    "topic:beach",
+    "topic:travel"
   ],
   "previews": [
     "preview.png"

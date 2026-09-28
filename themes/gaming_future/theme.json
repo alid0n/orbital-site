@@ -15,7 +15,9 @@
     "color:blue",
     "color:neon",
     "color:white",
-    "style:one-handed"
+    "style:one-handed",
+    "topic:gaming",
+    "topic:space"
   ],
   "previews": [
     "preview.png"

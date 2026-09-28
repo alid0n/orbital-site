@@ -1,0 +1,95 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "halloween_night",
+  "name": "Halloween Night",
+  "description": "Pumpkin orange and deep violet under a starry October sky.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:spooky",
+    "vibe:dark",
+    "color:orange",
+    "color:purple",
+    "style:one-handed",
+    "topic:halloween",
+    "topic:space"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FF8C2B",
+    "accentAlt": "#B06CFF",
+    "ink": "#FFF0E0",
+    "dim": "#B89A8C",
+    "drawer": "#0C0710",
+    "surface": "#140B1A",
+    "elevated": "#23122C",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "FINE",
+    "widgetTint": 0.3,
+    "widgetSolid": 0.8,
+    "font": "outfit",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "DOT",
+    "glow": true
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "NEBULA",
+      "colors": [
+        "#24103A",
+        "#07040C",
+        "#FF8C2B",
+        "#B06CFF",
+        "#3A1C52"
+      ],
+      "light": false
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.06,
+        "y": 0.24,
+        "col": 0,
+        "row": 0,
+        "w": 0.88,
+        "tint": 1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "HUD"
+  },
+  "effect": "twinkle-stars"
+}

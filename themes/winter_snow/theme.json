@@ -1,0 +1,103 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "winter_snow",
+  "name": "Winter Snow",
+  "description": "Crisp snow white, frosted blue and a quiet, sparkling winter light.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:cozy",
+    "color:white",
+    "color:blue",
+    "color:pastel",
+    "style:one-handed",
+    "topic:winter",
+    "topic:nature",
+    "topic:family"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#2F6FB3",
+    "accentAlt": "#7FA8D6",
+    "ink": "#12263A",
+    "dim": "#5B7189",
+    "drawer": "#F5F9FD",
+    "surface": "#F9FBFE",
+    "elevated": "#E6EFF8",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.6,
+    "font": "quicksand",
+    "clockFace": "STACK",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "MIST",
+      "colors": [
+        "#EAF3FB",
+        "#FFFFFF",
+        "#BFD8EE",
+        "#8FB6DD",
+        "#DDE9F5"
+      ],
+      "light": true
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.33,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  }
+}

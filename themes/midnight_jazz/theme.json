@@ -15,7 +15,8 @@
     "vibe:dark",
     "color:blue",
     "color:gold",
-    "style:minimal"
+    "style:minimal",
+    "topic:music"
   ],
   "previews": [
     "preview.png"

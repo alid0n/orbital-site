@@ -15,7 +15,9 @@
     "vibe:cozy",
     "color:orange",
     "color:yellow",
-    "style:one-handed"
+    "style:one-handed",
+    "topic:music",
+    "topic:retro"
   ],
   "previews": [
     "preview.png"

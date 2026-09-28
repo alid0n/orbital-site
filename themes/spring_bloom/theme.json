@@ -1,0 +1,103 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "spring_bloom",
+  "name": "Spring Bloom",
+  "description": "Fresh leaf green, blossom pink and morning light, for the first warm days of the year.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dreamy",
+    "color:green",
+    "color:pink",
+    "color:pastel",
+    "style:one-handed",
+    "topic:spring",
+    "topic:nature",
+    "topic:family"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#2E8B57",
+    "accentAlt": "#D94F8A",
+    "ink": "#1B2E22",
+    "dim": "#62786A",
+    "drawer": "#F6FBF4",
+    "surface": "#FAFDF8",
+    "elevated": "#E7F4E4",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "PAPER",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.85,
+    "font": "lora",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "DOT"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "PETALS",
+      "colors": [
+        "#F4FBEF",
+        "#FFF4F8",
+        "#9BD68C",
+        "#F6A6C8",
+        "#FFE59A"
+      ],
+      "light": true
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "week",
+        "kind": "CALENDAR_WEEK",
+        "x": 0.04,
+        "y": 0.33,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  }
+}

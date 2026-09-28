@@ -175,6 +175,58 @@ THEMES = [
           None,
           dict(font="vt323"),
           assistant=dict(look="RETRO"), base="TERMINAL"),
+
+    # THE SEASONAL THEMES, each listed under its season in FEATURED below.
+    theme("halloween_night", "Halloween Night",
+          "Pumpkin orange and deep violet under a starry October sky.",
+          ["audience:general", "vibe:spooky", "vibe:dark", "color:orange", "color:purple"],
+          pal("#FF8C2B", "#B06CFF", "#FFF0E0", "#B89A8C", "#0C0710", "#140B1A", "#23122C", "#44000000"),
+          drawn("NEBULA", ["#24103A", "#07040C", "#FF8C2B", "#B06CFF", "#3A1C52"]),
+          dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="CARD",
+               widgetCorner="ROUNDED", widgetEdge="FINE", widgetTint=0.3, widgetSolid=0.8,
+               font="outfit", clockFace="STACK", panelLook="CARD", notch="DOT", glow=True),
+          premium=True, effect="twinkle-stars"),
+    theme("pumpkin_patch", "Pumpkin Patch",
+          "Friendly pumpkins, falling leaves and big, easy-to-read letters for autumn.",
+          ["audience:kids", "vibe:playful", "color:orange", "color:yellow", "style:easy to see"],
+          pal("#C2410C", "#15803D", "#2A160A", "#7A5A44", "#FFF7EC", "#FFFAF3", "#FFEBD2", "#11FFFFFF", light=True),
+          drawn("BUBBLES", ["#FFE7C7", "#FFF8EC", "#FF9A3C", "#7CC46A", "#FFD166"], light=True),
+          dict(corner="PILL", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="SOLID",
+               widgetCorner="PILL", widgetEdge="BOLD", widgetTint=0.3, widgetSolid=1.0,
+               font="fredoka", clockFace="DIGITS", panelLook="CARD", notch="DOT")),
+    theme("winter_snow", "Winter Snow",
+          "Crisp snow white, frosted blue and a quiet, sparkling winter light.",
+          ["audience:general", "vibe:calm", "vibe:cozy", "color:white", "color:blue", "color:pastel"],
+          pal("#2F6FB3", "#7FA8D6", "#12263A", "#5B7189", "#F5F9FD", "#F9FBFE", "#E6EFF8", "#11FFFFFF", light=True),
+          drawn("MIST", ["#EAF3FB", "#FFFFFF", "#BFD8EE", "#8FB6DD", "#DDE9F5"], light=True),
+          dict(corner="ROUNDED", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.6,
+               font="quicksand", clockFace="STACK", panelLook="FADE", notch="DOT")),
+    theme("valentines_day", "Valentine's",
+          "Rose red, soft blush and warm gold, with rounded shapes and a gentle glow.",
+          ["audience:general", "vibe:dreamy", "vibe:elegant", "color:red", "color:pink", "color:gold"],
+          pal("#E0245E", "#F2B45A", "#FFF0F4", "#C79AA8", "#1A070D", "#230A12", "#36111D", "#33000000"),
+          drawn("PETALS", ["#3A0D1C", "#12040A", "#E0245E", "#FF8FB1", "#F2B45A"]),
+          dict(corner="PILL", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="PILL", widgetEdge="HAIR", widgetTint=0.3, widgetSolid=0.5,
+               font="cormorant", clockFace="STACK", panelLook="FADE", notch="DOT", glow=True),
+          premium=True, effect="sparkles"),
+    theme("summer_splash", "Summer Splash",
+          "Pool blue, lemon yellow and watermelon pink on a bright summer page.",
+          ["audience:general", "vibe:energetic", "vibe:playful", "color:blue", "color:yellow", "color:pink"],
+          pal("#0A74C9", "#E8436E", "#0F2A3D", "#557184", "#F2FAFF", "#F7FCFF", "#E0F1FC", "#11FFFFFF", light=True),
+          drawn("DUNES", ["#BFE8FF", "#FFF6C7", "#FF8FAB", "#39B7F0", "#FFD84D"], light=True),
+          dict(corner="ROUNDED", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="CARD",
+               widgetCorner="ROUNDED", widgetEdge="NONE", widgetTint=0.25, widgetSolid=0.9,
+               font="baloo_2", clockFace="STACK", panelLook="CARD", notch="PIP")),
+    theme("spring_bloom", "Spring Bloom",
+          "Fresh leaf green, blossom pink and morning light, for the first warm days of the year.",
+          ["audience:general", "vibe:calm", "vibe:dreamy", "color:green", "color:pink", "color:pastel"],
+          pal("#2E8B57", "#D94F8A", "#1B2E22", "#62786A", "#F6FBF4", "#FAFDF8", "#E7F4E4", "#11FFFFFF", light=True),
+          drawn("PETALS", ["#F4FBEF", "#FFF4F8", "#9BD68C", "#F6A6C8", "#FFE59A"], light=True),
+          dict(corner="ROUNDED", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="PAPER",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.85,
+               font="lora", clockFace="STACK", panelLook="CARD", notch="DOT")),
 ]
 
 
@@ -245,6 +297,19 @@ LAYOUTS = {
     # The assistant up front on a drawer home, with the calendar in the column.
     "arcade_assistant": dict(homeLayout="DRAWER", dockStyle="ROW", anchor="BOTTOM", drawerLayout="LIST",
                              drawerWidgets=[side("COMMAND", end="TOP"), side("CLOCK"), side("CALENDAR")]),
+    # The seasonal themes: pages with the time and what the season is for.
+    "halloween_night": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
+                            widgets=[CLOCK(), MEDIA_FULL(0.24)]),
+    "pumpkin_patch": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
+                          widgets=[CLOCK(scale=1.2), WEATHER(0.04, 0.2, 0.92)]),
+    "winter_snow": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
+                        widgets=[CLOCK(), WEATHER(), w("next", "AGENDA", 0.04, 0.33, 0.92)]),
+    "valentines_day": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
+                           widgets=[CLOCK(scale=1.1), MEDIA_FULL(0.24)]),
+    "summer_splash": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
+                          widgets=[CLOCK(), WEATHER(), MEDIA(0.33)]),
+    "spring_bloom": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
+                         widgets=[CLOCK(), WEATHER(), w("week", "CALENDAR_WEEK", 0.04, 0.33, 0.92)]),
 }
 
 ASSISTANTS = {
@@ -253,6 +318,8 @@ ASSISTANTS = {
     "sparkles": "SPOTLIGHT", "disco": "CHAT", "gaming_90s": "RETRO", "gaming_future": "HUD",
     "gaming_green": "COMMAND_PROMPT", "cozy_cabin": "NOTEPAD", "midnight_jazz": "MINIMAL_LINE",
     "arcade_assistant": "RETRO",
+    "halloween_night": "HUD", "pumpkin_patch": "VOICE", "winter_snow": "NOTEPAD",
+    "valentines_day": "SPOTLIGHT", "summer_splash": "CHAT", "spring_bloom": "NOTEPAD",
 }
 
 # The phone-use style each layout is for. Kept consistent with the layouts above by the app's tests.
@@ -263,6 +330,8 @@ STYLES = {
     "disco": ["one-handed"], "gaming_90s": ["one-handed"], "gaming_future": ["one-handed"],
     "gaming_green": ["power user"], "cozy_cabin": ["one-handed"], "midnight_jazz": ["minimal"],
     "arcade_assistant": ["power user"],
+    "halloween_night": ["one-handed"], "pumpkin_patch": ["easy to see"], "winter_snow": ["one-handed"],
+    "valentines_day": ["one-handed"], "summer_splash": ["one-handed"], "spring_bloom": ["one-handed"],
 }
 
 EFFECTS = {"neon_80s": "sparkles"}
@@ -270,7 +339,76 @@ EFFECTS = {"neon_80s": "sparkles"}
 LOOK_EXTRA = {
     "candy": dict(homeIconScale=1.3, homeLabels=True),
     "crayon_box": dict(homeIconScale=1.3, homeLabels=True),
+    "pumpkin_patch": dict(homeIconScale=1.3, homeLabels=True),
 }
+
+# WHAT EACH THEME IS ABOUT, for the interests somebody picks in the app (see Interests.kt there).
+# "topic:family" marks a theme for everyone that suits children too; kids themes are audience:kids.
+TOPICS = {
+    "groove_70s": ["music", "retro"], "neon_80s": ["music", "retro"], "bright_90s": ["retro"],
+    "y2k_chrome": ["retro"], "candy": ["family"], "crayon_box": ["family"],
+    "road_trip": ["cars", "travel"], "beach": ["beach", "travel"], "sparkles": ["space"],
+    "disco": ["music"], "gaming_90s": ["gaming", "retro"], "gaming_future": ["gaming", "space"],
+    "gaming_green": ["gaming"], "cozy_cabin": ["nature"], "midnight_jazz": ["music"],
+    "arcade_assistant": ["gaming", "retro"],
+    "halloween_night": ["halloween", "space"], "pumpkin_patch": ["halloween", "family"],
+    "winter_snow": ["winter", "nature", "family"], "valentines_day": ["valentines"],
+    "summer_splash": ["summer", "beach", "sports", "family"], "spring_bloom": ["spring", "nature", "family"],
+}
+
+# THE FEATURED SECTION of the index: the theme of each week, the drops, and the seasons.
+#
+# Dates are calendar days, read in the phone's own time zone, so a drop goes live at local midnight
+# everywhere; "until" is the last day, inclusive. Premium members get a drop from premiumFrom, and
+# everybody from publicFrom. Seasons repeat every year and may run over New Year.
+FEATURED = {
+    "weeks": [
+        {"id": "groove_70s", "start": "2026-09-21", "end": "2026-09-27"},
+        {"id": "neon_80s", "start": "2026-09-28", "end": "2026-10-04"},
+        {"id": "cozy_cabin", "start": "2026-10-05", "end": "2026-10-11"},
+        {"id": "midnight_jazz", "start": "2026-10-12", "end": "2026-10-18"},
+        {"id": "halloween_night", "start": "2026-10-19", "end": "2026-10-25"},
+        {"id": "pumpkin_patch", "start": "2026-10-26", "end": "2026-11-01"},
+        {"id": "sparkles", "start": "2026-11-02", "end": "2026-11-08"},
+        {"id": "road_trip", "start": "2026-11-09", "end": "2026-11-15"},
+        {"id": "gaming_future", "start": "2026-11-16", "end": "2026-11-22"},
+        {"id": "y2k_chrome", "start": "2026-11-23", "end": "2026-11-29"},
+        {"id": "winter_snow", "start": "2026-11-30", "end": "2026-12-06"},
+    ],
+    "drops": [
+        {"id": "retro_week", "name": "Retro Week",
+         "description": "Four decades of style: 70s warmth, 80s neon, 90s colour and a classic games console.",
+         "themes": ["groove_70s", "neon_80s", "bright_90s", "gaming_90s"],
+         "premiumFrom": "2026-09-24", "publicFrom": "2026-09-27", "until": "2026-10-11"},
+        {"id": "spooky_week", "name": "Spooky Week",
+         "description": "A starry Halloween night, and a friendly pumpkin patch for younger fans.",
+         "themes": ["halloween_night", "pumpkin_patch"],
+         "premiumFrom": "2026-10-23", "publicFrom": "2026-10-26", "until": "2026-11-01"},
+        {"id": "winter_pack", "name": "Winter Pack",
+         "description": "Fresh snow and frosted blue for the cold months.",
+         "themes": ["winter_snow"],
+         "premiumFrom": "2026-11-27", "publicFrom": "2026-11-30", "until": "2026-12-13"},
+    ],
+    "seasonal": [
+        {"id": "halloween", "name": "Halloween", "themes": ["halloween_night", "pumpkin_patch"], "from": "10-15", "until": "10-31"},
+        {"id": "winter", "name": "Winter", "themes": ["winter_snow"], "from": "12-01", "until": "02-28"},
+        {"id": "new_year", "name": "New Year", "themes": ["sparkles", "disco"], "from": "12-30", "until": "01-02"},
+        {"id": "valentines", "name": "Valentine's", "themes": ["valentines_day"], "from": "02-07", "until": "02-14"},
+        {"id": "spring", "name": "Spring", "themes": ["spring_bloom"], "from": "03-20", "until": "04-30"},
+        {"id": "summer", "name": "Summer", "themes": ["summer_splash", "beach"], "from": "06-21", "until": "08-31"},
+    ],
+}
+
+
+def check_featured(ids):
+    """Every theme the featured section names is in the catalog."""
+    named = [w["id"] for w in FEATURED["weeks"]]
+    for group in FEATURED["drops"] + FEATURED["seasonal"]:
+        named += group["themes"]
+    missing = sorted(set(named) - set(ids))
+    assert not missing, missing
+    for drop in FEATURED["drops"]:
+        assert drop["premiumFrom"] <= drop["publicFrom"] <= drop["until"], drop["id"]
 
 
 def finish(entry):
@@ -278,6 +416,7 @@ def finish(entry):
     entry["layout"] = dict(LAYOUTS[tid], **{k: v for k, v in (entry["layout"] or {}).items() if k not in LAYOUTS[tid]})
     entry["assistant"] = {"look": ASSISTANTS[tid]}
     entry["tags"] = [t for t in entry["tags"] if not t.startswith("style:")] + ["style:" + s for s in STYLES[tid]]
+    entry["tags"] += ["topic:" + t for t in TOPICS.get(tid, [])]
     if tid in EFFECTS:
         entry["effect"] = EFFECTS[tid]
     entry["look"] = dict(entry["look"], **LOOK_EXTRA.get(tid, {}))
@@ -427,9 +566,12 @@ SHARE_PAGE = """<!DOCTYPE html>
 def share_page(entry):
     """The page a theme link opens where Orbital is not installed: orbitallauncher.com/t/<id>."""
     esc = html.escape
-    tags = "".join(
-        "<li>" + esc(t.split(":", 1)[1]) + "</li>" for t in entry["tags"] if not t.startswith("audience:")
-    )
+    words = []
+    for t in entry["tags"]:
+        word = t.split(":", 1)[1]
+        if not t.startswith("audience:") and word not in words:
+            words.append(word)
+    tags = "".join("<li>" + esc(word) + "</li>" for word in words)
     return SHARE_PAGE.format(
         id=esc(entry["id"]),
         name=esc(entry["name"]),
@@ -473,7 +615,9 @@ def main():
         })
         print(entry["id"], len(data), "bytes json,", size, "bytes png")
     with open(os.path.join(ROOT, "index.json"), "w", encoding="utf-8", newline="\n") as f:
-        json.dump({"kind": "orbital-theme-index", "format": 1, "themes": index}, f, indent=2, ensure_ascii=False)
+        check_featured([e["id"] for e in index])
+        json.dump({"kind": "orbital-theme-index", "format": 1, "themes": index, "featured": FEATURED},
+                  f, indent=2, ensure_ascii=False)
         f.write("\n")
     write_share_pages(finished)
 

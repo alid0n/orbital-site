@@ -16,7 +16,9 @@
     "color:pink",
     "color:neon",
     "color:blue",
-    "style:one-handed"
+    "style:one-handed",
+    "topic:music",
+    "topic:retro"
   ],
   "previews": [
     "preview.png"
