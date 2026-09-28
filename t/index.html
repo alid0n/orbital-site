@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A theme for Orbital Launcher</title>
+<meta name="description" content="A theme shared from Orbital Launcher. Open it in Orbital to try it.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#07090e">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=7">
+<script src="/assets/theme.js"></script>
+<style>.share-actions { display: flex; flex-wrap: wrap; gap: 10px; }</style>
+</head>
+<body data-share="theme">
+<header class="top">
+  <a class="mark" href="/"><span>Orbital</span></a>
+  <nav aria-label="Site"><a href="/themes.html">Themes</a><a href="/features.html">Features</a></nav>
+</header>
+<main class="wrap">
+  <p class="eyebrow">A theme for Orbital Launcher</p>
+  <h1 id="theme-name">A theme shared with you</h1>
+  <p class="lede">
+    This theme comes with Orbital. Open the link on an Android phone with Orbital Launcher to see
+    it in the theme store, or browse <a href="/themes.html">every theme in the catalog</a>.
+  </p>
+  <div class="share-actions">
+    <a class="btn" data-open-app href="https://play.google.com/store/apps/details?id=com.alid0n.orbital">Get it in Orbital</a>
+    <a class="btn ghost" data-play href="https://play.google.com/store/apps/details?id=com.alid0n.orbital">Get Orbital on Google Play</a>
+  </div>
+</main>
+<footer class="foot">
+  <p><a href="/">Home</a> &middot; <a href="/themes.html">All themes</a> &middot; <a href="/privacy.html">Privacy policy</a></p>
+</footer>
+<script>
+  /* Reached from 404.html for a theme without a page of its own (the themes built into Orbital):
+     the link's own address is kept so "Get it in Orbital" opens the right one. */
+  (function () {
+    var id = new URLSearchParams(location.search).get('id') || '';
+    if (/^[A-Za-z0-9_]{1,40}$/.test(id)) {
+      history.replaceState(null, '', '/t/' + id + location.search.replace(/([?&])id=[^&]*&?/, '$1').replace(/[?&]$/, ''));
+      var nice = id.toLowerCase().replace(/_/g, ' ');
+      document.getElementById('theme-name').textContent = nice.charAt(0).toUpperCase() + nice.slice(1);
+    }
+  })();
+</script>
+<script src="/assets/share.js"></script>
+</body>
+</html>

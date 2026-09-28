@@ -59,6 +59,31 @@ few minutes.
 either at the repository, or drag this folder into Netlify's deploy box, and add
 the domain in their dashboard.
 
+## Shared links: /t/, /l/ and App Links
+
+- `t/<id>/index.html` is written by `tools/make_catalog.py` for every catalog theme: the
+  preview, name, tags, "Get it in Orbital" and a Google Play button. `t/index.html` is the
+  generic page for themes built into the app, reached through `404.html`.
+- `l/index.html` is the one page for every layout code. `/l/<code>` has no file, so
+  `404.html` sends it to `/l/#<code>`.
+- `assets/share.js` fills in the buttons: an `intent://` link that opens Orbital (or falls
+  back to Play), and the Play URL with `&referrer=ref%3D<code>` when the link carried one.
+- `.well-known/assetlinks.json` lets Android verify the app's link filter. `_config.yml`
+  tells Jekyll to publish that dot-folder.
+
+**Before shipping the app with App Links, add the Play App Signing key's SHA-256** to
+`sha256_cert_fingerprints` in `.well-known/assetlinks.json`, next to the upload key already
+there. JSON has no comments, so the placeholder lives here:
+
+```
+PLAY_APP_SIGNING_SHA256 = TODO  (Play Console > Test and release > App integrity >
+                                 App signing > "App signing key certificate" > SHA-256)
+```
+
+Installs from Play are signed with that key, not the upload key, so without it the links open
+the browser page instead of the app. Check with
+`https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=https://orbitallauncher.com&relation=delegate_permission/common.handle_all_urls`.
+
 ## The privacy policy exists twice
 
 `privacy.html` here is a copy of the one already published at

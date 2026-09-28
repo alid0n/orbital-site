@@ -1,6 +1,9 @@
 """Writes the starter theme catalog for orbitallauncher.com: one folder per theme with theme.json and
-preview.png, and themes/index.json with each file's size and SHA-256. Run from anywhere."""
+preview.png, themes/index.json with each file's size and SHA-256, and t/<id>/index.html, the page a
+shared theme link (orbitallauncher.com/t/<id>) shows where Orbital is not installed. Run from
+anywhere."""
 import hashlib
+import html
 import json
 import math
 import os
@@ -361,10 +364,97 @@ def theme_json(entry):
     return json.dumps(out, indent=2, ensure_ascii=False) + "\n"
 
 
+SHARE_PAGE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{name} &mdash; a theme for Orbital Launcher</title>
+<meta name="description" content="{description}">
+<meta name="theme-color" content="#07090e">
+<link rel="canonical" href="https://orbitallauncher.com/t/{id}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{name}, a theme for Orbital Launcher">
+<meta property="og:description" content="{description}">
+<meta property="og:url" content="https://orbitallauncher.com/t/{id}">
+<meta property="og:image" content="https://orbitallauncher.com/themes/{id}/preview.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=7">
+<script src="/assets/theme.js"></script>
+<style>
+  .share-theme {{ display: grid; gap: 2rem; align-items: center; grid-template-columns: minmax(0, 240px) minmax(0, 1fr); margin-top: 2rem; }}
+  .share-theme img {{ width: 100%; height: auto; border-radius: 28px; border: 1px solid var(--card-edge); }}
+  .share-tags {{ display: flex; flex-wrap: wrap; gap: 6px; margin: 1rem 0 1.5rem; padding: 0; list-style: none; }}
+  .share-tags li {{ font-size: 0.85rem; padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid var(--card-edge); }}
+  .share-actions {{ display: flex; flex-wrap: wrap; gap: 10px; }}
+  @media (max-width: 640px) {{ .share-theme {{ grid-template-columns: 1fr; }} .share-theme img {{ max-width: 220px; }} }}
+</style>
+</head>
+<body data-share="theme">
+<header class="top">
+  <a class="mark" href="/"><span>Orbital</span></a>
+  <nav aria-label="Site"><a href="/themes.html">Themes</a><a href="/features.html">Features</a></nav>
+</header>
+<main class="wrap">
+  <div class="share-theme">
+    <img src="/themes/{id}/preview.png" width="240" height="480" alt="A preview of the {name} theme">
+    <div>
+      <p class="eyebrow">A theme for Orbital Launcher{premium}</p>
+      <h1>{name}</h1>
+      <p class="lede">{description}</p>
+      <ul class="share-tags">{tags}</ul>
+      <div class="share-actions">
+        <a class="btn" data-open-app href="https://play.google.com/store/apps/details?id=com.alid0n.orbital">Get it in Orbital</a>
+        <a class="btn ghost" data-play href="https://play.google.com/store/apps/details?id=com.alid0n.orbital">Get Orbital on Google Play</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="foot">
+  <p><a href="/">Home</a> &middot; <a href="/themes.html">All themes</a> &middot; <a href="/privacy.html">Privacy policy</a></p>
+</footer>
+<script src="/assets/share.js"></script>
+</body>
+</html>
+"""
+
+
+def share_page(entry):
+    """The page a theme link opens where Orbital is not installed: orbitallauncher.com/t/<id>."""
+    esc = html.escape
+    tags = "".join(
+        "<li>" + esc(t.split(":", 1)[1]) + "</li>" for t in entry["tags"] if not t.startswith("audience:")
+    )
+    return SHARE_PAGE.format(
+        id=esc(entry["id"]),
+        name=esc(entry["name"]),
+        description=esc(entry["description"]),
+        premium=" &middot; Orbital Premium" if entry["premium"] else "",
+        tags=tags,
+    )
+
+
+def write_share_pages(entries):
+    """One folder per theme under t/, so /t/<id> serves its page."""
+    root = os.path.join(SITE, "t")
+    for entry in entries:
+        folder = os.path.join(root, entry["id"])
+        os.makedirs(folder, exist_ok=True)
+        with open(os.path.join(folder, "index.html"), "w", encoding="utf-8", newline="\n") as f:
+            f.write(share_page(entry))
+
+
 def main():
     os.makedirs(ROOT, exist_ok=True)
+    finished = []
     index = []
     for entry in map(finish, THEMES):
+        finished.append(entry)
         folder = os.path.join(ROOT, entry["id"])
         os.makedirs(folder, exist_ok=True)
         data = theme_json(entry).encode("utf-8")
@@ -385,6 +475,7 @@ def main():
     with open(os.path.join(ROOT, "index.json"), "w", encoding="utf-8", newline="\n") as f:
         json.dump({"kind": "orbital-theme-index", "format": 1, "themes": index}, f, indent=2, ensure_ascii=False)
         f.write("\n")
+    write_share_pages(finished)
 
 
 if __name__ == "__main__":

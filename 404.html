@@ -13,6 +13,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css?v=7">
 <script src="/assets/theme.js"></script>
+<script>
+  /* Shared links without a page of their own: /l/<code> goes to the layout page with the code
+     after the #, and /t/<id> for a theme built into the app goes to the generic theme page. The
+     referral in the query, if any, travels with it. */
+  (function () {
+    var l = /^\/l\/([^/]+)\/?$/.exec(location.pathname);
+    var t = /^\/t\/([A-Za-z0-9_]{1,40})\/?$/.exec(location.pathname);
+    var q = location.search;
+    if (l) location.replace('/l/' + q + '#' + encodeURIComponent(decodeURIComponent(l[1])));
+    else if (t) location.replace('/t/' + (q ? q + '&' : '?') + 'id=' + t[1]);
+  })();
+</script>
 </head>
 <body>
 

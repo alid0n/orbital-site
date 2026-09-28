@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A shared home screen &mdash; Orbital Launcher</title>
+<meta name="description" content="Somebody shared their Orbital home screen with you. Open it in Orbital to try it.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#07090e">
+<meta property="og:title" content="Try my Orbital home screen">
+<meta property="og:description" content="Open this link on Android to try the layout in Orbital Launcher.">
+<meta property="og:image" content="https://orbitallauncher.com/assets/og-image.jpg?v=3">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=7">
+<script src="/assets/theme.js"></script>
+<style>
+  .share-code { font-size: 2rem; font-weight: 600; letter-spacing: 0.08em; margin: 0.5rem 0 1.5rem; }
+  .share-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+</style>
+</head>
+<body data-share="layout">
+<header class="top">
+  <a class="mark" href="/"><span>Orbital</span></a>
+  <nav aria-label="Site"><a href="/themes.html">Themes</a><a href="/features.html">Features</a></nav>
+</header>
+<main class="wrap">
+  <p class="eyebrow">Try my setup</p>
+  <h1>A home screen shared with you</h1>
+  <p class="lede">
+    Open this link on an Android phone with Orbital Launcher to see the layout, then apply it or
+    save it for later. Your own home screen stays as it is until you choose to apply it.
+  </p>
+  <p class="share-code" id="layout-code" aria-live="polite"></p>
+  <p id="layout-missing" hidden>
+    This link doesn't include a layout code. You can still type a code into
+    <strong>Enter a code</strong> in Orbital's theme store.
+  </p>
+  <div class="share-actions">
+    <a class="btn" data-open-app href="https://play.google.com/store/apps/details?id=com.alid0n.orbital">Open in Orbital</a>
+    <a class="btn ghost" data-play href="https://play.google.com/store/apps/details?id=com.alid0n.orbital">Get Orbital</a>
+  </div>
+  <p class="small">Layout codes expire after 90 days without use. Shared layouts never include notes, contacts, calendar events or anything personal.</p>
+</main>
+<footer class="foot">
+  <p><a href="/">Home</a> &middot; <a href="/themes.html">Themes</a> &middot; <a href="/privacy.html">Privacy policy</a></p>
+</footer>
+<script src="/assets/share.js"></script>
+</body>
+</html>

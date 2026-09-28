@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.alid0n.orbital",
+      "sha256_cert_fingerprints": [
+        "EC:28:DC:44:19:C3:D5:AC:F0:62:8D:AC:8B:6F:B0:52:68:A5:A4:47:72:31:E9:F6:DC:62:29:A0:5E:8E:CA:34"
+      ]
+    }
+  }
+]
