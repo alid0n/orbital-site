@@ -1,0 +1,103 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "autumn_leaves",
+  "name": "Autumn Leaves",
+  "description": "Maple red and amber on a warm cream page, bright and easy on a crisp morning.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:cozy",
+    "vibe:calm",
+    "color:red",
+    "color:orange",
+    "style:one-handed",
+    "topic:autumn",
+    "topic:nature",
+    "topic:family"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#B8401A",
+    "accentAlt": "#8C5A2B",
+    "ink": "#2A170C",
+    "dim": "#7A5E48",
+    "drawer": "#FFF8F0",
+    "surface": "#FFFBF6",
+    "elevated": "#FBEBD9",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.9,
+    "font": "nunito",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "DOT"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "PETALS",
+      "colors": [
+        "#FFF1DE",
+        "#FFF9F0",
+        "#D9531E",
+        "#F2A33A",
+        "#B5763A"
+      ],
+      "light": true
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "week",
+        "kind": "CALENDAR_WEEK",
+        "x": 0.04,
+        "y": 0.33,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  },
+  "season": "autumn"
+}

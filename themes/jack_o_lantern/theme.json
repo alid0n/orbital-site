@@ -1,0 +1,103 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "jack_o_lantern",
+  "name": "Jack-o'-Lantern",
+  "description": "A warm orange glow flickering out of the dark, like a carved pumpkin on the porch.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:spooky",
+    "vibe:cozy",
+    "color:orange",
+    "color:yellow",
+    "style:one-handed",
+    "topic:halloween",
+    "topic:family"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FF9A1F",
+    "accentAlt": "#FFD166",
+    "ink": "#FFF3E0",
+    "dim": "#BFA088",
+    "drawer": "#0B0603",
+    "surface": "#140A04",
+    "elevated": "#24130A",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.3,
+    "widgetSolid": 0.85,
+    "font": "baloo_2",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "DOT",
+    "glow": true
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "NEBULA",
+      "colors": [
+        "#3A1A05",
+        "#0A0502",
+        "#FF8C1A",
+        "#FFC247",
+        "#7A2E00"
+      ],
+      "light": false
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.04,
+        "y": 0.33,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  },
+  "season": "halloween"
+}

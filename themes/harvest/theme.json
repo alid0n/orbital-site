@@ -1,0 +1,104 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "harvest",
+  "name": "Harvest",
+  "description": "Russet, wheat gold and deep brown, with leaves drifting down past the time.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:cozy",
+    "vibe:calm",
+    "color:orange",
+    "color:gold",
+    "style:one-handed",
+    "topic:autumn",
+    "topic:nature"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#E8A33D",
+    "accentAlt": "#C8553D",
+    "ink": "#FBF0E0",
+    "dim": "#B89C82",
+    "drawer": "#140C07",
+    "surface": "#1C110A",
+    "elevated": "#2C1B10",
+    "veil": "#33120A04",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "PAPER",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.9,
+    "font": "lora",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "DOT"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "DUNES",
+      "colors": [
+        "#4A2410",
+        "#140904",
+        "#D9822B",
+        "#E8B04A",
+        "#8C3B1A"
+      ],
+      "light": false
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.33,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  },
+  "effect": "falling-leaves",
+  "tap": true,
+  "season": "autumn"
+}

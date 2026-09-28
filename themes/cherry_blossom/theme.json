@@ -1,0 +1,104 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "cherry_blossom",
+  "name": "Cherry Blossom",
+  "description": "Pale pink blossom, fresh green leaves and soft morning light.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dreamy",
+    "color:pink",
+    "color:green",
+    "color:pastel",
+    "style:one-handed",
+    "topic:spring",
+    "topic:nature",
+    "topic:family"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#B8336A",
+    "accentAlt": "#3E8E5A",
+    "ink": "#2A1620",
+    "dim": "#7A6070",
+    "drawer": "#FFF7FA",
+    "surface": "#FFFBFD",
+    "elevated": "#FBE9F0",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "PILL",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.7,
+    "font": "comfortaa",
+    "clockFace": "STACK",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "PETALS",
+      "colors": [
+        "#FFEFF5",
+        "#FDFBFF",
+        "#F48FB1",
+        "#FFC1D6",
+        "#A5D6A7"
+      ],
+      "light": true
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "week",
+        "kind": "CALENDAR_WEEK",
+        "x": 0.04,
+        "y": 0.33,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  },
+  "season": "spring"
+}

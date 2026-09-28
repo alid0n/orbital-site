@@ -1,0 +1,75 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "spider_web",
+  "name": "Spider Web",
+  "description": "Silver threads on charcoal: a quiet, monochrome page with just the time.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:spooky",
+    "vibe:dark",
+    "vibe:calm",
+    "color:black",
+    "color:white",
+    "style:minimal",
+    "topic:halloween"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#D8DCE2",
+    "accentAlt": "#9AA1AB",
+    "ink": "#F2F4F7",
+    "dim": "#8A9099",
+    "drawer": "#060607",
+    "surface": "#0B0B0D",
+    "elevated": "#18181C",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "CIRCLE",
+    "iconStyle": "MONOCHROME",
+    "widgetLook": "BARE",
+    "widgetCorner": "SLIGHT",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.1,
+    "widgetSolid": 0.3,
+    "font": "manrope",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "TAPER"
+  },
+  "wallpaper": {
+    "image": "wallpaper.png"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "LIST",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.08,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.2
+      }
+    ]
+  },
+  "assistant": {
+    "look": "MINIMAL_LINE"
+  },
+  "season": "halloween"
+}

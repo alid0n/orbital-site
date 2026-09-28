@@ -27,6 +27,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css?v=7">
 <script src="assets/theme.js"></script>
+<script src="assets/season.js"></script>
 <style>
   .catalog-tools { display: flex; flex-wrap: wrap; gap: 10px; margin: 1.5rem 0 0.5rem; }
   .catalog-tools input {
@@ -71,6 +72,9 @@
   .featured-thumbs { display: flex; gap: 8px; margin-top: 0.6rem; flex-wrap: wrap; }
   .featured-thumbs img { width: 44px; height: 88px; object-fit: cover; border-radius: 8px; background: var(--bg-lift); }
   .featured[hidden] { display: none; }
+  .theme-card p.theme-season { font-size: 0.82rem; margin: 0 0 0.5rem; color: var(--accent); }
+  .out-of-season img { opacity: 0.55; }
+  .out-of-season p.theme-season { color: var(--muted); }
 </style>
 </head>
 <body>
@@ -127,6 +131,7 @@
   var query = document.getElementById('q');
   var group = 'all';
   var themes = [];
+  var seasons = {};
 
   function audience(theme) {
     var tag = (theme.tags || []).filter(function (t) { return t.indexOf('audience:') === 0; })[0];
@@ -172,6 +177,20 @@
     });
     body.appendChild(title);
     body.appendChild(line);
+    // A seasonal theme is in the app's store only during its season: say when.
+    var season = theme.season && seasons[theme.season];
+    if (season && window.OrbitalSeason) {
+      var w = OrbitalSeason.seasonWindow(season.from, season.until, new Date());
+      var when = document.createElement('p');
+      when.className = 'theme-season';
+      if (w && new Date() >= w.start) {
+        when.textContent = season.name + ' theme, available until ' + OrbitalSeason.short(season.until) + '.';
+      } else {
+        when.textContent = 'Available ' + OrbitalSeason.span(season.from, season.until) + '.';
+        el.classList.add('out-of-season');
+      }
+      body.appendChild(when);
+    }
     body.appendChild(tags);
     el.appendChild(img);
     el.appendChild(body);
@@ -277,9 +296,20 @@
     });
     (featured.seasonal || []).forEach(function (season) {
       var w = seasonWindow(season, now);
-      if (!w || now < w.start) return;
-      row.appendChild(featuredCard('In season', season.name, null,
-        'Available until ' + said(new Date(w.end.getTime() - 86400000)) + '.', season.themes || []));
+      if (!w) return;
+      if (now >= w.start) {
+        row.appendChild(featuredCard('In season', season.name, null,
+          'Available until ' + said(new Date(w.end.getTime() - 86400000)) + '.', season.themes || []));
+        return;
+      }
+      // A few days before a season opens, a teaser for its seasonal themes.
+      var tease = season.teaseDays == null ? 5 : season.teaseDays;
+      var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      var opensIn = Math.round((w.start - today) / 86400000);
+      var own = themes.filter(function (t) { return t.season === season.id; }).map(function (t) { return t.id; });
+      if (opensIn <= tease && own.length) {
+        row.appendChild(featuredCard('Coming soon', season.name, null, 'Coming ' + said(w.start) + '.', own));
+      }
     });
     document.getElementById('featured').hidden = !row.children.length;
 
@@ -298,6 +328,7 @@
   render();
   fetch('themes/index.json').then(function (r) { return r.json(); }).then(function (index) {
     themes = index.themes || [];
+    ((index.featured || {}).seasonal || []).forEach(function (s) { seasons[s.id] = s; });
     render();
     renderFeatured(index.featured);
   }).catch(function () {

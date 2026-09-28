@@ -1,0 +1,93 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "love_letters",
+  "name": "Love Letters",
+  "description": "Blush paper, rose ink and a handwritten note, soft and warm.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:calm",
+    "color:pink",
+    "color:red",
+    "color:pastel",
+    "style:one-handed",
+    "topic:valentines"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#B8325A",
+    "accentAlt": "#C77D2E",
+    "ink": "#2E1219",
+    "dim": "#7E5A63",
+    "drawer": "#FFF6F8",
+    "surface": "#FFFAFB",
+    "elevated": "#FCE8EE",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "PAPER",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.9,
+    "font": "caveat",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "DOT"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "PETALS",
+      "colors": [
+        "#FFEFF3",
+        "#FFF9FA",
+        "#E05A7A",
+        "#F7A8B8",
+        "#F2C57C"
+      ],
+      "light": true
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  },
+  "season": "valentines"
+}

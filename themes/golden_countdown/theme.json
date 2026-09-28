@@ -1,0 +1,84 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "golden_countdown",
+  "name": "Golden Countdown",
+  "description": "Black and champagne gold, with one elegant clock counting down to the new year.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:elegant",
+    "vibe:dark",
+    "color:gold",
+    "color:black",
+    "style:minimal",
+    "topic:new year"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#E8C15A",
+    "accentAlt": "#F5E3A8",
+    "ink": "#FBF4E0",
+    "dim": "#A89C80",
+    "drawer": "#060503",
+    "surface": "#0B0906",
+    "elevated": "#19150C",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "CIRCLE",
+    "iconStyle": "MONOCHROME",
+    "widgetLook": "BARE",
+    "widgetCorner": "SLIGHT",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.1,
+    "widgetSolid": 0.3,
+    "font": "playfair_display",
+    "clockFace": "ANALOGUE",
+    "panelLook": "FADE",
+    "notch": "TAPER"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "SILK",
+      "colors": [
+        "#1A1408",
+        "#050402",
+        "#E8C15A",
+        "#FFF1C4",
+        "#6B5320"
+      ],
+      "light": false
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "LIST",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.08,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.2
+      }
+    ]
+  },
+  "assistant": {
+    "look": "MINIMAL_LINE"
+  },
+  "season": "new_year"
+}

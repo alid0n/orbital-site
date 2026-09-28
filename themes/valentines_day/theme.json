@@ -92,5 +92,7 @@
   "assistant": {
     "look": "SPOTLIGHT"
   },
-  "effect": "sparkles"
+  "effect": "sparkles",
+  "tap": true,
+  "season": "valentines"
 }

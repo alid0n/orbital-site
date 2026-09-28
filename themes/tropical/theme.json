@@ -1,0 +1,104 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "tropical",
+  "name": "Tropical",
+  "description": "Lagoon teal, palm green and hibiscus coral under a bright island sun.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:chill",
+    "color:blue",
+    "color:green",
+    "color:orange",
+    "style:one-handed",
+    "topic:summer",
+    "topic:beach",
+    "topic:travel"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#0B7A6E",
+    "accentAlt": "#D2472F",
+    "ink": "#0E2A26",
+    "dim": "#557A73",
+    "drawer": "#F2FBF8",
+    "surface": "#F7FDFB",
+    "elevated": "#DEF4EE",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.9,
+    "font": "varela_round",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "PIP"
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "DUNES",
+      "colors": [
+        "#B2F0E6",
+        "#FFF3C4",
+        "#FF6F61",
+        "#1FB5A3",
+        "#FFD166"
+      ],
+      "light": true
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.04,
+        "y": 0.33,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  },
+  "season": "summer"
+}

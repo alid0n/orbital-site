@@ -26,6 +26,7 @@
   .share-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 1rem 0 1.5rem; padding: 0; list-style: none; }
   .share-tags li { font-size: 0.85rem; padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid var(--card-edge); }
   .share-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .season-note { margin: -0.5rem 0 1.25rem; font-size: 0.95rem; color: var(--accent); }
   @media (max-width: 640px) { .share-theme { grid-template-columns: 1fr; } .share-theme img { max-width: 220px; } }
 </style>
 </head>
@@ -42,6 +43,7 @@
       <h1>Spring Bloom</h1>
       <p class="lede">Fresh leaf green, blossom pink and morning light, for the first warm days of the year.</p>
       <ul class="share-tags"><li>calm</li><li>dreamy</li><li>green</li><li>pink</li><li>pastel</li><li>one-handed</li><li>spring</li><li>nature</li><li>family</li></ul>
+      <p class="season-note" data-season-from="03-20" data-season-until="05-31">A seasonal theme. Available Mar 20–May 31.</p>
       <div class="share-actions">
         <a class="btn" data-open-app href="https://play.google.com/store/apps/details?id=com.alid0n.orbital">Get it in Orbital</a>
         <a class="btn ghost" data-play href="https://play.google.com/store/apps/details?id=com.alid0n.orbital">Get Orbital on Google Play</a>
@@ -53,5 +55,6 @@
   <p><a href="/">Home</a> &middot; <a href="/themes.html">All themes</a> &middot; <a href="/privacy.html">Privacy policy</a></p>
 </footer>
 <script src="/assets/share.js"></script>
+<script src="/assets/season.js"></script>
 </body>
 </html>

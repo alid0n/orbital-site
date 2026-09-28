@@ -1,0 +1,108 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "northern_lights",
+  "name": "Northern Lights",
+  "description": "Green and violet ribbons of light over a starry polar night.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:calm",
+    "color:green",
+    "color:purple",
+    "color:blue",
+    "style:one-handed",
+    "topic:winter",
+    "topic:nature",
+    "topic:space"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#5CF2B8",
+    "accentAlt": "#8C9CFF",
+    "ink": "#EAFBF5",
+    "dim": "#8FA8B0",
+    "drawer": "#030811",
+    "surface": "#060D18",
+    "elevated": "#0E1A2B",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "PILL",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.45,
+    "font": "exo_2",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT",
+    "glow": true
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "AURORA",
+      "colors": [
+        "#06142A",
+        "#02050C",
+        "#3DF5B0",
+        "#6C8CFF",
+        "#B46CFF"
+      ],
+      "light": false
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.04,
+        "y": 0.36,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
+  },
+  "effect": "twinkle-stars",
+  "tap": true,
+  "season": "winter"
+}

@@ -1,0 +1,96 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "witching_hour",
+  "name": "Witching Hour",
+  "description": "Midnight black and ember orange under a great full moon.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:spooky",
+    "vibe:dark",
+    "color:orange",
+    "color:black",
+    "style:one-handed",
+    "topic:halloween",
+    "topic:space"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FF7A1A",
+    "accentAlt": "#FFB45C",
+    "ink": "#FFF1E3",
+    "dim": "#B39A86",
+    "drawer": "#060403",
+    "surface": "#0C0806",
+    "elevated": "#1B120C",
+    "veil": "#55000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "marcellus",
+    "clockFace": "STACK",
+    "uppercase": true,
+    "panelLook": "FADE",
+    "notch": "DOT",
+    "glow": true
+  },
+  "wallpaper": {
+    "image": "wallpaper.png"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.04,
+        "y": 0.33,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  },
+  "effect": "bats",
+  "tap": true,
+  "season": "halloween"
+}

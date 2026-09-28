@@ -548,8 +548,8 @@
       "thumbnail": "halloween_night/preview.png",
       "file": "halloween_night/theme.json",
       "premium": true,
-      "size": 1835,
-      "sha256": "c46d09f0b2976a4f52c33c545045c82cc9e2e52faec48ad0144304b014f234b9",
+      "size": 1860,
+      "sha256": "b1b76cc53253a64eeadd819c911cdf7fa17b11bd98548e6ea044d9d926ff5cf5",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FF8C2B",
@@ -561,7 +561,8 @@
         "elevated": "#23122C",
         "veil": "#44000000",
         "light": false
-      }
+      },
+      "season": "halloween"
     },
     {
       "id": "pumpkin_patch",
@@ -580,8 +581,8 @@
       "thumbnail": "pumpkin_patch/preview.png",
       "file": "pumpkin_patch/theme.json",
       "premium": false,
-      "size": 1837,
-      "sha256": "40ab6baf622d67e8848b76936827e4f0f11b9fe5fa76eaeefe2eb7fcaf7c8092",
+      "size": 1862,
+      "sha256": "cd99a67aa7526ad25164f22c4ddb02c2554c7236d73d0fb33a5adcff3c97f262",
       "base": "ORBITAL",
       "colors": {
         "accent": "#C2410C",
@@ -593,7 +594,8 @@
         "elevated": "#FFEBD2",
         "veil": "#11FFFFFF",
         "light": true
-      }
+      },
+      "season": "halloween"
     },
     {
       "id": "winter_snow",
@@ -615,8 +617,8 @@
       "thumbnail": "winter_snow/preview.png",
       "file": "winter_snow/theme.json",
       "premium": false,
-      "size": 1971,
-      "sha256": "0d9ee98d990f1fb96204e1f30476a15be0847b24a9bca58d44549b10a57c2692",
+      "size": 1993,
+      "sha256": "e21f878425a408d10399ecf43a4930320fccda2e038a6c4d921511178a0c02a9",
       "base": "ORBITAL",
       "colors": {
         "accent": "#2F6FB3",
@@ -628,7 +630,8 @@
         "elevated": "#E6EFF8",
         "veil": "#11FFFFFF",
         "light": true
-      }
+      },
+      "season": "winter"
     },
     {
       "id": "valentines_day",
@@ -648,8 +651,8 @@
       "thumbnail": "valentines_day/preview.png",
       "file": "valentines_day/theme.json",
       "premium": true,
-      "size": 1865,
-      "sha256": "a3560418999fdb0c59e4b19f345e6b212a7f41bc144b7d0109b265ea2a6743da",
+      "size": 1906,
+      "sha256": "c0e7ef2eb6083f78be20504ffe7e5dc1f2c2883b17f93e515f44f8920d0ef33d",
       "base": "ORBITAL",
       "colors": {
         "accent": "#E0245E",
@@ -661,7 +664,8 @@
         "elevated": "#36111D",
         "veil": "#33000000",
         "light": false
-      }
+      },
+      "season": "valentines"
     },
     {
       "id": "summer_splash",
@@ -684,8 +688,8 @@
       "thumbnail": "summer_splash/preview.png",
       "file": "summer_splash/theme.json",
       "premium": false,
-      "size": 1996,
-      "sha256": "75d3b7a3f918a79ca8125ee2ec6db409ab959a856e516fd0c63ebfab8fbca42b",
+      "size": 2018,
+      "sha256": "6d345e9880661c5a341073d2a477050ab3f0f4ebe37deda3b19937c689aea9f3",
       "base": "ORBITAL",
       "colors": {
         "accent": "#0A74C9",
@@ -697,7 +701,8 @@
         "elevated": "#E0F1FC",
         "veil": "#11FFFFFF",
         "light": true
-      }
+      },
+      "season": "summer"
     },
     {
       "id": "spring_bloom",
@@ -719,8 +724,8 @@
       "thumbnail": "spring_bloom/preview.png",
       "file": "spring_bloom/theme.json",
       "premium": false,
-      "size": 1999,
-      "sha256": "840ffeffd9d66cf1b43ae4b1acb430873462a5fa4e863b85b8255c0f8ce84c03",
+      "size": 2021,
+      "sha256": "55455492fc23d99fbb03fc177ff69047faf7bce14d38cea8388152792074d583",
       "base": "ORBITAL",
       "colors": {
         "accent": "#2E8B57",
@@ -732,7 +737,492 @@
         "elevated": "#E7F4E4",
         "veil": "#11FFFFFF",
         "light": true
-      }
+      },
+      "season": "spring"
+    },
+    {
+      "id": "ghost_glow",
+      "name": "Ghost Glow",
+      "description": "Glow-in-the-dark green on midnight black, with violet accents and friendly ghosts drifting by.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:spooky",
+        "vibe:dark",
+        "vibe:playful",
+        "color:green",
+        "color:purple",
+        "color:neon",
+        "style:one-handed",
+        "topic:halloween"
+      ],
+      "thumbnail": "ghost_glow/preview.png",
+      "file": "ghost_glow/theme.json",
+      "premium": true,
+      "size": 1772,
+      "sha256": "9157db743fe5e11146bc20ae62697270ab2814beeab93d06b70fbc94e96362ce",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#39FF14",
+        "accentAlt": "#9B30FF",
+        "ink": "#EDFFE8",
+        "dim": "#8FB394",
+        "drawer": "#040705",
+        "surface": "#070B08",
+        "elevated": "#101A12",
+        "veil": "#55000000",
+        "light": false
+      },
+      "season": "halloween"
+    },
+    {
+      "id": "haunted_mansion",
+      "name": "Haunted Mansion",
+      "description": "Deep velvet purple and candlelight gold, with elegant lettering and bats in the rafters.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:spooky",
+        "vibe:elegant",
+        "vibe:dark",
+        "color:purple",
+        "color:gold",
+        "style:one-handed",
+        "topic:halloween"
+      ],
+      "thumbnail": "haunted_mansion/preview.png",
+      "file": "haunted_mansion/theme.json",
+      "premium": true,
+      "size": 1905,
+      "sha256": "a63c2f0597ccbd60f0f4d170309a4a356842c8f6faebc1ed78bb1bfb05eae3d1",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#F2C46D",
+        "accentAlt": "#9D6BE0",
+        "ink": "#F8EFDC",
+        "dim": "#A99BB6",
+        "drawer": "#0C0612",
+        "surface": "#130A1C",
+        "elevated": "#221336",
+        "veil": "#44000000",
+        "light": false
+      },
+      "season": "halloween"
+    },
+    {
+      "id": "witching_hour",
+      "name": "Witching Hour",
+      "description": "Midnight black and ember orange under a great full moon.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:spooky",
+        "vibe:dark",
+        "color:orange",
+        "color:black",
+        "style:one-handed",
+        "topic:halloween",
+        "topic:space"
+      ],
+      "thumbnail": "witching_hour/preview.png",
+      "file": "witching_hour/theme.json",
+      "premium": true,
+      "size": 1871,
+      "sha256": "d0cbbc3709351d52e6f8e94c505ca24f68d32da6eb68a705749de8b553b8ff78",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF7A1A",
+        "accentAlt": "#FFB45C",
+        "ink": "#FFF1E3",
+        "dim": "#B39A86",
+        "drawer": "#060403",
+        "surface": "#0C0806",
+        "elevated": "#1B120C",
+        "veil": "#55000000",
+        "light": false
+      },
+      "season": "halloween"
+    },
+    {
+      "id": "candy_corn",
+      "name": "Candy Corn",
+      "description": "Sunny orange, lemon yellow and bright white, with big friendly shapes for trick-or-treaters.",
+      "version": 1,
+      "tags": [
+        "audience:kids",
+        "vibe:playful",
+        "color:orange",
+        "color:yellow",
+        "color:white",
+        "style:easy to see",
+        "topic:halloween",
+        "topic:family"
+      ],
+      "thumbnail": "candy_corn/preview.png",
+      "file": "candy_corn/theme.json",
+      "premium": false,
+      "size": 1892,
+      "sha256": "fb214b02f08c134197b66bcca715d5a8a9fa15650ca6fff5c80790d7e0463535",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#C2410C",
+        "accentAlt": "#A16207",
+        "ink": "#2B1A0A",
+        "dim": "#7A5A44",
+        "drawer": "#FFFBF2",
+        "surface": "#FFFDF8",
+        "elevated": "#FFF0D6",
+        "veil": "#11FFFFFF",
+        "light": true
+      },
+      "season": "halloween"
+    },
+    {
+      "id": "spider_web",
+      "name": "Spider Web",
+      "description": "Silver threads on charcoal: a quiet, monochrome page with just the time.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:spooky",
+        "vibe:dark",
+        "vibe:calm",
+        "color:black",
+        "color:white",
+        "style:minimal",
+        "topic:halloween"
+      ],
+      "thumbnail": "spider_web/preview.png",
+      "file": "spider_web/theme.json",
+      "premium": false,
+      "size": 1509,
+      "sha256": "bb3d0236d36656189c12d715858710e3d13e2526ada789a27927dbc8b5cdd9a8",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#D8DCE2",
+        "accentAlt": "#9AA1AB",
+        "ink": "#F2F4F7",
+        "dim": "#8A9099",
+        "drawer": "#060607",
+        "surface": "#0B0B0D",
+        "elevated": "#18181C",
+        "veil": "#44000000",
+        "light": false
+      },
+      "season": "halloween"
+    },
+    {
+      "id": "jack_o_lantern",
+      "name": "Jack-o'-Lantern",
+      "description": "A warm orange glow flickering out of the dark, like a carved pumpkin on the porch.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:spooky",
+        "vibe:cozy",
+        "color:orange",
+        "color:yellow",
+        "style:one-handed",
+        "topic:halloween",
+        "topic:family"
+      ],
+      "thumbnail": "jack_o_lantern/preview.png",
+      "file": "jack_o_lantern/theme.json",
+      "premium": false,
+      "size": 2003,
+      "sha256": "a94db26183043a24529dbe8936d1ace815a67cd6f44046223c61145e93b80a40",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF9A1F",
+        "accentAlt": "#FFD166",
+        "ink": "#FFF3E0",
+        "dim": "#BFA088",
+        "drawer": "#0B0603",
+        "surface": "#140A04",
+        "elevated": "#24130A",
+        "veil": "#44000000",
+        "light": false
+      },
+      "season": "halloween"
+    },
+    {
+      "id": "harvest",
+      "name": "Harvest",
+      "description": "Russet, wheat gold and deep brown, with leaves drifting down past the time.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:cozy",
+        "vibe:calm",
+        "color:orange",
+        "color:gold",
+        "style:one-handed",
+        "topic:autumn",
+        "topic:nature"
+      ],
+      "thumbnail": "harvest/preview.png",
+      "file": "harvest/theme.json",
+      "premium": true,
+      "size": 1996,
+      "sha256": "6bbb3f3871dbbaa721f19cf7ecb9592c7d9345dba7834dcab6d83e1270508925",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E8A33D",
+        "accentAlt": "#C8553D",
+        "ink": "#FBF0E0",
+        "dim": "#B89C82",
+        "drawer": "#140C07",
+        "surface": "#1C110A",
+        "elevated": "#2C1B10",
+        "veil": "#33120A04",
+        "light": false
+      },
+      "season": "autumn"
+    },
+    {
+      "id": "autumn_leaves",
+      "name": "Autumn Leaves",
+      "description": "Maple red and amber on a warm cream page, bright and easy on a crisp morning.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:cozy",
+        "vibe:calm",
+        "color:red",
+        "color:orange",
+        "style:one-handed",
+        "topic:autumn",
+        "topic:nature",
+        "topic:family"
+      ],
+      "thumbnail": "autumn_leaves/preview.png",
+      "file": "autumn_leaves/theme.json",
+      "premium": false,
+      "size": 1988,
+      "sha256": "6ffc2457be513397373a5d2d03b243b9d598432691a1163c5eb22bdaed99fe2a",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#B8401A",
+        "accentAlt": "#8C5A2B",
+        "ink": "#2A170C",
+        "dim": "#7A5E48",
+        "drawer": "#FFF8F0",
+        "surface": "#FFFBF6",
+        "elevated": "#FBEBD9",
+        "veil": "#11FFFFFF",
+        "light": true
+      },
+      "season": "autumn"
+    },
+    {
+      "id": "northern_lights",
+      "name": "Northern Lights",
+      "description": "Green and violet ribbons of light over a starry polar night.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dreamy",
+        "vibe:calm",
+        "color:green",
+        "color:purple",
+        "color:blue",
+        "style:one-handed",
+        "topic:winter",
+        "topic:nature",
+        "topic:space"
+      ],
+      "thumbnail": "northern_lights/preview.png",
+      "file": "northern_lights/theme.json",
+      "premium": true,
+      "size": 2073,
+      "sha256": "0ca4601849394c4bda428d527b28580865359cd1bd3af01183d3ca7c6b287305",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#5CF2B8",
+        "accentAlt": "#8C9CFF",
+        "ink": "#EAFBF5",
+        "dim": "#8FA8B0",
+        "drawer": "#030811",
+        "surface": "#060D18",
+        "elevated": "#0E1A2B",
+        "veil": "#44000000",
+        "light": false
+      },
+      "season": "winter"
+    },
+    {
+      "id": "midnight_fireworks",
+      "name": "Midnight Fireworks",
+      "description": "Gold, magenta and electric blue bursting over a midnight sky.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:dark",
+        "color:gold",
+        "color:pink",
+        "color:blue",
+        "style:one-handed",
+        "topic:new year",
+        "topic:music"
+      ],
+      "thumbnail": "midnight_fireworks/preview.png",
+      "file": "midnight_fireworks/theme.json",
+      "premium": true,
+      "size": 1915,
+      "sha256": "d94c593bed6d350c2af4cabe88f45f351365afefc89ee60e91c6532926507603",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFD24A",
+        "accentAlt": "#FF4FA3",
+        "ink": "#FFF7E0",
+        "dim": "#B8A6C0",
+        "drawer": "#05040E",
+        "surface": "#0A0818",
+        "elevated": "#171230",
+        "veil": "#55000000",
+        "light": false
+      },
+      "season": "new_year"
+    },
+    {
+      "id": "golden_countdown",
+      "name": "Golden Countdown",
+      "description": "Black and champagne gold, with one elegant clock counting down to the new year.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:elegant",
+        "vibe:dark",
+        "color:gold",
+        "color:black",
+        "style:minimal",
+        "topic:new year"
+      ],
+      "thumbnail": "golden_countdown/preview.png",
+      "file": "golden_countdown/theme.json",
+      "premium": false,
+      "size": 1679,
+      "sha256": "8002c4150a62993eb778340c9e17c597d30217eb09371c9705433a7f9b137556",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E8C15A",
+        "accentAlt": "#F5E3A8",
+        "ink": "#FBF4E0",
+        "dim": "#A89C80",
+        "drawer": "#060503",
+        "surface": "#0B0906",
+        "elevated": "#19150C",
+        "veil": "#44000000",
+        "light": false
+      },
+      "season": "new_year"
+    },
+    {
+      "id": "love_letters",
+      "name": "Love Letters",
+      "description": "Blush paper, rose ink and a handwritten note, soft and warm.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dreamy",
+        "vibe:calm",
+        "color:pink",
+        "color:red",
+        "color:pastel",
+        "style:one-handed",
+        "topic:valentines"
+      ],
+      "thumbnail": "love_letters/preview.png",
+      "file": "love_letters/theme.json",
+      "premium": false,
+      "size": 1791,
+      "sha256": "43b7e8886e622529f123ebd2bc0e7d101485c957c837b69d0c6c89deddf9e3a7",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#B8325A",
+        "accentAlt": "#C77D2E",
+        "ink": "#2E1219",
+        "dim": "#7E5A63",
+        "drawer": "#FFF6F8",
+        "surface": "#FFFAFB",
+        "elevated": "#FCE8EE",
+        "veil": "#11FFFFFF",
+        "light": true
+      },
+      "season": "valentines"
+    },
+    {
+      "id": "cherry_blossom",
+      "name": "Cherry Blossom",
+      "description": "Pale pink blossom, fresh green leaves and soft morning light.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dreamy",
+        "color:pink",
+        "color:green",
+        "color:pastel",
+        "style:one-handed",
+        "topic:spring",
+        "topic:nature",
+        "topic:family"
+      ],
+      "thumbnail": "cherry_blossom/preview.png",
+      "file": "cherry_blossom/theme.json",
+      "premium": false,
+      "size": 1996,
+      "sha256": "bf7f3cf795bf7d26673d4e14b7cc87d09c81e070b7d6572bf6a4ce054717d694",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#B8336A",
+        "accentAlt": "#3E8E5A",
+        "ink": "#2A1620",
+        "dim": "#7A6070",
+        "drawer": "#FFF7FA",
+        "surface": "#FFFBFD",
+        "elevated": "#FBE9F0",
+        "veil": "#11FFFFFF",
+        "light": true
+      },
+      "season": "spring"
+    },
+    {
+      "id": "tropical",
+      "name": "Tropical",
+      "description": "Lagoon teal, palm green and hibiscus coral under a bright island sun.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:chill",
+        "color:blue",
+        "color:green",
+        "color:orange",
+        "style:one-handed",
+        "topic:summer",
+        "topic:beach",
+        "topic:travel"
+      ],
+      "thumbnail": "tropical/preview.png",
+      "file": "tropical/theme.json",
+      "premium": false,
+      "size": 1993,
+      "sha256": "062ede9c8f2ff9dca11c62709b71a274fe80c9c7a95c9047fc6bebce7c46fec5",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#0B7A6E",
+        "accentAlt": "#D2472F",
+        "ink": "#0E2A26",
+        "dim": "#557A73",
+        "drawer": "#F2FBF8",
+        "surface": "#F7FDFB",
+        "elevated": "#DEF4EE",
+        "veil": "#11FFFFFF",
+        "light": true
+      },
+      "season": "summer"
     }
   ],
   "featured": {
@@ -748,7 +1238,7 @@
         "end": "2026-10-04"
       },
       {
-        "id": "cozy_cabin",
+        "id": "ghost_glow",
         "start": "2026-10-05",
         "end": "2026-10-11"
       },
@@ -788,9 +1278,14 @@
         "end": "2026-11-29"
       },
       {
-        "id": "winter_snow",
+        "id": "cozy_cabin",
         "start": "2026-11-30",
         "end": "2026-12-06"
+      },
+      {
+        "id": "winter_snow",
+        "start": "2026-12-07",
+        "end": "2026-12-13"
       }
     ],
     "drops": [
@@ -811,9 +1306,11 @@
       {
         "id": "spooky_week",
         "name": "Spooky Week",
-        "description": "A starry Halloween night, and a friendly pumpkin patch for younger fans.",
+        "description": "A starry Halloween night, glowing ghosts, a witching-hour moon and a friendly pumpkin patch.",
         "themes": [
           "halloween_night",
+          "ghost_glow",
+          "witching_hour",
           "pumpkin_patch"
         ],
         "premiumFrom": "2026-10-23",
@@ -823,12 +1320,13 @@
       {
         "id": "winter_pack",
         "name": "Winter Pack",
-        "description": "Fresh snow and frosted blue for the cold months.",
+        "description": "Fresh snow, frosted blue and the northern lights for the cold months.",
         "themes": [
-          "winter_snow"
+          "winter_snow",
+          "northern_lights"
         ],
-        "premiumFrom": "2026-11-27",
-        "publicFrom": "2026-11-30",
+        "premiumFrom": "2026-11-28",
+        "publicFrom": "2026-12-01",
         "until": "2026-12-13"
       }
     ],
@@ -836,59 +1334,96 @@
       {
         "id": "halloween",
         "name": "Halloween",
+        "from": "10-01",
+        "until": "11-01",
+        "teaseDays": 5,
+        "earlyDays": 3,
         "themes": [
           "halloween_night",
-          "pumpkin_patch"
-        ],
-        "from": "10-15",
-        "until": "10-31"
+          "ghost_glow",
+          "haunted_mansion",
+          "witching_hour",
+          "jack_o_lantern",
+          "spider_web",
+          "pumpkin_patch",
+          "candy_corn"
+        ]
+      },
+      {
+        "id": "autumn",
+        "name": "Autumn",
+        "from": "11-01",
+        "until": "11-30",
+        "teaseDays": 5,
+        "earlyDays": 3,
+        "themes": [
+          "harvest",
+          "autumn_leaves",
+          "cozy_cabin"
+        ]
       },
       {
         "id": "winter",
-        "name": "Winter",
-        "themes": [
-          "winter_snow"
-        ],
+        "name": "Winter holidays",
         "from": "12-01",
-        "until": "02-28"
+        "until": "01-06",
+        "teaseDays": 5,
+        "earlyDays": 3,
+        "themes": [
+          "winter_snow",
+          "northern_lights"
+        ]
       },
       {
         "id": "new_year",
         "name": "New Year",
+        "from": "12-26",
+        "until": "01-07",
+        "teaseDays": 5,
+        "earlyDays": 3,
         "themes": [
+          "midnight_fireworks",
+          "golden_countdown",
           "sparkles",
           "disco"
-        ],
-        "from": "12-30",
-        "until": "01-02"
+        ]
       },
       {
         "id": "valentines",
         "name": "Valentine's",
+        "from": "02-01",
+        "until": "02-15",
+        "teaseDays": 5,
+        "earlyDays": 3,
         "themes": [
-          "valentines_day"
-        ],
-        "from": "02-07",
-        "until": "02-14"
+          "valentines_day",
+          "love_letters"
+        ]
       },
       {
         "id": "spring",
         "name": "Spring",
-        "themes": [
-          "spring_bloom"
-        ],
         "from": "03-20",
-        "until": "04-30"
+        "until": "05-31",
+        "teaseDays": 5,
+        "earlyDays": 3,
+        "themes": [
+          "spring_bloom",
+          "cherry_blossom"
+        ]
       },
       {
         "id": "summer",
         "name": "Summer",
+        "from": "06-01",
+        "until": "08-31",
+        "teaseDays": 5,
+        "earlyDays": 3,
         "themes": [
           "summer_splash",
+          "tropical",
           "beach"
-        ],
-        "from": "06-21",
-        "until": "08-31"
+        ]
       }
     ]
   }

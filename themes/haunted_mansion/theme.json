@@ -1,0 +1,97 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "haunted_mansion",
+  "name": "Haunted Mansion",
+  "description": "Deep velvet purple and candlelight gold, with elegant lettering and bats in the rafters.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:spooky",
+    "vibe:elegant",
+    "vibe:dark",
+    "color:purple",
+    "color:gold",
+    "style:one-handed",
+    "topic:halloween"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#F2C46D",
+    "accentAlt": "#9D6BE0",
+    "ink": "#F8EFDC",
+    "dim": "#A99BB6",
+    "drawer": "#0C0612",
+    "surface": "#130A1C",
+    "elevated": "#221336",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "SLIGHT",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.8,
+    "font": "cinzel",
+    "clockFace": "ANALOGUE",
+    "panelLook": "FADE",
+    "notch": "TAPER",
+    "glow": true
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "SILK",
+      "colors": [
+        "#2A1245",
+        "#08040E",
+        "#F2C46D",
+        "#9D6BE0",
+        "#3D1F5C"
+      ],
+      "light": false
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "LIST",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.05,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.3,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
+  },
+  "effect": "bats",
+  "tap": true,
+  "season": "halloween"
+}

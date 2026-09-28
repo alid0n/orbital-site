@@ -1,0 +1,99 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "midnight_fireworks",
+  "name": "Midnight Fireworks",
+  "description": "Gold, magenta and electric blue bursting over a midnight sky.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:dark",
+    "color:gold",
+    "color:pink",
+    "color:blue",
+    "style:one-handed",
+    "topic:new year",
+    "topic:music"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFD24A",
+    "accentAlt": "#FF4FA3",
+    "ink": "#FFF7E0",
+    "dim": "#B8A6C0",
+    "drawer": "#05040E",
+    "surface": "#0A0818",
+    "elevated": "#171230",
+    "veil": "#55000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "FINE",
+    "widgetTint": 0.3,
+    "widgetSolid": 0.5,
+    "font": "outfit",
+    "clockFace": "LINE",
+    "uppercase": true,
+    "panelLook": "FADE",
+    "notch": "DOT",
+    "glow": true
+  },
+  "wallpaper": {
+    "drawn": {
+      "style": "NEBULA",
+      "colors": [
+        "#0B0A2A",
+        "#02020A",
+        "#FFD24A",
+        "#FF4FA3",
+        "#4FC3FF"
+      ],
+      "light": false
+    }
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.06,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.88,
+        "tint": 1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "HUD"
+  },
+  "effect": "fireworks",
+  "tap": true,
+  "season": "new_year"
+}

@@ -1,0 +1,88 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "ghost_glow",
+  "name": "Ghost Glow",
+  "description": "Glow-in-the-dark green on midnight black, with violet accents and friendly ghosts drifting by.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:spooky",
+    "vibe:dark",
+    "vibe:playful",
+    "color:green",
+    "color:purple",
+    "color:neon",
+    "style:one-handed",
+    "topic:halloween"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#39FF14",
+    "accentAlt": "#9B30FF",
+    "ink": "#EDFFE8",
+    "dim": "#8FB394",
+    "drawer": "#040705",
+    "surface": "#070B08",
+    "elevated": "#101A12",
+    "veil": "#55000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "DUOTONE",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "FINE",
+    "widgetTint": 0.3,
+    "widgetSolid": 0.5,
+    "font": "permanent_marker",
+    "clockFace": "STACK",
+    "panelLook": "FADE",
+    "notch": "DOT",
+    "glow": true
+  },
+  "wallpaper": {
+    "image": "wallpaper.png"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.06,
+        "y": 0.24,
+        "col": 0,
+        "row": 0,
+        "w": 0.88,
+        "tint": 1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "HUD"
+  },
+  "effect": "floating-ghosts",
+  "tap": true,
+  "season": "halloween"
+}

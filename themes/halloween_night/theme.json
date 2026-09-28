@@ -91,5 +91,6 @@
   "assistant": {
     "look": "HUD"
   },
-  "effect": "twinkle-stars"
+  "effect": "twinkle-stars",
+  "season": "halloween"
 }
