@@ -71,7 +71,8 @@
 :root[data-theme='light'] .band-section.alt { background: linear-gradient(180deg, rgba(15, 23, 42, 0.03), rgba(15, 23, 42, 0)); }
 
 /* The sun or moon in the header that switches between the two. */
-.mode-btn {
+.mode-btn,
+.share-btn {
   display: grid;
   place-items: center;
   width: 34px;
@@ -83,8 +84,8 @@
   color: var(--muted);
   cursor: pointer;
 }
-.mode-btn:hover { color: var(--accent); border-color: var(--accent); }
-.mode-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.mode-btn:hover, .share-btn:hover { color: var(--accent); border-color: var(--accent); }
+.mode-btn svg, .share-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
 * { box-sizing: border-box; }
 
@@ -1529,9 +1530,42 @@ dl.rows dd {
   .orbit-name span { font-size: 0.82rem; }
 }
 
-@media (max-width: 400px) {
+/* Share sits in the header on phones only. To keep the header on one line
+   there, the early-access button steps out of it (the same button is right in
+   the hero), and below 420px the logo drops its name. */
+.share-btn { display: none; }
+@media (max-width: 760px) {
+  .share-btn { display: grid; }
+}
+@media (max-width: 560px) {
+  .top nav .nav-cta { display: none; }
+}
+@media (max-width: 420px) {
   .mark span { display: none; }
 }
+
+.share-toast {
+  position: fixed;
+  z-index: 90;
+  left: 50%;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  width: max-content;
+  max-width: calc(100% - 32px);
+  margin: 0;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: var(--bg-lift);
+  border: 1px solid var(--card-edge);
+  color: var(--text-strong);
+  font-size: 0.92rem;
+  text-align: center;
+  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.8);
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s;
+}
+.share-toast.is-on { opacity: 1; transform: translate(-50%, 0); }
 
 /* Read aloud, never drawn. */
 .sr-only {
