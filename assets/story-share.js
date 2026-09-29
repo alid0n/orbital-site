@@ -30,6 +30,13 @@
 
   var script = document.querySelector('script[src*="story-share.js"]');
   var ROOT = script ? script.src.replace(/story-share\.js.*$/, 'story/') : 'assets/story/';
+  var HOME = script ? script.src.replace(/assets\/story-share\.js.*$/, '') : './';
+
+  var MORE = {
+    site: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5L12 3l4.5 4.5M5 12v7.5h14V12"/></svg>',
+    link: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1 1M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1-1"/></svg>',
+    photo: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z M4 16l5-5 4 4 3-3 4 4"/><circle cx="15.5" cy="8.5" r="1.3"/></svg>',
+  };
 
   /* Each picture is fetched as soon as the picker opens, because Safari only
      lets a page open the share sheet straight from a tap, not after a
@@ -97,6 +104,12 @@
       '</div>' +
       '<button type="button" class="btn shs-go">Share</button>' +
       '<p class="shs-note small muted">Choose Instagram, then Story. The link is already copied, ready for a link sticker.</p>' +
+      '<div class="shs-more">' +
+      '<button type="button" data-do="site">' + MORE.site + 'Share the site</button>' +
+      '<button type="button" data-do="link">' + MORE.link + 'Copy link</button>' +
+      '<button type="button" data-do="photo">' + MORE.photo + 'Copy photo</button>' +
+      '</div>' +
+      '<a class="shs-tester" href="' + HOME + '#get">Become a tester</a>' +
       /* Where the browser cannot share a picture (the browsers inside
          Instagram, TikTok and Facebook among them), the picture is shown to
          save instead, to post from Instagram itself. */
@@ -118,6 +131,20 @@
       pick(o.getAttribute('data-k'));
     });
     goBtn.addEventListener('click', go);
+    sheet.querySelector('.shs-more').addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (!b) return;
+      var what = b.getAttribute('data-do');
+      if (what === 'site') shareSite();
+      else if (what === 'link') copyLink().then(function () { say('Link copied.'); }, function () { say(URL); });
+      else copyPhoto();
+    });
+    sheet.querySelector('.shs-tester').addEventListener('click', function () {
+      close();
+      /* On the front page the form is right here; elsewhere the link goes there. */
+      var form = document.getElementById('get');
+      if (form) setTimeout(function () { var i = document.getElementById('email'); if (i) i.focus({ preventScroll: true }); }, 400);
+    });
     sheet.querySelector('.shs-back').addEventListener('click', function () { saving(false); });
   }
 
@@ -128,6 +155,8 @@
     sheet.querySelector('.shs-lede').hidden = on;
     goBtn.hidden = on;
     sheet.querySelector('.shs-note').hidden = on;
+    sheet.querySelector('.shs-more').hidden = on;
+    sheet.querySelector('.shs-tester').hidden = on;
     if (on) {
       var src = ROOT + chosen + '.jpg?v=' + V;
       box.querySelector('img').src = src;
@@ -195,6 +224,45 @@
          open, so the picture is offered to save instead. */
       if (!err || err.name !== 'AbortError') saving(true);
     });
+  }
+
+  /* The site itself, as a link: to messages, email, anywhere. */
+  function shareSite() {
+    if (navigator.share) {
+      navigator.share({ title: TITLE, url: URL }).catch(function () { /* closed */ });
+      return;
+    }
+    copyLink().then(function () { say('Link copied.'); }, function () { say(URL); });
+  }
+
+  /* The chosen picture onto the clipboard. Clipboards take pictures only as
+     PNG, so the JPG is redrawn as one; the promise goes straight into the
+     ClipboardItem so Safari still counts it as part of the tap. */
+  function asPng(src) {
+    return new Promise(function (resolve, reject) {
+      var img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = function () {
+        var c = document.createElement('canvas');
+        c.width = img.naturalWidth;
+        c.height = img.naturalHeight;
+        c.getContext('2d').drawImage(img, 0, 0);
+        c.toBlob(function (b) { if (b) resolve(b); else reject(new Error('no png')); }, 'image/png');
+      };
+      img.onerror = reject;
+      img.src = src;
+    });
+  }
+
+  function copyPhoto() {
+    var src = ROOT + chosen + '.jpg?v=' + V;
+    if (!navigator.clipboard || !navigator.clipboard.write || !window.ClipboardItem) {
+      saving(true);
+      return;
+    }
+    navigator.clipboard.write([new ClipboardItem({ 'image/png': asPng(src) })]).then(function () {
+      say('Photo copied.');
+    }).catch(function () { saving(true); });
   }
 
   /* ---- the header button ----------------------------------------------------- */

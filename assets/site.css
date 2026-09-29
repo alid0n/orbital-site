@@ -1625,3 +1625,10 @@ dl.rows dd {
   white-space: nowrap;
   border: 0;
 }
+
+/* Under the Instagram button: the site as a link, the link, the photo. */
+.shs-more { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 14px 16px 0; }
+.shs-more button { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 4px; border: 1px solid var(--rule); border-radius: 14px; background: none; color: var(--text-strong); font: inherit; font-size: 0.84rem; cursor: pointer; }
+.shs-more button:hover { border-color: var(--accent); color: var(--accent); }
+.shs-more svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.shs-tester { display: block; margin: 14px 16px 0; padding: 12px; border-radius: 12px; text-align: center; font-weight: 600; text-decoration: none; color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); border: 1px solid var(--card-edge); }
