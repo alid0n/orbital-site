@@ -1604,8 +1604,13 @@ dl.rows dd {
 .shs-opt[aria-checked='true'] img { outline-color: var(--accent); transform: translateY(-2px); }
 .shs-go { display: flex; width: calc(100% - 32px); margin: 10px 16px 0; cursor: pointer; font: inherit; font-weight: 600; }
 .shs-go[disabled] { opacity: 0.6; cursor: default; }
-.shs-copy { display: block; margin: 8px auto 0; padding: 8px; border: 0; background: none; color: var(--accent); font: inherit; font-size: 0.92rem; cursor: pointer; }
-.shs-note { margin: 4px 16px 0; text-align: center; }
+.shs-note { margin: 10px 16px 0; text-align: center; }
+.shs-save { padding: 0 16px; text-align: center; }
+.shs-save img { display: block; width: auto; max-width: 100%; height: min(52vh, 460px); aspect-ratio: 9 / 16; margin: 0 auto; border-radius: 14px; -webkit-touch-callout: default; }
+.shs-save-how { margin: 12px 0 10px; font-size: 0.92rem; color: var(--text); }
+.shs-dl { display: flex; cursor: pointer; }
+.shs-back { display: block; margin: 8px auto 0; padding: 8px; border: 0; background: none; color: var(--accent); font: inherit; font-size: 0.92rem; cursor: pointer; }
+.shs [hidden] { display: none !important; }
 
 /* Read aloud, never drawn. */
 .sr-only {

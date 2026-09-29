@@ -5,9 +5,9 @@
    does take is a picture from the phone's own share sheet, and there it
    offers Stories. So the button opens a picker of story-sized pictures of
    the site (assets/story/, 1080 by 1920), each in a different theme, and
-   shares the one chosen, copying the link at the same moment, ready to paste
-   into a link sticker. Where a browser cannot share pictures, it shares the
-   link instead, and where it cannot share at all, it copies it.
+   shares the one chosen. The link is copied when the picker opens, ready to
+   paste into a link sticker. Where a browser cannot share pictures, such as
+   the ones inside Instagram and TikTok, the picture is shown to save.
 
    The pictures are made by a script outside the site from the app's own
    screenshots; add a design there, then add it to DESIGNS here.
@@ -96,8 +96,16 @@
       }).join('') +
       '</div>' +
       '<button type="button" class="btn shs-go">Share</button>' +
-      '<button type="button" class="shs-copy">Copy the link instead</button>' +
-      '<p class="shs-note small muted">Instagram: choose Story, then add a link sticker. The link is copied for you.</p>' +
+      '<p class="shs-note small muted">Choose Instagram, then Story. The link is already copied, ready for a link sticker.</p>' +
+      /* Where the browser cannot share a picture (the browsers inside
+         Instagram, TikTok and Facebook among them), the picture is shown to
+         save instead, to post from Instagram itself. */
+      '<div class="shs-save" hidden>' +
+      '<img alt="The story picture">' +
+      '<p class="shs-save-how">Press and hold the picture and choose <b>Save</b> (or <b>Add to Photos</b>), then post it from Instagram.</p>' +
+      '<a class="btn shs-dl" download>Download the picture</a>' +
+      '<button type="button" class="shs-back">Pick another look</button>' +
+      '</div>' +
       '</div>';
     document.body.appendChild(sheet);
     goBtn = sheet.querySelector('.shs-go');
@@ -110,9 +118,23 @@
       pick(o.getAttribute('data-k'));
     });
     goBtn.addEventListener('click', go);
-    sheet.querySelector('.shs-copy').addEventListener('click', function () {
-      copyLink().then(function () { say('Link copied.'); }, function () { say(URL); });
-    });
+    sheet.querySelector('.shs-back').addEventListener('click', function () { saving(false); });
+  }
+
+  function saving(on) {
+    var box = sheet.querySelector('.shs-save');
+    box.hidden = !on;
+    sheet.querySelector('.shs-list').hidden = on;
+    sheet.querySelector('.shs-lede').hidden = on;
+    goBtn.hidden = on;
+    sheet.querySelector('.shs-note').hidden = on;
+    if (on) {
+      var src = ROOT + chosen + '.jpg?v=' + V;
+      box.querySelector('img').src = src;
+      var dl = box.querySelector('.shs-dl');
+      dl.href = src;
+      dl.setAttribute('download', 'orbital-launcher-' + chosen + '.jpg');
+    }
   }
 
   function pick(key) {
@@ -125,9 +147,14 @@
 
   /* The Share button waits, briefly, for the chosen picture to arrive. */
   function ready() {
-    if (!canShareFiles() || files[chosen]) {
+    if (!canShareFiles()) {
       goBtn.disabled = false;
-      goBtn.textContent = 'Share';
+      goBtn.textContent = 'Get the picture';
+      return;
+    }
+    if (files[chosen]) {
+      goBtn.disabled = false;
+      goBtn.textContent = 'Share to Instagram';
       return;
     }
     goBtn.disabled = true;
@@ -138,7 +165,12 @@
 
   function open() {
     if (!sheet) build();
+    /* The link is copied here, on the tap that opens the picker. Copying it
+       on the Share tap instead used that tap up in Safari, which then
+       refused to open the share sheet. */
+    copyLink().catch(function () { /* the sticker can be typed */ });
     if (canShareFiles()) DESIGNS.forEach(function (d) { load(d[0]); });
+    saving(false);
     ready();
     if (sheet.showModal) sheet.showModal(); else sheet.setAttribute('open', '');
   }
@@ -147,24 +179,22 @@
     if (sheet.close) sheet.close(); else sheet.removeAttribute('open');
   }
 
+  /* Nothing may run before navigator.share on this tap: it has to be the
+     first thing the tap does, or Safari refuses it. */
   function go() {
-    var copied = copyLink().then(function () { return true; }, function () { return false; });
     var file = files[chosen];
-
-    if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
-      navigator.share({ files: [file], title: TITLE }).then(function () {
-        close();
-        copied.then(function (ok) {
-          if (ok) say('Link copied. In your story, add a link sticker and paste it.');
-        });
-      }).catch(function () { /* closed the share sheet */ });
+    if (!file || !navigator.canShare || !navigator.canShare({ files: [file] })) {
+      saving(true);
       return;
     }
-    if (navigator.share) {
-      navigator.share({ title: TITLE, url: URL }).then(close).catch(function () { /* closed */ });
-      return;
-    }
-    copied.then(function (ok) { say(ok ? 'Link copied.' : URL); });
+    navigator.share({ files: [file], title: TITLE }).then(function () {
+      close();
+      say('In your story, add a link sticker and paste the link.');
+    }).catch(function (err) {
+      /* Closing the share sheet is fine; anything else means it could not
+         open, so the picture is offered to save instead. */
+      if (!err || err.name !== 'AbortError') saving(true);
+    });
   }
 
   /* ---- the header button ----------------------------------------------------- */
