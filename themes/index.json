@@ -3,141 +3,6 @@
   "format": 1,
   "themes": [
     {
-      "id": "groove_70s",
-      "name": "70s Groove",
-      "description": "Burnt orange, mustard and chocolate brown, with soft rounded shapes and a warm glow.",
-      "version": 1,
-      "tags": [
-        "audience:general",
-        "era:70s",
-        "vibe:retro",
-        "vibe:cozy",
-        "color:orange",
-        "color:yellow",
-        "style:one-handed",
-        "topic:music",
-        "topic:retro"
-      ],
-      "thumbnail": "groove_70s/preview.png",
-      "file": "groove_70s/theme.json",
-      "premium": false,
-      "size": 1974,
-      "sha256": "6a737072066bdc18ebb449dcd9220e34b2e80c82ea3ca289e4aa0508bc1fccad",
-      "base": "ORBITAL",
-      "colors": {
-        "accent": "#FFB347",
-        "accentAlt": "#E8743B",
-        "ink": "#FFF1DC",
-        "dim": "#C9A27E",
-        "drawer": "#1E120A",
-        "surface": "#28180D",
-        "elevated": "#3A2414",
-        "veil": "#33140A04",
-        "light": false
-      }
-    },
-    {
-      "id": "neon_80s",
-      "name": "80s Neon",
-      "description": "Hot pink and electric cyan over a glowing grid that runs to the horizon.",
-      "version": 1,
-      "tags": [
-        "audience:general",
-        "era:80s",
-        "vibe:retro",
-        "vibe:energetic",
-        "color:pink",
-        "color:neon",
-        "color:blue",
-        "style:one-handed",
-        "topic:music",
-        "topic:retro"
-      ],
-      "thumbnail": "neon_80s/preview.png",
-      "file": "neon_80s/theme.json",
-      "premium": true,
-      "size": 1904,
-      "sha256": "5d7e30c78d597665553654413096a57b0fb18d22e60c31c1e0a666dcb7ec3f06",
-      "base": "ORBITAL",
-      "colors": {
-        "accent": "#FF3FA4",
-        "accentAlt": "#29E6FF",
-        "ink": "#FFE9F6",
-        "dim": "#B58DC0",
-        "drawer": "#0B0214",
-        "surface": "#12041E",
-        "elevated": "#220A34",
-        "veil": "#55000000",
-        "light": false
-      }
-    },
-    {
-      "id": "bright_90s",
-      "name": "90s Bright",
-      "description": "Bold teal, purple and sunshine yellow, with playful shapes and a light, friendly page.",
-      "version": 1,
-      "tags": [
-        "audience:general",
-        "era:90s",
-        "vibe:playful",
-        "vibe:energetic",
-        "color:purple",
-        "color:yellow",
-        "style:one-handed",
-        "topic:retro"
-      ],
-      "thumbnail": "bright_90s/preview.png",
-      "file": "bright_90s/theme.json",
-      "premium": false,
-      "size": 1952,
-      "sha256": "bffd6b8907ebc9fb74b0bffd9a1e9be52ed508f3699ba150661498ad877323ed",
-      "base": "ORBITAL",
-      "colors": {
-        "accent": "#7B2FBF",
-        "accentAlt": "#0E9C9C",
-        "ink": "#1D1230",
-        "dim": "#6A5C80",
-        "drawer": "#FFF8E8",
-        "surface": "#FFFBF0",
-        "elevated": "#F2ECFF",
-        "veil": "#11FFFFFF",
-        "light": true
-      }
-    },
-    {
-      "id": "y2k_chrome",
-      "name": "Y2K Chrome",
-      "description": "Liquid silver, icy blue and frosted glass, straight out of the new millennium.",
-      "version": 1,
-      "tags": [
-        "audience:general",
-        "era:2000s",
-        "vibe:futuristic",
-        "vibe:dreamy",
-        "color:blue",
-        "color:white",
-        "style:big screen",
-        "topic:retro"
-      ],
-      "thumbnail": "y2k_chrome/preview.png",
-      "file": "y2k_chrome/theme.json",
-      "premium": true,
-      "size": 1956,
-      "sha256": "0fa0749516b939da8342e16bb7892593826b233eb646c3b1c9b1610e6b41cf13",
-      "base": "ORBITAL",
-      "colors": {
-        "accent": "#9FD8FF",
-        "accentAlt": "#D5C8FF",
-        "ink": "#F2F7FF",
-        "dim": "#9AA7BA",
-        "drawer": "#0A0F18",
-        "surface": "#101826",
-        "elevated": "#1B2638",
-        "veil": "#33060A14",
-        "light": false
-      }
-    },
-    {
       "id": "candy",
       "name": "Candy Shop",
       "description": "Bubblegum pink, mint and lemon on a soft cream page. Sweet, bright and easy to read.",
@@ -298,105 +163,6 @@
         "surface": "#14081C",
         "elevated": "#241030",
         "veil": "#44000000",
-        "light": false
-      }
-    },
-    {
-      "id": "gaming_90s",
-      "name": "90s Gaming System",
-      "description": "Classic grey plastic, a deep purple accent and chunky pixel lettering, like an evening of couch co-op.",
-      "version": 1,
-      "tags": [
-        "audience:general",
-        "era:90s",
-        "vibe:retro",
-        "vibe:playful",
-        "color:purple",
-        "style:one-handed",
-        "topic:gaming",
-        "topic:retro"
-      ],
-      "thumbnail": "gaming_90s/preview.png",
-      "file": "gaming_90s/theme.json",
-      "premium": false,
-      "size": 1845,
-      "sha256": "e1f2d7b8e4bd642699f27066e66db193552f8b2d53e8e80ea033ea3fd6627eac",
-      "base": "ORBITAL",
-      "colors": {
-        "accent": "#8C7BFF",
-        "accentAlt": "#E0503C",
-        "ink": "#EDEBF2",
-        "dim": "#9C98A8",
-        "drawer": "#1A1A20",
-        "surface": "#222229",
-        "elevated": "#302F3A",
-        "veil": "#33000000",
-        "light": false
-      }
-    },
-    {
-      "id": "gaming_future",
-      "name": "Futuristic Gaming System",
-      "description": "Ice-white panels, neon cyan edges and a quiet hum of starlight. Next generation, today.",
-      "version": 1,
-      "tags": [
-        "audience:general",
-        "vibe:futuristic",
-        "vibe:energetic",
-        "color:blue",
-        "color:neon",
-        "color:white",
-        "style:one-handed",
-        "topic:gaming",
-        "topic:space"
-      ],
-      "thumbnail": "gaming_future/preview.png",
-      "file": "gaming_future/theme.json",
-      "premium": true,
-      "size": 2094,
-      "sha256": "dda09131732d7671fd8d9f0eb43e7fd0e459101483face517b79d74b51cd1a9f",
-      "base": "ORBITAL",
-      "colors": {
-        "accent": "#34F5FF",
-        "accentAlt": "#7B6CFF",
-        "ink": "#EAFBFF",
-        "dim": "#86A6B3",
-        "drawer": "#03070C",
-        "surface": "#060D14",
-        "elevated": "#0D1A26",
-        "veil": "#55000000",
-        "light": false
-      }
-    },
-    {
-      "id": "gaming_green",
-      "name": "Green Gaming System",
-      "description": "Deep black with bright green highlights and a crisp monospace readout.",
-      "version": 1,
-      "tags": [
-        "audience:general",
-        "vibe:dark",
-        "vibe:energetic",
-        "color:green",
-        "color:black",
-        "style:power user",
-        "topic:gaming"
-      ],
-      "thumbnail": "gaming_green/preview.png",
-      "file": "gaming_green/theme.json",
-      "premium": false,
-      "size": 1767,
-      "sha256": "a360177d62bf470ccf73f0c8d41fbf91085fa5a154d941114b4f3ce426eb1b93",
-      "base": "ORBITAL",
-      "colors": {
-        "accent": "#4BE35A",
-        "accentAlt": "#A8FF60",
-        "ink": "#E8FFE9",
-        "dim": "#86A889",
-        "drawer": "#030603",
-        "surface": "#070C07",
-        "elevated": "#102012",
-        "veil": "#55000000",
         "light": false
       }
     },
@@ -1228,12 +994,12 @@
   "featured": {
     "weeks": [
       {
-        "id": "groove_70s",
+        "id": "beach",
         "start": "2026-09-21",
         "end": "2026-09-27"
       },
       {
-        "id": "neon_80s",
+        "id": "disco",
         "start": "2026-09-28",
         "end": "2026-10-04"
       },
@@ -1268,12 +1034,12 @@
         "end": "2026-11-15"
       },
       {
-        "id": "gaming_future",
+        "id": "crayon_box",
         "start": "2026-11-16",
         "end": "2026-11-22"
       },
       {
-        "id": "y2k_chrome",
+        "id": "candy",
         "start": "2026-11-23",
         "end": "2026-11-29"
       },
@@ -1289,20 +1055,6 @@
       }
     ],
     "drops": [
-      {
-        "id": "retro_week",
-        "name": "Retro Week",
-        "description": "Four decades of style: 70s warmth, 80s neon, 90s colour and a classic games console.",
-        "themes": [
-          "groove_70s",
-          "neon_80s",
-          "bright_90s",
-          "gaming_90s"
-        ],
-        "premiumFrom": "2026-09-24",
-        "publicFrom": "2026-09-27",
-        "until": "2026-10-11"
-      },
       {
         "id": "spooky_week",
         "name": "Spooky Week",

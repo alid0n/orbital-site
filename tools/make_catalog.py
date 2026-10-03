@@ -45,41 +45,6 @@ def picture(kind):
 
 
 THEMES = [
-    theme("groove_70s", "70s Groove",
-          "Burnt orange, mustard and chocolate brown, with soft rounded shapes and a warm glow.",
-          ["audience:general", "era:70s", "vibe:retro", "vibe:cozy", "color:orange", "color:yellow"],
-          pal("#FFB347", "#E8743B", "#FFF1DC", "#C9A27E", "#1E120A", "#28180D", "#3A2414", "#33140A04"),
-          drawn("DUNES", ["#3B1F0E", "#E8743B", "#FFB347", "#D9A441", "#1A0F08"]),
-          dict(corner="PILL", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="CARD",
-               widgetCorner="PILL", widgetEdge="NONE", widgetTint=0.3, widgetSolid=0.9,
-               font="baloo_2", clockFace="STACK", panelLook="CARD", notch="DOT", glow=False)),
-    theme("neon_80s", "80s Neon",
-          "Hot pink and electric cyan over a glowing grid that runs to the horizon.",
-          ["audience:general", "era:80s", "vibe:retro", "vibe:energetic", "color:pink", "color:neon", "color:blue"],
-          pal("#FF3FA4", "#29E6FF", "#FFE9F6", "#B58DC0", "#0B0214", "#12041E", "#220A34", "#55000000"),
-          drawn("HORIZON", ["#1A0433", "#000000", "#FF3FA4", "#29E6FF", "#6B3CFF"]),
-          dict(corner="SLIGHT", iconShape="ROUNDED", iconStyle="DUOTONE", widgetLook="OUTLINE",
-               widgetCorner="SLIGHT", widgetEdge="FINE", widgetTint=0.25, widgetSolid=0.5,
-               font="audiowide", clockFace="LINE", uppercase=True, panelLook="LINES", notch="RUNG",
-               glow=True, flow=True),
-          premium=True, effect="twinkle-stars"),
-    theme("bright_90s", "90s Bright",
-          "Bold teal, purple and sunshine yellow, with playful shapes and a light, friendly page.",
-          ["audience:general", "era:90s", "vibe:playful", "vibe:energetic", "color:purple", "color:yellow"],
-          pal("#7B2FBF", "#0E9C9C", "#1D1230", "#6A5C80", "#FFF8E8", "#FFFBF0", "#F2ECFF", "#11FFFFFF", light=True),
-          drawn("MOSAIC", ["#FFF6D8", "#E8F7F5", "#7B2FBF", "#18B7B0", "#FFC928"], light=True),
-          dict(corner="ROUNDED", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="SOLID",
-               widgetCorner="ROUNDED", widgetEdge="BOLD", widgetTint=0.2, widgetSolid=1.0,
-               font="fredoka", clockFace="DIGITS", panelLook="CARD", notch="PIP")),
-    theme("y2k_chrome", "Y2K Chrome",
-          "Liquid silver, icy blue and frosted glass, straight out of the new millennium.",
-          ["audience:general", "era:2000s", "vibe:futuristic", "vibe:dreamy", "color:blue", "color:white"],
-          pal("#9FD8FF", "#D5C8FF", "#F2F7FF", "#9AA7BA", "#0A0F18", "#101826", "#1B2638", "#33060A14"),
-          drawn("PRISM", ["#1A2233", "#070A12", "#CFE6FF", "#9FD8FF", "#E3D6FF"]),
-          dict(corner="PILL", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
-               widgetCorner="PILL", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.4,
-               font="exo_2", clockFace="LINE", panelLook="FADE", notch="DOT", glow=True),
-          premium=True),
     theme("candy", "Candy Shop",
           "Bubblegum pink, mint and lemon on a soft cream page. Sweet, bright and easy to read.",
           ["audience:kids", "vibe:playful", "color:pink", "color:pastel", "style:easy to see"],
@@ -125,35 +90,6 @@ THEMES = [
                widgetCorner="ROUNDED", widgetEdge="FINE", widgetTint=0.3, widgetSolid=0.7,
                font="outfit", clockFace="LINE", uppercase=True, panelLook="CARD", notch="DOT", glow=True),
           premium=True, effect="disco-lights"),
-    theme("gaming_90s", "90s Gaming System",
-          "Classic grey plastic, a deep purple accent and chunky pixel lettering, like an evening of couch co-op.",
-          ["audience:general", "era:90s", "vibe:retro", "vibe:playful", "color:purple", "style:power user"],
-          pal("#8C7BFF", "#E0503C", "#EDEBF2", "#9C98A8", "#1A1A20", "#222229", "#302F3A", "#33000000"),
-          drawn("GRID", ["#2B2A33", "#121216", "#8C7BFF", "#C9C6D6", "#3D3A52"]),
-          dict(corner="SLIGHT", iconShape="ROUNDED", iconStyle="ORIGINAL", widgetLook="SOLID",
-               widgetCorner="SLIGHT", widgetEdge="BOLD", widgetTint=0.1, widgetSolid=1.0,
-               font="vt323", clockFace="DIGITS", uppercase=True, panelLook="LINES", notch="PIP"),
-          layout=dict(dockStyle="ROW", drawerLayout="GRID")),
-    theme("gaming_future", "Futuristic Gaming System",
-          "Ice-white panels, neon cyan edges and a quiet hum of starlight. Next generation, today.",
-          ["audience:general", "vibe:futuristic", "vibe:energetic", "color:blue", "color:neon", "color:white", "style:power user"],
-          pal("#34F5FF", "#7B6CFF", "#EAFBFF", "#86A6B3", "#03070C", "#060D14", "#0D1A26", "#55000000"),
-          drawn("LIGHT_GRID", ["#021320", "#000000", "#34F5FF", "#B6FBFF", "#1A4B8C"]),
-          dict(corner="SLIGHT", iconShape="HEX", iconStyle="DUOTONE", widgetLook="BRACKET",
-               widgetCorner="SLIGHT", widgetEdge="FINE", widgetTint=0.25, widgetSolid=0.5,
-               font="oxanium", clockFace="LINE", uppercase=True, panelLook="LINES", notch="RUNG",
-               glow=True, flow=True),
-          premium=True, effect="twinkle-stars"),
-    theme("gaming_green", "Green Gaming System",
-          "Deep black with bright green highlights and a crisp monospace readout.",
-          ["audience:general", "vibe:dark", "vibe:energetic", "color:green", "color:black", "style:power user"],
-          pal("#4BE35A", "#A8FF60", "#E8FFE9", "#86A889", "#030603", "#070C07", "#102012", "#55000000"),
-          drawn("HEX", ["#0A1A0B", "#000000", "#4BE35A", "#A8FF60", "#135C1A"]),
-          dict(corner="SQUARE", iconShape="SQUARE", iconStyle="ORIGINAL", widgetLook="OUTLINE",
-               widgetCorner="SQUARE", widgetEdge="FINE", widgetTint=0.2, widgetSolid=0.5,
-               font="share_tech_mono", clockFace="LINE", uppercase=True, panelLook="LINES",
-               notch="RUNG", glow=True),
-          layout=dict(drawerLayout="LIST")),
     theme("cozy_cabin", "Cozy Cabin",
           "Firelight amber, pine green and warm wood. A blanket-and-cocoa kind of home screen.",
           ["audience:general", "vibe:cozy", "vibe:calm", "color:orange", "color:green"],
@@ -411,17 +347,6 @@ MEDIA_FULL = lambda y=0.34: w("music", "MEDIA", 0.06, y, 0.88, tint=1)
 MEDIA = lambda y=0.34: w("music", "MEDIA", 0.04, y, 0.92)
 
 LAYOUTS = {
-    # Warm and familiar: pages, the orbit low for the thumb, the time, the weather and music.
-    "groove_70s": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
-                       widgets=[CLOCK(), WEATHER(), MEDIA(0.33)]),
-    # Neon party: a bold row dock and a full Now playing card, with sparkles over the page.
-    "neon_80s": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
-                     widgets=[CLOCK(), MEDIA_FULL(0.2)]),
-    "bright_90s": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
-                       widgets=[CLOCK(), w("week", "CALENDAR_WEEK", 0.04, 0.19, 0.92), MEDIA(0.42)]),
-    # The canvas: room to arrange on a big screen.
-    "y2k_chrome": dict(homeLayout="FREE_ROAM", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
-                       widgets=[CLOCK(), WEATHER(0.06, 0.2, 0.42), MEDIA(0.36)]),
     # Kids and easy to see: big icons on pages, a plain row of apps, and very little else.
     "candy": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
                   widgets=[CLOCK(scale=1.2)]),
@@ -436,14 +361,6 @@ LAYOUTS = {
                      widgets=[CLOCK(scale=1.1), MEDIA_FULL(0.24)]),
     "disco": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
                   widgets=[CLOCK(), MEDIA_FULL(0.2)]),
-    # The gaming systems: a bold flat dock and a full Now playing card.
-    "gaming_90s": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
-                       widgets=[CLOCK(), MEDIA_FULL(0.2)]),
-    "gaming_future": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
-                          widgets=[CLOCK(), MEDIA_FULL(0.2), w("battery", "BATTERY", 0.06, 0.62, 0.4)]),
-    # Power user: the drawer home, with a widget column holding the calendar, and the music.
-    "gaming_green": dict(homeLayout="DRAWER", dockStyle="ROW", anchor="BOTTOM", drawerLayout="LIST",
-                         drawerWidgets=[side("CLOCK"), side("CALENDAR"), side("MEDIA", tint=1)]),
     "cozy_cabin": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
                        widgets=[CLOCK(), WEATHER(), w("next", "AGENDA", 0.04, 0.33, 0.92)]),
     # Minimal: one page with just a clock.
@@ -498,10 +415,8 @@ LAYOUTS = {
 }
 
 ASSISTANTS = {
-    "groove_70s": "NOTEPAD", "neon_80s": "HUD", "bright_90s": "CHAT", "y2k_chrome": "SPOTLIGHT",
     "candy": "VOICE", "crayon_box": "VOICE", "road_trip": "VOICE", "beach": "CHAT",
-    "sparkles": "SPOTLIGHT", "disco": "CHAT", "gaming_90s": "RETRO", "gaming_future": "HUD",
-    "gaming_green": "COMMAND_PROMPT", "cozy_cabin": "NOTEPAD", "midnight_jazz": "MINIMAL_LINE",
+    "sparkles": "SPOTLIGHT", "disco": "CHAT", "cozy_cabin": "NOTEPAD", "midnight_jazz": "MINIMAL_LINE",
     "arcade_assistant": "RETRO",
     "halloween_night": "HUD", "pumpkin_patch": "VOICE", "winter_snow": "NOTEPAD",
     "valentines_day": "SPOTLIGHT", "summer_splash": "CHAT", "spring_bloom": "NOTEPAD",
@@ -513,11 +428,9 @@ ASSISTANTS = {
 
 # The phone-use style each layout is for. Kept consistent with the layouts above by the app's tests.
 STYLES = {
-    "groove_70s": ["one-handed"], "neon_80s": ["one-handed"], "bright_90s": ["one-handed"],
-    "y2k_chrome": ["big screen"], "candy": ["easy to see"], "crayon_box": ["easy to see"],
+    "candy": ["easy to see"], "crayon_box": ["easy to see"],
     "road_trip": ["one-handed"], "beach": ["one-handed"], "sparkles": ["one-handed"],
-    "disco": ["one-handed"], "gaming_90s": ["one-handed"], "gaming_future": ["one-handed"],
-    "gaming_green": ["power user"], "cozy_cabin": ["one-handed"], "midnight_jazz": ["minimal"],
+    "disco": ["one-handed"], "cozy_cabin": ["one-handed"], "midnight_jazz": ["minimal"],
     "arcade_assistant": ["power user"],
     "halloween_night": ["one-handed"], "pumpkin_patch": ["easy to see"], "winter_snow": ["one-handed"],
     "valentines_day": ["one-handed"], "summer_splash": ["one-handed"], "spring_bloom": ["one-handed"],
@@ -528,7 +441,7 @@ STYLES = {
     "cherry_blossom": ["one-handed"], "tropical": ["one-handed"],
 }
 
-EFFECTS = {"neon_80s": "sparkles"}
+EFFECTS = {}
 
 LOOK_EXTRA = {
     "candy": dict(homeIconScale=1.3, homeLabels=True),
@@ -540,11 +453,9 @@ LOOK_EXTRA = {
 # WHAT EACH THEME IS ABOUT, for the interests somebody picks in the app (see Interests.kt there).
 # "topic:family" marks a theme for everyone that suits children too; kids themes are audience:kids.
 TOPICS = {
-    "groove_70s": ["music", "retro"], "neon_80s": ["music", "retro"], "bright_90s": ["retro"],
-    "y2k_chrome": ["retro"], "candy": ["family"], "crayon_box": ["family"],
+    "candy": ["family"], "crayon_box": ["family"],
     "road_trip": ["cars", "travel"], "beach": ["beach", "travel"], "sparkles": ["space"],
-    "disco": ["music"], "gaming_90s": ["gaming", "retro"], "gaming_future": ["gaming", "space"],
-    "gaming_green": ["gaming"], "cozy_cabin": ["nature"], "midnight_jazz": ["music"],
+    "disco": ["music"], "cozy_cabin": ["nature"], "midnight_jazz": ["music"],
     "arcade_assistant": ["gaming", "retro"],
     "halloween_night": ["halloween", "space"], "pumpkin_patch": ["halloween", "family"],
     "winter_snow": ["winter", "nature", "family"], "valentines_day": ["valentines"],
@@ -564,24 +475,20 @@ TOPICS = {
 # everybody from publicFrom. Seasons repeat every year and may run over New Year.
 FEATURED = {
     "weeks": [
-        {"id": "groove_70s", "start": "2026-09-21", "end": "2026-09-27"},
-        {"id": "neon_80s", "start": "2026-09-28", "end": "2026-10-04"},
+        {"id": "beach", "start": "2026-09-21", "end": "2026-09-27"},
+        {"id": "disco", "start": "2026-09-28", "end": "2026-10-04"},
         {"id": "ghost_glow", "start": "2026-10-05", "end": "2026-10-11"},
         {"id": "midnight_jazz", "start": "2026-10-12", "end": "2026-10-18"},
         {"id": "halloween_night", "start": "2026-10-19", "end": "2026-10-25"},
         {"id": "pumpkin_patch", "start": "2026-10-26", "end": "2026-11-01"},
         {"id": "sparkles", "start": "2026-11-02", "end": "2026-11-08"},
         {"id": "road_trip", "start": "2026-11-09", "end": "2026-11-15"},
-        {"id": "gaming_future", "start": "2026-11-16", "end": "2026-11-22"},
-        {"id": "y2k_chrome", "start": "2026-11-23", "end": "2026-11-29"},
+        {"id": "crayon_box", "start": "2026-11-16", "end": "2026-11-22"},
+        {"id": "candy", "start": "2026-11-23", "end": "2026-11-29"},
         {"id": "cozy_cabin", "start": "2026-11-30", "end": "2026-12-06"},
         {"id": "winter_snow", "start": "2026-12-07", "end": "2026-12-13"},
     ],
     "drops": [
-        {"id": "retro_week", "name": "Retro Week",
-         "description": "Four decades of style: 70s warmth, 80s neon, 90s colour and a classic games console.",
-         "themes": ["groove_70s", "neon_80s", "bright_90s", "gaming_90s"],
-         "premiumFrom": "2026-09-24", "publicFrom": "2026-09-27", "until": "2026-10-11"},
         {"id": "spooky_week", "name": "Spooky Week",
          "description": "A starry Halloween night, glowing ghosts, a witching-hour moon and a friendly pumpkin patch.",
          "themes": ["halloween_night", "ghost_glow", "witching_hour", "pumpkin_patch"],
