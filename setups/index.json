@@ -15,12 +15,12 @@
       "preview": { "theme": "orbital", "cards": ["ask", "cal"] }
     },
     {
-      "id": "thumb-orbit",
-      "name": "Thumb orbit setup",
+      "id": "orbit-pad",
+      "name": "Orbit Pad setup",
       "description": "Every app in rings around your thumb. Hold the pad, slide to an app and let go.",
       "theme": "GALACTIC",
       "themeName": "Galactic",
-      "layout": "Thumb orbit",
+      "layout": "Orbit Pad",
       "premium": true,
       "code": "",
       "by": "orbital",

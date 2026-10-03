@@ -85,7 +85,7 @@ generator; edit the JSON by hand. One entry:
   "theme": "ORBITAL",                  // the app's ThemeId name, for the /t/ fallback link
   "themeName": "Orbital",              // as the app shows it
   "layout": "Traditional pages",       // HomeLayout.displayName: Traditional pages, Free roam,
-                                       // Drawer, Thumb orbit or Showcase
+                                       // Drawer, Orbit Pad or Showcase
   "premium": false,                    // true when the theme or the layout is Premium
   "code": "ORB-XXXXXX",                // the layout code; "" until there is one
   "by": "orbital",                     // "orbital" shows "Orbital example"; anything else "Shared setup"
