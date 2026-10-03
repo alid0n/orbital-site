@@ -1543,6 +1543,14 @@ dl.rows dd {
 @media (max-width: 420px) {
   .mark span { display: none; }
 }
+/* Setups steps out of the header on narrow phones too; it is in the footer
+   and on the front page. */
+@media (max-width: 520px) {
+  .top nav .nav-setups { display: none; }
+}
+@media (max-width: 380px) {
+  .top nav { gap: 12px; }
+}
 
 .share-toast {
   position: fixed;

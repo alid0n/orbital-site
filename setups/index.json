@@ -1,0 +1,78 @@
+{
+  "kind": "orbital-setups-index",
+  "format": 1,
+  "setups": [
+    {
+      "id": "everyday-orbit",
+      "name": "Everyday orbit",
+      "description": "Orbital's own colors, the orbit dock under your thumb, and a calendar ready at a glance.",
+      "theme": "ORBITAL",
+      "themeName": "Orbital",
+      "layout": "Traditional pages",
+      "premium": false,
+      "code": "",
+      "by": "orbital",
+      "preview": { "theme": "orbital", "cards": ["ask", "cal"] }
+    },
+    {
+      "id": "thumb-orbit",
+      "name": "Thumb orbit setup",
+      "description": "Every app in rings around your thumb. Hold the pad, slide to an app and let go.",
+      "theme": "GALACTIC",
+      "themeName": "Galactic",
+      "layout": "Thumb orbit",
+      "premium": true,
+      "code": "",
+      "by": "orbital",
+      "preview": { "theme": "galactic", "layout": "pad", "cards": ["weather"] }
+    },
+    {
+      "id": "showcase",
+      "name": "Showcase setup",
+      "description": "Large tiles in a row with your recent apps first, ready for a game controller.",
+      "theme": "CYBERNETIC",
+      "themeName": "Cybernetic",
+      "layout": "Showcase",
+      "premium": true,
+      "code": "",
+      "by": "orbital",
+      "preview": { "theme": "cybernetic", "layout": "showcase" }
+    },
+    {
+      "id": "daylight-drawer",
+      "name": "Daylight drawer",
+      "description": "A bright page with every app on the home screen, sorted A to Z, and a widget on top.",
+      "theme": "DAYLIGHT",
+      "themeName": "Daylight",
+      "layout": "Drawer",
+      "premium": true,
+      "code": "",
+      "by": "orbital",
+      "preview": { "theme": "daylight", "layout": "list" }
+    },
+    {
+      "id": "weekend-canvas",
+      "name": "Weekend canvas",
+      "description": "One open canvas with folders for travel, work and games, in flowing teal and violet.",
+      "theme": "FLUID",
+      "themeName": "Fluid",
+      "layout": "Free roam",
+      "premium": true,
+      "code": "",
+      "by": "orbital",
+      "preview": { "theme": "fluid", "layout": "roam" }
+    },
+    {
+      "id": "clear-and-simple",
+      "name": "Clear and simple",
+      "description": "High contrast, big buttons and every app named, for a home screen that is easy to read.",
+      "theme": "LARGE_PRINT",
+      "themeName": "Large Print",
+      "layout": "Traditional pages",
+      "premium": false,
+      "code": "",
+      "by": "orbital",
+      "preview": { "theme": "largeprint" }
+    }
+  ]
+}

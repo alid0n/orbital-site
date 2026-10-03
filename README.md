@@ -10,6 +10,7 @@ index.html      the front page, kept to things to play with: the turning phone,
 features.html   the explaining: every dock style, the home layouts, icons,
                 Orbital Assistant, the details, privacy and Premium
 guide.html      every feature and every setting, page by page
+setups.html     the shared setups gallery, from setups/index.json
 privacy.html    the privacy policy
 assets/
   site.css      one stylesheet for every page
@@ -70,6 +71,36 @@ the domain in their dashboard.
   back to Play), and the Play URL with `&referrer=ref%3D<code>` when the link carried one.
 - `.well-known/assetlinks.json` lets Android verify the app's link filter. `_config.yml`
   tells Jekyll to publish that dot-folder.
+
+## The setups gallery: setups.html and setups/index.json
+
+`setups.html` shows every entry in `setups/index.json` as a card, in file order. There is no
+generator; edit the JSON by hand. One entry:
+
+```json
+{
+  "id": "everyday-orbit",              // unique, letters, digits and hyphens
+  "name": "Everyday orbit",
+  "description": "One sentence about the setup.",
+  "theme": "ORBITAL",                  // the app's ThemeId name, for the /t/ fallback link
+  "themeName": "Orbital",              // as the app shows it
+  "layout": "Traditional pages",       // HomeLayout.displayName: Traditional pages, Free roam,
+                                       // Drawer, Thumb orbit or Showcase
+  "premium": false,                    // true when the theme or the layout is Premium
+  "code": "ORB-XXXXXX",                // the layout code; "" until there is one
+  "by": "orbital",                     // "orbital" shows "Orbital example"; anything else "Shared setup"
+  "preview": { "theme": "orbital" },   // a phone.js scene; layout may be pages (default),
+                                       // roam, list, pad or showcase
+  "image": "setups/everyday.webp",     // optional: a picture instead of the drawn phone
+  "hidden": true                       // optional: keeps the entry off the page
+}
+```
+
+(The comments above are for reading only; JSON allows none.) To get a code, set the layout up
+on a phone and use Settings → Look & Feel → Share my setup → Get a code. "Open in Orbital" is
+then `/l/<code>`; with no code it opens the theme (`/t/<theme>`) and says which layout to pick.
+**A layout code is deleted after 90 days without being opened**, so check the gallery's codes
+from time to time and make a new one for any that has lapsed.
 
 **Before shipping the app with App Links, add the Play App Signing key's SHA-256** to
 `sha256_cert_fingerprints` in `.well-known/assetlinks.json`, next to the upload key already

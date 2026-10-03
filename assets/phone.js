@@ -405,6 +405,50 @@
       '</div></div>';
   }
 
+  /* Thumb orbit: the pages stay behind for the clock and widgets, and a pad
+     rests where the thumb does. Drawn held open, the way it looks with a
+     finger on it: the dock on the first ring, more apps on the second. The
+     layout carries the dock itself, so no other dock is drawn. */
+  function pagePad(cfg) {
+    var X = 68, Y = 168; /* the thumb, in cqw from the screen's top left */
+    function ring(names, r, from) {
+      return names.map(function (n, i) {
+        var t = from + (i / names.length) * TAU;
+        var x = X + r * Math.cos(t), y = Y + r * Math.sin(t);
+        return '<span class="pad-at" style="left:' + x.toFixed(2) + 'cqw;top:' + y.toFixed(2) + 'cqw">' + icon(app(n), cfg) + '</span>';
+      }).join('');
+    }
+    var behind = pagePages(scene({ theme: cfg.theme, cards: cfg.cards.slice(0, 1), marks: 'none' }));
+    return behind +
+      '<div class="pad" aria-hidden="true">' +
+      '<span class="pad-veil"></span>' +
+      '<span class="pad-track" style="left:' + X + 'cqw;top:' + Y + 'cqw;--d:44cqw"></span>' +
+      '<span class="pad-track" style="left:' + X + 'cqw;top:' + Y + 'cqw;--d:78cqw"></span>' +
+      ring(DOCK_APPS.slice(0, 6), 22, -Math.PI / 2) +
+      ring(['Notes', 'Weather', 'Clock', 'Files', 'Store', 'Video', 'Podcasts', 'Contacts', 'Mail', 'Calendar'], 39, -Math.PI / 2 + 0.3) +
+      '<span class="pad-core" style="left:' + X + 'cqw;top:' + Y + 'cqw"></span>' +
+      '</div>';
+  }
+
+  /* Showcase: a row of large tiles across the middle, recent apps first, the
+     one in focus drawn larger over a backdrop in its own colour, with Recent,
+     Pinned and Library underneath. The layout carries the dock's apps. */
+  function pageShowcase() {
+    var row = ['Music', 'Photos', 'Video', 'Maps', 'Messages', 'Camera'];
+    var focus = app(row[0]);
+    var tiles = row.map(function (n, i) {
+      var a = app(n);
+      return '<span class="sh-t' + (i ? '' : ' on') + '" style="--c:' + a[2] + '">' + glyph(a[1]) + '</span>';
+    }).join('');
+    return '<div class="pg pg-show" style="--c:' + focus[2] + '">' +
+      '<span class="sh-back">' + glyph(focus[1]) + '</span>' +
+      '<div class="sh-top"><b class="sh-badge"></b><span>Good afternoon</span></div>' +
+      '<div class="sh-row">' + tiles + '</div>' +
+      '<div class="sh-cap"><b>' + focus[0] + '</b><span>Opened a few minutes ago</span></div>' +
+      '<div class="sh-tabs"><b>Recent</b><span>Pinned</span><span>Library</span></div>' +
+      '</div>';
+  }
+
   /* ---- docks -------------------------------------------------------------- */
 
   /* Where an orbit sits for each edge, as fractions of the screen. The front of
@@ -509,7 +553,7 @@
     var side = cfg.anchor === 'left' || cfg.anchor === 'right';
     var letters = cfg.holds === 'letters';
     var d = 0;
-    if (cfg.layout === 'app') return ins;
+    if (cfg.layout === 'app' || cfg.layout === 'pad' || cfg.layout === 'showcase') return ins;
     if (cfg.dock === 'orbit') {
       var extra = letters ? 0 : (Math.max(1, cfg.orbits) - 1);
       d = side ? 35 + extra * 13 + (letters ? 14 : 0) : 23 + extra * 8.5 + (letters ? 9 : 0);
@@ -581,9 +625,13 @@
     if (cfg.layout === 'roam') page = pageRoam(cfg);
     else if (cfg.layout === 'list') page = pageList(cfg);
     else if (cfg.layout === 'app') page = pageApp(cfg);
+    else if (cfg.layout === 'pad') page = pagePad(cfg);
+    else if (cfg.layout === 'showcase') page = pageShowcase(cfg);
     else page = pagePages(cfg);
 
-    var dock = cfg.hideDock ? '' : dockHtml(cfg);
+    /* Thumb orbit and Showcase carry the dock's apps themselves. */
+    var ownsDock = cfg.layout === 'pad' || cfg.layout === 'showcase';
+    var dock = cfg.hideDock || ownsDock ? '' : dockHtml(cfg);
     if (cfg.layout === 'app') {
       dock = '<div class="ov">' + dock + '</div><span class="handle"></span><span class="touch"></span>';
     }
