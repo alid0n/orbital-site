@@ -1,0 +1,106 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "cozy_rainy_day",
+  "name": "Cozy Rainy Day",
+  "description": "Raindrops on the window and warm lamplight beyond. A calm, cozy page for slow afternoons.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:cozy",
+    "vibe:calm",
+    "vibe:dark",
+    "color:orange",
+    "color:black",
+    "style:one-handed",
+    "topic:autumn"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#F2B66D",
+    "accentAlt": "#8FB3C9",
+    "ink": "#F6EFE6",
+    "dim": "#A99F94",
+    "drawer": "#0E0D0C",
+    "surface": "#151311",
+    "elevated": "#221F1B",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "PAPER",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.85,
+    "font": "nunito",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "cozy",
+    "calm"
+  ],
+  "swatch": "#3A332B",
+  "credits": [
+    {
+      "title": "Raindrops on a window in Brastad 1",
+      "author": "W.carter",
+      "source": "Wikimedia Commons",
+      "license": "CC0 1.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Raindrops_on_a_window_in_Brastad_1.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.04,
+        "y": 0.33,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  }
+}

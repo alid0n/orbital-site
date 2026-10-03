@@ -49,6 +49,13 @@
     "panelLook": "FADE",
     "notch": "DOT"
   },
+  "mood": [
+    "light",
+    "calm",
+    "pastel"
+  ],
+  "swatch": "#BFD8EE",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "MIST",

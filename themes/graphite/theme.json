@@ -1,0 +1,43 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "graphite",
+  "name": "Graphite",
+  "description": "Cool graphite greys and crisp white lettering. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dark",
+    "color:black",
+    "color:white"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#C9CED6",
+    "accentAlt": "#8A93A0",
+    "ink": "#EEF0F3",
+    "dim": "#8B9099",
+    "drawer": "#121315",
+    "surface": "#17181B",
+    "elevated": "#222428",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "font": "inter"
+  },
+  "mood": [
+    "dark",
+    "minimal",
+    "calm"
+  ],
+  "swatch": "#2A2C30",
+  "credits": []
+}

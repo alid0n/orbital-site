@@ -1,0 +1,92 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "desert_dusk",
+  "name": "Desert Dusk",
+  "description": "Rose, apricot and violet melting into a desert evening, finished with a fine film grain.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dreamy",
+    "color:pink",
+    "color:purple",
+    "color:orange",
+    "style:one-handed",
+    "topic:nature",
+    "topic:travel"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFB38A",
+    "accentAlt": "#C9A0FF",
+    "ink": "#FFF2EA",
+    "dim": "#C4A6A0",
+    "drawer": "#1A0F17",
+    "surface": "#22131D",
+    "elevated": "#33202C",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.45,
+    "font": "marcellus",
+    "clockFace": "STACK",
+    "uppercase": true,
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "vivid",
+    "calm"
+  ],
+  "swatch": "#C76B7E",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
+  }
+}

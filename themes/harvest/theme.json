@@ -47,6 +47,13 @@
     "panelLook": "CARD",
     "notch": "DOT"
   },
+  "mood": [
+    "cozy",
+    "dark",
+    "calm"
+  ],
+  "swatch": "#C46A2A",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "DUNES",

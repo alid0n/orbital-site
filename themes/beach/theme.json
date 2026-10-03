@@ -48,6 +48,13 @@
     "panelLook": "FADE",
     "notch": "DOT"
   },
+  "mood": [
+    "light",
+    "calm",
+    "pastel"
+  ],
+  "swatch": "#4FB8BD",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "DUNES",

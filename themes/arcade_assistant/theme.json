@@ -36,6 +36,13 @@
   "look": {
     "font": "vt323"
   },
+  "mood": [
+    "dark",
+    "bold",
+    "minimal"
+  ],
+  "swatch": "#2E9E3A",
+  "credits": [],
   "layout": {
     "homeLayout": "DRAWER",
     "dockStyle": "ROW",

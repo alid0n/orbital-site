@@ -12,21 +12,30 @@ import os
 import random
 import sys
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
+
+import wallpaper_engine as engine
 
 SITE = sys.argv[1] if len(sys.argv) > 1 else r"C:\Users\addis\Documents\tests\orbital-site"
 ROOT = os.path.join(SITE, "themes")
 APP_VERSION = 10  # the first version with the catalog
 
+# The original photographs the photo-wash wallpapers are made from. They stay out of git: only the
+# finished WebP is published. Where a photo is not here, its theme's committed wallpaper.webp is kept
+# as it is rather than made again.
+SOURCES = os.environ.get("ORBITAL_WALL_SRC", r"C:\osite-wall-src")
+
 
 def theme(id, name, description, tags, colors, wallpaper, look, premium=False, layout=None,
-          effect="", assistant=None, base="ORBITAL", season=None, tap=False):
+          effect="", assistant=None, base="ORBITAL", season=None, tap=False, kind="full"):
     """season: the id of a season in FEATURED["seasonal"]; the theme is then offered only while that
     season is on, every year (the app's SeasonalThemes). tap: the effect answers a tap on empty
-    home-screen space with a small burst (the app's TapReaction), where the effect has one."""
+    home-screen space with a small burst (the app's TapReaction), where the effect has one.
+    kind: "full", or "accent" for a theme that changes only the colours and the font, and leaves
+    the layout and the wallpaper as they are."""
     return dict(id=id, name=name, description=description, tags=tags, colors=colors,
                 wallpaper=wallpaper, look=look, premium=premium, layout=layout, effect=effect,
-                assistant=assistant, base=base, season=season, tap=tap)
+                assistant=assistant, base=base, season=season, tap=tap, kind=kind)
 
 
 def pal(accent, alt, ink, dim, drawer, surface, elevated, veil="#33000000", light=False):
@@ -38,10 +47,63 @@ def drawn(style, colors, light=False):
     return {"drawn": {"style": style, "colors": colors, "light": light}}
 
 
-def picture(kind):
-    """A wallpaper painted here, by one of the painters in PAINTERS, into the theme's folder as
-    wallpaper.png, under 300 KB."""
-    return {"image": "wallpaper.png", "paint": kind}
+def picture(kind, **finish):
+    """A wallpaper painted here, by one of the painters in PAINTERS, then finished by the wallpaper
+    engine ([finish]: its grain, vignette and the rest) and saved into the theme's folder as
+    wallpaper.webp at the phone's resolution."""
+    return {"image": "wallpaper.webp", "paint": kind, "render": finish}
+
+
+def rendered(**spec):
+    """A wallpaper made by the wallpaper engine (tools/wallpaper_engine.py): a mesh gradient, or a
+    photo wash of one of PHOTOS, with its light, wash, texture and grain."""
+    return {"image": "wallpaper.webp", "render": spec}
+
+
+# THE PHOTOGRAPHS the photo-wash wallpapers are made from, each with the credit its theme carries.
+# Only public-domain and CC0 pictures from the approved sources are used (see PHOTO_SOURCES); each
+# licence was checked on the picture's own page, on the date given.
+PHOTO_SOURCES = {"NASA Image and Video Library", "Wikimedia Commons", "Smithsonian Open Access",
+                 "The Metropolitan Museum of Art", "Art Institute of Chicago", "Cleveland Museum of Art",
+                 "Rijksmuseum", "StockSnap.io"}
+FREE_LICENSES = {"CC0 1.0", "Public domain"}
+PHOTOS = {
+    "nasa-iss073e0427643.jpg": dict(
+        title="Circular arcs of star trails viewed from International Space Station", author="NASA",
+        source="NASA Image and Video Library", license="Public domain",
+        url="https://images.nasa.gov/details/iss073e0427643", retrieved="2026-10-03"),
+    "nasa-iss075e0144232.jpg": dict(
+        title="Star trails above Earth, blue lights of fishing boats, and yellow lights of Indonesia",
+        author="NASA", source="NASA Image and Video Library", license="Public domain",
+        url="https://images.nasa.gov/details/iss075e0144232", retrieved="2026-10-03"),
+    "commons-bilberry-bush-and-moss-in-gullmarsskogen-ravine.jpg": dict(
+        title="Bilberry bush and moss in Gullmarsskogen ravine", author="W.carter",
+        source="Wikimedia Commons", license="CC0 1.0",
+        url="https://commons.wikimedia.org/wiki/File:Bilberry_bush_and_moss_in_Gullmarsskogen_ravine.jpg",
+        retrieved="2026-10-03"),
+    "commons-raindrops-on-a-window-in-brastad-1.jpg": dict(
+        title="Raindrops on a window in Brastad 1", author="W.carter",
+        source="Wikimedia Commons", license="CC0 1.0",
+        url="https://commons.wikimedia.org/wiki/File:Raindrops_on_a_window_in_Brastad_1.jpg",
+        retrieved="2026-10-03"),
+    "commons-shinjuku-shinjuku258.jpg": dict(
+        title="Shinjuku - Shinjuku258", author="lumoplank",
+        source="Wikimedia Commons", license="CC0 1.0",
+        url="https://commons.wikimedia.org/wiki/File:Shinjuku_-_Shinjuku258.jpg", retrieved="2026-10-03"),
+    "commons-alaska-aurora-borealis.jpg": dict(
+        title="Alaska Aurora Borealis", author="Justin Connaher, U.S. Air Force",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:Alaska_Aurora_Borealis.jpg", retrieved="2026-10-03"),
+}
+
+
+def credits_of(entry):
+    """The credits a theme carries: one for each photograph its wallpaper is made from."""
+    spec = (entry["wallpaper"] or {}).get("render") or {}
+    if "photo" not in spec:
+        return []
+    credit = PHOTOS[spec["photo"]["file"]]
+    return [{k: credit[k] for k in ("title", "author", "source", "license", "url")}]
 
 
 THEMES = [
@@ -94,7 +156,12 @@ THEMES = [
           "Firelight amber, pine green and warm wood. A blanket-and-cocoa kind of home screen.",
           ["audience:general", "vibe:cozy", "vibe:calm", "color:orange", "color:green"],
           pal("#F0A35E", "#8DB38B", "#FBEFE2", "#B59C85", "#140E0A", "#1C140E", "#2A1F16", "#33120A04"),
-          drawn("GEARS", ["#2A1C12", "#0D0906", "#F0A35E", "#8DB38B", "#6B4426"]),
+          # Firelight on warm wood, a little pine, and a linen weave, like a blanket over the chair.
+          rendered(mesh=[(0.2, 0.08, "#2A1C12", 0.4), (0.85, 0.2, "#1F2A1D", 0.4), (0.35, 0.5, "#6E3E1C", 0.38),
+                         (0.85, 0.62, "#2A1C12", 0.4), (0.3, 0.9, "#0D0906", 0.42)],
+                   blobs=[(0.3, 0.5, 0.21, "#F0A35E", 0.45), (0.72, 0.28, 0.16, "#8DB38B", 0.16)],
+                   wash=[(0.0, "#0D0906", 0.0), (0.74, "#0D0906", 0.0), (1.0, "#0D0906", 0.6)],
+                   texture="linen", textureAmount=0.02, vignette=0.3, grain=0.045),
           dict(corner="ROUNDED", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="PAPER",
                widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.9,
                font="lora", clockFace="STACK", panelLook="CARD", notch="DOT")),
@@ -102,7 +169,11 @@ THEMES = [
           "Smoky navy, brass and a single spotlight. Elegant, late and unhurried.",
           ["audience:general", "vibe:elegant", "vibe:chill", "vibe:dark", "color:blue", "color:gold"],
           pal("#E0B865", "#8FA9E0", "#F5EEDC", "#A39C8C", "#070A12", "#0C1120", "#161E33", "#44000000"),
-          drawn("SILK", ["#141B33", "#05070E", "#E0B865", "#C9A6C3", "#2B3358"]),
+          # Smoky navy, with one warm brass spotlight high on the stage.
+          rendered(mesh=[(0.5, 0.0, "#2B3358", 0.35), (0.12, 0.3, "#141B33", 0.4), (0.88, 0.42, "#0C1120", 0.4),
+                         (0.4, 0.7, "#070A12", 0.45), (0.8, 0.92, "#05070E", 0.4)],
+                   blobs=[(0.62, 0.17, 0.17, "#E0B865", 0.26), (0.3, 0.5, 0.25, "#C9A6C3", 0.07)],
+                   vignette=0.35, grain=0.045),
           dict(corner="SLIGHT", iconShape="CIRCLE", iconStyle="MONOCHROME", widgetLook="BARE",
                widgetCorner="SLIGHT", widgetEdge="NONE", widgetTint=0.1, widgetSolid=0.3,
                font="playfair_display", clockFace="ANALOGUE", panelLook="FADE", notch="TAPER"),
@@ -184,7 +255,7 @@ THEMES = [
           "Glow-in-the-dark green on midnight black, with violet accents and friendly ghosts drifting by.",
           ["audience:general", "vibe:spooky", "vibe:dark", "vibe:playful", "color:green", "color:purple", "color:neon"],
           pal("#39FF14", "#9B30FF", "#EDFFE8", "#8FB394", "#040705", "#070B08", "#101A12", "#55000000"),
-          picture("ghosts"),
+          picture("ghosts", vignette=0.25, grain=0.04),
           dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="DUOTONE", widgetLook="GLASS",
                widgetCorner="ROUNDED", widgetEdge="FINE", widgetTint=0.3, widgetSolid=0.5,
                font="permanent_marker", clockFace="STACK", panelLook="FADE", notch="DOT", glow=True),
@@ -202,7 +273,7 @@ THEMES = [
           "Midnight black and ember orange under a great full moon.",
           ["audience:general", "vibe:spooky", "vibe:dark", "color:orange", "color:black"],
           pal("#FF7A1A", "#FFB45C", "#FFF1E3", "#B39A86", "#060403", "#0C0806", "#1B120C", "#55000000"),
-          picture("moon"),
+          picture("moon", vignette=0.2, grain=0.04),
           dict(corner="ROUNDED", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
                widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
                font="marcellus", clockFace="STACK", uppercase=True, panelLook="FADE", notch="DOT", glow=True),
@@ -220,7 +291,7 @@ THEMES = [
           "Silver threads on charcoal: a quiet, monochrome page with just the time.",
           ["audience:general", "vibe:spooky", "vibe:dark", "vibe:calm", "color:black", "color:white"],
           pal("#D8DCE2", "#9AA1AB", "#F2F4F7", "#8A9099", "#060607", "#0B0B0D", "#18181C", "#44000000"),
-          picture("webs"),
+          picture("webs", vignette=0.3, grain=0.035),
           dict(corner="SLIGHT", iconShape="CIRCLE", iconStyle="MONOCHROME", widgetLook="BARE",
                widgetCorner="SLIGHT", widgetEdge="NONE", widgetTint=0.1, widgetSolid=0.3,
                font="manrope", clockFace="LINE", panelLook="FADE", notch="TAPER"),
@@ -260,7 +331,11 @@ THEMES = [
           "Green and violet ribbons of light over a starry polar night.",
           ["audience:general", "vibe:dreamy", "vibe:calm", "color:green", "color:purple", "color:blue"],
           pal("#5CF2B8", "#8C9CFF", "#EAFBF5", "#8FA8B0", "#030811", "#060D18", "#0E1A2B", "#44000000"),
-          drawn("AURORA", ["#06142A", "#02050C", "#3DF5B0", "#6C8CFF", "#B46CFF"]),
+          rendered(photo=dict(file="commons-alaska-aurora-borealis.jpg", focus=(0.62, 0.5), blur=1.2, saturation=1.15,
+                              map=[(0.0, "#02050C"), (0.45, "#06142A"), (0.75, "#3DF5B0"), (1.0, "#E8FFF6")], mapAmount=0.3),
+                   wash=[(0.0, "#030811", 0.25), (0.25, "#030811", 0.0), (0.66, "#030811", 0.15),
+                         (0.82, "#030811", 0.72), (1.0, "#030811", 0.85)],
+                   vignette=0.25, grain=0.035),
           dict(corner="PILL", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
                widgetCorner="PILL", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.45,
                font="exo_2", clockFace="LINE", panelLook="FADE", notch="DOT", glow=True),
@@ -318,6 +393,197 @@ THEMES = [
                widgetCorner="ROUNDED", widgetEdge="NONE", widgetTint=0.25, widgetSolid=0.9,
                font="varela_round", clockFace="STACK", panelLook="CARD", notch="PIP"),
           season="summer"),
+
+    # THE FIRST WALLPAPER-ENGINE BATCH: mesh gradients, photo washes and two accent themes.
+    #
+    # Everyday minimal.
+    theme("paper", "Paper",
+          "Warm, softly textured paper with ink-dark lettering. A calm, uncluttered page for every day.",
+          ["audience:general", "vibe:calm", "color:white"],
+          pal("#2F4A6B", "#B5562E", "#1F1C18", "#77706A", "#F7F3EC", "#FAF7F1", "#EFE9DE", "#11FFFFFF", light=True),
+          rendered(mesh=[(0.15, 0.1, "#F8F4EC", 0.5), (0.9, 0.2, "#F2ECE0", 0.45), (0.3, 0.55, "#F6F1E7", 0.5),
+                         (0.85, 0.75, "#EDE5D6", 0.45), (0.2, 0.95, "#E9E1D1", 0.4)],
+                   blobs=[(0.78, 0.12, 0.35, "#FFF9EE", 0.35)],
+                   texture="paper", textureAmount=0.012, vignette=0.1, grain=0.035),
+          dict(corner="SLIGHT", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="PAPER",
+               widgetCorner="SLIGHT", widgetEdge="HAIR", widgetTint=0.1, widgetSolid=0.9,
+               font="dm_sans", clockFace="LINE", panelLook="LINES", notch="TAPER")),
+    theme("graphite", "Graphite",
+          "Cool graphite greys and crisp white lettering. Refreshes your colours and font, and keeps "
+          "your layout and wallpaper just as they are.",
+          ["audience:general", "vibe:calm", "vibe:dark", "color:black", "color:white"],
+          pal("#C9CED6", "#8A93A0", "#EEF0F3", "#8B9099", "#121315", "#17181B", "#222428", "#44000000"),
+          None,
+          dict(font="inter"),
+          kind="accent"),
+    # Calm.
+    theme("matcha", "Matcha",
+          "Soft green tea and warm cream with rounded lettering. Refreshes your colours and font, and "
+          "keeps your layout and wallpaper just as they are.",
+          ["audience:general", "vibe:calm", "color:green", "color:pastel"],
+          pal("#4F7A3A", "#A8834B", "#1F2A1A", "#6B7564", "#F3F5EC", "#F7F8F1", "#E6ECD9", "#11FFFFFF", light=True),
+          None,
+          dict(font="quicksand"),
+          kind="accent"),
+    # Nature.
+    theme("forest_floor", "Forest Floor",
+          "Moss, bilberry leaves and dappled woodland light, in deep greens that keep every icon clear.",
+          ["audience:general", "vibe:calm", "vibe:cozy", "color:green"],
+          pal("#B8D98A", "#E0B15C", "#EEF4E6", "#9AAB8F", "#0B120B", "#101910", "#1A271A", "#44000000"),
+          rendered(photo=dict(file="commons-bilberry-bush-and-moss-in-gullmarsskogen-ravine.jpg", focus=(0.6, 0.5),
+                              blur=1.0, saturation=0.85,
+                              map=[(0.0, "#071007"), (0.5, "#2F4A22"), (0.85, "#A9C27A"), (1.0, "#F2E9C8")], mapAmount=0.4),
+                   wash=[(0.0, "#0B120B", 0.45), (0.2, "#0B120B", 0.1), (0.6, "#0B120B", 0.15),
+                         (0.8, "#0B120B", 0.7), (1.0, "#0B120B", 0.85)],
+                   vignette=0.3, grain=0.04),
+          dict(corner="ROUNDED", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.5,
+               font="lora", clockFace="STACK", panelLook="FADE", notch="DOT"),
+          premium=True),
+    theme("desert_dusk", "Desert Dusk",
+          "Rose, apricot and violet melting into a desert evening, finished with a fine film grain.",
+          ["audience:general", "vibe:calm", "vibe:dreamy", "color:pink", "color:purple", "color:orange"],
+          pal("#FFB38A", "#C9A0FF", "#FFF2EA", "#C4A6A0", "#1A0F17", "#22131D", "#33202C", "#44000000"),
+          rendered(mesh=[(0.2, 0.05, "#C9786A", 0.4), (0.85, 0.18, "#B8606E", 0.42), (0.3, 0.27, "#E89A7A", 0.3),
+                         (0.35, 0.42, "#9C5C86", 0.45), (0.8, 0.6, "#4C2F5E", 0.42), (0.25, 0.8, "#2A1830", 0.45),
+                         (0.7, 0.98, "#140A14", 0.4)],
+                   blobs=[(0.66, 0.36, 0.16, "#FFD2A6", 0.35)],
+                   wash=[(0.0, "#140A14", 0.3), (0.2, "#140A14", 0.0), (0.72, "#140A14", 0.0), (1.0, "#140A14", 0.55)],
+                   vignette=0.25, grain=0.045),
+          dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.45,
+               font="marcellus", clockFace="STACK", uppercase=True, panelLook="FADE", notch="DOT"),
+          premium=True),
+    # From the seasonal list, though rain is welcome all year, so it is offered all year.
+    theme("cozy_rainy_day", "Cozy Rainy Day",
+          "Raindrops on the window and warm lamplight beyond. A calm, cozy page for slow afternoons.",
+          ["audience:general", "vibe:cozy", "vibe:calm", "vibe:dark", "color:orange", "color:black"],
+          pal("#F2B66D", "#8FB3C9", "#F6EFE6", "#A99F94", "#0E0D0C", "#151311", "#221F1B", "#44000000"),
+          rendered(photo=dict(file="commons-raindrops-on-a-window-in-brastad-1.jpg", focus=(0.5, 0.45), blur=0.8,
+                              saturation=0.9,
+                              map=[(0.0, "#0E0D0C"), (0.5, "#3A332B"), (0.85, "#E3A867"), (1.0, "#FFF0D8")], mapAmount=0.35),
+                   wash=[(0.0, "#0E0D0C", 0.2), (0.3, "#0E0D0C", 0.0), (0.7, "#0E0D0C", 0.2),
+                         (0.84, "#0E0D0C", 0.7), (1.0, "#0E0D0C", 0.85)],
+                   vignette=0.25, grain=0.04),
+          dict(corner="ROUNDED", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="PAPER",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.85,
+               font="nunito", clockFace="STACK", panelLook="CARD", notch="DOT"),
+          premium=True),
+    # City.
+    theme("tokyo_night", "Tokyo Night",
+          "Neon signs and late-night streets in Shinjuku, tinted magenta and electric blue.",
+          ["audience:general", "vibe:energetic", "vibe:dark", "color:pink", "color:blue", "color:neon"],
+          pal("#FF4FA0", "#3FE0FF", "#F3F0FF", "#A79EC4", "#08061A", "#0E0B24", "#1A1538", "#55000000"),
+          rendered(photo=dict(file="commons-shinjuku-shinjuku258.jpg", focus=(0.5, 0.42), blur=1.0, saturation=1.05,
+                              map=[(0.0, "#08061A"), (0.45, "#2A1F5C"), (0.75, "#FF4FA0"), (1.0, "#BFF6FF")], mapAmount=0.4),
+                   wash=[(0.0, "#08061A", 0.5), (0.22, "#08061A", 0.05), (0.62, "#08061A", 0.15),
+                         (0.8, "#08061A", 0.75), (1.0, "#08061A", 0.88)],
+                   vignette=0.25, grain=0.04),
+          dict(corner="SLIGHT", iconShape="ROUNDED", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="SLIGHT", widgetEdge="FINE", widgetTint=0.3, widgetSolid=0.5,
+               font="space_grotesk", clockFace="LINE", uppercase=True, panelLook="LINES", notch="CHEVRON", glow=True),
+          premium=True),
+    # Premium showpieces, built around the Showcase and the Orbit Pad.
+    theme("constellation", "Constellation",
+          "Star trails circling above the Earth, photographed from the International Space Station, "
+          "with gold lettering and the Showcase layout.",
+          ["audience:general", "vibe:elegant", "vibe:dark", "vibe:dreamy", "color:blue", "color:gold"],
+          pal("#F2D28A", "#8FB8FF", "#F4F1E8", "#A3A6B8", "#05060D", "#090B16", "#141A2C", "#55000000"),
+          rendered(photo=dict(file="nasa-iss073e0427643.jpg", focus=(0.6, 0.5), blur=1.2, saturation=0.8,
+                              map=[(0.0, "#04060E"), (0.45, "#1B2440"), (0.8, "#B8925A"), (1.0, "#FFF0D0")], mapAmount=0.45),
+                   wash=[(0.0, "#05060D", 0.25), (0.3, "#05060D", 0.0), (0.7, "#05060D", 0.15),
+                         (0.84, "#05060D", 0.7), (1.0, "#05060D", 0.85)],
+                   vignette=0.3, grain=0.035),
+          dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.45,
+               font="cormorant", clockFace="LINE", panelLook="FADE", notch="TAPER", glow=True),
+          premium=True, effect="twinkle-stars", tap=True),
+    theme("glass", "Glass",
+          "Luminous cyan and violet light behind frosted glass, built around the Orbit Pad.",
+          ["audience:general", "vibe:futuristic", "vibe:calm", "vibe:dark", "color:blue", "color:purple"],
+          pal("#9FE8FF", "#C6A8FF", "#F2F7FF", "#9DA9C0", "#070A12", "#0C111C", "#18202F", "#44000000"),
+          rendered(mesh=[(0.15, 0.12, "#1A2C5C", 0.4), (0.85, 0.08, "#3B2A6E", 0.4), (0.5, 0.45, "#0E1830", 0.45),
+                         (0.2, 0.7, "#123A52", 0.4), (0.85, 0.85, "#070A12", 0.4)],
+                   blobs=[(0.25, 0.28, 0.2, "#6FD8FF", 0.55), (0.8, 0.42, 0.22, "#B48CFF", 0.5),
+                          (0.45, 0.62, 0.16, "#4FA8FF", 0.3)],
+                   wash=[(0.0, "#070A12", 0.0), (0.74, "#070A12", 0.0), (1.0, "#070A12", 0.6)],
+                   vignette=0.3, grain=0.04, warp=0.09),
+          dict(corner="PILL", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="PILL", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.35,
+               font="lexend", clockFace="LINE", panelLook="FADE", notch="DOT", glow=True),
+          premium=True),
+    # Kids.
+    theme("space_cadet", "Space Cadet",
+          "Stars and city lights seen from the International Space Station, with big, bright icons for "
+          "young astronauts.",
+          ["audience:kids", "vibe:playful", "color:blue", "color:yellow"],
+          pal("#FFD23F", "#4FC3FF", "#FFFFFF", "#B4C2E0", "#070B1E", "#0C1230", "#182253", "#55000000"),
+          rendered(photo=dict(file="nasa-iss075e0144232.jpg", focus=(0.5, 0.45), blur=1.5,
+                              map=[(0.0, "#050A24"), (0.5, "#1E3A8A"), (0.85, "#4FC3FF"), (1.0, "#FFF6D0")], mapAmount=0.35),
+                   wash=[(0.0, "#070B1E", 0.2), (0.25, "#070B1E", 0.0), (0.62, "#070B1E", 0.15),
+                         (0.8, "#070B1E", 0.72), (1.0, "#070B1E", 0.85)],
+                   vignette=0.2, grain=0.035),
+          dict(corner="PILL", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="SOLID",
+               widgetCorner="PILL", widgetEdge="BOLD", widgetTint=0.3, widgetSolid=1.0,
+               font="fredoka", clockFace="DIGITS", panelLook="CARD", notch="DOT")),
+]
+
+# EACH THEME'S MOOD (the words the store's mood filter offers) and its swatch, the one colour it is
+# filed under in the colour filter: the colour it reads as at a glance.
+MOOD_WORDS = {"calm", "bold", "dark", "light", "pastel", "vivid", "minimal", "cozy", "playful"}
+MOODS = {
+    "candy": (["light", "pastel", "playful"], "#F27BB5"),
+    "road_trip": (["bold", "dark", "vivid"], "#FF8A3D"),
+    "beach": (["light", "calm", "pastel"], "#4FB8BD"),
+    "sparkles": (["dark", "vivid"], "#7A4FB0"),
+    "disco": (["bold", "dark", "vivid", "playful"], "#C03FB0"),
+    "cozy_cabin": (["cozy", "dark", "calm"], "#B8743A"),
+    "midnight_jazz": (["dark", "minimal", "calm"], "#1E2A4A"),
+    "crayon_box": (["light", "playful", "vivid"], "#1F6FD1"),
+    "arcade_assistant": (["dark", "bold", "minimal"], "#2E9E3A"),
+    "halloween_night": (["dark", "vivid"], "#FF8C2B"),
+    "pumpkin_patch": (["light", "playful", "vivid"], "#FF9A3C"),
+    "winter_snow": (["light", "calm", "pastel"], "#BFD8EE"),
+    "valentines_day": (["dark", "vivid"], "#E0245E"),
+    "summer_splash": (["light", "vivid", "playful"], "#39B7F0"),
+    "spring_bloom": (["light", "pastel", "calm"], "#9BD68C"),
+    "ghost_glow": (["dark", "vivid", "playful"], "#3FCF2A"),
+    "haunted_mansion": (["dark", "bold"], "#4A2470"),
+    "witching_hour": (["dark", "bold"], "#E8691A"),
+    "candy_corn": (["light", "playful", "vivid"], "#FFB02E"),
+    "spider_web": (["dark", "minimal", "calm"], "#3A3B40"),
+    "jack_o_lantern": (["dark", "cozy"], "#F07F1A"),
+    "harvest": (["cozy", "dark", "calm"], "#C46A2A"),
+    "autumn_leaves": (["light", "cozy"], "#D9531E"),
+    "northern_lights": (["dark", "calm", "vivid"], "#2FC79A"),
+    "midnight_fireworks": (["dark", "vivid", "bold"], "#2A2266"),
+    "golden_countdown": (["dark", "minimal"], "#C9A24A"),
+    "love_letters": (["light", "pastel", "cozy"], "#F2A7B8"),
+    "cherry_blossom": (["light", "pastel", "calm"], "#F7B6CC"),
+    "tropical": (["light", "vivid", "playful"], "#1FB5A3"),
+    "paper": (["light", "minimal", "calm"], "#F3EDE2"),
+    "graphite": (["dark", "minimal", "calm"], "#2A2C30"),
+    "matcha": (["light", "pastel", "calm"], "#9DB67A"),
+    "forest_floor": (["dark", "calm", "cozy"], "#3F5E2A"),
+    "desert_dusk": (["dark", "vivid", "calm"], "#C76B7E"),
+    "cozy_rainy_day": (["dark", "cozy", "calm"], "#3A332B"),
+    "tokyo_night": (["dark", "vivid", "bold"], "#2A1F5C"),
+    "constellation": (["dark", "calm", "minimal"], "#1B2440"),
+    "glass": (["dark", "minimal", "vivid"], "#3D4F8F"),
+    "space_cadet": (["dark", "playful", "vivid"], "#1E3A8A"),
+}
+
+# THE CURATED COLLECTIONS the store shows as shelves of their own, each from its first to its last
+# day. Only themes offered all year: a collection never shows a theme that is out of season.
+COLLECTIONS = [
+    {"id": "minimal_setups", "name": "Minimal setups",
+     "description": "Quiet pages with just what you need: a clean clock, soft colour and plenty of space.",
+     "themes": ["paper", "graphite", "matcha", "midnight_jazz", "glass"],
+     "start": "2026-10-05", "end": "2027-03-31"},
+    {"id": "one_handed_favourites", "name": "One-handed favourites",
+     "description": "Everything within easy reach of your thumb, from the Orbit Pad to a dock along the foot of the screen.",
+     "themes": ["glass", "forest_floor", "cozy_rainy_day", "beach", "sparkles", "road_trip"],
+     "start": "2026-10-05", "end": "2027-03-31"},
 ]
 
 
@@ -412,6 +678,23 @@ LAYOUTS = {
                            widgets=[CLOCK(), WEATHER(), w("week", "CALENDAR_WEEK", 0.04, 0.33, 0.92)]),
     "tropical": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
                      widgets=[CLOCK(), WEATHER(), MEDIA(0.33)]),
+    # The wallpaper-engine batch. Minimal: the time and what is next, in a plain list drawer.
+    "paper": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="LIST",
+                  widgets=[CLOCK(0.08, 1.2), w("next", "AGENDA", 0.04, 0.3, 0.92)]),
+    "forest_floor": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
+                         widgets=[CLOCK(), WEATHER()]),
+    "desert_dusk": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
+                        widgets=[CLOCK(scale=1.1), WEATHER(0.04, 0.2, 0.92)]),
+    "cozy_rainy_day": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
+                           widgets=[CLOCK(), WEATHER(), MEDIA(0.33)]),
+    "tokyo_night": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
+                        widgets=[CLOCK(), MEDIA_FULL(0.2)]),
+    # The showpieces: the Showcase's row of large tiles, and the Orbit Pad with pages behind it.
+    "constellation": dict(homeLayout="CONSOLE", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID"),
+    "glass": dict(homeLayout="ORBIT_PAD", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
+                  widgets=[CLOCK(0.06, 1.1)]),
+    "space_cadet": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
+                        widgets=[CLOCK(scale=1.2), WEATHER(0.04, 0.2, 0.92)]),
 }
 
 ASSISTANTS = {
@@ -424,6 +707,8 @@ ASSISTANTS = {
     "spider_web": "MINIMAL_LINE", "jack_o_lantern": "CHAT", "harvest": "NOTEPAD", "autumn_leaves": "CHAT",
     "northern_lights": "SPOTLIGHT", "midnight_fireworks": "HUD", "golden_countdown": "MINIMAL_LINE",
     "love_letters": "NOTEPAD", "cherry_blossom": "NOTEPAD", "tropical": "CHAT",
+    "paper": "NOTEPAD", "forest_floor": "NOTEPAD", "desert_dusk": "SPOTLIGHT", "cozy_rainy_day": "NOTEPAD",
+    "tokyo_night": "HUD", "constellation": "SPOTLIGHT", "glass": "MINIMAL_LINE", "space_cadet": "VOICE",
 }
 
 # The phone-use style each layout is for. Kept consistent with the layouts above by the app's tests.
@@ -439,6 +724,9 @@ STYLES = {
     "harvest": ["one-handed"], "autumn_leaves": ["one-handed"], "northern_lights": ["one-handed"],
     "midnight_fireworks": ["one-handed"], "golden_countdown": ["minimal"], "love_letters": ["one-handed"],
     "cherry_blossom": ["one-handed"], "tropical": ["one-handed"],
+    "paper": ["minimal"], "forest_floor": ["one-handed"], "desert_dusk": ["one-handed"],
+    "cozy_rainy_day": ["one-handed"], "tokyo_night": ["one-handed"], "constellation": ["big screen"],
+    "glass": ["one-handed"], "space_cadet": ["easy to see"],
 }
 
 EFFECTS = {}
@@ -448,6 +736,7 @@ LOOK_EXTRA = {
     "crayon_box": dict(homeIconScale=1.3, homeLabels=True),
     "pumpkin_patch": dict(homeIconScale=1.3, homeLabels=True),
     "candy_corn": dict(homeIconScale=1.3, homeLabels=True),
+    "space_cadet": dict(homeIconScale=1.3, homeLabels=True),
 }
 
 # WHAT EACH THEME IS ABOUT, for the interests somebody picks in the app (see Interests.kt there).
@@ -466,6 +755,9 @@ TOPICS = {
     "northern_lights": ["winter", "nature", "space"], "midnight_fireworks": ["new year", "music"],
     "golden_countdown": ["new year"], "love_letters": ["valentines"],
     "cherry_blossom": ["spring", "nature", "family"], "tropical": ["summer", "beach", "travel"],
+    "forest_floor": ["nature"], "desert_dusk": ["nature", "travel"], "cozy_rainy_day": ["autumn"],
+    "tokyo_night": ["travel", "city"], "constellation": ["space"], "glass": ["orbit pad"],
+    "space_cadet": ["space", "family"],
 }
 
 # THE FEATURED SECTION of the index: the theme of each week, the drops, and the seasons.
@@ -619,10 +911,55 @@ def check_featured(entries):
                 "%s drops %s early, before Premium's early access to its season" % (drop["id"], tid)
 
 
+def check_collections(entries):
+    """Every collection has an id the app accepts, a name and a description, dates that parse in
+    order, and two or more themes, all in the catalog and all offered all year."""
+    by_id = {e["id"]: e for e in entries}
+    ids = [c["id"] for c in COLLECTIONS]
+    assert len(ids) == len(set(ids)), "two collections share an id"
+    for c in COLLECTIONS:
+        assert set(c) == {"id", "name", "description", "themes", "start", "end"}, c["id"]
+        assert c["id"].replace("_", "").isalnum() and c["id"] == c["id"].lower() and len(c["id"]) <= 40, c["id"]
+        assert c["name"] and len(c["name"]) <= 40 and c["description"] and len(c["description"]) <= 280, c["id"]
+        assert day(c["start"], c["id"]) <= day(c["end"], c["id"]), c["id"]
+        assert len(c["themes"]) >= 2 and len(set(c["themes"])) == len(c["themes"]), c["id"]
+        for tid in c["themes"]:
+            assert tid in by_id, "%s names %s, which is not in the catalog" % (c["id"], tid)
+            assert not by_id[tid]["season"], "%s names %s, which is seasonal" % (c["id"], tid)
+
+
+def check_credits(entry):
+    """A theme's credits are complete, and a wallpaper made from a photograph is credited to an
+    approved source under a CC0 or public-domain licence. Refuses the theme otherwise."""
+    tid = entry["id"]
+    for credit in entry["credits"]:
+        assert set(credit) == {"title", "author", "source", "license", "url"}, (tid, credit)
+        assert all(isinstance(v, str) and v.strip() for v in credit.values()), (tid, credit)
+        assert credit["url"].startswith("https://"), (tid, credit["url"])
+    spec = (entry["wallpaper"] or {}).get("render") or {}
+    if "photo" in spec:
+        photo = PHOTOS.get(spec["photo"]["file"])
+        assert photo, "%s uses a photo with no credit recorded in PHOTOS" % tid
+        assert photo["license"] in FREE_LICENSES, \
+            "%s uses a photo licensed %r; only CC0 or public domain may be used" % (tid, photo["license"])
+        assert photo["source"] in PHOTO_SOURCES, "%s uses a photo from %r, not an approved source" % (tid, photo["source"])
+        assert photo.get("retrieved"), "%s: the photo's licence check has no date" % tid
+        assert entry["credits"], "%s is photo-based but carries no credit" % tid
+
+
 def check_theme(entry):
     """One theme against the app's rules: a whitelisted effect, and only on a Premium theme, a font
     in the library, and a season written as an id."""
     tid = entry["id"]
+    assert entry["kind"] in ("full", "accent"), (tid, entry["kind"])
+    if entry["kind"] == "accent":
+        # The colours and the font, and nothing that would move or repaint the home screen.
+        assert not entry["wallpaper"] and not entry["layout"] and not entry["effect"], tid
+        assert set(entry["look"]) <= {"font"}, (tid, "an accent theme's look is its font alone")
+    moods, swatch = entry["mood"], entry["swatch"]
+    assert moods and set(moods) <= MOOD_WORDS and len(set(moods)) == len(moods), (tid, moods)
+    assert len(swatch) == 7 and swatch[0] == "#" and all(c in "0123456789ABCDEF" for c in swatch[1:]), (tid, swatch)
+    check_credits(entry)
     assert entry["effect"] in EFFECTS_ALLOWED, (tid, entry["effect"])
     if entry["effect"]:
         assert entry["premium"], "%s has an effect, which is part of Premium" % tid
@@ -636,6 +973,13 @@ def check_theme(entry):
 
 def finish(entry):
     tid = entry["id"]
+    entry["mood"], entry["swatch"] = MOODS[tid]
+    entry["credits"] = credits_of(entry)
+    if entry["kind"] == "accent":
+        # Only colours and a font: no layout, assistant look or phone style of its own.
+        entry["tags"] = [t for t in entry["tags"] if not t.startswith("style:")]
+        entry["tags"] += ["topic:" + t for t in TOPICS.get(tid, [])]
+        return entry
     entry["layout"] = dict(LAYOUTS[tid], **{k: v for k, v in (entry["layout"] or {}).items() if k not in LAYOUTS[tid]})
     entry["assistant"] = {"look": ASSISTANTS[tid]}
     entry["tags"] = [t for t in entry["tags"] if not t.startswith("style:")] + ["style:" + s for s in STYLES[tid]]
@@ -657,14 +1001,15 @@ def preview(entry, path):
     """A small portrait picture: the wallpaper's colours, a clock, a page of icons and a dock."""
     w, h = 240, 480
     paper = (entry["wallpaper"] or {}).get("drawn")
-    painted = os.path.join(os.path.dirname(path), "wallpaper.png")
+    image = (entry["wallpaper"] or {}).get("image")
+    painted = os.path.join(os.path.dirname(path), image) if image else None
     colors = paper["colors"] if paper else [entry["colors"]["surface"], entry["colors"]["drawer"],
                                             entry["colors"]["accent"], entry["colors"]["accentAlt"],
                                             entry["colors"]["elevated"]]
-    if (entry["wallpaper"] or {}).get("paint") and os.path.exists(painted):
-        # The painted wallpaper itself, cut to the preview's shape.
+    if painted and os.path.exists(painted):
+        # The wallpaper itself, cut to the preview's shape.
         with Image.open(painted) as wall:
-            img = wall.convert("RGBA").resize((w, int(wall.height * w / wall.width))).crop((0, 0, w, h))
+            img = ImageOps.fit(wall.convert("RGBA"), (w, h), Image.LANCZOS)
     else:
         top, bottom = hex_rgb(colors[0]), hex_rgb(colors[1])
         img = Image.new("RGB", (w, h))
@@ -720,9 +1065,13 @@ def theme_json(entry):
         "author": "Orbital", "version": 1, "minAppVersion": APP_VERSION,
         "premium": entry["premium"], "tags": entry["tags"], "previews": ["preview.png"],
         "base": entry["base"], "colors": entry["colors"], "look": entry["look"],
+        # The store's mood and colour filters, and the credit for a photograph in the wallpaper.
+        # (Whether it is a full theme or an accent is said in the index only: "kind" here is the
+        # file's own kind, "orbital-theme", which the app checks.)
+        "mood": entry["mood"], "swatch": entry["swatch"], "credits": entry["credits"],
     }
     if entry["wallpaper"]:
-        out["wallpaper"] = {k: v for k, v in entry["wallpaper"].items() if k != "paint"}
+        out["wallpaper"] = {k: v for k, v in entry["wallpaper"].items() if k not in ("paint", "render")}
     if entry["layout"]:
         out["layout"] = entry["layout"]
     if entry["assistant"]:
@@ -739,7 +1088,9 @@ def theme_json(entry):
 # THE PAINTED WALLPAPERS, for pictures no drawn style makes: soft shapes on a dark sky, blurred and
 # saved small. Seeded by the theme, so the same picture comes out every run.
 
-WALL_W, WALL_H = 720, 1560
+# Painted at two-thirds of the phone's size (the shapes are soft, so nothing is lost), then scaled up
+# and finished by the wallpaper engine at its full size.
+WALL_W, WALL_H = 720, 1600
 
 
 def sky(top, bottom):
@@ -842,17 +1193,34 @@ def paint_webs(entry, rnd):
 PAINTERS = {"ghosts": paint_ghosts, "moon": paint_moon, "webs": paint_webs}
 
 
-def paint_wallpaper(entry, folder):
-    """Paints [entry]'s picture into [folder] as wallpaper.png, kept under 300 KB. Returns its path."""
-    kind = entry["wallpaper"]["paint"]
-    img = PAINTERS[kind](entry, random.Random(entry["id"])).convert("RGB")
-    path = os.path.join(folder, "wallpaper.png")
-    # Soft pictures banded into a palette of their own stay smooth and small.
-    for colours in (256, 128, 64):
-        img.quantize(colors=colours, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE).save(path, "PNG", optimize=True)
-        if os.path.getsize(path) < 300_000:
-            return path
-    raise AssertionError((entry["id"], "wallpaper.png is over 300 KB"))
+# How readable the screen's furniture must stay over a wallpaper made here, as contrast ratios
+# against the theme's ink: the dock (on average, and against its lightest or darkest few percent),
+# and the clock, which is large text, against its worst few percent.
+DOCK_AVERAGE, DOCK_WORST, CLOCK_WORST = 4.5, 3.0, 3.0
+
+
+def make_wallpaper(entry, folder):
+    """Makes [entry]'s wallpaper.webp in [folder] with the wallpaper engine: painted here first, or a
+    mesh gradient, or a photo wash. Checks the dock and the clock read clearly over it. A photo wash
+    whose original is not in SOURCES keeps the committed picture. Returns its path and size."""
+    paper = entry["wallpaper"]
+    path = os.path.join(folder, paper["image"])
+    spec = paper.get("render") or {}
+    if "photo" in spec and not os.path.exists(os.path.join(SOURCES, spec["photo"]["file"])):
+        assert os.path.exists(path), "%s: the photo %s is not in %s and there is no wallpaper to keep" % (
+            entry["id"], spec["photo"]["file"], SOURCES)
+        print(entry["id"], "keeps its wallpaper; the original photo is not in", SOURCES)
+        img = Image.open(path).convert("RGB")
+    else:
+        base = None
+        if paper.get("paint"):
+            base = PAINTERS[paper["paint"]](entry, random.Random(entry["id"]))
+        img = engine.render(spec, entry["id"], SOURCES, base_image=base)
+        engine.save_webp(img, path)
+    read = engine.readability(img, entry["colors"]["ink"])
+    assert read["dock"][0] >= DOCK_AVERAGE and read["dock"][1] >= DOCK_WORST, (entry["id"], "dock", read["dock"])
+    assert read["clock"][1] >= CLOCK_WORST, (entry["id"], "clock", read["clock"])
+    return path, os.path.getsize(path)
 
 
 SHARE_PAGE = """<!DOCTYPE html>
@@ -884,6 +1252,8 @@ SHARE_PAGE = """<!DOCTYPE html>
   .share-tags li {{ font-size: 0.85rem; padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid var(--card-edge); }}
   .share-actions {{ display: flex; flex-wrap: wrap; gap: 10px; }}
   .season-note {{ margin: -0.5rem 0 1.25rem; font-size: 0.95rem; color: var(--accent); }}
+  .credit {{ margin: -0.5rem 0 1.25rem; font-size: 0.85rem; opacity: 0.75; }}
+  .credit a {{ color: inherit; }}
   @media (max-width: 640px) {{ .share-theme {{ grid-template-columns: 1fr; }} .share-theme img {{ max-width: 220px; }} }}
 </style>
 </head>
@@ -899,7 +1269,7 @@ SHARE_PAGE = """<!DOCTYPE html>
       <p class="eyebrow">A theme for Orbital Launcher{premium}</p>
       <h1>{name}</h1>
       <p class="lede">{description}</p>
-      <ul class="share-tags">{tags}</ul>{season}
+      <ul class="share-tags">{tags}</ul>{season}{credit}
       <div class="share-actions">
         <a class="btn" data-open-app href="https://play.google.com/store/apps/details?id=com.alid0n.orbital">Get it in Orbital</a>
         <a class="btn ghost" data-play href="https://play.google.com/store/apps/details?id=com.alid0n.orbital">Get Orbital on Google Play</a>
@@ -935,6 +1305,13 @@ def share_page(entry):
         season = ('\n      <p class="season-note" data-season-from="%s" data-season-until="%s">'
                   'A seasonal theme. Available %s.</p>' % (esc(s["from"]), esc(s["until"]), esc(span)))
         season_script = '\n<script src="/assets/season.js"></script>'
+    credit = ""
+    if entry["credits"]:
+        # The photograph in the wallpaper: its title, who made it, where it is from and its licence.
+        credit = '\n      <p class="credit">Wallpaper photo: ' + "; ".join(
+            '<a href="%s" rel="noopener">%s</a> by %s, %s (%s)' % (
+                esc(c["url"]), esc(c["title"]), esc(c["author"]), esc(c["source"]), esc(c["license"]))
+            for c in entry["credits"]) + ".</p>"
     return SHARE_PAGE.format(
         id=esc(entry["id"]),
         name=esc(entry["name"]),
@@ -942,6 +1319,7 @@ def share_page(entry):
         premium=" &middot; Orbital Premium" if entry["premium"] else "",
         tags=tags,
         season=season,
+        credit=credit,
         season_script=season_script,
     )
 
@@ -972,14 +1350,16 @@ def main():
     ids = [e["id"] for e in finished]
     assert len(ids) == len(set(ids)), "two themes share an id"
     check_featured(finished)
+    check_collections(finished)
+    only = set(os.environ.get("ORBITAL_ONLY", "").split(",")) - {""}
     for entry in finished:
         folder = os.path.join(ROOT, entry["id"])
         os.makedirs(folder, exist_ok=True)
         data = theme_json(entry).encode("utf-8")
         with open(os.path.join(folder, "theme.json"), "wb") as f:
             f.write(data)
-        if (entry["wallpaper"] or {}).get("paint"):
-            print(entry["id"], os.path.getsize(paint_wallpaper(entry, folder)), "bytes wallpaper")
+        if (entry["wallpaper"] or {}).get("image") and (not only or entry["id"] in only):
+            print(entry["id"], make_wallpaper(entry, folder)[1], "bytes wallpaper")
         png = os.path.join(folder, "preview.png")
         preview(entry, png)
         size = os.path.getsize(png)
@@ -990,13 +1370,15 @@ def main():
             "file": entry["id"] + "/theme.json", "premium": entry["premium"], "size": len(data),
             "sha256": hashlib.sha256(data).hexdigest(), "base": entry["base"],
             "colors": entry["colors"],
+            "kind": entry["kind"], "mood": entry["mood"], "swatch": entry["swatch"], "credits": entry["credits"],
         }
         if entry["season"]:
             item["season"] = entry["season"]
         index.append(item)
         print(entry["id"], len(data), "bytes json,", size, "bytes png")
     with open(os.path.join(ROOT, "index.json"), "w", encoding="utf-8", newline="\n") as f:
-        json.dump({"kind": "orbital-theme-index", "format": 1, "themes": index, "featured": FEATURED},
+        json.dump({"kind": "orbital-theme-index", "format": 1, "themes": index, "featured": FEATURED,
+                   "collections": COLLECTIONS},
                   f, indent=2, ensure_ascii=False)
         f.write("\n")
     check_written()
@@ -1007,8 +1389,14 @@ def check_written():
     """Reads back what was written, as the app will: every index entry's file is there, its size and
     SHA-256 match, and every season a theme names is in the index's own featured section."""
     with open(os.path.join(ROOT, "index.json"), encoding="utf-8") as f:
-        index = json.load(f)
+        text = f.read()
+    # The app reads no index longer than this (ThemeCatalogFormat.MAX_CHARS).
+    assert len(text) <= 262_144, ("index.json", len(text))
+    index = json.loads(text)
     seasons = {s["id"] for s in index["featured"]["seasonal"]}
+    listed = {item["id"] for item in index["themes"]}
+    for c in index["collections"]:
+        assert set(c["themes"]) <= listed, c["id"]
     for item in index["themes"]:
         with open(os.path.join(ROOT, item["file"]), "rb") as f:
             data = f.read()
@@ -1017,10 +1405,18 @@ def check_written():
         theme_file = json.loads(data.decode("utf-8"))
         assert theme_file.get("season") == item.get("season"), (item["id"], "season")
         assert item.get("season") is None or item["season"] in seasons, (item["id"], item["season"])
+        assert theme_file["kind"] == "orbital-theme", (item["id"], "kind")
+        for key in ("mood", "swatch", "credits"):
+            assert theme_file[key] == item[key], (item["id"], key)
+        if item["kind"] == "accent":
+            assert "layout" not in theme_file and "wallpaper" not in theme_file, (item["id"], "accent")
         image = (theme_file.get("wallpaper") or {}).get("image")
         if image:
             picture_path = os.path.join(ROOT, item["id"], image)
-            assert os.path.getsize(picture_path) < 300_000, (item["id"], image)
+            assert os.path.getsize(picture_path) <= engine.MAX_BYTES, (item["id"], image)
+            with Image.open(picture_path) as picture:
+                # Within what the app will decode (ThemeImages.MAX_SIDE).
+                assert max(picture.size) <= 4096, (item["id"], picture.size)
 
 
 if __name__ == "__main__":

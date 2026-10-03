@@ -50,18 +50,23 @@
     "notch": "DOT",
     "glow": true
   },
-  "wallpaper": {
-    "drawn": {
-      "style": "AURORA",
-      "colors": [
-        "#06142A",
-        "#02050C",
-        "#3DF5B0",
-        "#6C8CFF",
-        "#B46CFF"
-      ],
-      "light": false
+  "mood": [
+    "dark",
+    "calm",
+    "vivid"
+  ],
+  "swatch": "#2FC79A",
+  "credits": [
+    {
+      "title": "Alaska Aurora Borealis",
+      "author": "Justin Connaher, U.S. Air Force",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Alaska_Aurora_Borealis.jpg"
     }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
   },
   "layout": {
     "homeLayout": "PAGES",

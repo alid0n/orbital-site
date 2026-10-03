@@ -47,18 +47,15 @@
     "panelLook": "FADE",
     "notch": "TAPER"
   },
+  "mood": [
+    "dark",
+    "minimal",
+    "calm"
+  ],
+  "swatch": "#1E2A4A",
+  "credits": [],
   "wallpaper": {
-    "drawn": {
-      "style": "SILK",
-      "colors": [
-        "#141B33",
-        "#05070E",
-        "#E0B865",
-        "#C9A6C3",
-        "#2B3358"
-      ],
-      "light": false
-    }
+    "image": "wallpaper.webp"
   },
   "layout": {
     "homeLayout": "PAGES",

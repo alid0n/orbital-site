@@ -49,6 +49,13 @@
     "panelLook": "CARD",
     "notch": "DOT"
   },
+  "mood": [
+    "light",
+    "pastel",
+    "calm"
+  ],
+  "swatch": "#9BD68C",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "PETALS",

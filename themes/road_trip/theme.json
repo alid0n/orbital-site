@@ -48,6 +48,13 @@
     "panelLook": "LINES",
     "notch": "CHEVRON"
   },
+  "mood": [
+    "bold",
+    "dark",
+    "vivid"
+  ],
+  "swatch": "#FF8A3D",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "HORIZON",

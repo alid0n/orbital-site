@@ -1,0 +1,95 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "forest_floor",
+  "name": "Forest Floor",
+  "description": "Moss, bilberry leaves and dappled woodland light, in deep greens that keep every icon clear.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:cozy",
+    "color:green",
+    "style:one-handed",
+    "topic:nature"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#B8D98A",
+    "accentAlt": "#E0B15C",
+    "ink": "#EEF4E6",
+    "dim": "#9AAB8F",
+    "drawer": "#0B120B",
+    "surface": "#101910",
+    "elevated": "#1A271A",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.5,
+    "font": "lora",
+    "clockFace": "STACK",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "cozy"
+  ],
+  "swatch": "#3F5E2A",
+  "credits": [
+    {
+      "title": "Bilberry bush and moss in Gullmarsskogen ravine",
+      "author": "W.carter",
+      "source": "Wikimedia Commons",
+      "license": "CC0 1.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Bilberry_bush_and_moss_in_Gullmarsskogen_ravine.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.19,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "tokyo_night",
+  "name": "Tokyo Night",
+  "description": "Neon signs and late-night streets in Shinjuku, tinted magenta and electric blue.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:dark",
+    "color:pink",
+    "color:blue",
+    "color:neon",
+    "style:one-handed",
+    "topic:travel",
+    "topic:city"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FF4FA0",
+    "accentAlt": "#3FE0FF",
+    "ink": "#F3F0FF",
+    "dim": "#A79EC4",
+    "drawer": "#08061A",
+    "surface": "#0E0B24",
+    "elevated": "#1A1538",
+    "veil": "#55000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "SLIGHT",
+    "widgetEdge": "FINE",
+    "widgetTint": 0.3,
+    "widgetSolid": 0.5,
+    "font": "space_grotesk",
+    "clockFace": "LINE",
+    "uppercase": true,
+    "panelLook": "LINES",
+    "notch": "CHEVRON",
+    "glow": true
+  },
+  "mood": [
+    "dark",
+    "vivid",
+    "bold"
+  ],
+  "swatch": "#2A1F5C",
+  "credits": [
+    {
+      "title": "Shinjuku - Shinjuku258",
+      "author": "lumoplank",
+      "source": "Wikimedia Commons",
+      "license": "CC0 1.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Shinjuku_-_Shinjuku258.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.06,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.88,
+        "tint": 1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "HUD"
+  }
+}

@@ -50,6 +50,13 @@
     "panelLook": "CARD",
     "notch": "PIP"
   },
+  "mood": [
+    "light",
+    "vivid",
+    "playful"
+  ],
+  "swatch": "#39B7F0",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "DUNES",

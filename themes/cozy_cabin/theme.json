@@ -46,18 +46,15 @@
     "panelLook": "CARD",
     "notch": "DOT"
   },
+  "mood": [
+    "cozy",
+    "dark",
+    "calm"
+  ],
+  "swatch": "#B8743A",
+  "credits": [],
   "wallpaper": {
-    "drawn": {
-      "style": "GEARS",
-      "colors": [
-        "#2A1C12",
-        "#0D0906",
-        "#F0A35E",
-        "#8DB38B",
-        "#6B4426"
-      ],
-      "light": false
-    }
+    "image": "wallpaper.webp"
   },
   "layout": {
     "homeLayout": "PAGES",

@@ -48,6 +48,12 @@
     "notch": "DOT",
     "glow": true
   },
+  "mood": [
+    "dark",
+    "vivid"
+  ],
+  "swatch": "#E0245E",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "PETALS",

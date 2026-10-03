@@ -48,6 +48,12 @@
     "notch": "DOT",
     "glow": true
   },
+  "mood": [
+    "dark",
+    "cozy"
+  ],
+  "swatch": "#F07F1A",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "NEBULA",

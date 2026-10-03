@@ -47,8 +47,15 @@
     "panelLook": "FADE",
     "notch": "TAPER"
   },
+  "mood": [
+    "dark",
+    "minimal",
+    "calm"
+  ],
+  "swatch": "#3A3B40",
+  "credits": [],
   "wallpaper": {
-    "image": "wallpaper.png"
+    "image": "wallpaper.webp"
   },
   "layout": {
     "homeLayout": "PAGES",

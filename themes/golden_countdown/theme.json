@@ -46,6 +46,12 @@
     "panelLook": "FADE",
     "notch": "TAPER"
   },
+  "mood": [
+    "dark",
+    "minimal"
+  ],
+  "swatch": "#C9A24A",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "SILK",

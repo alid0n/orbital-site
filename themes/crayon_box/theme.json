@@ -48,6 +48,13 @@
     "homeIconScale": 1.3,
     "homeLabels": true
   },
+  "mood": [
+    "light",
+    "playful",
+    "vivid"
+  ],
+  "swatch": "#1F6FD1",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "MOSAIC",

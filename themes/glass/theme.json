@@ -1,0 +1,82 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "glass",
+  "name": "Glass",
+  "description": "Luminous cyan and violet light behind frosted glass, built around the Orbit Pad.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:futuristic",
+    "vibe:calm",
+    "vibe:dark",
+    "color:blue",
+    "color:purple",
+    "style:one-handed",
+    "topic:orbit pad"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#9FE8FF",
+    "accentAlt": "#C6A8FF",
+    "ink": "#F2F7FF",
+    "dim": "#9DA9C0",
+    "drawer": "#070A12",
+    "surface": "#0C111C",
+    "elevated": "#18202F",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "PILL",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.35,
+    "font": "lexend",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT",
+    "glow": true
+  },
+  "mood": [
+    "dark",
+    "minimal",
+    "vivid"
+  ],
+  "swatch": "#3D4F8F",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "ORBIT_PAD",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "MINIMAL_LINE"
+  }
+}

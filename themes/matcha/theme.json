@@ -1,0 +1,42 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "matcha",
+  "name": "Matcha",
+  "description": "Soft green tea and warm cream with rounded lettering. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "color:green",
+    "color:pastel"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#4F7A3A",
+    "accentAlt": "#A8834B",
+    "ink": "#1F2A1A",
+    "dim": "#6B7564",
+    "drawer": "#F3F5EC",
+    "surface": "#F7F8F1",
+    "elevated": "#E6ECD9",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "font": "quicksand"
+  },
+  "mood": [
+    "light",
+    "pastel",
+    "calm"
+  ],
+  "swatch": "#9DB67A",
+  "credits": []
+}

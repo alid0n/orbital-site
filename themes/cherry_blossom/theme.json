@@ -49,6 +49,13 @@
     "panelLook": "FADE",
     "notch": "DOT"
   },
+  "mood": [
+    "light",
+    "pastel",
+    "calm"
+  ],
+  "swatch": "#F7B6CC",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "PETALS",

@@ -1,0 +1,86 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "paper",
+  "name": "Paper",
+  "description": "Warm, softly textured paper with ink-dark lettering. A calm, uncluttered page for every day.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "color:white",
+    "style:minimal"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#2F4A6B",
+    "accentAlt": "#B5562E",
+    "ink": "#1F1C18",
+    "dim": "#77706A",
+    "drawer": "#F7F3EC",
+    "surface": "#FAF7F1",
+    "elevated": "#EFE9DE",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "PAPER",
+    "widgetCorner": "SLIGHT",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.1,
+    "widgetSolid": 0.9,
+    "font": "dm_sans",
+    "clockFace": "LINE",
+    "panelLook": "LINES",
+    "notch": "TAPER"
+  },
+  "mood": [
+    "light",
+    "minimal",
+    "calm"
+  ],
+  "swatch": "#F3EDE2",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "LIST",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.08,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.2
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.3,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  }
+}

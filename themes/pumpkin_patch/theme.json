@@ -48,6 +48,13 @@
     "homeIconScale": 1.3,
     "homeLabels": true
   },
+  "mood": [
+    "light",
+    "playful",
+    "vivid"
+  ],
+  "swatch": "#FF9A3C",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "BUBBLES",

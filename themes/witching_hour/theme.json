@@ -49,8 +49,14 @@
     "notch": "DOT",
     "glow": true
   },
+  "mood": [
+    "dark",
+    "bold"
+  ],
+  "swatch": "#E8691A",
+  "credits": [],
   "wallpaper": {
-    "image": "wallpaper.png"
+    "image": "wallpaper.webp"
   },
   "layout": {
     "homeLayout": "PAGES",

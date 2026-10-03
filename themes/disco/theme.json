@@ -50,6 +50,14 @@
     "notch": "DOT",
     "glow": true
   },
+  "mood": [
+    "bold",
+    "dark",
+    "vivid",
+    "playful"
+  ],
+  "swatch": "#C03FB0",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "ARCS",

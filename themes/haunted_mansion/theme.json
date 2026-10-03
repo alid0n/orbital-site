@@ -48,6 +48,12 @@
     "notch": "TAPER",
     "glow": true
   },
+  "mood": [
+    "dark",
+    "bold"
+  ],
+  "swatch": "#4A2470",
+  "credits": [],
   "wallpaper": {
     "drawn": {
       "style": "SILK",

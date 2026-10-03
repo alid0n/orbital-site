@@ -1,0 +1,99 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "space_cadet",
+  "name": "Space Cadet",
+  "description": "Stars and city lights seen from the International Space Station, with big, bright icons for young astronauts.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:kids",
+    "vibe:playful",
+    "color:blue",
+    "color:yellow",
+    "style:easy to see",
+    "topic:space",
+    "topic:family"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFD23F",
+    "accentAlt": "#4FC3FF",
+    "ink": "#FFFFFF",
+    "dim": "#B4C2E0",
+    "drawer": "#070B1E",
+    "surface": "#0C1230",
+    "elevated": "#182253",
+    "veil": "#55000000",
+    "light": false
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "PILL",
+    "widgetEdge": "BOLD",
+    "widgetTint": 0.3,
+    "widgetSolid": 1.0,
+    "font": "fredoka",
+    "clockFace": "DIGITS",
+    "panelLook": "CARD",
+    "notch": "DOT",
+    "homeIconScale": 1.3,
+    "homeLabels": true
+  },
+  "mood": [
+    "dark",
+    "playful",
+    "vivid"
+  ],
+  "swatch": "#1E3A8A",
+  "credits": [
+    {
+      "title": "Star trails above Earth, blue lights of fishing boats, and yellow lights of Indonesia",
+      "author": "NASA",
+      "source": "NASA Image and Video Library",
+      "license": "Public domain",
+      "url": "https://images.nasa.gov/details/iss075e0144232"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.03,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.2
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "VOICE"
+  }
+}

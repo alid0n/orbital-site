@@ -18,8 +18,8 @@
       "thumbnail": "candy/preview.png",
       "file": "candy/theme.json",
       "premium": false,
-      "size": 1676,
-      "sha256": "80b946d53a4fd1d35e681c94ae91e1d78ab0b7afa8be04e59b734f0d756ef1f5",
+      "size": 1774,
+      "sha256": "b9a7140120233a487920872fc40f88d14cff9cec221053e37da6383ea0b57a7a",
       "base": "ORBITAL",
       "colors": {
         "accent": "#D6337A",
@@ -31,7 +31,15 @@
         "elevated": "#FFE8F2",
         "veil": "#11FFFFFF",
         "light": true
-      }
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "pastel",
+        "playful"
+      ],
+      "swatch": "#F27BB5",
+      "credits": []
     },
     {
       "id": "road_trip",
@@ -51,8 +59,8 @@
       "thumbnail": "road_trip/preview.png",
       "file": "road_trip/theme.json",
       "premium": false,
-      "size": 1992,
-      "sha256": "4300105757154a30a537ba339a8847b94ebc814730aa257472d4debbbc1bbe33",
+      "size": 2085,
+      "sha256": "3640cafe951b613267034c6f19694d2497322c8be80456c65643239731336d2b",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FF8A3D",
@@ -64,7 +72,15 @@
         "elevated": "#24272B",
         "veil": "#44000000",
         "light": false
-      }
+      },
+      "kind": "full",
+      "mood": [
+        "bold",
+        "dark",
+        "vivid"
+      ],
+      "swatch": "#FF8A3D",
+      "credits": []
     },
     {
       "id": "beach",
@@ -85,8 +101,8 @@
       "thumbnail": "beach/preview.png",
       "file": "beach/theme.json",
       "premium": false,
-      "size": 1926,
-      "sha256": "c58ea11af25db9a7288d6c99ec0502507b006994a5250d824dab1f4b104dcc2c",
+      "size": 2021,
+      "sha256": "3f27f8c0ea68ad6d52454542125e9991a698c0083103c2b3907fb2d3889fd75c",
       "base": "ORBITAL",
       "colors": {
         "accent": "#0B7F8C",
@@ -98,7 +114,15 @@
         "elevated": "#E3F4F2",
         "veil": "#11FFFFFF",
         "light": true
-      }
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "calm",
+        "pastel"
+      ],
+      "swatch": "#4FB8BD",
+      "credits": []
     },
     {
       "id": "sparkles",
@@ -117,8 +141,8 @@
       "thumbnail": "sparkles/preview.png",
       "file": "sparkles/theme.json",
       "premium": true,
-      "size": 1848,
-      "sha256": "399104d96d0442c1a1137e93a9465c33bef2803669b83d5880aab27fdc994f53",
+      "size": 1929,
+      "sha256": "48a11bc0142c08d48f9f12c589eba3990b294293b57dda29a14b9c9361fee61b",
       "base": "ORBITAL",
       "colors": {
         "accent": "#F5C8FF",
@@ -130,7 +154,14 @@
         "elevated": "#241236",
         "veil": "#33000000",
         "light": false
-      }
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid"
+      ],
+      "swatch": "#7A4FB0",
+      "credits": []
     },
     {
       "id": "disco",
@@ -151,8 +182,8 @@
       "thumbnail": "disco/preview.png",
       "file": "disco/theme.json",
       "premium": true,
-      "size": 1886,
-      "sha256": "48bcfaeb653b24e7486f539efb4968508661d8004593aaf77bc6bb8de3811e5b",
+      "size": 1994,
+      "sha256": "b44424d1a5d81990e641c578cf0ad54831247c2c707752842c9f4844e0e95829",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FFCC4D",
@@ -164,7 +195,16 @@
         "elevated": "#241030",
         "veil": "#44000000",
         "light": false
-      }
+      },
+      "kind": "full",
+      "mood": [
+        "bold",
+        "dark",
+        "vivid",
+        "playful"
+      ],
+      "swatch": "#C03FB0",
+      "credits": []
     },
     {
       "id": "cozy_cabin",
@@ -183,8 +223,8 @@
       "thumbnail": "cozy_cabin/preview.png",
       "file": "cozy_cabin/theme.json",
       "premium": false,
-      "size": 1925,
-      "sha256": "01813cfa6bf1e63bbddaff23c1a3a279c5ade72c4d5e0a17449cb8584311a072",
+      "size": 1860,
+      "sha256": "32b74733dc4c13a927f2928c0d3c6e8f5de5571f985f78ae1050f8a35228817c",
       "base": "ORBITAL",
       "colors": {
         "accent": "#F0A35E",
@@ -196,7 +236,15 @@
         "elevated": "#2A1F16",
         "veil": "#33120A04",
         "light": false
-      }
+      },
+      "kind": "full",
+      "mood": [
+        "cozy",
+        "dark",
+        "calm"
+      ],
+      "swatch": "#B8743A",
+      "credits": []
     },
     {
       "id": "midnight_jazz",
@@ -216,8 +264,8 @@
       "thumbnail": "midnight_jazz/preview.png",
       "file": "midnight_jazz/theme.json",
       "premium": true,
-      "size": 1682,
-      "sha256": "7ebe45f92fee70c6cca8e31d44df1f1bd1e118beb747d8f507e2d205875362ee",
+      "size": 1621,
+      "sha256": "8b83ca8b0a4f287a1760159876d35ff21522cce99286095280dc921b7dc0d6bf",
       "base": "ORBITAL",
       "colors": {
         "accent": "#E0B865",
@@ -229,7 +277,15 @@
         "elevated": "#161E33",
         "veil": "#44000000",
         "light": false
-      }
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "minimal",
+        "calm"
+      ],
+      "swatch": "#1E2A4A",
+      "credits": []
     },
     {
       "id": "crayon_box",
@@ -248,8 +304,8 @@
       "thumbnail": "crayon_box/preview.png",
       "file": "crayon_box/theme.json",
       "premium": false,
-      "size": 1839,
-      "sha256": "5f688e77ece97b5b1dd738a518bb55b77064f19369e75f030b2091194e479e71",
+      "size": 1936,
+      "sha256": "fefff98f1f6b5d0403b499f9af4065632e517bb053b4725cd590b28f92268747",
       "base": "ORBITAL",
       "colors": {
         "accent": "#1F6FD1",
@@ -261,7 +317,15 @@
         "elevated": "#FFF1D6",
         "veil": "#11FFFFFF",
         "light": true
-      }
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "playful",
+        "vivid"
+      ],
+      "swatch": "#1F6FD1",
+      "credits": []
     },
     {
       "id": "arcade_assistant",
@@ -281,8 +345,8 @@
       "thumbnail": "arcade_assistant/preview.png",
       "file": "arcade_assistant/theme.json",
       "premium": false,
-      "size": 1250,
-      "sha256": "4aecc6c5d59e0234fba3969ee56d4ef51918e71d007565e2a1f4746bb63dae05",
+      "size": 1345,
+      "sha256": "06284565f041de7c2b3f2f290f67983520104ec33cbcaa8281f18794335f24eb",
       "base": "TERMINAL",
       "colors": {
         "accent": "#4BE35A",
@@ -294,7 +358,15 @@
         "elevated": "#102012",
         "veil": "#55000000",
         "light": false
-      }
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "bold",
+        "minimal"
+      ],
+      "swatch": "#2E9E3A",
+      "credits": []
     },
     {
       "id": "halloween_night",
@@ -314,8 +386,8 @@
       "thumbnail": "halloween_night/preview.png",
       "file": "halloween_night/theme.json",
       "premium": true,
-      "size": 1860,
-      "sha256": "b1b76cc53253a64eeadd819c911cdf7fa17b11bd98548e6ea044d9d926ff5cf5",
+      "size": 1941,
+      "sha256": "9cbb9df3c7edddf414a17629eebba5b3e16e34f7e6b71e1bbbcfbbafe01483af",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FF8C2B",
@@ -328,6 +400,13 @@
         "veil": "#44000000",
         "light": false
       },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid"
+      ],
+      "swatch": "#FF8C2B",
+      "credits": [],
       "season": "halloween"
     },
     {
@@ -347,8 +426,8 @@
       "thumbnail": "pumpkin_patch/preview.png",
       "file": "pumpkin_patch/theme.json",
       "premium": false,
-      "size": 1862,
-      "sha256": "cd99a67aa7526ad25164f22c4ddb02c2554c7236d73d0fb33a5adcff3c97f262",
+      "size": 1959,
+      "sha256": "055bcbe7d01a75a458ed95ffd5981c45ab9efe1460bb9625a06a6c7a5e2d8721",
       "base": "ORBITAL",
       "colors": {
         "accent": "#C2410C",
@@ -361,6 +440,14 @@
         "veil": "#11FFFFFF",
         "light": true
       },
+      "kind": "full",
+      "mood": [
+        "light",
+        "playful",
+        "vivid"
+      ],
+      "swatch": "#FF9A3C",
+      "credits": [],
       "season": "halloween"
     },
     {
@@ -383,8 +470,8 @@
       "thumbnail": "winter_snow/preview.png",
       "file": "winter_snow/theme.json",
       "premium": false,
-      "size": 1993,
-      "sha256": "e21f878425a408d10399ecf43a4930320fccda2e038a6c4d921511178a0c02a9",
+      "size": 2088,
+      "sha256": "9bdb6e6295dc7dc06fb7db0b57640ed2e7ee46f087676355ca6d8a250a7d87eb",
       "base": "ORBITAL",
       "colors": {
         "accent": "#2F6FB3",
@@ -397,6 +484,14 @@
         "veil": "#11FFFFFF",
         "light": true
       },
+      "kind": "full",
+      "mood": [
+        "light",
+        "calm",
+        "pastel"
+      ],
+      "swatch": "#BFD8EE",
+      "credits": [],
       "season": "winter"
     },
     {
@@ -417,8 +512,8 @@
       "thumbnail": "valentines_day/preview.png",
       "file": "valentines_day/theme.json",
       "premium": true,
-      "size": 1906,
-      "sha256": "c0e7ef2eb6083f78be20504ffe7e5dc1f2c2883b17f93e515f44f8920d0ef33d",
+      "size": 1987,
+      "sha256": "38867e06cd887c3ab8f7cf666e68a1b0a82723f6ef9963f79bec42a1fcd7170d",
       "base": "ORBITAL",
       "colors": {
         "accent": "#E0245E",
@@ -431,6 +526,13 @@
         "veil": "#33000000",
         "light": false
       },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid"
+      ],
+      "swatch": "#E0245E",
+      "credits": [],
       "season": "valentines"
     },
     {
@@ -454,8 +556,8 @@
       "thumbnail": "summer_splash/preview.png",
       "file": "summer_splash/theme.json",
       "premium": false,
-      "size": 2018,
-      "sha256": "6d345e9880661c5a341073d2a477050ab3f0f4ebe37deda3b19937c689aea9f3",
+      "size": 2115,
+      "sha256": "cdc9dd5624e4e9dd8f7cdc9bdd7eb869fa68c7ac2a063421b4ea0eff5a84c642",
       "base": "ORBITAL",
       "colors": {
         "accent": "#0A74C9",
@@ -468,6 +570,14 @@
         "veil": "#11FFFFFF",
         "light": true
       },
+      "kind": "full",
+      "mood": [
+        "light",
+        "vivid",
+        "playful"
+      ],
+      "swatch": "#39B7F0",
+      "credits": [],
       "season": "summer"
     },
     {
@@ -490,8 +600,8 @@
       "thumbnail": "spring_bloom/preview.png",
       "file": "spring_bloom/theme.json",
       "premium": false,
-      "size": 2021,
-      "sha256": "55455492fc23d99fbb03fc177ff69047faf7bce14d38cea8388152792074d583",
+      "size": 2116,
+      "sha256": "fec0fb672c8af2784270ca073319f6b6d5462cd8d73c45ece2b030162a12abed",
       "base": "ORBITAL",
       "colors": {
         "accent": "#2E8B57",
@@ -504,6 +614,14 @@
         "veil": "#11FFFFFF",
         "light": true
       },
+      "kind": "full",
+      "mood": [
+        "light",
+        "pastel",
+        "calm"
+      ],
+      "swatch": "#9BD68C",
+      "credits": [],
       "season": "spring"
     },
     {
@@ -525,8 +643,8 @@
       "thumbnail": "ghost_glow/preview.png",
       "file": "ghost_glow/theme.json",
       "premium": true,
-      "size": 1772,
-      "sha256": "9157db743fe5e11146bc20ae62697270ab2814beeab93d06b70fbc94e96362ce",
+      "size": 1869,
+      "sha256": "c1815db650a2cf52407a84daa7ba7974a95a7d2275a7c530b021a4df770669a0",
       "base": "ORBITAL",
       "colors": {
         "accent": "#39FF14",
@@ -539,6 +657,14 @@
         "veil": "#55000000",
         "light": false
       },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "playful"
+      ],
+      "swatch": "#3FCF2A",
+      "credits": [],
       "season": "halloween"
     },
     {
@@ -559,8 +685,8 @@
       "thumbnail": "haunted_mansion/preview.png",
       "file": "haunted_mansion/theme.json",
       "premium": true,
-      "size": 1905,
-      "sha256": "a63c2f0597ccbd60f0f4d170309a4a356842c8f6faebc1ed78bb1bfb05eae3d1",
+      "size": 1985,
+      "sha256": "dc97d90038970aa2ca7e208ceb7b17cca3747c2c0ccbb4c2fcfea7c97fc6a5b8",
       "base": "ORBITAL",
       "colors": {
         "accent": "#F2C46D",
@@ -573,6 +699,13 @@
         "veil": "#44000000",
         "light": false
       },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "bold"
+      ],
+      "swatch": "#4A2470",
+      "credits": [],
       "season": "halloween"
     },
     {
@@ -593,8 +726,8 @@
       "thumbnail": "witching_hour/preview.png",
       "file": "witching_hour/theme.json",
       "premium": true,
-      "size": 1871,
-      "sha256": "d0cbbc3709351d52e6f8e94c505ca24f68d32da6eb68a705749de8b553b8ff78",
+      "size": 1952,
+      "sha256": "1a4a28e66f8d52580dd476980af4629bf6a0c32868b1fed4d2fd8e6b8487d713",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FF7A1A",
@@ -607,6 +740,13 @@
         "veil": "#55000000",
         "light": false
       },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "bold"
+      ],
+      "swatch": "#E8691A",
+      "credits": [],
       "season": "halloween"
     },
     {
@@ -627,8 +767,8 @@
       "thumbnail": "candy_corn/preview.png",
       "file": "candy_corn/theme.json",
       "premium": false,
-      "size": 1892,
-      "sha256": "fb214b02f08c134197b66bcca715d5a8a9fa15650ca6fff5c80790d7e0463535",
+      "size": 1989,
+      "sha256": "ed1d48e900c97051750de972fe700b4f364d33d122a5c15cf89bfbc304df13db",
       "base": "ORBITAL",
       "colors": {
         "accent": "#C2410C",
@@ -641,6 +781,14 @@
         "veil": "#11FFFFFF",
         "light": true
       },
+      "kind": "full",
+      "mood": [
+        "light",
+        "playful",
+        "vivid"
+      ],
+      "swatch": "#FFB02E",
+      "credits": [],
       "season": "halloween"
     },
     {
@@ -661,8 +809,8 @@
       "thumbnail": "spider_web/preview.png",
       "file": "spider_web/theme.json",
       "premium": false,
-      "size": 1509,
-      "sha256": "bb3d0236d36656189c12d715858710e3d13e2526ada789a27927dbc8b5cdd9a8",
+      "size": 1605,
+      "sha256": "79a2396ecfd63fbb89ad62c3b70a3e4b8b6dc7959d04984a81a508f7c247c81f",
       "base": "ORBITAL",
       "colors": {
         "accent": "#D8DCE2",
@@ -675,6 +823,14 @@
         "veil": "#44000000",
         "light": false
       },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "minimal",
+        "calm"
+      ],
+      "swatch": "#3A3B40",
+      "credits": [],
       "season": "halloween"
     },
     {
@@ -695,8 +851,8 @@
       "thumbnail": "jack_o_lantern/preview.png",
       "file": "jack_o_lantern/theme.json",
       "premium": false,
-      "size": 2003,
-      "sha256": "a94db26183043a24529dbe8936d1ace815a67cd6f44046223c61145e93b80a40",
+      "size": 2083,
+      "sha256": "66b48b34e8f8ae93dec2ccc55ec2bd43ea8b2429c50a4393c9d8e8f6fd5cb4a8",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FF9A1F",
@@ -709,6 +865,13 @@
         "veil": "#44000000",
         "light": false
       },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "cozy"
+      ],
+      "swatch": "#F07F1A",
+      "credits": [],
       "season": "halloween"
     },
     {
@@ -729,8 +892,8 @@
       "thumbnail": "harvest/preview.png",
       "file": "harvest/theme.json",
       "premium": true,
-      "size": 1996,
-      "sha256": "6bbb3f3871dbbaa721f19cf7ecb9592c7d9345dba7834dcab6d83e1270508925",
+      "size": 2088,
+      "sha256": "537010ee6156ee0a79a5ee34a3873e703141ef6b3b7ce6584444568ee5349c3e",
       "base": "ORBITAL",
       "colors": {
         "accent": "#E8A33D",
@@ -743,6 +906,14 @@
         "veil": "#33120A04",
         "light": false
       },
+      "kind": "full",
+      "mood": [
+        "cozy",
+        "dark",
+        "calm"
+      ],
+      "swatch": "#C46A2A",
+      "credits": [],
       "season": "autumn"
     },
     {
@@ -764,8 +935,8 @@
       "thumbnail": "autumn_leaves/preview.png",
       "file": "autumn_leaves/theme.json",
       "premium": false,
-      "size": 1988,
-      "sha256": "6ffc2457be513397373a5d2d03b243b9d598432691a1163c5eb22bdaed99fe2a",
+      "size": 2069,
+      "sha256": "41054ff2ce07fd774fe0c02e8dde361ef954c6a4fc81c10e0c20b55db74e0da6",
       "base": "ORBITAL",
       "colors": {
         "accent": "#B8401A",
@@ -778,6 +949,13 @@
         "veil": "#11FFFFFF",
         "light": true
       },
+      "kind": "full",
+      "mood": [
+        "light",
+        "cozy"
+      ],
+      "swatch": "#D9531E",
+      "credits": [],
       "season": "autumn"
     },
     {
@@ -800,8 +978,8 @@
       "thumbnail": "northern_lights/preview.png",
       "file": "northern_lights/theme.json",
       "premium": true,
-      "size": 2073,
-      "sha256": "0ca4601849394c4bda428d527b28580865359cd1bd3af01183d3ca7c6b287305",
+      "size": 2268,
+      "sha256": "a53dfe1cf531bf60ae866265b22dab3d18212df37edb43c418fb345861dbd080",
       "base": "ORBITAL",
       "colors": {
         "accent": "#5CF2B8",
@@ -814,6 +992,22 @@
         "veil": "#44000000",
         "light": false
       },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "vivid"
+      ],
+      "swatch": "#2FC79A",
+      "credits": [
+        {
+          "title": "Alaska Aurora Borealis",
+          "author": "Justin Connaher, U.S. Air Force",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:Alaska_Aurora_Borealis.jpg"
+        }
+      ],
       "season": "winter"
     },
     {
@@ -835,8 +1029,8 @@
       "thumbnail": "midnight_fireworks/preview.png",
       "file": "midnight_fireworks/theme.json",
       "premium": true,
-      "size": 1915,
-      "sha256": "d94c593bed6d350c2af4cabe88f45f351365afefc89ee60e91c6532926507603",
+      "size": 2008,
+      "sha256": "038758d9cd047e51e956f259d047d5b02a2b190958a2bec73e78c2d640873569",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FFD24A",
@@ -849,6 +1043,14 @@
         "veil": "#55000000",
         "light": false
       },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "bold"
+      ],
+      "swatch": "#2A2266",
+      "credits": [],
       "season": "new_year"
     },
     {
@@ -868,8 +1070,8 @@
       "thumbnail": "golden_countdown/preview.png",
       "file": "golden_countdown/theme.json",
       "premium": false,
-      "size": 1679,
-      "sha256": "8002c4150a62993eb778340c9e17c597d30217eb09371c9705433a7f9b137556",
+      "size": 1762,
+      "sha256": "4049a57097f5b85a333930b2f40058e825a69691358131d703a943e622433924",
       "base": "ORBITAL",
       "colors": {
         "accent": "#E8C15A",
@@ -882,6 +1084,13 @@
         "veil": "#44000000",
         "light": false
       },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "minimal"
+      ],
+      "swatch": "#C9A24A",
+      "credits": [],
       "season": "new_year"
     },
     {
@@ -902,8 +1111,8 @@
       "thumbnail": "love_letters/preview.png",
       "file": "love_letters/theme.json",
       "premium": false,
-      "size": 1791,
-      "sha256": "43b7e8886e622529f123ebd2bc0e7d101485c957c837b69d0c6c89deddf9e3a7",
+      "size": 1886,
+      "sha256": "994fc6b5ab9a9719528dfe855bea81a2d9f27c1d0ef8cf686c2f5ddd35bf2628",
       "base": "ORBITAL",
       "colors": {
         "accent": "#B8325A",
@@ -916,6 +1125,14 @@
         "veil": "#11FFFFFF",
         "light": true
       },
+      "kind": "full",
+      "mood": [
+        "light",
+        "pastel",
+        "cozy"
+      ],
+      "swatch": "#F2A7B8",
+      "credits": [],
       "season": "valentines"
     },
     {
@@ -938,8 +1155,8 @@
       "thumbnail": "cherry_blossom/preview.png",
       "file": "cherry_blossom/theme.json",
       "premium": false,
-      "size": 1996,
-      "sha256": "bf7f3cf795bf7d26673d4e14b7cc87d09c81e070b7d6572bf6a4ce054717d694",
+      "size": 2091,
+      "sha256": "56991caae6c7d99b3ee2ce07e418867656ce166a32178df625af1d412ff00ede",
       "base": "ORBITAL",
       "colors": {
         "accent": "#B8336A",
@@ -952,6 +1169,14 @@
         "veil": "#11FFFFFF",
         "light": true
       },
+      "kind": "full",
+      "mood": [
+        "light",
+        "pastel",
+        "calm"
+      ],
+      "swatch": "#F7B6CC",
+      "credits": [],
       "season": "spring"
     },
     {
@@ -974,8 +1199,8 @@
       "thumbnail": "tropical/preview.png",
       "file": "tropical/theme.json",
       "premium": false,
-      "size": 1993,
-      "sha256": "062ede9c8f2ff9dca11c62709b71a274fe80c9c7a95c9047fc6bebce7c46fec5",
+      "size": 2090,
+      "sha256": "f4b4c8bd43d2f0f5181a16f436e9f7ea99d93f9b987d3d47e0dfae63e3490ee9",
       "base": "ORBITAL",
       "colors": {
         "accent": "#0B7A6E",
@@ -988,7 +1213,453 @@
         "veil": "#11FFFFFF",
         "light": true
       },
+      "kind": "full",
+      "mood": [
+        "light",
+        "vivid",
+        "playful"
+      ],
+      "swatch": "#1FB5A3",
+      "credits": [],
       "season": "summer"
+    },
+    {
+      "id": "paper",
+      "name": "Paper",
+      "description": "Warm, softly textured paper with ink-dark lettering. A calm, uncluttered page for every day.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "color:white",
+        "style:minimal"
+      ],
+      "thumbnail": "paper/preview.png",
+      "file": "paper/theme.json",
+      "premium": false,
+      "size": 1663,
+      "sha256": "dd578766d8c3335c4ec06cc82401fac950e8f20bde69a2eb8f148e76b33cb0e6",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#2F4A6B",
+        "accentAlt": "#B5562E",
+        "ink": "#1F1C18",
+        "dim": "#77706A",
+        "drawer": "#F7F3EC",
+        "surface": "#FAF7F1",
+        "elevated": "#EFE9DE",
+        "veil": "#11FFFFFF",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "minimal",
+        "calm"
+      ],
+      "swatch": "#F3EDE2",
+      "credits": []
+    },
+    {
+      "id": "graphite",
+      "name": "Graphite",
+      "description": "Cool graphite greys and crisp white lettering. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:black",
+        "color:white"
+      ],
+      "thumbnail": "graphite/preview.png",
+      "file": "graphite/theme.json",
+      "premium": false,
+      "size": 865,
+      "sha256": "79973c20133cad97d30f418c7750d92ec2c8fffb2f918f9c539a624a874df65b",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#C9CED6",
+        "accentAlt": "#8A93A0",
+        "ink": "#EEF0F3",
+        "dim": "#8B9099",
+        "drawer": "#121315",
+        "surface": "#17181B",
+        "elevated": "#222428",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "accent",
+      "mood": [
+        "dark",
+        "minimal",
+        "calm"
+      ],
+      "swatch": "#2A2C30",
+      "credits": []
+    },
+    {
+      "id": "matcha",
+      "name": "Matcha",
+      "description": "Soft green tea and warm cream with rounded lettering. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "color:green",
+        "color:pastel"
+      ],
+      "thumbnail": "matcha/preview.png",
+      "file": "matcha/theme.json",
+      "premium": false,
+      "size": 855,
+      "sha256": "6bbcec8790cd64d1c3d2db5045f9c9c23d1fff3285be40af367ce2a09f399c60",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#4F7A3A",
+        "accentAlt": "#A8834B",
+        "ink": "#1F2A1A",
+        "dim": "#6B7564",
+        "drawer": "#F3F5EC",
+        "surface": "#F7F8F1",
+        "elevated": "#E6ECD9",
+        "veil": "#11FFFFFF",
+        "light": true
+      },
+      "kind": "accent",
+      "mood": [
+        "light",
+        "pastel",
+        "calm"
+      ],
+      "swatch": "#9DB67A",
+      "credits": []
+    },
+    {
+      "id": "forest_floor",
+      "name": "Forest Floor",
+      "description": "Moss, bilberry leaves and dappled woodland light, in deep greens that keep every icon clear.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:cozy",
+        "color:green",
+        "style:one-handed",
+        "topic:nature"
+      ],
+      "thumbnail": "forest_floor/preview.png",
+      "file": "forest_floor/theme.json",
+      "premium": true,
+      "size": 1976,
+      "sha256": "d6262fb40013d79b6ca8d858a1a63fe669327b9e393e1a9df6bcd51f19fc9b05",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#B8D98A",
+        "accentAlt": "#E0B15C",
+        "ink": "#EEF4E6",
+        "dim": "#9AAB8F",
+        "drawer": "#0B120B",
+        "surface": "#101910",
+        "elevated": "#1A271A",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "cozy"
+      ],
+      "swatch": "#3F5E2A",
+      "credits": [
+        {
+          "title": "Bilberry bush and moss in Gullmarsskogen ravine",
+          "author": "W.carter",
+          "source": "Wikimedia Commons",
+          "license": "CC0 1.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Bilberry_bush_and_moss_in_Gullmarsskogen_ravine.jpg"
+        }
+      ]
+    },
+    {
+      "id": "desert_dusk",
+      "name": "Desert Dusk",
+      "description": "Rose, apricot and violet melting into a desert evening, finished with a fine film grain.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dreamy",
+        "color:pink",
+        "color:purple",
+        "color:orange",
+        "style:one-handed",
+        "topic:nature",
+        "topic:travel"
+      ],
+      "thumbnail": "desert_dusk/preview.png",
+      "file": "desert_dusk/theme.json",
+      "premium": true,
+      "size": 1802,
+      "sha256": "c481e7c85af08d383a9813d44d7813925c3533d0495aaeee1e7e4f830975fc33",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFB38A",
+        "accentAlt": "#C9A0FF",
+        "ink": "#FFF2EA",
+        "dim": "#C4A6A0",
+        "drawer": "#1A0F17",
+        "surface": "#22131D",
+        "elevated": "#33202C",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "calm"
+      ],
+      "swatch": "#C76B7E",
+      "credits": []
+    },
+    {
+      "id": "cozy_rainy_day",
+      "name": "Cozy Rainy Day",
+      "description": "Raindrops on the window and warm lamplight beyond. A calm, cozy page for slow afternoons.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:cozy",
+        "vibe:calm",
+        "vibe:dark",
+        "color:orange",
+        "color:black",
+        "style:one-handed",
+        "topic:autumn"
+      ],
+      "thumbnail": "cozy_rainy_day/preview.png",
+      "file": "cozy_rainy_day/theme.json",
+      "premium": true,
+      "size": 2148,
+      "sha256": "8f10e35943411726a4fc59eddfd4d95cab8fc4e9705d76d78d1b9dabcfeebad2",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#F2B66D",
+        "accentAlt": "#8FB3C9",
+        "ink": "#F6EFE6",
+        "dim": "#A99F94",
+        "drawer": "#0E0D0C",
+        "surface": "#151311",
+        "elevated": "#221F1B",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "cozy",
+        "calm"
+      ],
+      "swatch": "#3A332B",
+      "credits": [
+        {
+          "title": "Raindrops on a window in Brastad 1",
+          "author": "W.carter",
+          "source": "Wikimedia Commons",
+          "license": "CC0 1.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Raindrops_on_a_window_in_Brastad_1.jpg"
+        }
+      ]
+    },
+    {
+      "id": "tokyo_night",
+      "name": "Tokyo Night",
+      "description": "Neon signs and late-night streets in Shinjuku, tinted magenta and electric blue.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:dark",
+        "color:pink",
+        "color:blue",
+        "color:neon",
+        "style:one-handed",
+        "topic:travel",
+        "topic:city"
+      ],
+      "thumbnail": "tokyo_night/preview.png",
+      "file": "tokyo_night/theme.json",
+      "premium": true,
+      "size": 2031,
+      "sha256": "511a65e028a2aa34f813ec450bf017766a12445c1df55c4c7da865c3e8ebf0c4",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF4FA0",
+        "accentAlt": "#3FE0FF",
+        "ink": "#F3F0FF",
+        "dim": "#A79EC4",
+        "drawer": "#08061A",
+        "surface": "#0E0B24",
+        "elevated": "#1A1538",
+        "veil": "#55000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "bold"
+      ],
+      "swatch": "#2A1F5C",
+      "credits": [
+        {
+          "title": "Shinjuku - Shinjuku258",
+          "author": "lumoplank",
+          "source": "Wikimedia Commons",
+          "license": "CC0 1.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Shinjuku_-_Shinjuku258.jpg"
+        }
+      ]
+    },
+    {
+      "id": "constellation",
+      "name": "Constellation",
+      "description": "Star trails circling above the Earth, photographed from the International Space Station, with gold lettering and the Showcase layout.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:elegant",
+        "vibe:dark",
+        "vibe:dreamy",
+        "color:blue",
+        "color:gold",
+        "style:big screen",
+        "topic:space"
+      ],
+      "thumbnail": "constellation/preview.png",
+      "file": "constellation/theme.json",
+      "premium": true,
+      "size": 1782,
+      "sha256": "2ae75ef1a2cac3e9f064029233aff4017137bb8c031088a802e8b99c681f691f",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#F2D28A",
+        "accentAlt": "#8FB8FF",
+        "ink": "#F4F1E8",
+        "dim": "#A3A6B8",
+        "drawer": "#05060D",
+        "surface": "#090B16",
+        "elevated": "#141A2C",
+        "veil": "#55000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#1B2440",
+      "credits": [
+        {
+          "title": "Circular arcs of star trails viewed from International Space Station",
+          "author": "NASA",
+          "source": "NASA Image and Video Library",
+          "license": "Public domain",
+          "url": "https://images.nasa.gov/details/iss073e0427643"
+        }
+      ]
+    },
+    {
+      "id": "glass",
+      "name": "Glass",
+      "description": "Luminous cyan and violet light behind frosted glass, built around the Orbit Pad.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:futuristic",
+        "vibe:calm",
+        "vibe:dark",
+        "color:blue",
+        "color:purple",
+        "style:one-handed",
+        "topic:orbit pad"
+      ],
+      "thumbnail": "glass/preview.png",
+      "file": "glass/theme.json",
+      "premium": true,
+      "size": 1600,
+      "sha256": "c6fd8b3e7bfbc890daa62302dd3c5edf1deb688215d885306d25f8dde697a00b",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#9FE8FF",
+        "accentAlt": "#C6A8FF",
+        "ink": "#F2F7FF",
+        "dim": "#9DA9C0",
+        "drawer": "#070A12",
+        "surface": "#0C111C",
+        "elevated": "#18202F",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "minimal",
+        "vivid"
+      ],
+      "swatch": "#3D4F8F",
+      "credits": []
+    },
+    {
+      "id": "space_cadet",
+      "name": "Space Cadet",
+      "description": "Stars and city lights seen from the International Space Station, with big, bright icons for young astronauts.",
+      "version": 1,
+      "tags": [
+        "audience:kids",
+        "vibe:playful",
+        "color:blue",
+        "color:yellow",
+        "style:easy to see",
+        "topic:space",
+        "topic:family"
+      ],
+      "thumbnail": "space_cadet/preview.png",
+      "file": "space_cadet/theme.json",
+      "premium": false,
+      "size": 2087,
+      "sha256": "da986f36dae9faf544ef2e631bcbdaa1d76513bfdab094ec62f98e9767d8b422",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFD23F",
+        "accentAlt": "#4FC3FF",
+        "ink": "#FFFFFF",
+        "dim": "#B4C2E0",
+        "drawer": "#070B1E",
+        "surface": "#0C1230",
+        "elevated": "#182253",
+        "veil": "#55000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "playful",
+        "vivid"
+      ],
+      "swatch": "#1E3A8A",
+      "credits": [
+        {
+          "title": "Star trails above Earth, blue lights of fishing boats, and yellow lights of Indonesia",
+          "author": "NASA",
+          "source": "NASA Image and Video Library",
+          "license": "Public domain",
+          "url": "https://images.nasa.gov/details/iss075e0144232"
+        }
+      ]
     }
   ],
   "featured": {
@@ -1178,5 +1849,36 @@
         ]
       }
     ]
-  }
+  },
+  "collections": [
+    {
+      "id": "minimal_setups",
+      "name": "Minimal setups",
+      "description": "Quiet pages with just what you need: a clean clock, soft colour and plenty of space.",
+      "themes": [
+        "paper",
+        "graphite",
+        "matcha",
+        "midnight_jazz",
+        "glass"
+      ],
+      "start": "2026-10-05",
+      "end": "2027-03-31"
+    },
+    {
+      "id": "one_handed_favourites",
+      "name": "One-handed favourites",
+      "description": "Everything within easy reach of your thumb, from the Orbit Pad to a dock along the foot of the screen.",
+      "themes": [
+        "glass",
+        "forest_floor",
+        "cozy_rainy_day",
+        "beach",
+        "sparkles",
+        "road_trip"
+      ],
+      "start": "2026-10-05",
+      "end": "2027-03-31"
+    }
+  ]
 }

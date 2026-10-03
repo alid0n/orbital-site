@@ -1,0 +1,80 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "constellation",
+  "name": "Constellation",
+  "description": "Star trails circling above the Earth, photographed from the International Space Station, with gold lettering and the Showcase layout.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:elegant",
+    "vibe:dark",
+    "vibe:dreamy",
+    "color:blue",
+    "color:gold",
+    "style:big screen",
+    "topic:space"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#F2D28A",
+    "accentAlt": "#8FB8FF",
+    "ink": "#F4F1E8",
+    "dim": "#A3A6B8",
+    "drawer": "#05060D",
+    "surface": "#090B16",
+    "elevated": "#141A2C",
+    "veil": "#55000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.45,
+    "font": "cormorant",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "TAPER",
+    "glow": true
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "minimal"
+  ],
+  "swatch": "#1B2440",
+  "credits": [
+    {
+      "title": "Circular arcs of star trails viewed from International Space Station",
+      "author": "NASA",
+      "source": "NASA Image and Video Library",
+      "license": "Public domain",
+      "url": "https://images.nasa.gov/details/iss073e0427643"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "CONSOLE",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID"
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
+  },
+  "effect": "twinkle-stars",
+  "tap": true
+}
