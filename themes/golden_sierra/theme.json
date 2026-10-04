@@ -1,0 +1,108 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "golden_sierra",
+  "name": "Golden Sierra",
+  "description": "Bierstadt's alpine light in amber and mountain blue, with the Orbit wheel curving across the top.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:elegant",
+    "color:gold",
+    "color:blue",
+    "style:one-handed",
+    "topic:nature",
+    "topic:travel",
+    "topic:art"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#F2B65A",
+    "accentAlt": "#8FB6D9",
+    "ink": "#FFF3DE",
+    "dim": "#CDB48C",
+    "drawer": "#120C06",
+    "surface": "#1A130B",
+    "elevated": "#2A1E10",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "outfit",
+    "clockFace": "STACK",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "cozy",
+    "vivid"
+  ],
+  "swatch": "#B97A2E",
+  "credits": [
+    {
+      "title": "Among the Sierra Nevada, California",
+      "author": "Albert Bierstadt",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Albert_Bierstadt_-_Among_the_Sierra_Nevada,_California_-_Google_Art_Project.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "TOP",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.17,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      },
+      {
+        "id": "batt",
+        "kind": "BATTERY",
+        "x": 0.04,
+        "y": 0.34,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "people",
+        "kind": "PEOPLE",
+        "x": 0.04,
+        "y": 0.46,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
+  }
+}

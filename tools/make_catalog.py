@@ -143,6 +143,28 @@ PHOTOS = {
         source="Wikimedia Commons", license="Public domain",
         url="https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Water_Lilies_-_1906,_Ryerson.jpg",
         retrieved="2026-10-04"),
+    "commons-friedrich-wanderer-sea-of-fog.jpg": dict(
+        title="Wanderer above the Sea of Fog", author="Caspar David Friedrich",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg",
+        retrieved="2026-10-04"),
+    "commons-morris-willow-bough-1887.jpg": dict(
+        title="Willow Bough", author="William Morris",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:Morris_Willow_Bough_1887.jpg", retrieved="2026-10-04"),
+    "nasa-PIA21052.jpg": dict(
+        title="Over Saturn's Turbulent North", author="NASA/JPL-Caltech/Space Science Institute",
+        source="NASA Image and Video Library", license="Public domain",
+        url="https://images.nasa.gov/details/PIA21052", retrieved="2026-10-04"),
+    "commons-audubon-american-flamingo-431.jpg": dict(
+        title="American Flamingo (Birds of America, plate 431)", author="John James Audubon",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:431_American_Flamingo.jpg", retrieved="2026-10-04"),
+    "commons-bierstadt-among-the-sierra-nevada.jpg": dict(
+        title="Among the Sierra Nevada, California", author="Albert Bierstadt",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:Albert_Bierstadt_-_Among_the_Sierra_Nevada,_California_-_Google_Art_Project.jpg",
+        retrieved="2026-10-04"),
 }
 
 
@@ -714,6 +736,72 @@ THEMES = [
                widgetCorner="PILL", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.85,
                font="nunito", clockFace="STACK", panelLook="CARD", notch="PIP"),
           premium=True),
+    # A Showcase theme, a theme of tiled icons and a theme of hexagon icons, with a drawer-first
+    # theme and an Orbit wheel along the top edge.
+    theme("sea_of_fog", "Sea of Fog",
+          "Friedrich's wanderer above a sea of mist, in slate blue with fine serif lettering and the "
+          "Showcase layout.",
+          ["audience:general", "vibe:elegant", "vibe:calm", "vibe:dark", "color:blue", "color:gold"],
+          pal("#9DB4C8", "#D8B98A", "#F1F4F7", "#9AA7B4", "#0B1017", "#121820", "#1E2833", "#44000000"),
+          rendered(photo=dict(file="commons-friedrich-wanderer-sea-of-fog.jpg", focus=(0.5, 0.4), blur=0.5, saturation=0.9),
+                   wash=[(0.0, "#0B1017", 0.65), (0.18, "#0B1017", 0.5), (0.34, "#0B1017", 0.2), (0.62, "#0B1017", 0.15),
+                         (0.8, "#0B1017", 0.72), (1.0, "#0B1017", 0.88)],
+                   vignette=0.25, grain=0.035),
+          dict(corner="ROUNDED", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
+               font="marcellus", clockFace="LINE", panelLook="FADE", notch="TAPER"),
+          premium=True),
+    theme("willow_bough", "Willow Bough",
+          "William Morris's willow pattern behind a wall of square tiles, in sage green and cream.",
+          ["audience:general", "vibe:elegant", "vibe:calm", "color:green", "color:white", "color:orange"],
+          pal("#3E6B4A", "#B5532E", "#1F2A1F", "#5E6E5E", "#EAE6D2", "#F2EEDC", "#DFD9BE", "#22F2EEDC", light=True),
+          rendered(photo=dict(file="commons-morris-willow-bough-1887.jpg", focus=(0.5, 0.5), blur=0.8, saturation=1.0),
+                   wash=[(0.0, "#EAE6D2", 0.55), (0.2, "#EAE6D2", 0.4), (0.6, "#EAE6D2", 0.35),
+                         (0.8, "#EAE6D2", 0.8), (1.0, "#EAE6D2", 0.9)],
+                   texture="paper", textureAmount=0.01, vignette=0.06, grain=0.03),
+          dict(corner="SQUARE", iconShape="TILE", iconStyle="ORIGINAL", widgetLook="SOLID",
+               widgetCorner="SQUARE", widgetEdge="NONE", widgetTint=0.2, widgetSolid=1.0,
+               font="montserrat", clockFace="DIGITS", panelLook="CARD", notch="RUNG"),
+          premium=True, base="TILES"),
+    theme("saturns_hexagon", "Saturn's Hexagon",
+          "The great storm at Saturn's north pole, photographed by Cassini and tinted gold and deep blue, "
+          "with every app a hexagon on an open canvas.",
+          ["audience:general", "vibe:futuristic", "vibe:dreamy", "color:blue", "color:gold"],
+          pal("#F2C46B", "#5FD0E0", "#F4F7FA", "#9FB2C0", "#050B13", "#07101A", "#11202F", "#33000000"),
+          rendered(photo=dict(file="nasa-PIA21052.jpg", focus=(0.2, 0.5), blur=0.8, saturation=1.0,
+                              map=[(0.0, "#03070D"), (0.4, "#0F2740"), (0.75, "#D9A24A"), (1.0, "#FFF0C8")], mapAmount=0.9),
+                   wash=[(0.0, "#050B13", 0.55), (0.18, "#050B13", 0.4), (0.34, "#050B13", 0.1), (0.65, "#050B13", 0.05),
+                         (0.82, "#050B13", 0.65), (1.0, "#050B13", 0.82)],
+                   vignette=0.25, grain=0.035),
+          dict(corner="ROUNDED", iconShape="HEX", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
+               font="rajdhani", clockFace="LINE", panelLook="LINES", notch="CHEVRON", glow=True),
+          premium=True, base="HONEYCOMB"),
+    theme("flamingo", "Flamingo",
+          "Audubon's American flamingo in coral pink on cream, with your apps in a drawer home and a "
+          "container dock down the left edge.",
+          ["audience:general", "vibe:elegant", "vibe:chill", "color:pink", "color:white", "color:green"],
+          pal("#D6485E", "#2F6F6A", "#3A1F26", "#7A5560", "#F7EBE3", "#FBF1EA", "#F0DDD3", "#22FBF1EA", light=True),
+          rendered(photo=dict(file="commons-audubon-american-flamingo-431.jpg", focus=(0.5, 0.35), blur=0.4, saturation=1.0),
+                   wash=[(0.0, "#FBF1EA", 0.5), (0.2, "#FBF1EA", 0.3), (0.62, "#FBF1EA", 0.2),
+                         (0.8, "#FBF1EA", 0.75), (1.0, "#FBF1EA", 0.88)],
+                   texture="paper", textureAmount=0.01, vignette=0.08, grain=0.03),
+          dict(corner="ROUNDED", iconShape="ROUNDED", iconStyle="ORIGINAL", widgetLook="CARD",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.85,
+               font="poppins", clockFace="BARE", panelLook="CARD", notch="DOT"),
+          premium=True),
+    theme("golden_sierra", "Golden Sierra",
+          "Bierstadt's alpine light in amber and mountain blue, with the Orbit wheel curving across the top.",
+          ["audience:general", "vibe:dreamy", "vibe:elegant", "color:gold", "color:blue"],
+          pal("#F2B65A", "#8FB6D9", "#FFF3DE", "#CDB48C", "#120C06", "#1A130B", "#2A1E10", "#33000000"),
+          rendered(photo=dict(file="commons-bierstadt-among-the-sierra-nevada.jpg", focus=(0.35, 0.5), blur=0.5, saturation=1.0),
+                   wash=[(0.0, "#120C06", 0.7), (0.18, "#120C06", 0.55), (0.34, "#120C06", 0.2), (0.62, "#120C06", 0.15),
+                         (0.8, "#120C06", 0.72), (1.0, "#120C06", 0.88)],
+                   vignette=0.25, grain=0.035),
+          dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
+               font="outfit", clockFace="STACK", panelLook="FADE", notch="DOT"),
+          premium=True),
 ]
 
 # EACH THEME'S MOOD (the words the store's mood filter offers) and its swatch, the one colour it is
@@ -769,6 +857,11 @@ MOODS = {
     "night_pass": (["dark", "minimal", "bold"], "#0B4A22"),
     "medusae": (["light", "calm", "vivid"], "#E6A98A"),
     "water_lilies": (["light", "pastel", "calm"], "#8FC1B2"),
+    "sea_of_fog": (["dark", "calm", "minimal"], "#3C4A5A"),
+    "willow_bough": (["light", "calm", "cozy"], "#8DAA8E"),
+    "saturns_hexagon": (["dark", "vivid", "bold"], "#C99A3C"),
+    "flamingo": (["light", "vivid", "bold"], "#E26A7E"),
+    "golden_sierra": (["dark", "cozy", "vivid"], "#B97A2E"),
 }
 
 # THE CURATED COLLECTIONS the store shows as shelves of their own, each from its first to its last
@@ -922,6 +1015,22 @@ LAYOUTS = {
                          drawerFrom="RIGHT", tiledDrawer=True, drawerColumns=4,
                          widgets=[CLOCK(0.06, 1.1), w("cal", "CALENDAR", 0.04, 0.22, 0.92),
                                   w("people", "PEOPLE", 0.04, 0.45, 0.92)]),
+    # The Showcase; a wall of square tiles with a tiled drawer; a honeycomb on an open canvas with a
+    # tiled drawer five across; a drawer home with a container dock on the left; and the Orbit wheel
+    # along the top edge.
+    "sea_of_fog": dict(homeLayout="CONSOLE", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID"),
+    "willow_bough": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
+                         tiledDrawer=True, drawerColumns=4,
+                         widgets=[CLOCK(0.05, 1.0), w("next", "AGENDA", 0.04, 0.2, 0.92)]),
+    "saturns_hexagon": dict(homeLayout="FREE_ROAM", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
+                            tiledDrawer=True, drawerColumns=5, drawerRail=False,
+                            widgets=[CLOCK(0.06, 1.1)]),
+    "flamingo": dict(homeLayout="DRAWER", dockStyle="CARD", anchor="LEFT", drawerLayout="GRID",
+                     drawerColumns=5, drawerTop="FAVORITES", drawerSort="CATEGORY", drawerSearch="BOTTOM",
+                     drawerWidgets=[side("CLOCK", end="TOP")]),
+    "golden_sierra": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="TOP", drawerLayout="GRID",
+                          widgets=[CLOCK(0.17, 1.1), w("batt", "BATTERY", 0.04, 0.34, 0.92),
+                                   w("people", "PEOPLE", 0.04, 0.46, 0.92)]),
 }
 
 ASSISTANTS = {
@@ -940,6 +1049,8 @@ ASSISTANTS = {
     "gismonda": "SPOTLIGHT",
     "rhinoceros": "NOTEPAD", "almond_blossom": "CHAT", "night_pass": "COMMAND_PROMPT", "medusae": "VOICE",
     "water_lilies": "NOTEPAD",
+    "sea_of_fog": "SPOTLIGHT", "willow_bough": "NOTEPAD", "saturns_hexagon": "HUD", "flamingo": "CHAT",
+    "golden_sierra": "SPOTLIGHT",
 }
 
 # The phone-use style each layout is for. Kept consistent with the layouts above by the app's tests.
@@ -962,6 +1073,8 @@ STYLES = {
     "solar": ["big screen"], "gismonda": ["one-handed"],
     "rhinoceros": ["traditional"], "almond_blossom": ["one-handed"], "night_pass": ["power user"],
     "medusae": ["one-handed"], "water_lilies": ["traditional"],
+    "sea_of_fog": ["big screen"], "willow_bough": ["traditional"], "saturns_hexagon": ["one-handed"],
+    "flamingo": ["minimal"], "golden_sierra": ["one-handed"],
 }
 
 EFFECTS = {}
@@ -998,6 +1111,8 @@ TOPICS = {
     "rhinoceros": ["animals", "art"], "almond_blossom": ["nature", "spring", "art"],
     "night_pass": ["space", "city", "retro"], "medusae": ["animals", "nature", "art"],
     "water_lilies": ["nature", "art"],
+    "sea_of_fog": ["nature", "art"], "willow_bough": ["nature", "art"], "saturns_hexagon": ["space"],
+    "flamingo": ["animals", "nature", "art"], "golden_sierra": ["nature", "travel", "art"],
 }
 
 # THE FEATURED SECTION of the index: the theme of each week, the drops, and the seasons.

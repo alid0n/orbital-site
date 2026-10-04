@@ -1,0 +1,90 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "flamingo",
+  "name": "Flamingo",
+  "description": "Audubon's American flamingo in coral pink on cream, with your apps in a drawer home and a container dock down the left edge.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:elegant",
+    "vibe:chill",
+    "color:pink",
+    "color:white",
+    "color:green",
+    "style:minimal",
+    "topic:animals",
+    "topic:nature",
+    "topic:art"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#D6485E",
+    "accentAlt": "#2F6F6A",
+    "ink": "#3A1F26",
+    "dim": "#7A5560",
+    "drawer": "#F7EBE3",
+    "surface": "#FBF1EA",
+    "elevated": "#F0DDD3",
+    "veil": "#22FBF1EA",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.85,
+    "font": "poppins",
+    "clockFace": "BARE",
+    "panelLook": "CARD",
+    "notch": "DOT"
+  },
+  "mood": [
+    "light",
+    "vivid",
+    "bold"
+  ],
+  "swatch": "#E26A7E",
+  "credits": [
+    {
+      "title": "American Flamingo (Birds of America, plate 431)",
+      "author": "John James Audubon",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:431_American_Flamingo.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "DRAWER",
+    "dockStyle": "CARD",
+    "anchor": "LEFT",
+    "drawerLayout": "GRID",
+    "drawerColumns": 5,
+    "drawerTop": "FAVORITES",
+    "drawerSort": "CATEGORY",
+    "drawerSearch": "BOTTOM",
+    "drawerWidgets": [
+      {
+        "kind": "CLOCK",
+        "end": "TOP",
+        "tint": 0
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  }
+}

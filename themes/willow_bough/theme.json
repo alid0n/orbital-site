@@ -1,0 +1,100 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "willow_bough",
+  "name": "Willow Bough",
+  "description": "William Morris's willow pattern behind a wall of square tiles, in sage green and cream.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:elegant",
+    "vibe:calm",
+    "color:green",
+    "color:white",
+    "color:orange",
+    "style:traditional",
+    "topic:nature",
+    "topic:art"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "TILES",
+  "colors": {
+    "accent": "#3E6B4A",
+    "accentAlt": "#B5532E",
+    "ink": "#1F2A1F",
+    "dim": "#5E6E5E",
+    "drawer": "#EAE6D2",
+    "surface": "#F2EEDC",
+    "elevated": "#DFD9BE",
+    "veil": "#22F2EEDC",
+    "light": true
+  },
+  "look": {
+    "corner": "SQUARE",
+    "iconShape": "TILE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "SQUARE",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.2,
+    "widgetSolid": 1.0,
+    "font": "montserrat",
+    "clockFace": "DIGITS",
+    "panelLook": "CARD",
+    "notch": "RUNG"
+  },
+  "mood": [
+    "light",
+    "calm",
+    "cozy"
+  ],
+  "swatch": "#8DAA8E",
+  "credits": [
+    {
+      "title": "Willow Bough",
+      "author": "William Morris",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Morris_Willow_Bough_1887.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "tiledDrawer": true,
+    "drawerColumns": 4,
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.05,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "saturns_hexagon",
+  "name": "Saturn's Hexagon",
+  "description": "The great storm at Saturn's north pole, photographed by Cassini and tinted gold and deep blue, with every app a hexagon on an open canvas.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:futuristic",
+    "vibe:dreamy",
+    "color:blue",
+    "color:gold",
+    "style:one-handed",
+    "topic:space"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "HONEYCOMB",
+  "colors": {
+    "accent": "#F2C46B",
+    "accentAlt": "#5FD0E0",
+    "ink": "#F4F7FA",
+    "dim": "#9FB2C0",
+    "drawer": "#050B13",
+    "surface": "#07101A",
+    "elevated": "#11202F",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "HEX",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "rajdhani",
+    "clockFace": "LINE",
+    "panelLook": "LINES",
+    "notch": "CHEVRON",
+    "glow": true
+  },
+  "mood": [
+    "dark",
+    "vivid",
+    "bold"
+  ],
+  "swatch": "#C99A3C",
+  "credits": [
+    {
+      "title": "Over Saturn's Turbulent North",
+      "author": "NASA/JPL-Caltech/Space Science Institute",
+      "source": "NASA Image and Video Library",
+      "license": "Public domain",
+      "url": "https://images.nasa.gov/details/PIA21052"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "FREE_ROAM",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "tiledDrawer": true,
+    "drawerColumns": 5,
+    "drawerRail": false,
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "HUD"
+  }
+}
