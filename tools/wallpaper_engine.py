@@ -12,6 +12,7 @@ A picture is built in layers, every one of them optional:
            (or light) enough for the dock;
   texture  a faint paper or linen surface;
   vignette a gentle darkening towards the corners;
+  silhouette a flat dark shape along the foot, such as hills under a moon;
   grain    monochrome film grain, which also breaks up the banding a smooth gradient shows on an OLED.
 
 Everything is seeded by the theme, so the same picture comes out on every run, and saved as WebP at
@@ -21,7 +22,7 @@ import hashlib
 import os
 
 import numpy as np
-from PIL import Image, ImageFilter, ImageOps
+from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
 W, H = 1080, 2400
 MAX_BYTES = 400_000
@@ -131,12 +132,35 @@ def mesh(points, rng, warp=0.06, softness=1.0):
     return np.stack([resize_field(lab[..., k], W, H) for k in range(3)], axis=-1)
 
 
+def place(img, scale, center, threshold=0.12, feather=(1.3, 0.3)):
+    """A zoom out for a single bright subject on a dark sky, such as the Moon: [img] set on a black
+    canvas of the phone's shape, its width [scale] times the canvas's, with the subject's middle at
+    [center] (fractions of the canvas). The subject is found as the pixels brighter than
+    [threshold] of the brightest (its middle the median of them, its radius that of a disc of the
+    same area), and the photo is faded out from feather[0] radii over feather[1] more, so its own sky
+    meets the canvas without an edge."""
+    a = np.asarray(img.convert("L"), np.float32)
+    ys, xs = np.nonzero(a > threshold * a.max())
+    mx, my = np.median(xs), np.median(ys)
+    r = (len(xs) / np.pi) ** 0.5
+    yy, xx = np.mgrid[0:img.height, 0:img.width]
+    d = np.sqrt((xx - mx) ** 2 + (yy - my) ** 2)
+    outer, fade = feather
+    mask = Image.fromarray((np.clip((r * outer - d) / (r * fade), 0, 1) * 255).astype(np.uint8), "L")
+    canvas_w = int(img.width / scale)
+    canvas = Image.new("RGB", (canvas_w, int(canvas_w * H / W)), (0, 0, 0))
+    canvas.paste(img, (int(center[0] * canvas.width - mx), int(center[1] * canvas.height - my)), mask)
+    return canvas
+
+
 def photo(spec, source_dir):
     """The photograph [spec] names, cropped to the phone around its focus point and softened, then
     mapped onto the palette (spec["map"]: dark-to-light stops) by spec["mapAmount"]."""
     path = os.path.join(source_dir, spec["file"])
     with Image.open(path) as raw:
         img = ImageOps.exif_transpose(raw).convert("RGB")
+    if spec.get("place"):
+        img = place(img, **spec["place"])
     w, h = img.size
     aspect = W / H
     zoom = spec.get("zoom", 1.0)
@@ -213,6 +237,21 @@ def texture(img, kind, amount, rng):
     return img * (1 + amount * np.clip(field, -3, 3))[..., None]
 
 
+def silhouette(img, shape, colour):
+    """A flat dark shape across the foot of the screen, laid over a photo or a gradient before the
+    grain, so it carries the same grain. "hills": the rolling hills the generator's painted moon has
+    (its paint_moon), drawn at full size."""
+    if shape != "hills":
+        raise ValueError(shape)
+    layer = Image.new("L", (W, H), 0)
+    s = W / 720.0
+    ImageDraw.Draw(layer).polygon(
+        [(0, H * 0.84)] + [(x, H * 0.82 - 40 * s * np.sin(x / (90.0 * s)) - 25 * s * np.sin(x / (37.0 * s)))
+                           for x in range(0, W + 1, 8)] + [(W, H), (0, H)], fill=255)
+    a = (np.asarray(layer, np.float32) / 255.0)[..., None]
+    return img * (1 - a) + hex_rgb(colour) * a
+
+
 def grain(img, amount, rng):
     """Monochrome film grain; [amount] is the grain layer's strength (0.03 to 0.05 suits most)."""
     noise = rng.standard_normal((H, W)).astype(np.float32)
@@ -245,6 +284,8 @@ def render(spec, theme_id, source_dir=None, base_image=None):
         img = texture(img, spec["texture"], spec.get("textureAmount", 0.03), rng)
     if spec.get("vignette"):
         img = vignette(img, spec["vignette"])
+    if spec.get("silhouette"):
+        img = silhouette(img, **spec["silhouette"])
     img = grain(img, spec.get("grain", 0.04), rng)
     return Image.fromarray(np.clip(np.rint(img * 255), 0, 255).astype(np.uint8), "RGB")
 

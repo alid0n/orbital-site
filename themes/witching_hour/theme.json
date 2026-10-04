@@ -3,7 +3,7 @@
   "format": 1,
   "id": "witching_hour",
   "name": "Witching Hour",
-  "description": "Midnight black and ember orange under a great full moon.",
+  "description": "Midnight black and ember orange under a copper-red eclipsed moon.",
   "author": "Orbital",
   "version": 1,
   "minAppVersion": 10,
@@ -54,7 +54,15 @@
     "bold"
   ],
   "swatch": "#E8691A",
-  "credits": [],
+  "credits": [
+    {
+      "title": "Total Lunar Eclipse",
+      "author": "NASA/Joel Kowsky",
+      "source": "NASA Image and Video Library",
+      "license": "Public domain",
+      "url": "https://images.nasa.gov/details/NHQ202211080005"
+    }
+  ],
   "wallpaper": {
     "image": "wallpaper.webp"
   },

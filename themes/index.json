@@ -711,7 +711,7 @@
     {
       "id": "witching_hour",
       "name": "Witching Hour",
-      "description": "Midnight black and ember orange under a great full moon.",
+      "description": "Midnight black and ember orange under a copper-red eclipsed moon.",
       "version": 1,
       "tags": [
         "audience:general",
@@ -726,8 +726,8 @@
       "thumbnail": "witching_hour/preview.png",
       "file": "witching_hour/theme.json",
       "premium": true,
-      "size": 1952,
-      "sha256": "1a4a28e66f8d52580dd476980af4629bf6a0c32868b1fed4d2fd8e6b8487d713",
+      "size": 2195,
+      "sha256": "b53554bb1bf38a4f47b71487785fc7a8731bf471f691de7e1771be4a6d326282",
       "base": "ORBITAL",
       "colors": {
         "accent": "#FF7A1A",
@@ -746,7 +746,15 @@
         "bold"
       ],
       "swatch": "#E8691A",
-      "credits": [],
+      "credits": [
+        {
+          "title": "Total Lunar Eclipse",
+          "author": "NASA/Joel Kowsky",
+          "source": "NASA Image and Video Library",
+          "license": "Public domain",
+          "url": "https://images.nasa.gov/details/NHQ202211080005"
+        }
+      ],
       "season": "halloween"
     },
     {

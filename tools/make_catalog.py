@@ -90,6 +90,10 @@ PHOTOS = {
         title="Shinjuku - Shinjuku258", author="lumoplank",
         source="Wikimedia Commons", license="CC0 1.0",
         url="https://commons.wikimedia.org/wiki/File:Shinjuku_-_Shinjuku258.jpg", retrieved="2026-10-03"),
+    "nasa-NHQ202211080005.jpg": dict(
+        title="Total Lunar Eclipse", author="NASA/Joel Kowsky",
+        source="NASA Image and Video Library", license="Public domain",
+        url="https://images.nasa.gov/details/NHQ202211080005", retrieved="2026-10-03"),
     "commons-alaska-aurora-borealis.jpg": dict(
         title="Alaska Aurora Borealis", author="Justin Connaher, U.S. Air Force",
         source="Wikimedia Commons", license="Public domain",
@@ -270,10 +274,18 @@ THEMES = [
                font="cinzel", clockFace="ANALOGUE", panelLook="FADE", notch="TAPER", glow=True),
           premium=True, effect="bats", season="halloween", tap=True),
     theme("witching_hour", "Witching Hour",
-          "Midnight black and ember orange under a great full moon.",
+          "Midnight black and ember orange under a copper-red eclipsed moon.",
           ["audience:general", "vibe:spooky", "vibe:dark", "color:orange", "color:black"],
           pal("#FF7A1A", "#FFB45C", "#FFF1E3", "#B39A86", "#060403", "#0C0806", "#1B120C", "#55000000"),
-          picture("moon", vignette=0.2, grain=0.04),
+          # A total lunar eclipse, set small and high on a midnight sky in the theme's ember colours,
+          # over the rolling hills the painted moon had. (Its old painted wallpaper.png stays
+          # published, unused, for links made before.)
+          rendered(photo=dict(file="nasa-NHQ202211080005.jpg", place=dict(scale=1.6, center=(0.55, 0.33)),
+                              blur=0.6, saturation=0.9,
+                              map=[(0.0, "#050302"), (0.4, "#24120A"), (0.78, "#E0954E"), (1.0, "#FFE9C8")], mapAmount=0.4),
+                   blobs=[(0.6, 0.33, 0.22, "#FF7A1A", 0.18), (0.5, 0.8, 0.3, "#FF7A1A", 0.14)],
+                   wash=[(0.0, "#050302", 0.0), (0.7, "#050302", 0.0), (1.0, "#050302", 0.6)],
+                   vignette=0.25, silhouette=dict(shape="hills", colour="#080503"), grain=0.04),
           dict(corner="ROUNDED", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
                widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
                font="marcellus", clockFace="STACK", uppercase=True, panelLook="FADE", notch="DOT", glow=True),
