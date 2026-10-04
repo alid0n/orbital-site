@@ -30,10 +30,10 @@ SOURCES = os.environ.get("ORBITAL_GALLERY_SRC", r"C:\osite-wall-src\gallery")
 PHONE = (1440, 3120)  # 9:19.5
 WIDE = (2560, 1600)  # 16:10
 THUMB = (270, 585)
-PHONE_MAX_BYTES = 700_000
-WIDE_MAX_BYTES = 600_000
-THUMB_MAX_BYTES = 60_000
-TOTAL_MAX_BYTES = 60_000_000  # the whole gallery, every file in wallpapers/
+PHONE_MAX_BYTES = 2_000_000
+WIDE_MAX_BYTES = 1_600_000
+THUMB_MAX_BYTES = 150_000
+TOTAL_MAX_BYTES = 150_000_000  # the whole gallery, every file in wallpapers/
 # What the app accepts (it silently drops an entry over any of these): a picture at most 4 MiB and
 # 4096 px a side, a thumbnail at most 512 KiB, index.json at most 256 KiB.
 APP_MAX_PICTURE_BYTES = 4 * 1024 * 1024
@@ -41,7 +41,7 @@ APP_MAX_SIDE = 4096
 APP_MAX_THUMB_BYTES = 512 * 1024
 APP_MAX_INDEX_BYTES = 256 * 1024
 MIN_LONG_SIDE = 2400  # the source pixels a crop uses, on its long side
-MAX_UPSCALE = 1.3  # at most this much enlargement from source pixels to the finished file
+MIN_SOURCE_PIXELS = 1.0  # source pixels per output pixel, along each side: nothing is ever enlarged
 
 # THE LICENCE BAR. Only these licences, only from these sources, each checked on the item's own record.
 # Written exactly so: the app shows the licence string as it is.
@@ -50,18 +50,29 @@ APPROVED_HOSTS = {
     "www.metmuseum.org": "The Metropolitan Museum of Art",
     "clevelandart.org": "Cleveland Museum of Art",
     "images.nasa.gov": "NASA",
+    "science.nasa.gov": "NASA",  # the NASA Photojournal (photojournal.jpl.nasa.gov redirects here)
     "www.loc.gov": "Library of Congress",
     "commons.wikimedia.org": None,  # only US-government or author-dedicated public-domain/CC0 files
 }
-# Partners whose NASA-library images carry their own terms, and non-NASA astronauts whose photographs are
-# credited to their own agencies: anything naming them is refused.
-NASA_PARTNERS = ("ESA", "CSA", "STScI", "JPL-Caltech", "JAXA", "Roscosmos", "University", "Saint-Jacques",
-                 "Hadfield", "Kuipers", "Gerst", "Noguchi", "Pesquet", "Cristoforetti", "Parmitano")
+# NASA imagery. Never: other space agencies, STScI/Webb, astronauts of other agencies (whose photographs
+# are credited to their own agencies), citizen-processed images, or anything marked © or non-commercial.
+NASA_EXCLUDED = ("ESA", "CSA", "JAXA", "Roscosmos", "STScI", "Webb", "Gill", "Doran", "processing", "©",
+                 "CC BY", "commercial", "Saint-Jacques", "Hadfield", "Kuipers", "Gerst", "Noguchi", "Yui",
+                 "Pesquet", "Cristoforetti", "Parmitano")
+# The partners NASA names in Photojournal credit lines for images it publishes under its media usage
+# guidelines (any use, commercial included, without implying endorsement). A Photojournal credit must
+# be made of these alone, and is carried verbatim. (USGS is a US federal agency: its work is public domain.)
+NASA_CREDIT_PARTS = {"NASA", "JPL", "JPL-Caltech", "SSI", "Space Science Institute", "MSSS", "ASU",
+                     "Arizona State University", "JHUAPL", "Johns Hopkins University Applied Physics Laboratory",
+                     "SwRI", "Southwest Research Institute", "University of Arizona", "Univ. of Arizona",
+                     "UArizona", "GSFC", "USGS"}
+NASA_GUIDELINES = "https://www.nasa.gov/nasa-brand-center/images-and-media/"
 RETRIEVED = "2026-10-03"
 
 CATEGORIES = [
     {"id": "space", "name": "Space"},
     {"id": "earth", "name": "Earth from Orbit"},
+    {"id": "planets", "name": "Planets"},
     {"id": "landscapes", "name": "Landscapes"},
     {"id": "botanical", "name": "Botanical"},
     {"id": "japanese", "name": "Japanese Prints"},
@@ -85,6 +96,12 @@ def cma(n, accession, title, creator):
 def nasa(nasa_id, title, creator="NASA", centre="Johnson Space Center"):
     return "nasa-%s" % nasa_id, dict(title=title, creator=creator, institution="NASA, %s" % centre,
                                      url="https://images.nasa.gov/details/%s" % nasa_id, license="Public domain")
+
+
+def pj(pia, slug, title, credit):
+    """A NASA Photojournal image, credited exactly as NASA credits it."""
+    return "pj-%s" % pia, dict(title=title, creator=credit, institution="NASA, Jet Propulsion Laboratory",
+                               url="https://science.nasa.gov/photojournal/%s/" % slug, license="Public domain")
 
 
 def loc(n, title):
@@ -120,12 +137,9 @@ def wall(id, category, title, source, phone, wide=None):
 
 WALLPAPERS = [
     # SPACE: NASA's own photographs only (crew and NASA photographers), no partner imagery.
-    wall("milky_way_from_orbit", "space", "Milky Way from Orbit",
-         nasa("iss071e256593", "The Milky Way appears behind the SpaceX Dragon Endeavour"),
-         crop(0.2, 0.5), crop(0.25, 0.5, 0.47)),
     wall("earthrise", "space", "Earthrise",
          nasa("as08-14-2383", "Apollo 8 Mission image, Earth over the horizon of the moon"),
-         crop(0.57, 0.5), crop(0.5, 0.6, 0.625)),
+         fit(0.0, 0.0, 1.0, 1.0, (0, 0, 0)), crop(0.5, 0.6, 0.625)),
     wall("earthset", "space", "Earthset",
          nasa("art002e021278", "A Breathtaking Earthset from Orion"),
          crop(0.5, 0.5), crop(0.5, 0.5, 0.93)),
@@ -134,10 +148,46 @@ WALLPAPERS = [
          crop(0.48, 0.5), crop(0.5, 0.5, 0.93)),
     wall("eclipse_from_orion", "space", "Eclipse from Orion",
          nasa("art002e016324", "Solar Eclipse During Artemis II"),
-         crop(0.7, 0.5)),
+         fit(0.45, 0.0, 1.0, 1.0, (0, 0, 0))),
     wall("moon_crescent_eclipse", "space", "Lunar Silhouette",
          nasa("art002e009298", "Artemis II Total Solar Eclipse, Partial Frame"),
          crop(0.66, 0.5), crop(0.5, 0.5, 0.93)),
+    wall("eclipse_emergence", "space", "Sunlight's Return",
+         nasa("art002e009299", "Solar Eclipse Emergence from Orion"),
+         crop(0.48, 0.45), crop(0.5, 0.5, 0.93)),
+    # Spitzer and WISE infrared views, credited NASA/JPL-Caltech alone.
+    wall("north_america_nebula", "space", "North America Nebula",
+         pj("PIA13845", "north-america-nebula-in-different-lights", "North America Nebula in Different Lights",
+            "NASA/JPL-Caltech"),
+         crop(0.35, 0.5), crop(0.5, 0.5, 0.6)),
+    wall("helix_nebula", "space", "Helix Nebula",
+         pj("PIA15817", "the-helix-nebula-unraveling-at-the-seams", "The Helix Nebula: Unraveling at the Seams",
+            "NASA/JPL-Caltech"),
+         crop(0.5, 0.5, 0.75), crop(0.5, 0.5, 0.6)),
+    wall("eta_carinae", "space", "Clouds of Eta Carinae",
+         pj("PIA17257", "the-tortured-clouds-of-eta-carinae", "The Tortured Clouds of Eta Carinae", "NASA/JPL-Caltech"),
+         crop(0.5, 0.5), crop(0.5, 0.48, 0.6)),
+    wall("witch_head_nebula", "space", "Witch Head Nebula",
+         pj("PIA17553", "witch-head-brews-baby-stars", "'Witch Head' Brews Baby Stars", "NASA/JPL-Caltech"),
+         crop(0.6, 0.5, 0.8), crop(0.55, 0.5, 0.6)),
+    wall("tarantula_nebula", "space", "Tarantula Nebula",
+         pj("PIA23647", "tarantula-nebula-spitzer-3-color-image", "Tarantula Nebula Spitzer 3-Color Image",
+            "NASA/JPL-Caltech"),
+         crop(0.3, 0.55), crop(0.5, 0.5, 0.93)),
+    wall("godzilla_nebula", "space", "Godzilla Nebula",
+         pj("PIA24579", "godzilla-nebula-imaged-by-spitzer", "Godzilla Nebula Imaged by Spitzer", "NASA/JPL-Caltech"),
+         crop(0.3, 0.6), crop(0.5, 0.5, 0.6)),
+    wall("andromeda_infrared", "space", "Andromeda in Infrared",
+         pj("PIA26276", "the-infrared-face-of-the-andromeda-galaxy", "The Infrared Face of the Andromeda Galaxy",
+            "NASA/JPL-Caltech"),
+         crop(0.5, 0.5, 0.45), crop(0.5, 0.5, 0.6)),
+    wall("orion_dreamy_stars", "space", "Orion's Dreamy Stars",
+         pj("PIA13005", "orions-dreamy-stars", "Orion's Dreamy Stars", "NASA/JPL-Caltech"),
+         crop(0.5, 0.5)),
+    wall("galactic_center", "space", "Heart of the Milky Way",
+         pj("PIA03654", "a-cauldron-of-stars-at-the-galaxys-center", "A Cauldron of Stars at the Galaxy's Center",
+            "NASA/JPL-Caltech"),
+         crop(0.5, 0.5), crop(0.5, 0.5, 0.85)),
 
     # EARTH FROM ORBIT
     wall("blue_marble", "earth", "The Blue Marble",
@@ -155,26 +205,87 @@ WALLPAPERS = [
     wall("bahamas_from_orbit", "earth", "The Bahamas",
          nasa("iss071e449837", "The clear blue waters surrounding The Bahamas"),
          crop(0.5, 0.5), crop(0.5, 0.45, 0.85)),
-    wall("himalayas", "earth", "The Himalayas",
-         nasa("iss069e003192", "The Himalayas and Mount Everest in Nepal"),
-         crop(0.55, 0.5), crop(0.5, 0.5, 1.0)),
     wall("tibetan_glaciers", "earth", "Himalayan Glaciers",
          nasa("iss074e0603585", "Glaciers flow downhill from the Himalayas' northern slopes onto China's Tibetan Plateau"),
          crop(0.6, 0.5), crop(0.5, 0.5, 0.93)),
-    wall("sahara_dunes", "earth", "Sahara Dunes",
-         nasa("iss070e090117", "Sand dunes in the Sahara Desert in Algeria"),
-         crop(0.4, 0.5), crop(0.42, 0.42, 0.8)),
     wall("hurricane_eye", "earth", "Eye of the Storm",
          nasa("iss069e090102", "A hurricane's ragged eye over the Atlantic Ocean"),
          crop(0.5, 0.5), crop(0.53, 0.5, 0.85)),
+    wall("aurora_australis", "earth", "Aurora Australis",
+         nasa("iss073e0247726", "The aurora australis arcs above a partly cloudy Indian Ocean"),
+         crop(0.2, 0.45, 0.8), crop(0.45, 0.38, 0.7)),
+    wall("eye_of_the_sahara", "earth", "Eye of the Sahara",
+         nasa("iss069e005526", "The \"Eye of the Sahara\" in the African nation of Mauritania"),
+         crop(0.55, 0.5), crop(0.52, 0.48, 0.9)),
+    wall("mount_fuji_from_orbit", "earth", "Mount Fuji",
+         nasa("iss074e0459342", "Near-overhead shot of Mount Fuji taken from the International Space Station",
+              "NASA/Chris Williams"),
+         crop(0.5, 0.45), crop(0.5, 0.45, 0.93)),
+    wall("bassas_da_india", "earth", "Bassas da India",
+         nasa("iss072e094988", "The French atoll of Bassas da India in the Mozambique Channel"),
+         crop(0.5, 0.55), crop(0.5, 0.5, 0.93)),
+    wall("aurora_on_the_limb", "earth", "Aurora on the Limb",
+         nasa("iss062e148363", "The Earth's glow mingles with the aurora australis over the Indian Ocean"),
+         crop(0.5, 0.5), crop(0.48, 0.5, 0.9)),
+    wall("namib_dunes", "earth", "Namib Dunes",
+         nasa("iss067e187073", "The Namib Desert on Namibia's Atlantic coast"),
+         crop(0.4, 0.6), crop(0.5, 0.5, 0.93)),
+    wall("eleuthera", "earth", "Eleuthera",
+         nasa("iss072e715777", "Eleuthera, an island state that is part of the Bahamas archipelago"),
+         crop(0.45, 0.5), crop(0.5, 0.5, 0.93)),
+    wall("khuvsgul_lake_ice", "earth", "Khuvsgul Lake Ice",
+         nasa("iss073e0119404", "The ice-covered Khuvsgul Lake in northern Mongolia"),
+         crop(0.55, 0.5), crop(0.5, 0.5, 0.93)),
+    wall("blood_moon_over_earth", "earth", "Blood Moon over Earth",
+         nasa("iss073e0611610", "The lunar eclipse, also known as the Blood Moon, above Earth's horizon"),
+         crop(0.5, 0.5), crop(0.5, 0.4, 0.42)),
+
+    # PLANETS: NASA and JPL images, credited exactly as the Photojournal credits them.
+    wall("saturn_portrait", "planets", "Saturn",
+         pj("PIA06193", "the-greatest-saturn-portrait-yet", "The Greatest Saturn Portrait ...Yet",
+            "NASA/JPL/Space Science Institute"),
+         crop(0.52, 0.55), crop(0.5, 0.52, 0.95)),
+    wall("day_the_earth_smiled", "planets", "The Day the Earth Smiled",
+         pj("PIA17172", "the-day-the-earth-smiled", "The Day the Earth Smiled", "NASA/JPL-Caltech/SSI"),
+         crop(0.5, 0.5), crop(0.5, 0.5, 1.0)),
+    wall("jupiter", "planets", "Jupiter",
+         pj("PIA04866", "cassini-jupiter-portrait", "Cassini Jupiter Portrait", "NASA/JPL/Space Science Institute"),
+         fit(0.0, 0.0, 1.0, 1.0, (0, 0, 0)), fit(0.0, 0.0, 1.0, 1.0, (0, 0, 0))),
+    wall("io", "planets", "Io",
+         pj("PIA02308", "global-image-of-io-true-color", "Global image of Io (true color)",
+            "NASA/JPL/University of Arizona"),
+         fit(0.0, 0.0, 1.0, 1.0, (0, 0, 0)), fit(0.0, 0.0, 1.0, 1.0, (0, 0, 0))),
+    wall("mars", "planets", "Mars",
+         pj("PIA00407", "global-color-views-of-mars", "Global Color Views of Mars", "NASA/JPL/USGS"),
+         fit(0.0, 0.0, 1.0, 1.0, (0, 0, 0)), fit(0.0, 0.0, 1.0, 1.0, (0, 0, 0))),
+    wall("jezero_crater_rim", "planets", "Jezero Crater Rim",
+         pj("PIA26373", "perseverance-rovers-view-up-crater", "Perseverance Rover's View Up Crater",
+            "NASA/JPL-Caltech/ASU/MSSS"),
+         crop(0.78, 0.55, 0.7, (0.0, 0.2, 1.0, 0.9)), crop(0.72, 0.55, 0.6, (0.0, 0.2, 1.0, 0.9))),
+    wall("pluto", "planets", "Pluto",
+         pj("PIA19952", "the-rich-color-variations-of-pluto", "The Rich Color Variations of Pluto",
+            "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute"),
+         fit(0.05, 0.02, 0.97, 0.98, (0, 0, 0)), fit(0.05, 0.02, 0.97, 0.98, (0, 0, 0))),
+    wall("pluto_and_charon", "planets", "Pluto and Charon",
+         pj("PIA19966", "charon-and-pluto-strikingly-different-worlds", "Charon and Pluto: Strikingly Different Worlds",
+            "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute"),
+         fit(0.08, 0.05, 0.97, 0.95, (0, 0, 0)), fit(0.08, 0.05, 0.97, 0.95, (0, 0, 0))),
+    wall("plutos_blue_haze", "planets", "Pluto's Blue Haze",
+         pj("PIA21590", "blue-rays-new-horizons-high-res-farewell-to-pluto",
+            "Blue Rays: New Horizons' High-Res Farewell to Pluto",
+            "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute"),
+         fit(0.0, 0.0, 1.0, 1.0, (0, 0, 0)), fit(0.0, 0.0, 1.0, 1.0, (0, 0, 0))),
+    wall("moon_far_side", "planets", "The Moon's Far Side",
+         nasa("art002e009212", "Orientale on Display"),
+         fit(0.3, 0.0, 1.0, 1.0, (0, 0, 0)), fit(0.3, 0.0, 1.0, 1.0, (0, 0, 0))),
+    wall("moon_edge_of_light", "planets", "The Moon at the Terminator",
+         nasa("art002e020686", "Orientale Basin at the Edge of Light"),
+         crop(0.4, 0.45), crop(0.5, 0.5, 0.93)),
+    wall("orientale_basin", "planets", "Orientale Basin",
+         nasa("art002e012090", "The Rings of the Orientale Basin"),
+         crop(0.45, 0.5), crop(0.5, 0.5, 0.93)),
 
     # LANDSCAPES AND NATURE
-    wall("wheat_field_cypresses", "landscapes", "Wheat Field with Cypresses",
-         met(436535, "Wheat Field with Cypresses", "Vincent van Gogh"),
-         crop(0.78, 0.5, 1.0, (0.03, 0.04, 0.97, 0.95)), crop(0.5, 0.5, 0.73, (0.03, 0.04, 0.97, 0.95))),
-    wall("the_oxbow", "landscapes", "The Oxbow",
-         met(10497, "View from Mount Holyoke, Northampton, Massachusetts, after a Thunderstorm (The Oxbow)", "Thomas Cole"),
-         crop(0.62, 0.5, 0.93, (0.02, 0.03, 0.98, 0.97)), crop(0.5, 0.5, 0.85, (0.02, 0.03, 0.98, 0.97))),
     wall("twilight_in_the_wilderness", "landscapes", "Twilight in the Wilderness",
          cma(141639, "1965.233", "Twilight in the Wilderness", "Frederic Edwin Church"),
          crop(0.5, 0.5), crop(0.5, 0.5, 0.95)),
@@ -185,15 +296,12 @@ WALLPAPERS = [
          commons("commons-north-to-alaska-aurora-in-denali-7957749870", "North to Alaska Aurora in Denali (7957749870).jpg",
                  "North to Alaska Aurora in Denali", "NPS / Jacob W. Frank", "National Park Service"),
          crop(0.55, 0.5), crop(0.5, 0.5, 0.93)),
-    wall("mount_moran", "landscapes", "Mount Moran",
-         commons("commons-grand-teton-aag05", "Grand Teton Aag05.jpg", "Mt. Moran, Teton National Park",
-                 "Ansel Adams", "U.S. National Archives (National Park Service)"),
-         crop(0.37, 0.5, 0.98), crop(0.5, 0.45, 0.78)),
-    wall("arctic_mountain_light", "landscapes", "Arctic Mountain Light",
-         commons("commons-mountain-light-48771994623", "Mountain light (48771994623).jpg",
-                 "Mountain light, Arctic National Wildlife Refuge", "Danielle Brigida / USFWS",
-                 "U.S. Fish and Wildlife Service"),
-         crop(0.33, 0.5), crop(0.5, 0.5, 1.0)),
+    wall("mount_starr_king", "landscapes", "Mount Starr King",
+         cma(172815, "1922.684", "Mount Starr King, Yosemite", "Albert Bierstadt"),
+         crop(0.55, 0.5, 1.0, (0.01, 0.0, 0.99, 1.0)), crop(0.5, 0.5, 0.85)),
+    wall("schroon_mountain", "landscapes", "Schroon Mountain",
+         cma(93014, "1917.1335", "View of Schroon Mountain, Essex County, New York, After a Storm", "Thomas Cole"),
+         crop(0.45, 0.5), crop(0.5, 0.5, 0.95)),
 
     # BOTANICAL AND NATURAL HISTORY
     wall("flowers_in_a_glass", "botanical", "Flowers in a Glass",
@@ -216,10 +324,10 @@ WALLPAPERS = [
     wall("great_wave", "japanese", "The Great Wave",
          met(45434, "Under the Wave off Kanagawa (Kanagawa oki nami ura), also known as The Great Wave",
              "Katsushika Hokusai"),
-         crop(0.3, 0.5, 0.97), crop(0.5, 0.5, 0.9)),
+         fit(0.0, 0.0, 1.0, 1.0), crop(0.5, 0.5, 0.9)),
     wall("red_fuji", "japanese", "Red Fuji",
-         met(36490, "South Wind, Clear Sky (Gaifū kaisei), also known as Red Fuji", "Katsushika Hokusai"),
-         crop(0.72, 0.5, 0.93, (0.03, 0.03, 0.97, 0.97)), crop(0.55, 0.5, 0.85, (0.03, 0.03, 0.97, 0.97))),
+         cma(111654, "1930.189", "South Wind, Clear Sky, from Thirty-Six Views of Mount Fuji", "Katsushika Hokusai"),
+         crop(0.72, 0.5, 0.92, (0.02, 0.03, 0.98, 0.95)), crop(0.55, 0.5, 0.85, (0.02, 0.03, 0.98, 0.95))),
     wall("eagle_over_fukagawa", "japanese", "Eagle over Fukagawa",
          met(55733, "Jūmantsubo Plain at Fukagawa Susaki, from One Hundred Famous Views of Edo",
              "Utagawa Hiroshige"),
@@ -279,38 +387,20 @@ WALLPAPERS = [
          commons("commons-fknms-reef-34136062951", "FKNMS - Reef (34136062951).jpg", "Reef",
                  "Matt McIntosh / NOAA", "NOAA, Florida Keys National Marine Sanctuary"),
          crop(0.5, 0.5), crop(0.5, 0.5, 0.93)),
-    wall("northeaster", "oceans", "Northeaster",
-         met(11130, "Northeaster", "Winslow Homer"),
-         crop(0.55, 0.5, 0.93, (0.02, 0.03, 0.98, 0.97)), crop(0.5, 0.5, 0.85, (0.02, 0.03, 0.98, 0.97))),
-    wall("wood_island_moonlight", "oceans", "Moonlight, Wood Island",
-         met(11127, "Moonlight, Wood Island Light", "Winslow Homer"),
-         crop(0.45, 0.5, 0.95, (0.01, 0.01, 0.99, 0.99)), crop(0.5, 0.5, 0.8, (0.01, 0.01, 0.99, 0.99))),
-    wall("north_cape_moonlight", "oceans", "North Cape by Moonlight",
-         met(441379, "The North Cape by Moonlight", "Peder Balke"),
-         crop(0.42, 0.5, 0.95, (0.01, 0.01, 0.99, 0.99)), crop(0.5, 0.5, 0.85, (0.01, 0.01, 0.99, 0.99))),
     wall("morning_after_a_storm", "oceans", "Morning after a Storm",
          cma(106088, "1924.195", "Early Morning After a Storm at Sea", "Winslow Homer"),
          crop(0.6, 0.5), crop(0.5, 0.5, 0.93)),
-    wall("bahamas_sandbanks", "oceans", "Bahamas Sandbanks",
-         nasa("iss064e002482", "A portion of the Atlantic Ocean off the coast of the Bahamas"),
-         crop(0.45, 0.5), crop(0.5, 0.5, 1.0)),
+    wall("seascape_open_sky", "oceans", "Seascape with Open Sky",
+         cma(92480, "2020.116", "Seascape with Open Sky", "Eugène Boudin"),
+         crop(0.65, 0.5, 0.96, (0.01, 0.01, 0.99, 0.96)), crop(0.5, 0.5, 0.8, (0.01, 0.01, 0.99, 0.96))),
 
     # CITIES AND ARCHITECTURE (historic)
-    wall("grand_canal_venice", "cities", "Grand Canal, Venice",
-         loc(2001701076, "Grand Canal, Venice, Italy"),
-         crop(0.55, 0.5, 0.93, (0.03, 0.03, 0.97, 0.97)), crop(0.5, 0.5, 0.82, (0.03, 0.03, 0.97, 0.97))),
-    wall("notre_dame", "cities", "Notre-Dame de Paris",
-         loc(2001698529, "Notre Dame, Paris, France"),
-         crop(0.4, 0.5, 0.92, (0.01, 0.025, 0.99, 0.92)), crop(0.45, 0.45, 0.8, (0.01, 0.025, 0.99, 0.92))),
     wall("suleymaniye", "cities", "Süleymaniye Mosque",
          loc(2003653113, "Süleymaniye Camii (mosque), Constantinople, Turkey"),
          crop(0.62, 0.5, 0.97, (0.0, 0.012, 0.96, 0.98))),
     wall("three_bridges_venice", "cities", "Three Bridges, Venice",
          loc(2001701040, "Three Bridges, Venice, Italy"),
          crop(0.5, 0.5, 0.92, (0.03, 0.02, 0.97, 0.94))),
-    wall("piazza_san_marco", "cities", "Piazza San Marco",
-         met(435839, "Piazza San Marco", "Canaletto (Giovanni Antonio Canal)"),
-         crop(0.59, 0.5, 0.99), crop(0.5, 0.5, 0.95)),
     wall("burning_parliament", "cities", "The Burning of Parliament",
          cma(122351, "1942.647", "The Burning of the Houses of Lords and Commons, 16 October 1834",
              "Joseph Mallord William Turner"),
@@ -318,6 +408,9 @@ WALLPAPERS = [
     wall("cathedral_interior", "cities", "Interior of a Cathedral",
          cma(119725, "1940.560", "Interior of a Cathedral", "Samuel Prout"),
          crop(0.5, 0.5, 0.93, (0.03, 0.02, 0.97, 0.97))),
+    wall("venetian_capriccio", "cities", "Venetian Capriccio",
+         cma(111702, "1930.23", "Capriccio: A Palace with a Courtyard by the Lagoon", "Antonio Canaletto"),
+         crop(0.68, 0.5, 0.96, (0.01, 0.01, 0.99, 0.99)), crop(0.5, 0.5, 0.85, (0.01, 0.01, 0.99, 0.99))),
 ]
 
 
@@ -332,9 +425,15 @@ def check_licence(entry, provenance):
     assert url.scheme == "https" and url.netloc in APPROVED_HOSTS, "%s: %s is not an approved source" % (wid, credit["url"])
     named = APPROVED_HOSTS[url.netloc]
     assert named is None or credit["institution"].startswith(named), (wid, credit["institution"])
-    if url.netloc == "images.nasa.gov" or "NASA" in credit["institution"]:
-        partners = [p for p in NASA_PARTNERS if p in credit["creator"] + credit["institution"] + credit["title"]]
-        assert not partners, "%s: credited to %s, whose images NASA does not release freely" % (wid, partners)
+    if url.netloc in ("images.nasa.gov", "science.nasa.gov") or "NASA" in credit["institution"]:
+        seen = credit["creator"] + " " + credit["institution"] + " " + credit["title"]
+        refused = [p for p in NASA_EXCLUDED if p in seen]
+        assert not refused, "%s: credited to %s, whose images NASA does not release freely" % (wid, refused)
+        assert credit["creator"].startswith("NASA"), "%s: %r is not a NASA credit" % (wid, credit["creator"])
+    if url.netloc == "science.nasa.gov":
+        parts = [p.strip() for p in credit["creator"].split("/")]
+        outside = [p for p in parts if p not in NASA_CREDIT_PARTS]
+        assert not outside, "%s: the credit names %s, outside the partners NASA publishes freely" % (wid, outside)
     if provenance is None:
         return
     rec = provenance.get(entry["src"])
@@ -343,6 +442,9 @@ def check_licence(entry, provenance):
     assert rec.get("evidence") and rec.get("retrieved"), "%s: the licence check is not recorded" % wid
     assert urllib.parse.unquote(rec["url"]).replace(" ", "_") == urllib.parse.unquote(credit["url"]), \
         (wid, rec["url"], credit["url"])
+    if url.netloc == "science.nasa.gov":
+        assert rec["creator"] == credit["creator"], "%s: the credit is not NASA's own line %r" % (wid, rec["creator"])
+        assert NASA_GUIDELINES in rec.get("note", ""), "%s: the NASA media guidelines are not noted" % wid
 
 
 def check_entry(entry):
@@ -376,8 +478,22 @@ def edge_colour(img):
     return tuple(int(v) for v in ImageStat.Stat(sample).median)
 
 
-def render(img, spec, size, wid, kind):
-    """[img] cut to [spec] and resized to exactly [size]."""
+def sharpen_for(src):
+    """The light unsharp mask a picture gets after its Lanczos downscale: photographs (fine grain and
+    stars) a little more than paintings and prints (canvas, paper and brushwork, which ring if pushed)."""
+    if src.startswith(("met-", "cma-", "loc-")):
+        return ImageFilter.UnsharpMask(radius=0.8, percent=40, threshold=3)
+    return ImageFilter.UnsharpMask(radius=1.0, percent=60, threshold=2)
+
+
+def check_scale(ratio, wid, kind):
+    """Every output pixel must come from at least one source pixel: nothing is ever enlarged."""
+    assert ratio >= MIN_SOURCE_PIXELS, "%s %s: %.2f source pixels per output pixel, under %.1f" % (
+        wid, kind, ratio, MIN_SOURCE_PIXELS)
+
+
+def render(img, spec, size, wid, kind, sharpen):
+    """[img] cut to [spec], downscaled to exactly [size] with Lanczos and lightly sharpened."""
     W, H = img.size
     tw, th = size
     if spec["mode"] == "crop":
@@ -393,16 +509,17 @@ def render(img, spec, size, wid, kind):
         box = (cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2)
         assert max(cw, ch) >= MIN_LONG_SIDE, "%s %s: the crop is %dx%d, under %d on its long side" % (
             wid, kind, cw, ch, MIN_LONG_SIDE)
-        assert tw / cw <= MAX_UPSCALE, "%s %s: would enlarge %.2fx" % (wid, kind, tw / cw)
-        return img.resize(size, Image.LANCZOS, box=box, reducing_gap=3.0)
+        check_scale(cw / tw, wid, kind)
+        return img.resize(size, Image.LANCZOS, box=box).filter(sharpen)
     l, t, r, b = spec["box"]
     part = img.crop((round(l * W), round(t * H), round(r * W), round(b * H)))
     pad = spec["pad"] or edge_colour(part)
     scale = min(tw / part.width, th / part.height)
-    assert scale <= MAX_UPSCALE, "%s %s: would enlarge %.2fx" % (wid, kind, scale)
-    assert max(part.size) >= MIN_LONG_SIDE or max(part.size) * scale >= max(size) * 0.6, (wid, kind, part.size)
+    check_scale(1 / scale, wid, kind)
+    assert max(part.size) >= MIN_LONG_SIDE, "%s %s: the box is %dx%d, under %d on its long side" % (
+        wid, kind, part.width, part.height, MIN_LONG_SIDE)
     pw, ph = round(part.width * scale), round(part.height * scale)
-    part = part.resize((pw, ph), Image.LANCZOS, reducing_gap=3.0)
+    part = part.resize((pw, ph), Image.LANCZOS).filter(sharpen)
     canvas = Image.new("RGB", size, pad)
     x, y = (tw - pw) // 2, (th - ph) // 2
     # Feather the picture's edge into the pad, so paper or sky meets it without a seam.
@@ -419,22 +536,19 @@ def render(img, spec, size, wid, kind):
 
 
 def save_webp(img, path, max_bytes):
-    """[img] as WebP at [path], at the best quality that keeps it to [max_bytes]. Sensor noise in night
-    photographs and the weave of a textile cost far more bytes than they show at a phone's pixel density,
-    so a picture that will not fit at a good quality is softened a little (a blur well under a pixel)
-    before the quality is let down further. The search encodes quickly; the file is then written with
-    the slowest, smallest setting. Returns the size."""
-    for soften in (0, 0.4, 0.6, 0.8):
-        softened = img.filter(ImageFilter.GaussianBlur(soften)) if soften else img
-        for quality in (86, 80, 74, 68) if soften < 0.8 else (86, 80, 74, 68, 62, 56):
-            trial = io.BytesIO()
-            softened.save(trial, "WEBP", quality=quality, method=4)
-            if trial.tell() <= max_bytes * 1.02:
-                softened.save(path, "WEBP", quality=quality, method=6)
-                size = os.path.getsize(path)
-                if size <= max_bytes:
-                    return size
-    raise AssertionError((path, "over %d bytes even softened, at quality 56" % max_bytes))
+    """[img] as WebP at [path], at the best quality that keeps it to [max_bytes]. Nothing is softened to
+    save bytes: detail is what a wallpaper is for, so the budget is generous and only the quality moves.
+    The search encodes quickly; the file is then written with the slowest, smallest setting. Returns the
+    size."""
+    for quality in (92, 90, 88, 85, 82, 78, 74, 70):
+        trial = io.BytesIO()
+        img.save(trial, "WEBP", quality=quality, method=4)
+        if trial.tell() <= max_bytes * 1.02:
+            img.save(path, "WEBP", quality=quality, method=6)
+            size = os.path.getsize(path)
+            if size <= max_bytes:
+                return size
+    raise AssertionError((path, "over %d bytes even at quality 70" % max_bytes))
 
 
 def describe(path):
@@ -449,14 +563,13 @@ def make_images(entry, folder):
     """Makes [entry]'s phone, wide and thumbnail WebP files in [folder] from the original."""
     path = os.path.join(SOURCES, entry["src"] + ".jpg")
     with Image.open(path) as img:
-        if max(img.size) > 9000:
-            img.draft("RGB", (img.width // 2, img.height // 2))
-        img = img.convert("RGB")
-    phone = render(img, entry["phone"], PHONE, entry["id"], "phone")
+        img = img.convert("RGB")  # always at full size: every source pixel counts
+    sharpen = sharpen_for(entry["src"])
+    phone = render(img, entry["phone"], PHONE, entry["id"], "phone", sharpen)
     save_webp(phone, os.path.join(folder, "phone.webp"), PHONE_MAX_BYTES)
     wide_path = os.path.join(folder, "wide.webp")
     if entry["wide"]:
-        save_webp(render(img, entry["wide"], WIDE, entry["id"], "wide"), wide_path, WIDE_MAX_BYTES)
+        save_webp(render(img, entry["wide"], WIDE, entry["id"], "wide", sharpen), wide_path, WIDE_MAX_BYTES)
     elif os.path.exists(wide_path):
         os.remove(wide_path)
     save_webp(phone.resize(THUMB, Image.LANCZOS), os.path.join(folder, "thumb.webp"), THUMB_MAX_BYTES)

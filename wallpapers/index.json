@@ -10,6 +10,10 @@
       "name": "Earth from Orbit"
     },
     {
+      "id": "planets",
+      "name": "Planets"
+    },
+    {
       "id": "landscapes",
       "name": "Landscapes"
     },
@@ -36,41 +40,6 @@
   ],
   "wallpapers": [
     {
-      "id": "milky_way_from_orbit",
-      "title": "Milky Way from Orbit",
-      "category": "space",
-      "credit": {
-        "title": "The Milky Way appears behind the SpaceX Dragon Endeavour",
-        "creator": "NASA",
-        "institution": "NASA, Johnson Space Center",
-        "url": "https://images.nasa.gov/details/iss071e256593",
-        "license": "Public domain"
-      },
-      "phone": {
-        "url": "milky_way_from_orbit/phone.webp",
-        "size": 517022,
-        "sha256": "e93c054ac08e162a741cb0b692a7b5965b62f9f9cbf23debc151dafe137cbd69",
-        "w": 1440,
-        "h": 3120
-      },
-      "wide": {
-        "url": "milky_way_from_orbit/wide.webp",
-        "size": 519194,
-        "sha256": "d374cbacf936c372946344f317cd521a1a2d8ec371b3ec1749ebe496ee1133eb",
-        "w": 2560,
-        "h": 1600
-      },
-      "thumb": {
-        "url": "milky_way_from_orbit/thumb.webp",
-        "size": 32230,
-        "sha256": "311070e51b812c20e525046800a87b554c19c95d298e080a455e7bbf90064b0e",
-        "w": 270,
-        "h": 585
-      },
-      "swatch": "#322F2D",
-      "dark": true
-    },
-    {
       "id": "earthrise",
       "title": "Earthrise",
       "category": "space",
@@ -83,26 +52,26 @@
       },
       "phone": {
         "url": "earthrise/phone.webp",
-        "size": 86526,
-        "sha256": "3ae8db36354166a40b3f737134501b72bfe79ddb4ba63bd7eac3ca3608f9499a",
+        "size": 99244,
+        "sha256": "2ea4f674ab7484c063146a8cb93a6a13e87fb806ed31dae779acbb5e156e9d99",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "earthrise/wide.webp",
-        "size": 80556,
-        "sha256": "0899e13885c5608b65ffb625f07704c638f35e1240be6dd76294ca9412c60c88",
+        "size": 156184,
+        "sha256": "d646065f22a74ac760bbe678a87b827d14e87e4158fcd28c555c271e256c6a56",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "earthrise/thumb.webp",
-        "size": 6750,
-        "sha256": "1ec34f87f149ba1b674423c886ce4b510e9d33edd28b961a5034826f912abcf2",
+        "size": 4636,
+        "sha256": "ea6fa5292eb77207bdc03e2cfb739a9e67723afdef3d950528c936674daca248",
         "w": 270,
         "h": 585
       },
-      "swatch": "#202021",
+      "swatch": "#0C0C0C",
       "dark": true
     },
     {
@@ -118,22 +87,22 @@
       },
       "phone": {
         "url": "earthset/phone.webp",
-        "size": 141532,
-        "sha256": "b658de188f6893c4116f394e7a7fdfdcc4f7983289322de8debcf29632aa746d",
+        "size": 284374,
+        "sha256": "61f43982ad1c786f2b93d8e7ff93a8d454f4b72f7c5b08d4add9636820533673",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "earthset/wide.webp",
-        "size": 131876,
-        "sha256": "f8f84369ea427b22ab379c732b324e480ab8ae1ffd722b6c96b8c9f557c5c612",
+        "size": 240996,
+        "sha256": "9c98029036911c51b723403291e324647342becda373c4e6186ba95088e4e4db",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "earthset/thumb.webp",
-        "size": 12542,
-        "sha256": "433900bde7221a9f49f492d38fa4325bf521f1978715c9b2f1263709ccb8e83e",
+        "size": 20136,
+        "sha256": "b26674c67b8df5d497ad1d526f72d332ec8af89ce58b51cb74a23392ff0d39dc",
         "w": 270,
         "h": 585
       },
@@ -153,22 +122,22 @@
       },
       "phone": {
         "url": "diamond_ring/phone.webp",
-        "size": 53288,
-        "sha256": "71bddb5257e6d7e232de7435fb66e70f442d8172a007ad627a01653c70b9051a",
+        "size": 151496,
+        "sha256": "f873ba2b0c1c8bf87e7cd607c9bb134fe3b0ea81df246f1cc006ffca3abd1d7c",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "diamond_ring/wide.webp",
-        "size": 20054,
-        "sha256": "3965f53e9e10689510283fc5779b934443e5d2339fde983705056418d0cc9974",
+        "size": 30004,
+        "sha256": "1815714976d849c58751e3ab59b8aaa82b9b27a3e860b3a8d1513772e0b8aada",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "diamond_ring/thumb.webp",
-        "size": 3492,
-        "sha256": "2cee0fb20ffdd6605f307a880827733e42a13dafb70f2d53bfa59abf84dfc036",
+        "size": 5004,
+        "sha256": "d65e94a5a1b41a5015413fdc4e498dc368361571856c0629e9a0f095f8267179",
         "w": 270,
         "h": 585
       },
@@ -188,20 +157,20 @@
       },
       "phone": {
         "url": "eclipse_from_orion/phone.webp",
-        "size": 121472,
-        "sha256": "d4f2cfe74e2fcf28b4ddf79797b87154650e683c2be0011a7face852876bdfc2",
+        "size": 191632,
+        "sha256": "0fddb24f5c81c5a9db268ff534b506140762f7d35c212056feb1fed518d52df4",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "eclipse_from_orion/thumb.webp",
-        "size": 6818,
-        "sha256": "f869f8d53d508687656b6406b254630b21e8f822d3fd0e19de10603132b999fc",
+        "size": 8364,
+        "sha256": "588c1ba43b98c2f888fc728b8a6b102969614a5f9b144f16e7bde10dfae919a0",
         "w": 270,
         "h": 585
       },
-      "swatch": "#353E3F",
+      "swatch": "#262C2D",
       "dark": true
     },
     {
@@ -217,26 +186,370 @@
       },
       "phone": {
         "url": "moon_crescent_eclipse/phone.webp",
-        "size": 607754,
-        "sha256": "ff690ad42fa238532cfa7a3e2eb0f5bbaf767f7c9ab39fac8291ad04a7f0c792",
+        "size": 1971478,
+        "sha256": "1431194a2f4274eba16a494cd9685d64d0ef1b6855495d061b205945ee1ac782",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "moon_crescent_eclipse/wide.webp",
-        "size": 487014,
-        "sha256": "9d9e865c4e920fbeb19872c9781219bb03a0124f3f2afd897c369d04c2148af3",
+        "size": 1441904,
+        "sha256": "b60827c02013fc3a13c745c6b75b6c0bea37f04179bae789135ed9604eda4bd1",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "moon_crescent_eclipse/thumb.webp",
-        "size": 9068,
-        "sha256": "1f8be0e9e944dbd9a33a028e858fca4ce88adf7f2612bd836884076fdf7d29d4",
+        "size": 23112,
+        "sha256": "a1c9cad91f6e60484a9ad099b170d232420102b5b05f3e76cdeebc4e73021832",
         "w": 270,
         "h": 585
       },
-      "swatch": "#13191A",
+      "swatch": "#141A1B",
+      "dark": true
+    },
+    {
+      "id": "eclipse_emergence",
+      "title": "Sunlight's Return",
+      "category": "space",
+      "credit": {
+        "title": "Solar Eclipse Emergence from Orion",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/art002e009299",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "eclipse_emergence/phone.webp",
+        "size": 444446,
+        "sha256": "2f50224b790cd235b1104e76f911f3808bcdc1ff6b3cfc4090cc7e61152dc052",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "eclipse_emergence/wide.webp",
+        "size": 118644,
+        "sha256": "5ccf2ae8bb45af8dd42ad2efcca7e506e70be20852f75330f0cb6f6e9cb293af",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "eclipse_emergence/thumb.webp",
+        "size": 2726,
+        "sha256": "d8847634b5d8300e5666c53afe8bfe1d8ca3cbd57e37f708cd08b3e82ac0ccff",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#101010",
+      "dark": true
+    },
+    {
+      "id": "north_america_nebula",
+      "title": "North America Nebula",
+      "category": "space",
+      "credit": {
+        "title": "North America Nebula in Different Lights",
+        "creator": "NASA/JPL-Caltech",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/north-america-nebula-in-different-lights/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "north_america_nebula/phone.webp",
+        "size": 1969814,
+        "sha256": "9d7222d400108a76c632d6bd8aab0cb49da349c368b2a528122e18ee0a18412d",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "north_america_nebula/wide.webp",
+        "size": 1466350,
+        "sha256": "2b72cfeffefa2c2086bcffba26807f050c6a9b34f4a8673730500984fb57cd81",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "north_america_nebula/thumb.webp",
+        "size": 79152,
+        "sha256": "6d6c909e6d4a5d6e50600817b4d09c4a1465b32f22d5e05c890aeb556140351f",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#47547E",
+      "dark": true
+    },
+    {
+      "id": "helix_nebula",
+      "title": "Helix Nebula",
+      "category": "space",
+      "credit": {
+        "title": "The Helix Nebula: Unraveling at the Seams",
+        "creator": "NASA/JPL-Caltech",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/the-helix-nebula-unraveling-at-the-seams/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "helix_nebula/phone.webp",
+        "size": 1005746,
+        "sha256": "433788f4b87e032ef570dc4a7699b5d153d9f4a35d26b8cc06d03008fa84e855",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "helix_nebula/wide.webp",
+        "size": 1118344,
+        "sha256": "cb3661ab98eda8efce056c143e60f8a09b400cf2570240f3da15e768e04fff93",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "helix_nebula/thumb.webp",
+        "size": 57730,
+        "sha256": "b83d2d0fa82c07bcab9de72b7c5356649ecac6a0b7d3b53f9061b6994260e20e",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#3C4062",
+      "dark": true
+    },
+    {
+      "id": "eta_carinae",
+      "title": "Clouds of Eta Carinae",
+      "category": "space",
+      "credit": {
+        "title": "The Tortured Clouds of Eta Carinae",
+        "creator": "NASA/JPL-Caltech",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/the-tortured-clouds-of-eta-carinae/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "eta_carinae/phone.webp",
+        "size": 1677618,
+        "sha256": "45427d66536fc93fa758d30831be91d3786b83f3e4a63bcbdfe16e826ff4a714",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "eta_carinae/wide.webp",
+        "size": 1521434,
+        "sha256": "0f94454373a2e69afaaec4bf783161766e093b33756a52c59af1f588be9ea6bd",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "eta_carinae/thumb.webp",
+        "size": 68498,
+        "sha256": "82826af052f50080177694cbd0eb5d0527421d521db7e0b713fa0adb4cdd7a03",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#52353D",
+      "dark": true
+    },
+    {
+      "id": "witch_head_nebula",
+      "title": "Witch Head Nebula",
+      "category": "space",
+      "credit": {
+        "title": "'Witch Head' Brews Baby Stars",
+        "creator": "NASA/JPL-Caltech",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/witch-head-brews-baby-stars/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "witch_head_nebula/phone.webp",
+        "size": 1138936,
+        "sha256": "50832b1476dd6e7d20e717be403d6f2a3ed60eb249a7d5e135345d99d7ac8f00",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "witch_head_nebula/wide.webp",
+        "size": 1297576,
+        "sha256": "cab614e39160a350e4fba35f52012e9b2385a179b1437c8b29e55f8624f8c3ba",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "witch_head_nebula/thumb.webp",
+        "size": 53238,
+        "sha256": "99c76815d4974af1212baeb35d6f7445c36ceecbca19b5ae9048bfad2285430e",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#142626",
+      "dark": true
+    },
+    {
+      "id": "tarantula_nebula",
+      "title": "Tarantula Nebula",
+      "category": "space",
+      "credit": {
+        "title": "Tarantula Nebula Spitzer 3-Color Image",
+        "creator": "NASA/JPL-Caltech",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/tarantula-nebula-spitzer-3-color-image/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "tarantula_nebula/phone.webp",
+        "size": 834470,
+        "sha256": "d0a6b72edb24caba872033b36c9547bee0d5a716849ff70902a7b00b02883229",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "tarantula_nebula/wide.webp",
+        "size": 1206966,
+        "sha256": "dfc9afc4b8e2b936987fe39b554d355f10d40e4a5e8d2638510f4c31b3b57817",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "tarantula_nebula/thumb.webp",
+        "size": 54338,
+        "sha256": "bc08a82989393c28b8eb909bc0cf5261999c242e36c617032ece1384aede63a2",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#4A3231",
+      "dark": true
+    },
+    {
+      "id": "godzilla_nebula",
+      "title": "Godzilla Nebula",
+      "category": "space",
+      "credit": {
+        "title": "Godzilla Nebula Imaged by Spitzer",
+        "creator": "NASA/JPL-Caltech",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/godzilla-nebula-imaged-by-spitzer/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "godzilla_nebula/phone.webp",
+        "size": 1501056,
+        "sha256": "853ba16d832a34bb434f32a9dcfa4574c845f6c083fbbdd3a05395fb86b5bd01",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "godzilla_nebula/wide.webp",
+        "size": 1530700,
+        "sha256": "40abe8c3b48b0335662c1adff62828838e01aec344ccc86e2e3eee810f3e4647",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "godzilla_nebula/thumb.webp",
+        "size": 56038,
+        "sha256": "94c2a773bd89cc55f72a40806dda4c42fb88bc83de887276ea0a66ced0f44232",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#3C5C5A",
+      "dark": true
+    },
+    {
+      "id": "andromeda_infrared",
+      "title": "Andromeda in Infrared",
+      "category": "space",
+      "credit": {
+        "title": "The Infrared Face of the Andromeda Galaxy",
+        "creator": "NASA/JPL-Caltech",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/the-infrared-face-of-the-andromeda-galaxy/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "andromeda_infrared/phone.webp",
+        "size": 1305070,
+        "sha256": "3e611903186689c0593dbd58f4b2c3d3828f14c72c1c6fc5280c14ca84ee6e2c",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "andromeda_infrared/wide.webp",
+        "size": 1496456,
+        "sha256": "b02405170e4f3ac1e78ee2e585dcfb4d1ffb27ad3e1f8a9c8115d7da661fc233",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "andromeda_infrared/thumb.webp",
+        "size": 61232,
+        "sha256": "568c628a1747f15f7739092e09682899fddd4e27eef7785a29b49b17bacdaa31",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#435461",
+      "dark": true
+    },
+    {
+      "id": "orion_dreamy_stars",
+      "title": "Orion's Dreamy Stars",
+      "category": "space",
+      "credit": {
+        "title": "Orion's Dreamy Stars",
+        "creator": "NASA/JPL-Caltech",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/orions-dreamy-stars/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "orion_dreamy_stars/phone.webp",
+        "size": 387182,
+        "sha256": "a5e77798123210a276725b39274c88aefbff81f4baac9f0e604f410719d16a7e",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "orion_dreamy_stars/thumb.webp",
+        "size": 39740,
+        "sha256": "dbdad14cf0872b430a19a86b021b9ec996774eaa53a8d5bb6571dcd72540e287",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#3C3634",
+      "dark": true
+    },
+    {
+      "id": "galactic_center",
+      "title": "Heart of the Milky Way",
+      "category": "space",
+      "credit": {
+        "title": "A Cauldron of Stars at the Galaxy's Center",
+        "creator": "NASA/JPL-Caltech",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/a-cauldron-of-stars-at-the-galaxys-center/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "galactic_center/phone.webp",
+        "size": 1931474,
+        "sha256": "6c5b2a072cd0aaaf3b0f0dca55890ddc051c91c629d493a97ecb912f7a586c1d",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "galactic_center/wide.webp",
+        "size": 1533006,
+        "sha256": "4fa957946cf73dd99d0da59f02106a0738b6484ef00b906a136796463daa0590",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "galactic_center/thumb.webp",
+        "size": 86534,
+        "sha256": "a9cd97aff81d796604afe2794ed6cc55aedd44fd94cdd456c8aa5025626ca30a",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#5E323C",
       "dark": true
     },
     {
@@ -252,22 +565,22 @@
       },
       "phone": {
         "url": "blue_marble/phone.webp",
-        "size": 364386,
-        "sha256": "5037fcb69de855e5bd0fc1f8d839955c412183b8e8cdfbc7b2a1f058e1ce7669",
+        "size": 629230,
+        "sha256": "233aa363f76fef8a8dc47d4b0cc58226df94e79c643c00f93cb8e8e07dc28eea",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "blue_marble/wide.webp",
-        "size": 405416,
-        "sha256": "9dd6defb29fc0904082b6d26b0b403aa16b6dc08bacc7efd474e1861224b7df8",
+        "size": 730200,
+        "sha256": "d4cceccc8ba92e5f40445ed9475e5230568b48bf95065eacd7a2894b2073640a",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "blue_marble/thumb.webp",
-        "size": 21352,
-        "sha256": "c1b13b9c95854ac09ec7d1a67dfc3a4cbee86a66ad3d881d99a7fcfd1d348cbf",
+        "size": 28256,
+        "sha256": "f3e427a4ef7c7d85eae559ae2cac6dddda70b8d665053c5673fa13f71af770d8",
         "w": 270,
         "h": 585
       },
@@ -287,22 +600,22 @@
       },
       "phone": {
         "url": "green_aurora/phone.webp",
-        "size": 637670,
-        "sha256": "24c96c6e8fa017571e358d6e0242d5a2d690bece3b80f21dc1a20d83f09a3246",
+        "size": 1343116,
+        "sha256": "48267b4a7801494d9d09abdcf6f4c7a21e6ea6652f86c5fb559091b2bd631543",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "green_aurora/wide.webp",
-        "size": 394894,
-        "sha256": "70a413491c9a230a53230bcc60fa6cb81678e9e313576c745ccb4ae81738f879",
+        "size": 816804,
+        "sha256": "fdbab8e6e4147bd48c1629c3696d6e3d6d1dab5cfe3fecba2f53f0b1fdbfe54c",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "green_aurora/thumb.webp",
-        "size": 6360,
-        "sha256": "e64dccf236eeb5a8d569d0db8ceb8f51700be192aeec0e2fa6484e533cd0289d",
+        "size": 14078,
+        "sha256": "d1d47c413abd61a6cf218c36f4e98d19cc2ee8b7c208897164cc39ac8cae4550",
         "w": 270,
         "h": 585
       },
@@ -322,26 +635,26 @@
       },
       "phone": {
         "url": "aurora_and_city_lights/phone.webp",
-        "size": 549074,
-        "sha256": "a5750f864dbb4a52b100618ba4e7bc60df9f2ad6bad08ee3473d8b3660f00b28",
+        "size": 1889706,
+        "sha256": "a2e5b89fe4b1b71d1f15710d2c2bc32ff9de625ef39166fac7533ae0350ab9f3",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "aurora_and_city_lights/wide.webp",
-        "size": 514502,
-        "sha256": "cf75c2fa7b667be1d148b7f6035b103032597f6141a871dc7ca0b866eb47a2d0",
+        "size": 1554310,
+        "sha256": "958408b5f6f980cbc53b36343ad98e25d90f17feaef291155cc024af3dc1020d",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "aurora_and_city_lights/thumb.webp",
-        "size": 23950,
-        "sha256": "5ea1a481cf9fb03846079bbe78d53863c0eaf8611f4eac0e3c331de3a1f09c9b",
+        "size": 42524,
+        "sha256": "756f727dda03dfbdc3e0cd643ee031f0b0c7d535b4c56d3d49f3582bd32a8629",
         "w": 270,
         "h": 585
       },
-      "swatch": "#3C4245",
+      "swatch": "#3D4245",
       "dark": true
     },
     {
@@ -357,22 +670,22 @@
       },
       "phone": {
         "url": "airglow/phone.webp",
-        "size": 604182,
-        "sha256": "c7ad2c8e4cbd180ea2b0a543471c98eb34bf1a45cea2efdd14a1156bb0e4cb8b",
+        "size": 1183352,
+        "sha256": "b07186a6334d4e7dde8bef7125de81751e5d91db3169c1d6c2cf1d3e34466c32",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "airglow/wide.webp",
-        "size": 279398,
-        "sha256": "49b76608531c100385f99543bc4468091411201d2cdee1f9eeeacfed3b24ede1",
+        "size": 792990,
+        "sha256": "5e1aa92dda6cf8a9f115e92aac52fc97ad93ba8afb7bc765fd0b84a8fdd72802",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "airglow/thumb.webp",
-        "size": 13114,
-        "sha256": "756ca91fa4c40573fefdf775d4ea570068bcacac0ce632f4c5b174546dcecda8",
+        "size": 20792,
+        "sha256": "0e6a6e82d6e0660cdb65e754e9402ec2dbae57c99417cfd699c1009ad8db71af",
         "w": 270,
         "h": 585
       },
@@ -392,61 +705,26 @@
       },
       "phone": {
         "url": "bahamas_from_orbit/phone.webp",
-        "size": 434254,
-        "sha256": "9f722b3d7981a217a4cfa1b8194789456b3fe7b23247d963e408674c6fd40e87",
+        "size": 770696,
+        "sha256": "309f8fb97f1ed7f56e0529ad1ff1c790440003b8ec8e482a6519b262cdbfdb65",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "bahamas_from_orbit/wide.webp",
-        "size": 448084,
-        "sha256": "e05b3c0af4820825802f135a6562255e57d8bc0d4267d707cd5ebb6e172ba690",
+        "size": 1008920,
+        "sha256": "d3c45dfdaa810b54a6cf520de91e4a41ce1acf95b8c285e04bcd61cbd83b827b",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "bahamas_from_orbit/thumb.webp",
-        "size": 39426,
-        "sha256": "b4848c51168ad1ff0150b6f5bd9a39b357d59b9b17ef6204715809e524365bf0",
+        "size": 55646,
+        "sha256": "fd90b44e3fb1f3e1b3387eb9217c1041785db81b4f98726e9bafa66bf9946288",
         "w": 270,
         "h": 585
       },
       "swatch": "#698FB7",
-      "dark": false
-    },
-    {
-      "id": "himalayas",
-      "title": "The Himalayas",
-      "category": "earth",
-      "credit": {
-        "title": "The Himalayas and Mount Everest in Nepal",
-        "creator": "NASA",
-        "institution": "NASA, Johnson Space Center",
-        "url": "https://images.nasa.gov/details/iss069e003192",
-        "license": "Public domain"
-      },
-      "phone": {
-        "url": "himalayas/phone.webp",
-        "size": 597270,
-        "sha256": "88ffbc016b76442261384ebacf461f4c6942a3100e41e17b46cfa52a30e3e384",
-        "w": 1440,
-        "h": 3120
-      },
-      "wide": {
-        "url": "himalayas/wide.webp",
-        "size": 535104,
-        "sha256": "2cf66d60a709081c509f7cfa66ae57ec3f8d5448ecf35be90163a7c4e3655c5a",
-        "w": 2560,
-        "h": 1600
-      },
-      "thumb": {
-        "url": "himalayas/thumb.webp",
-        "size": 55384,
-        "sha256": "86f267a96cd654f7e2404a9fffdf4ae89ec543972c19a66bdc4d053af124da13",
-        "w": 270,
-        "h": 585
-      },
-      "swatch": "#8B8882",
       "dark": false
     },
     {
@@ -462,62 +740,27 @@
       },
       "phone": {
         "url": "tibetan_glaciers/phone.webp",
-        "size": 536874,
-        "sha256": "08b36bd325e2d3e84744e47dfa3e3da4fa770cbdd8f81b1412f1b834d1f0564d",
+        "size": 1157330,
+        "sha256": "e83155df9dea9eb572335835e8725a83d594f4db1f5761ff15eb6e12c6fdd6c0",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "tibetan_glaciers/wide.webp",
-        "size": 523878,
-        "sha256": "0fecae40e09f07c011c8b244ebdeb40178ac6ea9dc4cb59b25887441b483387a",
+        "size": 1044618,
+        "sha256": "78ab46e822f270c40da43cfc7b08b47173cb416c0c41f38c29275330027e0215",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "tibetan_glaciers/thumb.webp",
-        "size": 34840,
-        "sha256": "ebe4ef3e635e6f7dbe92f6fba6b7a7c5d1b608eb67f391a4119210d93d75deeb",
+        "size": 50726,
+        "sha256": "1ac6079af1022a23aab53e9f9de3aa54d035aceef1e8061de5db45711e547882",
         "w": 270,
         "h": 585
       },
       "swatch": "#5F5F61",
       "dark": true
-    },
-    {
-      "id": "sahara_dunes",
-      "title": "Sahara Dunes",
-      "category": "earth",
-      "credit": {
-        "title": "Sand dunes in the Sahara Desert in Algeria",
-        "creator": "NASA",
-        "institution": "NASA, Johnson Space Center",
-        "url": "https://images.nasa.gov/details/iss070e090117",
-        "license": "Public domain"
-      },
-      "phone": {
-        "url": "sahara_dunes/phone.webp",
-        "size": 650502,
-        "sha256": "32139bac9774399711d5d60fe54308bb804724d6ae25496603dc7a4004689558",
-        "w": 1440,
-        "h": 3120
-      },
-      "wide": {
-        "url": "sahara_dunes/wide.webp",
-        "size": 472620,
-        "sha256": "101fa6c5aa793fd18c38cbc3452db8d572fe6a3b84b8231d649feb8c70455814",
-        "w": 2560,
-        "h": 1600
-      },
-      "thumb": {
-        "url": "sahara_dunes/thumb.webp",
-        "size": 29874,
-        "sha256": "a14cdf5b26a83497392e4565a6990a63633b95e6f6ce6a78cbe8e082cf82e296",
-        "w": 270,
-        "h": 585
-      },
-      "swatch": "#8E6C5C",
-      "dark": false
     },
     {
       "id": "hurricane_eye",
@@ -532,22 +775,22 @@
       },
       "phone": {
         "url": "hurricane_eye/phone.webp",
-        "size": 185252,
-        "sha256": "ec6753623a689f10ca2465ee286cc26dc10305ec860cd15217e0222fa2e99dd5",
+        "size": 328376,
+        "sha256": "160d64cbe3eb203b30819204152cdf718e2db858caba5b8cb2869d2d39aa666b",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "hurricane_eye/wide.webp",
-        "size": 192422,
-        "sha256": "c79b51bb240b792e13b6465188bb3132bf185a843918fc5586de3d597a8bf2ae",
+        "size": 372488,
+        "sha256": "23a67d654b0d36f14883c17c7c0bac4dccfdc4844ce773e8452b53e4292fd709",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "hurricane_eye/thumb.webp",
-        "size": 14664,
-        "sha256": "0cb74e47aeefee21de685c28fff7162a4e33758cbe11e6de77e57949de9b2c4a",
+        "size": 23058,
+        "sha256": "382d46240053c85192c14d8807a1055c94c154d4ad7e442469d157668953dd00",
         "w": 270,
         "h": 585
       },
@@ -555,74 +798,739 @@
       "dark": false
     },
     {
-      "id": "wheat_field_cypresses",
-      "title": "Wheat Field with Cypresses",
-      "category": "landscapes",
+      "id": "aurora_australis",
+      "title": "Aurora Australis",
+      "category": "earth",
       "credit": {
-        "title": "Wheat Field with Cypresses",
-        "creator": "Vincent van Gogh",
-        "institution": "The Metropolitan Museum of Art",
-        "url": "https://www.metmuseum.org/art/collection/search/436535",
-        "license": "CC0"
+        "title": "The aurora australis arcs above a partly cloudy Indian Ocean",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss073e0247726",
+        "license": "Public domain"
       },
       "phone": {
-        "url": "wheat_field_cypresses/phone.webp",
-        "size": 613294,
-        "sha256": "b2b9971604158b87d6addaef784398e49a62875a70fedc59293192c699a62e6c",
+        "url": "aurora_australis/phone.webp",
+        "size": 1388704,
+        "sha256": "effd5f12adee9a302ca9b6bbac76aa2f466ae379b394630dffa05845fe3b58fc",
         "w": 1440,
         "h": 3120
       },
       "wide": {
-        "url": "wheat_field_cypresses/wide.webp",
-        "size": 534586,
-        "sha256": "e6253a4a991b0e0c61cf10c11039b3b37c500564c39445db8337b8ca5b9e17ed",
+        "url": "aurora_australis/wide.webp",
+        "size": 1332794,
+        "sha256": "2ec584278085058f0bd39cbad01ab63884c41c47e49cc91d0d57fc57c47b3cc0",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
-        "url": "wheat_field_cypresses/thumb.webp",
-        "size": 58578,
-        "sha256": "d91f66d5bc63d24357b367d7a0d793c9d2266e69aea8c4bdb2dc6c8aa5fde8d1",
+        "url": "aurora_australis/thumb.webp",
+        "size": 26148,
+        "sha256": "b4dd85e85323cb4db88708be5aa67ac5dee621d5a06b2d0d82bd716f6cf3e559",
         "w": 270,
         "h": 585
       },
-      "swatch": "#65735F",
+      "swatch": "#3A3C38",
       "dark": true
     },
     {
-      "id": "the_oxbow",
-      "title": "The Oxbow",
-      "category": "landscapes",
+      "id": "eye_of_the_sahara",
+      "title": "Eye of the Sahara",
+      "category": "earth",
       "credit": {
-        "title": "View from Mount Holyoke, Northampton, Massachusetts, after a Thunderstorm (The Oxbow)",
-        "creator": "Thomas Cole",
-        "institution": "The Metropolitan Museum of Art",
-        "url": "https://www.metmuseum.org/art/collection/search/10497",
-        "license": "CC0"
+        "title": "The \"Eye of the Sahara\" in the African nation of Mauritania",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss069e005526",
+        "license": "Public domain"
       },
       "phone": {
-        "url": "the_oxbow/phone.webp",
-        "size": 419542,
-        "sha256": "712c37dae161a2893e2b061202fc5994302f5b675caa5c61b436af442aa3b3e3",
+        "url": "eye_of_the_sahara/phone.webp",
+        "size": 593668,
+        "sha256": "d15e626943f8b7936b72d9b41ff739ed977abead19f46fb528efaef7ff6b71d3",
         "w": 1440,
         "h": 3120
       },
       "wide": {
-        "url": "the_oxbow/wide.webp",
-        "size": 420432,
-        "sha256": "8084eb1fee98cbeb96e2b0849ade9c7b8de33eeb76b0ac0ba0279764ea645a9d",
+        "url": "eye_of_the_sahara/wide.webp",
+        "size": 622248,
+        "sha256": "cf082b3ea5c45a99fb4bd1c44126aa4424371bf172830ea537dafc712f3551be",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
-        "url": "the_oxbow/thumb.webp",
-        "size": 17976,
-        "sha256": "72164dbd66fd1db016a4e37453f77ef4090aaa9bf9c746c4fd731b93ab4feb36",
+        "url": "eye_of_the_sahara/thumb.webp",
+        "size": 19656,
+        "sha256": "1ab5a44a4b1ae9add73a3481d75ecc6e6f34c845d25150c1044ba7975b437526",
         "w": 270,
         "h": 585
       },
-      "swatch": "#8B806A",
+      "swatch": "#D09F82",
       "dark": false
+    },
+    {
+      "id": "mount_fuji_from_orbit",
+      "title": "Mount Fuji",
+      "category": "earth",
+      "credit": {
+        "title": "Near-overhead shot of Mount Fuji taken from the International Space Station",
+        "creator": "NASA/Chris Williams",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss074e0459342",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "mount_fuji_from_orbit/phone.webp",
+        "size": 1323968,
+        "sha256": "e3ef652f99c914611df5d13a809cfc9594bf5a81aee581efa85de385a126e16f",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "mount_fuji_from_orbit/wide.webp",
+        "size": 727922,
+        "sha256": "e56063eaf4a477aec0a889f645900e180e8af20d6a9391605dff8293101c611f",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "mount_fuji_from_orbit/thumb.webp",
+        "size": 49744,
+        "sha256": "9c95154d27d3fcb669d7c06c01986dea5bf7a0cf16b406cdcd220d8e84bf517e",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#6C7079",
+      "dark": true
+    },
+    {
+      "id": "bassas_da_india",
+      "title": "Bassas da India",
+      "category": "earth",
+      "credit": {
+        "title": "The French atoll of Bassas da India in the Mozambique Channel",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss072e094988",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "bassas_da_india/phone.webp",
+        "size": 1792738,
+        "sha256": "f98f8a2226a454218d848b72898a0395b4fa8befabf6133f4f35c731dea17185",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "bassas_da_india/wide.webp",
+        "size": 1051994,
+        "sha256": "92b9d8cc31b63e05b21a921e72c162fc2f8fb66689e2ebe940feb638c2ae5f52",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "bassas_da_india/thumb.webp",
+        "size": 27892,
+        "sha256": "833fc60524958837fc60f6bf14a9b33bfee38dd620b9b7789fa9df2dce9029c4",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#4D7190",
+      "dark": true
+    },
+    {
+      "id": "aurora_on_the_limb",
+      "title": "Aurora on the Limb",
+      "category": "earth",
+      "credit": {
+        "title": "The Earth's glow mingles with the aurora australis over the Indian Ocean",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss062e148363",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "aurora_on_the_limb/phone.webp",
+        "size": 1484448,
+        "sha256": "daa5db624e0574cadbadc7fa1a5dc1f5478121bc4db400bcfff0c9ce6bbfbc80",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "aurora_on_the_limb/wide.webp",
+        "size": 1074050,
+        "sha256": "f69e2d2dcd3e7e9e7105f3a760e1a28ac9bde0a0367f853823545e53cdc2487c",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "aurora_on_the_limb/thumb.webp",
+        "size": 13580,
+        "sha256": "2b859d6500fcaa27412c2cd9c1046bbe9a33f5816e552ad19a56d5165a4f8826",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#212A37",
+      "dark": true
+    },
+    {
+      "id": "namib_dunes",
+      "title": "Namib Dunes",
+      "category": "earth",
+      "credit": {
+        "title": "The Namib Desert on Namibia's Atlantic coast",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss067e187073",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "namib_dunes/phone.webp",
+        "size": 944092,
+        "sha256": "581fc39e81dadf11c838cfd4bcb78933f7e45c263468cf735e6c24002b98f80b",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "namib_dunes/wide.webp",
+        "size": 1214410,
+        "sha256": "d11391f521affa06b36d63c2528a4538a9e7446388823ea04625d1cb478acb83",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "namib_dunes/thumb.webp",
+        "size": 47520,
+        "sha256": "73731ab6e593099d51596520cc2b769542eff877a212b3e50dda6e296a8e97b1",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#7F7574",
+      "dark": false
+    },
+    {
+      "id": "eleuthera",
+      "title": "Eleuthera",
+      "category": "earth",
+      "credit": {
+        "title": "Eleuthera, an island state that is part of the Bahamas archipelago",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss072e715777",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "eleuthera/phone.webp",
+        "size": 1165288,
+        "sha256": "712d3d9ad88f24c7711fa961128b66a581f7d76853c6cb824f525cd707d5d48b",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "eleuthera/wide.webp",
+        "size": 521144,
+        "sha256": "7064905ac8b2e7d2f02c60584d1931e67d622c277bf37f904005170c04fcf8de",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "eleuthera/thumb.webp",
+        "size": 15530,
+        "sha256": "fa538c9c975b614785c8d8eb24043eaed5cfa10d7e3c01e572b93dd1ab7317e9",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#54839F",
+      "dark": false
+    },
+    {
+      "id": "khuvsgul_lake_ice",
+      "title": "Khuvsgul Lake Ice",
+      "category": "earth",
+      "credit": {
+        "title": "The ice-covered Khuvsgul Lake in northern Mongolia",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss073e0119404",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "khuvsgul_lake_ice/phone.webp",
+        "size": 1510188,
+        "sha256": "718f804b60f9745f6c48b36da5554f3e36e8041d18b39b6ef5ab3771bef3f66e",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "khuvsgul_lake_ice/wide.webp",
+        "size": 1074130,
+        "sha256": "7f90b1041554df19eee8df727190c3f9359e75410b77dfba3677ba8b755fbced",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "khuvsgul_lake_ice/thumb.webp",
+        "size": 45108,
+        "sha256": "9b7f749020b5decde6ea9b185f2204b208ef134e59dcf049354402d6d993be3f",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#7E8895",
+      "dark": false
+    },
+    {
+      "id": "blood_moon_over_earth",
+      "title": "Blood Moon over Earth",
+      "category": "earth",
+      "credit": {
+        "title": "The lunar eclipse, also known as the Blood Moon, above Earth's horizon",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss073e0611610",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "blood_moon_over_earth/phone.webp",
+        "size": 98796,
+        "sha256": "d447e1fc691837f9c9dfe2d95e974bef87810bd995f4d4d5b97c1ad2606600d1",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "blood_moon_over_earth/wide.webp",
+        "size": 218634,
+        "sha256": "c575b181a5dba2b262bfe813d7df0585a2ee28177be82aeb6e2711b6f35babaa",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "blood_moon_over_earth/thumb.webp",
+        "size": 3566,
+        "sha256": "f6a13ed449c8a188b90e85d7f473b16840ac74f6b8486ccaad0607cd085cfa38",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#404D60",
+      "dark": true
+    },
+    {
+      "id": "saturn_portrait",
+      "title": "Saturn",
+      "category": "planets",
+      "credit": {
+        "title": "The Greatest Saturn Portrait ...Yet",
+        "creator": "NASA/JPL/Space Science Institute",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/the-greatest-saturn-portrait-yet/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "saturn_portrait/phone.webp",
+        "size": 83324,
+        "sha256": "0ff755f9fba2592c4cd26e0a41b19fc91771ea97485f513f01c9ca8627dcbd15",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "saturn_portrait/wide.webp",
+        "size": 129010,
+        "sha256": "670f2f39a9a30c8598f90d7cce8dbf56c85b656a2d3563d68365d91036de9238",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "saturn_portrait/thumb.webp",
+        "size": 6418,
+        "sha256": "d050fb71a81ac447f3517b645c49d89fe94ddf04309c937fde466613779166e6",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#474339",
+      "dark": true
+    },
+    {
+      "id": "day_the_earth_smiled",
+      "title": "The Day the Earth Smiled",
+      "category": "planets",
+      "credit": {
+        "title": "The Day the Earth Smiled",
+        "creator": "NASA/JPL-Caltech/SSI",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/the-day-the-earth-smiled/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "day_the_earth_smiled/phone.webp",
+        "size": 92896,
+        "sha256": "908d009afa2550be41eb65d571830eb33e9d20120e414900126f51ab0914b604",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "day_the_earth_smiled/wide.webp",
+        "size": 137872,
+        "sha256": "6c02d447fe6b495cc5aacb2ded0891ddc4e9ff8d0800c7bb52be6d0465ea6af0",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "day_the_earth_smiled/thumb.webp",
+        "size": 9192,
+        "sha256": "5ea2616fdd499f84e61da3b912e3230b9ae33ac848356c611b57c567bdb8b71b",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#212430",
+      "dark": true
+    },
+    {
+      "id": "jupiter",
+      "title": "Jupiter",
+      "category": "planets",
+      "credit": {
+        "title": "Cassini Jupiter Portrait",
+        "creator": "NASA/JPL/Space Science Institute",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/cassini-jupiter-portrait/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "jupiter/phone.webp",
+        "size": 116450,
+        "sha256": "223816b3889c234a95477f2b015806a1f2d31d589c6d24e015a69a38419a2045",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "jupiter/wide.webp",
+        "size": 98726,
+        "sha256": "bf51901f76dd8f5ab6363ad5e12b5fa9d92906f06f7dafc8c46ad70ba1562624",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "jupiter/thumb.webp",
+        "size": 9136,
+        "sha256": "82f019c92ee96a06323a374282cb3c5bd6c1709a1ecc1a1abdfbbe47faf0a9d5",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#23201D",
+      "dark": true
+    },
+    {
+      "id": "io",
+      "title": "Io",
+      "category": "planets",
+      "credit": {
+        "title": "Global image of Io (true color)",
+        "creator": "NASA/JPL/University of Arizona",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/global-image-of-io-true-color/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "io/phone.webp",
+        "size": 425430,
+        "sha256": "8fc8a2fc4b6791d947b2ff44fc6b2d49701a5b3dd1d91914ca1b2f7ed3f7a26e",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "io/wide.webp",
+        "size": 516698,
+        "sha256": "a1e9ccb1f36b57fac6df75c719aa79ab424c55e5a2ba9d79d0c64d358b4d12b4",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "io/thumb.webp",
+        "size": 18874,
+        "sha256": "521de87b0ee75bf8d64a0198b40faedae00a19533ffc67d7979edd3fdd788d64",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#443F21",
+      "dark": true
+    },
+    {
+      "id": "mars",
+      "title": "Mars",
+      "category": "planets",
+      "credit": {
+        "title": "Global Color Views of Mars",
+        "creator": "NASA/JPL/USGS",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/global-color-views-of-mars/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "mars/phone.webp",
+        "size": 444980,
+        "sha256": "b07c0a8e9704cc9a7ec2c8d6a642df558766475a47c30b6654797cf07497e9f4",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "mars/wide.webp",
+        "size": 537030,
+        "sha256": "9c1f68627211aacbdf1a2b2f2340a0215e5e21a1c59298e3eeced87fd1b89e8a",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "mars/thumb.webp",
+        "size": 16768,
+        "sha256": "9cf2f57eca86b97c1c3a309bcb2807a7a9a3f115870ace8b6fe7948667379292",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#342213",
+      "dark": true
+    },
+    {
+      "id": "jezero_crater_rim",
+      "title": "Jezero Crater Rim",
+      "category": "planets",
+      "credit": {
+        "title": "Perseverance Rover's View Up Crater",
+        "creator": "NASA/JPL-Caltech/ASU/MSSS",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/perseverance-rovers-view-up-crater/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "jezero_crater_rim/phone.webp",
+        "size": 1917960,
+        "sha256": "4f2aeafc30d642c3827e60c75ffd2dd2b1859080c10eca7aa57411b90034f3ab",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "jezero_crater_rim/wide.webp",
+        "size": 1527218,
+        "sha256": "0f1dfff41b79da10fe574a772a45a51822b58af9b969d09072f04ec9458101a0",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "jezero_crater_rim/thumb.webp",
+        "size": 64568,
+        "sha256": "575921987471a33495cdaa645872d603c7d29ae253b39ac2e69afe6bb48f6e5c",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#83603F",
+      "dark": true
+    },
+    {
+      "id": "pluto",
+      "title": "Pluto",
+      "category": "planets",
+      "credit": {
+        "title": "The Rich Color Variations of Pluto",
+        "creator": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/the-rich-color-variations-of-pluto/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "pluto/phone.webp",
+        "size": 537234,
+        "sha256": "f3bc635bb408f59b60773d677ff337f9572f38f1bde301afabbae6839bd40d79",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "pluto/wide.webp",
+        "size": 642620,
+        "sha256": "005736fa32cb72e4806e7c12418df10cec19d69fdcc79158ccdff19a2c5dc171",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "pluto/thumb.webp",
+        "size": 17108,
+        "sha256": "d96fcdb4b94863deddd8ea64a44d12d0251543148a21c295486ee605b509a995",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#2A2625",
+      "dark": true
+    },
+    {
+      "id": "pluto_and_charon",
+      "title": "Pluto and Charon",
+      "category": "planets",
+      "credit": {
+        "title": "Charon and Pluto: Strikingly Different Worlds",
+        "creator": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/charon-and-pluto-strikingly-different-worlds/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "pluto_and_charon/phone.webp",
+        "size": 300256,
+        "sha256": "64fd5a3947701a259bbd83957e1d7a69c41370a2cf9cdcf65b5ba3a437cb9ded",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "pluto_and_charon/wide.webp",
+        "size": 358744,
+        "sha256": "9b9eb88ce27672929417a9720902b0f7e6b3faf472062c807aae1349aa16c270",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "pluto_and_charon/thumb.webp",
+        "size": 9950,
+        "sha256": "a63dc9174a41c80a72a2f640b3afd0213e75f53aee7fd80a3090dd170a1b403c",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#171514",
+      "dark": true
+    },
+    {
+      "id": "plutos_blue_haze",
+      "title": "Pluto's Blue Haze",
+      "category": "planets",
+      "credit": {
+        "title": "Blue Rays: New Horizons' High-Res Farewell to Pluto",
+        "creator": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute",
+        "institution": "NASA, Jet Propulsion Laboratory",
+        "url": "https://science.nasa.gov/photojournal/blue-rays-new-horizons-high-res-farewell-to-pluto/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "plutos_blue_haze/phone.webp",
+        "size": 29444,
+        "sha256": "0aca739fbab2eb3fe28845a43edbe1149d13040dfeb66ab28930a296bdc94bc8",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "plutos_blue_haze/wide.webp",
+        "size": 69504,
+        "sha256": "46b348086da4a28cadc1f2ff75544d5be85027d14659a94cfdfbc173e9d9d49c",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "plutos_blue_haze/thumb.webp",
+        "size": 2512,
+        "sha256": "fd76f4fa0a33b6106df8b9acd24f6412cdd670ae349d9c813e479d9ec506637d",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#040506",
+      "dark": true
+    },
+    {
+      "id": "moon_far_side",
+      "title": "The Moon's Far Side",
+      "category": "planets",
+      "credit": {
+        "title": "Orientale on Display",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/art002e009212",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "moon_far_side/phone.webp",
+        "size": 171318,
+        "sha256": "cee9228347b0ceb73a74f92f4df395188387d9692063e1de477645264816d3ac",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "moon_far_side/wide.webp",
+        "size": 215330,
+        "sha256": "a156502c6247b6e6d6bf6383fde9204267e18c8d33f3aa4e4d89d4fcb5fa52eb",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "moon_far_side/thumb.webp",
+        "size": 7288,
+        "sha256": "b7e2466db1ea7b5a6c175633c5ba04617c390d7e422183beb60ec0765b89b042",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#161616",
+      "dark": true
+    },
+    {
+      "id": "moon_edge_of_light",
+      "title": "The Moon at the Terminator",
+      "category": "planets",
+      "credit": {
+        "title": "Orientale Basin at the Edge of Light",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/art002e020686",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "moon_edge_of_light/phone.webp",
+        "size": 1176400,
+        "sha256": "06520c3c69fbe26bd6618b83bd0680710b85011f4e8383b8fc8890636c6edf6e",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "moon_edge_of_light/wide.webp",
+        "size": 772166,
+        "sha256": "993a9f57235b268202b6823a3aed8bb5caad6308d260bb23b88a358b4ccc0fdf",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "moon_edge_of_light/thumb.webp",
+        "size": 59396,
+        "sha256": "1e88c7da1c675d274f00cac8e5347e6e7340f32fa2e7adf1d02f8c92ae60bbe3",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#656466",
+      "dark": true
+    },
+    {
+      "id": "orientale_basin",
+      "title": "Orientale Basin",
+      "category": "planets",
+      "credit": {
+        "title": "The Rings of the Orientale Basin",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/art002e012090",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "orientale_basin/phone.webp",
+        "size": 670456,
+        "sha256": "e0f6b927659ea9f3f722b02c6551e424bd4d063a352d1a534e5ac311eb2acd08",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "orientale_basin/wide.webp",
+        "size": 885540,
+        "sha256": "5e52205e9ae2e36ec2af3cf282fa2c6e2bb81045d5caba62924b3c006644b24a",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "orientale_basin/thumb.webp",
+        "size": 40502,
+        "sha256": "b8f687627ffbcbd382ed3aeae46fbfb463a699186dd0f4a23ca1de864cd2cc9e",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#737073",
+      "dark": true
     },
     {
       "id": "twilight_in_the_wilderness",
@@ -637,26 +1545,26 @@
       },
       "phone": {
         "url": "twilight_in_the_wilderness/phone.webp",
-        "size": 156340,
-        "sha256": "64ce932bf93225c962229bd49922c3588718734117c993e48a6f8f06a26c585d",
+        "size": 298868,
+        "sha256": "7997364578fe8b651097e11fe665fbacf9e1aebe0efb35f321ac196062c13667",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "twilight_in_the_wilderness/wide.webp",
-        "size": 283052,
-        "sha256": "afaf598ef889abd4b258bbfde23504379512f60aff653016849a5f2e95799ef2",
+        "size": 553474,
+        "sha256": "8d65ff4978fa58233299b8781a44e0172cef14ee19509345648cef49ffac3562",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "twilight_in_the_wilderness/thumb.webp",
-        "size": 10872,
-        "sha256": "abb88b2a2188a4384de554a76c0f72263d29f38f95812a737ed0511d51d8d3a1",
+        "size": 17162,
+        "sha256": "93012dc6da1acfae672244a23d6002f70229effdb21e451f677223a813e3cab1",
         "w": 270,
         "h": 585
       },
-      "swatch": "#543C29",
+      "swatch": "#543C2A",
       "dark": true
     },
     {
@@ -672,16 +1580,16 @@
       },
       "phone": {
         "url": "two_poplars/phone.webp",
-        "size": 653104,
-        "sha256": "a63c9bb621f2ce2b57aff6ee48b50f2ec6a45d0bcca218b50a94f35f9bd566d9",
+        "size": 1996136,
+        "sha256": "5dbadc109444dbe309605b3fbe7b598184436d3f96db9a71d5c7f38eb78b053f",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "two_poplars/thumb.webp",
-        "size": 50842,
-        "sha256": "b07735f966b93e18444681da181d3ad69715fdbe8a53ddb3f9ec0868fd3ee0a7",
+        "size": 83062,
+        "sha256": "ff2380e57110227c85a393d35727a52aa86f2ba68f13e3c897f28d03e2382c4b",
         "w": 270,
         "h": 585
       },
@@ -701,22 +1609,22 @@
       },
       "phone": {
         "url": "denali_aurora/phone.webp",
-        "size": 260232,
-        "sha256": "9c89d622322488a7203d256a18624aef939f1c00e2822ea75d9a60c208d5e342",
+        "size": 792380,
+        "sha256": "493982d31294576d8b01a22eaf996413765b6c0c3248d648a2e9cf938f493876",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "denali_aurora/wide.webp",
-        "size": 83106,
-        "sha256": "196a5bd28bc75abde93faa82005773cb226a4cad2985bb205fb085862c95c3c7",
+        "size": 282236,
+        "sha256": "00394910958b1f1b4224f79a8c0cb77e3dcb2c2fc9a85d2819c3feee23394b13",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "denali_aurora/thumb.webp",
-        "size": 4684,
-        "sha256": "a15b94d7c54f035f063f5cb030d459b46746882f36b868bd8f33b480ff756d7b",
+        "size": 7586,
+        "sha256": "2c92cbcdc2ed1f41141e9f25a37e9acd4ebeb4463c70a7d56927074de32252a9",
         "w": 270,
         "h": 585
       },
@@ -724,74 +1632,74 @@
       "dark": true
     },
     {
-      "id": "mount_moran",
-      "title": "Mount Moran",
+      "id": "mount_starr_king",
+      "title": "Mount Starr King",
       "category": "landscapes",
       "credit": {
-        "title": "Mt. Moran, Teton National Park",
-        "creator": "Ansel Adams",
-        "institution": "U.S. National Archives (National Park Service)",
-        "url": "https://commons.wikimedia.org/wiki/File:Grand_Teton_Aag05.jpg",
-        "license": "Public domain"
+        "title": "Mount Starr King, Yosemite",
+        "creator": "Albert Bierstadt",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1922.684",
+        "license": "CC0"
       },
       "phone": {
-        "url": "mount_moran/phone.webp",
-        "size": 241614,
-        "sha256": "8397a360e2c30c66c39878dcc38d32af9e9e82f7a2bf799fe067298027524e4c",
+        "url": "mount_starr_king/phone.webp",
+        "size": 1119916,
+        "sha256": "faa79bb4204ced830545e27972ad95d93b4ba18e1b106dd65053bd177244053f",
         "w": 1440,
         "h": 3120
       },
       "wide": {
-        "url": "mount_moran/wide.webp",
-        "size": 287326,
-        "sha256": "4d64778111d3ca216b575e0f3dc839127571c19945e44ef1410e29b41a8ea56a",
+        "url": "mount_starr_king/wide.webp",
+        "size": 924638,
+        "sha256": "5377b34b419c9f5512c2202478a792995b6d10a78801003a7c785323fb352570",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
-        "url": "mount_moran/thumb.webp",
-        "size": 24668,
-        "sha256": "fe39b8bfa5016c8787e772c0af60d39653a97d832f5738d4abd56afbeab2aa1a",
+        "url": "mount_starr_king/thumb.webp",
+        "size": 39060,
+        "sha256": "b6a6b06ff35b1b049690e785eac7c041d883c064e6015aa55f9a1cf6327e8998",
         "w": 270,
         "h": 585
       },
-      "swatch": "#383838",
+      "swatch": "#726F61",
       "dark": true
     },
     {
-      "id": "arctic_mountain_light",
-      "title": "Arctic Mountain Light",
+      "id": "schroon_mountain",
+      "title": "Schroon Mountain",
       "category": "landscapes",
       "credit": {
-        "title": "Mountain light, Arctic National Wildlife Refuge",
-        "creator": "Danielle Brigida / USFWS",
-        "institution": "U.S. Fish and Wildlife Service",
-        "url": "https://commons.wikimedia.org/wiki/File:Mountain_light_(48771994623).jpg",
-        "license": "Public domain"
+        "title": "View of Schroon Mountain, Essex County, New York, After a Storm",
+        "creator": "Thomas Cole",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1917.1335",
+        "license": "CC0"
       },
       "phone": {
-        "url": "arctic_mountain_light/phone.webp",
-        "size": 673144,
-        "sha256": "94f455adfd7fead8d1d7a2a2db5f1cbe1ee8bf889b8effe7ae1bc381dec86f7f",
+        "url": "schroon_mountain/phone.webp",
+        "size": 1116536,
+        "sha256": "54886d31bbed1b0ceccef4be58338a49441b10a3ec98db3f4991a3a6b47c5225",
         "w": 1440,
         "h": 3120
       },
       "wide": {
-        "url": "arctic_mountain_light/wide.webp",
-        "size": 559888,
-        "sha256": "86157026bc59ab662355f3c7bef07d17a16adbaeaad51a4db4f8e52dc6a7f9eb",
+        "url": "schroon_mountain/wide.webp",
+        "size": 988552,
+        "sha256": "931b0b40ccebdbc92c6436990ec23fdb7780dffc172d5b3e41900a3694033789",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
-        "url": "arctic_mountain_light/thumb.webp",
-        "size": 39654,
-        "sha256": "f6a4ce9590356c3e7acb026c1b4254fec3cb10c4db55da9251343566cafb5dfe",
+        "url": "schroon_mountain/thumb.webp",
+        "size": 33778,
+        "sha256": "9e5b3dc2ea102ca92610c2253ee30c13352cf396f21ca46b770f6e03bb3c87a6",
         "w": 270,
         "h": 585
       },
-      "swatch": "#7B8D92",
-      "dark": false
+      "swatch": "#655141",
+      "dark": true
     },
     {
       "id": "flowers_in_a_glass",
@@ -806,26 +1714,26 @@
       },
       "phone": {
         "url": "flowers_in_a_glass/phone.webp",
-        "size": 411296,
-        "sha256": "b7d7f6ea3d9c978e7992bc90d10f64a09ba1812cad88e448d93224b80efaea9f",
+        "size": 779550,
+        "sha256": "6c96b5b320dd84dc7e29e516cf5900d92354d9d352edd5e1a909aa0fc575c5d2",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "flowers_in_a_glass/wide.webp",
-        "size": 373350,
-        "sha256": "f7a526f7830795c0f88a8f07f7624fda77a8b5dde8ba5076e385f8bf29fbc891",
+        "size": 774070,
+        "sha256": "3f6c09c6711f7fa083b0940b9506f57ac70a50e462ece9d8e765c2542b708e74",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "flowers_in_a_glass/thumb.webp",
-        "size": 31934,
-        "sha256": "507c960a49ee364b546fff4dd686df857fc7a8e0ccd3205d807c90d43ebc0d48",
+        "size": 48144,
+        "sha256": "3ea5204564e39cd87b57788db0558fcafe58b832a5736f2981e70441fb3056c6",
         "w": 270,
         "h": 585
       },
-      "swatch": "#50463B",
+      "swatch": "#51463B",
       "dark": true
     },
     {
@@ -841,22 +1749,22 @@
       },
       "phone": {
         "url": "morning_glory/phone.webp",
-        "size": 326152,
-        "sha256": "63367a6f03ad47afb135c87815f7abcfd404fc09d302c2c35771d2cfaf7a005b",
+        "size": 601706,
+        "sha256": "2fc68e6799e022f23c7f9f6516a09521bf52f87287d31c39b317fd7e731e2dd7",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "morning_glory/wide.webp",
-        "size": 220890,
-        "sha256": "8c6ab135ebba8b0942c4f1d0a87a1895037e552e1dfd874158630325709e31d2",
+        "size": 399130,
+        "sha256": "0686ebb75b46a228e90f171a1bc85524a4c4aa293593af3c4f3a55055034cee7",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "morning_glory/thumb.webp",
-        "size": 11854,
-        "sha256": "c66b2589b846c9dd9f470c449d273a5431de4df1c33d7c8b5a017840855be4f5",
+        "size": 19398,
+        "sha256": "d2ffe07a7214e51654184ad805c8a308f145ae8ee45218cfee1eaf7acce7e088",
         "w": 270,
         "h": 585
       },
@@ -876,22 +1784,22 @@
       },
       "phone": {
         "url": "crown_imperial/phone.webp",
-        "size": 270818,
-        "sha256": "6a176bcc7faea63adbec1d66a30a4214e79aa45cda2c4db8dd21a5e842ea35ba",
+        "size": 465100,
+        "sha256": "319504ef8bddfe90850997c9142dd9a76026a53f8d55f3091348121a49fb49c0",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "crown_imperial/wide.webp",
-        "size": 125032,
-        "sha256": "bee7f68ee12070e067dfe6e072084ae7f205396c7a74eef5e35fe7bf7786edc6",
+        "size": 221776,
+        "sha256": "5d189465a8f30ad93cac1a08dbfc90fa69c03356ece79e203c33250c29d5fdbc",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "crown_imperial/thumb.webp",
-        "size": 14216,
-        "sha256": "9112dd83a9f4d7bba8fc06236ba5580f56b92a9cc61ced09ee61782b2ea6dd4b",
+        "size": 20862,
+        "sha256": "3b3a2b48cb6ab5449dabb7af1b4d1dba1a5040d431929225c5c6766c880e8755",
         "w": 270,
         "h": 585
       },
@@ -911,16 +1819,16 @@
       },
       "phone": {
         "url": "spiraea_cyanotype/phone.webp",
-        "size": 451362,
-        "sha256": "ce349a855e3d8dda0f7969a7fce874c2fdd388a060ea4b8483c36ef79e52bb67",
+        "size": 858498,
+        "sha256": "9163554682b0e2b9c6f301088d8b0f8650f2a01180e7f4c004f94d3a6cd16bcd",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "spiraea_cyanotype/thumb.webp",
-        "size": 29296,
-        "sha256": "a4bbce6650f020227ae05d3d3e9c5cdf066a57b4b2db7205b8e43ef63ea752a8",
+        "size": 40928,
+        "sha256": "71ebf8500a9bcb24e8f43bc2c103da43af907115b235dce8965bbd159cce9b45",
         "w": 270,
         "h": 585
       },
@@ -940,22 +1848,22 @@
       },
       "phone": {
         "url": "plums/phone.webp",
-        "size": 429346,
-        "sha256": "0b15bd2f8c0bec65c650c855d9c1fd86e220e5d99993512e7620e81177386fd2",
+        "size": 840474,
+        "sha256": "05984420f39685000a2fee1055bf8d0944b208dbe9ed921b782ce4a21d7590b1",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "plums/wide.webp",
-        "size": 333258,
-        "sha256": "d0349a3381569e0b766651b942c374617d994360d27a605ba5287d4473dabf7e",
+        "size": 639724,
+        "sha256": "60a6d173c2f678e161e3e3dcc30814d40e0028c6b591db4971710183bfc9a684",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "plums/thumb.webp",
-        "size": 10102,
-        "sha256": "0efcf2de98edde998005fe8ee5223ec6670aabf2b86a2f80fa853fc1d3c25cf0",
+        "size": 16254,
+        "sha256": "480b793dda7239e06c0cec9ba2fb557e55734179ba6ef0f3f0cacdceed887f93",
         "w": 270,
         "h": 585
       },
@@ -975,26 +1883,26 @@
       },
       "phone": {
         "url": "great_wave/phone.webp",
-        "size": 547790,
-        "sha256": "2875abce0886c03a3ba54d050c6c36b652305fe8bc90e3e34eb277d0915c83dd",
+        "size": 525810,
+        "sha256": "e05e0e1dc1a0477d14b4176f99e33b47778a6cfb264bf0a84625b595ac2fd337",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "great_wave/wide.webp",
-        "size": 528734,
-        "sha256": "bdc45381bdb9b86b0dc1988ff0d909e045b0269f6965f7aaa3ce47e74dea48b2",
+        "size": 1444434,
+        "sha256": "d3be49e1020d23cf929eb1db00ad009b81cb93d96e480b0d38bb0057eaf1a3f0",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "great_wave/thumb.webp",
-        "size": 55584,
-        "sha256": "0ee67b8ac8c5d253b0efa0dbcff30dabf716afe22a3d0ab11ffe61ecaa61527b",
+        "size": 21030,
+        "sha256": "ac7986caf5a73f9f2ca9527565c5a4545d235d192e47a6c74139455d0956974a",
         "w": 270,
         "h": 585
       },
-      "swatch": "#AFB8B4",
+      "swatch": "#D9D2B8",
       "dark": false
     },
     {
@@ -1002,34 +1910,34 @@
       "title": "Red Fuji",
       "category": "japanese",
       "credit": {
-        "title": "South Wind, Clear Sky (Gaifū kaisei), also known as Red Fuji",
+        "title": "South Wind, Clear Sky, from Thirty-Six Views of Mount Fuji",
         "creator": "Katsushika Hokusai",
-        "institution": "The Metropolitan Museum of Art",
-        "url": "https://www.metmuseum.org/art/collection/search/36490",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1930.189",
         "license": "CC0"
       },
       "phone": {
         "url": "red_fuji/phone.webp",
-        "size": 583100,
-        "sha256": "24a01621f6ee60c59c1e7b32741514bbe5b852985da5949692f270e909c30c2d",
+        "size": 1861384,
+        "sha256": "461292432675c90f2a6415d88406ee69f02767862be8e8682f6f9debfed34deb",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "red_fuji/wide.webp",
-        "size": 512230,
-        "sha256": "473bfd8b5211623954b45ade652a5451c7cac9fda7364b403cdfae2f666df5e9",
+        "size": 1503616,
+        "sha256": "681e77fdaac93329f7a22e8a2bb63bcce0330c0523634d70ef082128e2a39355",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "red_fuji/thumb.webp",
-        "size": 29456,
-        "sha256": "21231c7943139cfad15194dd87fdf4a343eadd0454edae5ef5548d56ceaf6b3e",
+        "size": 53330,
+        "sha256": "df9026018629a78e886ce6b397c7d6e541a612593416ad7c7c5edbd00120b8a0",
         "w": 270,
         "h": 585
       },
-      "swatch": "#937C75",
+      "swatch": "#998B84",
       "dark": false
     },
     {
@@ -1045,20 +1953,20 @@
       },
       "phone": {
         "url": "eagle_over_fukagawa/phone.webp",
-        "size": 570658,
-        "sha256": "3282230701d6ddd4bf6dfb2b090b90bbe1275ff558b4f1c929292c50d0e51b94",
+        "size": 1609350,
+        "sha256": "628914c7731d30cf207ea07f49ac76160c427c760c0aa546c2bfe20e4fe7c7be",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "eagle_over_fukagawa/thumb.webp",
-        "size": 43150,
-        "sha256": "cdd5a6efb96e822344f39245c08d75998732dad00230a129a9bfa520697bfc04",
+        "size": 54174,
+        "sha256": "a187fd4edcf353fb6844fda17115416244d7b74967054ffacacd1dce1de18474",
         "w": 270,
         "h": 585
       },
-      "swatch": "#9EA396",
+      "swatch": "#9EA397",
       "dark": false
     },
     {
@@ -1074,16 +1982,16 @@
       },
       "phone": {
         "url": "sudden_shower/phone.webp",
-        "size": 623528,
-        "sha256": "14d90974866f1372862a053cda37364b9cff24864ebd056ce26e1daa1d4b5816",
+        "size": 1875626,
+        "sha256": "6b0d5557958a25cdd1be4a30e9b51d4ac6f1bdd25ad474babd22a250da6daa0a",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "sudden_shower/thumb.webp",
-        "size": 40126,
-        "sha256": "76ed588c97dabae9dcb88b5a1d61f12134ed5fee3c02477ae4c637655e94fbb1",
+        "size": 58562,
+        "sha256": "d78deea3e82bddc657e1b9fcea78eeecc912bbf4d6cdf1f9baff109991b94140",
         "w": 270,
         "h": 585
       },
@@ -1103,16 +2011,16 @@
       },
       "phone": {
         "url": "fireworks_at_ryogoku/phone.webp",
-        "size": 615172,
-        "sha256": "1f035ebac45621b3a74190b825ed2eda915a9398883903eb910edbe2c2634b2e",
+        "size": 1914020,
+        "sha256": "ea8c85b2cb69204016d12dddc00862a93c4365649a61f7b07c8897e13ccaef53",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "fireworks_at_ryogoku/thumb.webp",
-        "size": 35718,
-        "sha256": "905f48f3c46f2b2673aa4833dc463cc1dfc8a7ee083ca6477343603341341756",
+        "size": 54128,
+        "sha256": "b633e99d2194fd76f10fe0c5ee02974a3fa58159ef3c91d164ea8f742c6cf928",
         "w": 270,
         "h": 585
       },
@@ -1132,16 +2040,16 @@
       },
       "phone": {
         "url": "meguro_in_snow/phone.webp",
-        "size": 610746,
-        "sha256": "ef9f208d9077de293c2b771e545ee60a51fd6cb63a6382a5162c2652523c662b",
+        "size": 1927892,
+        "sha256": "735f4c1c96e8aee68dcdb8a0bcb8b584998f192b04e3cf1b8a972f44c2b23944",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "meguro_in_snow/thumb.webp",
-        "size": 52374,
-        "sha256": "052103ba88253cbead7edc174c065ccecdfe84e0db4ad7a038ec78aab5b02f99",
+        "size": 70292,
+        "sha256": "c5dca4fae8b22704da8213105953a52c1a5013e550ee2091405db8e4db1b8153",
         "w": 270,
         "h": 585
       },
@@ -1161,16 +2069,16 @@
       },
       "phone": {
         "url": "whirlpools_of_awa/phone.webp",
-        "size": 625862,
-        "sha256": "79f7227c6a88d0215d8e531c0f57d2cd8b08c34008ad2412384bb7aa1a29e1e9",
+        "size": 1822616,
+        "sha256": "5f3435b53cad3afbe9ab2a926a7c3a497bc16a49d27aee2caa56d2060cecfd83",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "whirlpools_of_awa/thumb.webp",
-        "size": 42240,
-        "sha256": "d76d25c372cf998062d4230e8da1f3370ff9ca0dad9d97f4835ea64d7dbfb6f8",
+        "size": 59492,
+        "sha256": "ffa2fd5a9424c2ffa75e929fa593efbf7c2149fa4a10e4195b4e75ec17e1d768",
         "w": 270,
         "h": 585
       },
@@ -1190,16 +2098,16 @@
       },
       "phone": {
         "url": "kiso_road_in_snow/phone.webp",
-        "size": 608748,
-        "sha256": "f8d25b623cd01f7992e96337e983a6de26fd73d297aee8d1215d135df5ed8180",
+        "size": 1858338,
+        "sha256": "194a9f7f9b4fafb97d89f4fc7a2cb34187ebc300e295130bf47b4944fbee4ed2",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "kiso_road_in_snow/thumb.webp",
-        "size": 35326,
-        "sha256": "0d2d9425ae5a376292acc28857a58a074e9eb22bb2d69b25b7ef67e99f2c5fd5",
+        "size": 53966,
+        "sha256": "af81360fb517b4326b482c8be3a83f597910cd4c36b244389e1197fed0a3aaa7",
         "w": 270,
         "h": 585
       },
@@ -1219,22 +2127,22 @@
       },
       "phone": {
         "url": "strawberry_thief/phone.webp",
-        "size": 598334,
-        "sha256": "4dff0a90059c8265d29a80ad47b2d2e11fd0a8366994a7fffb8d203ca93c6538",
+        "size": 1864986,
+        "sha256": "781d0694fc08161177f78c20989820ae6f071360d6a22932bb05ddcafd6f978f",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "strawberry_thief/wide.webp",
-        "size": 543722,
-        "sha256": "fbc30723e00914da0b20292d650adcc772f81f23c87460d0a1484f06239eb4c9",
+        "size": 1522330,
+        "sha256": "08438e8c9c8a0cf7c21b7a32f736fea0df43c99ea092733bcff252df27063409",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "strawberry_thief/thumb.webp",
-        "size": 57592,
-        "sha256": "757286ad8f497797bec6d5b182d837af0182ca7a215243a81246034a150daa85",
+        "size": 104578,
+        "sha256": "49ab2a40baa07f750fa1932a35b8ca31a22ca7cdaf37ce8ac22f8eef522a8bfa",
         "w": 270,
         "h": 585
       },
@@ -1254,26 +2162,26 @@
       },
       "phone": {
         "url": "honeysuckle/phone.webp",
-        "size": 636458,
-        "sha256": "e9d39cce7ed8383f22edec38de273d08a0a935f8cddbe74bf0571a452d9b9bc1",
+        "size": 1929420,
+        "sha256": "a194fd2182aed568d5de9ac71efa5976d332857a927d32d1307d1f8ff9fcc119",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "honeysuckle/wide.webp",
-        "size": 526602,
-        "sha256": "cb72844996e1610e3b0d6cc726cf24b87a209b9550e15a35e52c04d9ed9924a7",
+        "size": 1570894,
+        "sha256": "b8f05d948c94c4206dccbe3a3730fb3f598a72993eb4e740ca120d72653aa78c",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "honeysuckle/thumb.webp",
-        "size": 50582,
-        "sha256": "c5da356720ae845ee7adb19daa409a3131a46039cde4f6b2b9386589326d9915",
+        "size": 91988,
+        "sha256": "51defd55f0c42a1e7eee1bf0e69bf9725e48d129f7b39cbdb5d50fc7b961cc26",
         "w": 270,
         "h": 585
       },
-      "swatch": "#91766C",
+      "swatch": "#92766C",
       "dark": false
     },
     {
@@ -1289,26 +2197,26 @@
       },
       "phone": {
         "url": "kennet/phone.webp",
-        "size": 584588,
-        "sha256": "0eeaa438e530f9ca68ee77798a1997acb2c0d91811716dab0eb509fdb1f4e1b3",
+        "size": 1982728,
+        "sha256": "1f95b142526fa277018850961672c005c01390fe86d43183b5401ce04bf11f85",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "kennet/wide.webp",
-        "size": 544266,
-        "sha256": "b6ad8286bb38565004ec086264ee66ece85e353d8def12c72f382367c64d43c5",
+        "size": 1537084,
+        "sha256": "e379fdc8c4d9ee737847f16b7bfdcff99d0a5a2abe55031c6cdb9d180003086b",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "kennet/thumb.webp",
-        "size": 57930,
-        "sha256": "7c881faa7325e6f790e8e92c98224da8220cac7e7e8079d1b139d16934e502bd",
+        "size": 108950,
+        "sha256": "85d15c40af772327671b31e9d328f82db657e8eddb5b711fe70b67f8170429d4",
         "w": 270,
         "h": 585
       },
-      "swatch": "#656254",
+      "swatch": "#666253",
       "dark": true
     },
     {
@@ -1324,22 +2232,22 @@
       },
       "phone": {
         "url": "snakeshead/phone.webp",
-        "size": 621560,
-        "sha256": "6f647e011e2a8f101f8953afe12d996fe83c3bcd471a9fd6e9192c58afdf8ea5",
+        "size": 1860632,
+        "sha256": "7a6b3548683195c412fd8bf32c0a9481fec82b3ad66185de103a347862285927",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "snakeshead/wide.webp",
-        "size": 564528,
-        "sha256": "62bc9076f56c8cd96b5a775a879f446a17cef21653cbf3983aed3342c19ae7de",
+        "size": 1494400,
+        "sha256": "fb067714790e8a67409aa55f20f1d9177f7f88e04b40c5e59d93cbe7beda7dbb",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "snakeshead/thumb.webp",
-        "size": 56072,
-        "sha256": "40ce5de97b229e01c0a76fc28111573eff424c45569db391ae0c90241ead1d3f",
+        "size": 105792,
+        "sha256": "1118c735eb820520837805cba8b1d595a11b69e381134b6d82879456a66ba457",
         "w": 270,
         "h": 585
       },
@@ -1359,22 +2267,22 @@
       },
       "phone": {
         "url": "peacock_and_dragon/phone.webp",
-        "size": 633948,
-        "sha256": "26bb8e363046d7fb62a3e2f9e39a2b138d92375c0ce7f0421ef74d19de687770",
+        "size": 1895870,
+        "sha256": "5dded91e23ad71a2ee80f4162b2e459d1c006c70409637b05993ae0fe90db51a",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "peacock_and_dragon/wide.webp",
-        "size": 569536,
-        "sha256": "ca855b1a40c70846b67f3dc7f2d26965bcd96a6ae011e38c2e8bb9479a57b5b9",
+        "size": 1593686,
+        "sha256": "f3fb89c73f67df122561750e2b1a466c5692b6103bb749bc759dddc2f2de4cf7",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "peacock_and_dragon/thumb.webp",
-        "size": 50412,
-        "sha256": "e38c6c6e3a703aef11b831ec0510f603999349ae204de9bd7e6c33903ea785e5",
+        "size": 82974,
+        "sha256": "82527416feb29f893c26e45e3847cec4b46ad473873af75379e3f4fe120dad79",
         "w": 270,
         "h": 585
       },
@@ -1394,16 +2302,16 @@
       },
       "phone": {
         "url": "ikat_hanging/phone.webp",
-        "size": 636114,
-        "sha256": "e747d2ab44bcf824b2040f4b5b69c4d3b50f3add97d9aeff66a1205bdf9b8583",
+        "size": 1987598,
+        "sha256": "eb6d8025a6996c285f00a166239c83aa8162d0c0d0d754455c0f04725ef67a05",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "ikat_hanging/thumb.webp",
-        "size": 58466,
-        "sha256": "50a40ec71c5c371d8fc04726fa8e6d5b62acae1fcf0a29b8725b47bee7c7dfba",
+        "size": 90896,
+        "sha256": "eb12553735474f966a06d22bfc76be146e6bbf4c67a8f1a785ca2bd96bca9d4b",
         "w": 270,
         "h": 585
       },
@@ -1423,16 +2331,16 @@
       },
       "phone": {
         "url": "velvet_sunbursts/phone.webp",
-        "size": 636168,
-        "sha256": "d8ccdc54180e2df44e3fd0f297ae9cc156eb59b17f57351f1a576c9820452e06",
+        "size": 1882966,
+        "sha256": "a7b856cf702ca3bcd6b1784e7f530b670009586c636d4117af505e9a0bf76fbe",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "velvet_sunbursts/thumb.webp",
-        "size": 58940,
-        "sha256": "d7227b74d87051c931aebe4898536cc0316e6901305e14261fdc0b44713fb90f",
+        "size": 104208,
+        "sha256": "39419ecbb2937570f7df265d139359f4727a938d9c8aebe1dfa7c8e1d428b49c",
         "w": 270,
         "h": 585
       },
@@ -1452,26 +2360,26 @@
       },
       "phone": {
         "url": "coral_and_fish/phone.webp",
-        "size": 226858,
-        "sha256": "7c81656025ca7cee4e6da6ec205a4dc2dbdaa335f8a4d055c111d2f046ec8980",
+        "size": 477752,
+        "sha256": "c3d20dc9d9256c6dd98885f707bac7267d927c8f3b37d4f74fb6c1164de0e979",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "coral_and_fish/wide.webp",
-        "size": 207412,
-        "sha256": "f79085fc82f36b019aa3eceda87c1a000c2e00087c9dba885987934375d2bfd4",
+        "size": 420438,
+        "sha256": "735756df3a6c4a9ddd620c0ed5f1c68a31b7b4e7f6f41cdc5d6a2602b4b830ca",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "coral_and_fish/thumb.webp",
-        "size": 25238,
-        "sha256": "8895ad6a7b47301949655b3193ab92780b757b3240f34081be63905a7b5b67e5",
+        "size": 36236,
+        "sha256": "3d34662fd74ffcd2c5164376b59c88df4c57969b733dbba9fce86cb98e3f8ec5",
         "w": 270,
         "h": 585
       },
-      "swatch": "#3A95AD",
+      "swatch": "#3B95AD",
       "dark": false
     },
     {
@@ -1487,26 +2395,26 @@
       },
       "phone": {
         "url": "reef_in_sunlight/phone.webp",
-        "size": 470296,
-        "sha256": "0c4cd3b397fa4f3bab685ff733f6947e7fe3923365ac4cc2ead6b1392efb063e",
+        "size": 857330,
+        "sha256": "560d9745faafa0334553050e3fd62574b5047cc2cedbca79377d16437efb9e4d",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "reef_in_sunlight/wide.webp",
-        "size": 486770,
-        "sha256": "b9052b83f002dddd4f74eedd494817615cda79805f32ba6c60ed9df3b0d55241",
+        "size": 929596,
+        "sha256": "f35c19586953f78d1d7adab9d256ef3f34c90e789a7e3b9d2eeb57da8284771e",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "reef_in_sunlight/thumb.webp",
-        "size": 37154,
-        "sha256": "fd84ca8a90a3c44220fd14b462473bef6f98678c2fd09fcf101c79807f58a7e3",
+        "size": 51642,
+        "sha256": "62b84c6a8be6fc254db2445db8424405bae343f756a7d338cf8ff7b5e21d8fa1",
         "w": 270,
         "h": 585
       },
-      "swatch": "#417987",
+      "swatch": "#417A87",
       "dark": true
     },
     {
@@ -1522,132 +2430,27 @@
       },
       "phone": {
         "url": "florida_keys_reef/phone.webp",
-        "size": 584538,
-        "sha256": "f037cf62e216c37bc17c0809ef4fb5611be12031f754170f0d6d1875ce51b223",
+        "size": 1831210,
+        "sha256": "2d90a49bc7d6370318bf1c559277a055bf67507a376cffc21afdc2f89f007dbe",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "florida_keys_reef/wide.webp",
-        "size": 531558,
-        "sha256": "0062416cc7d4e2e2b5c2ad1a36e20871d859e4b7b515f8ff87ba9f16d72f0bc4",
+        "size": 1532990,
+        "sha256": "d8d2f8f69dea24b08182903a871fc284b7727f1da610c87697197c1cfa15ceab",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "florida_keys_reef/thumb.webp",
-        "size": 50988,
-        "sha256": "01895946c9e7ad621b149b73e6c3a01f9b45d3381308a8799930b4ed5bdc5b52",
+        "size": 70598,
+        "sha256": "44462f4e5905f9d67050519b228eb051aedaa6ef171e6cfdc0901140d647c39b",
         "w": 270,
         "h": 585
       },
-      "swatch": "#767865",
+      "swatch": "#767866",
       "dark": false
-    },
-    {
-      "id": "northeaster",
-      "title": "Northeaster",
-      "category": "oceans",
-      "credit": {
-        "title": "Northeaster",
-        "creator": "Winslow Homer",
-        "institution": "The Metropolitan Museum of Art",
-        "url": "https://www.metmuseum.org/art/collection/search/11130",
-        "license": "CC0"
-      },
-      "phone": {
-        "url": "northeaster/phone.webp",
-        "size": 492304,
-        "sha256": "fe4a65f7e75e5cb1419eb602f71a71a9a18a786e2eda4d28830316beaebbaa91",
-        "w": 1440,
-        "h": 3120
-      },
-      "wide": {
-        "url": "northeaster/wide.webp",
-        "size": 446638,
-        "sha256": "8a7adf574a0cf0dbafdba6d80d72bef4b8adb70000ada4b8ef071a6489c85e3b",
-        "w": 2560,
-        "h": 1600
-      },
-      "thumb": {
-        "url": "northeaster/thumb.webp",
-        "size": 22052,
-        "sha256": "294d10598db248db6499498b5d2ceb73047605280d33080df9bd85e1b6672425",
-        "w": 270,
-        "h": 585
-      },
-      "swatch": "#5E7176",
-      "dark": true
-    },
-    {
-      "id": "wood_island_moonlight",
-      "title": "Moonlight, Wood Island",
-      "category": "oceans",
-      "credit": {
-        "title": "Moonlight, Wood Island Light",
-        "creator": "Winslow Homer",
-        "institution": "The Metropolitan Museum of Art",
-        "url": "https://www.metmuseum.org/art/collection/search/11127",
-        "license": "CC0"
-      },
-      "phone": {
-        "url": "wood_island_moonlight/phone.webp",
-        "size": 529542,
-        "sha256": "8d8d7c054d96be739a8c90994a7d214f01eb2859162e5ff0665c251e2db7ef5b",
-        "w": 1440,
-        "h": 3120
-      },
-      "wide": {
-        "url": "wood_island_moonlight/wide.webp",
-        "size": 441036,
-        "sha256": "3e02ea8e322ac902227a80bea0eba515a30098a933f7ab9c3653c581c2e6f424",
-        "w": 2560,
-        "h": 1600
-      },
-      "thumb": {
-        "url": "wood_island_moonlight/thumb.webp",
-        "size": 18050,
-        "sha256": "c311aeedbf3d191699b8170e62a80db4167dd600d102573454ea7b8ccd52ab4b",
-        "w": 270,
-        "h": 585
-      },
-      "swatch": "#4F5048",
-      "dark": true
-    },
-    {
-      "id": "north_cape_moonlight",
-      "title": "North Cape by Moonlight",
-      "category": "oceans",
-      "credit": {
-        "title": "The North Cape by Moonlight",
-        "creator": "Peder Balke",
-        "institution": "The Metropolitan Museum of Art",
-        "url": "https://www.metmuseum.org/art/collection/search/441379",
-        "license": "CC0"
-      },
-      "phone": {
-        "url": "north_cape_moonlight/phone.webp",
-        "size": 453788,
-        "sha256": "8b626232597734db0fffaf787f1992be62f8890cddea2552885fe4b454f40f1c",
-        "w": 1440,
-        "h": 3120
-      },
-      "wide": {
-        "url": "north_cape_moonlight/wide.webp",
-        "size": 376914,
-        "sha256": "f48803b03ada4cbb24cb5074d09ddcb6ce1d0df325e0cbc5e867595b43a8911e",
-        "w": 2560,
-        "h": 1600
-      },
-      "thumb": {
-        "url": "north_cape_moonlight/thumb.webp",
-        "size": 18286,
-        "sha256": "e86d4ee0a431a3213f561002cd176c0d1d26e4ebf1c3da4b3a385ee87cd025d0",
-        "w": 270,
-        "h": 585
-      },
-      "swatch": "#4A4533",
-      "dark": true
     },
     {
       "id": "morning_after_a_storm",
@@ -1662,22 +2465,22 @@
       },
       "phone": {
         "url": "morning_after_a_storm/phone.webp",
-        "size": 594350,
-        "sha256": "8089c86e6986a03ed4340e7c617858ade79defcd40b29d37ab1546eee614d06b",
+        "size": 1141186,
+        "sha256": "3d44975348c9982c5b9c63371c3adf094897a3df804002399d4c3b9434c5795d",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "morning_after_a_storm/wide.webp",
-        "size": 527836,
-        "sha256": "092f6eb70515eeb9ac376c12447ab00273161209d39f6c1d36261c8c5eadf297",
+        "size": 1049434,
+        "sha256": "62a71dbd5ca95bc7b767c6ee9166061d15e8908e95d06b91790d1c77234b0586",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "morning_after_a_storm/thumb.webp",
-        "size": 20830,
-        "sha256": "33d0ac233ec60ca8b23a4acfd95fef23d12df535fc57905886f7c1096ed02fb6",
+        "size": 32968,
+        "sha256": "bd24b1dd2873c6484f161f09504e75b31498ca9cfd301c3d90c70bde850fc252",
         "w": 270,
         "h": 585
       },
@@ -1685,108 +2488,38 @@
       "dark": false
     },
     {
-      "id": "bahamas_sandbanks",
-      "title": "Bahamas Sandbanks",
+      "id": "seascape_open_sky",
+      "title": "Seascape with Open Sky",
       "category": "oceans",
       "credit": {
-        "title": "A portion of the Atlantic Ocean off the coast of the Bahamas",
-        "creator": "NASA",
-        "institution": "NASA, Johnson Space Center",
-        "url": "https://images.nasa.gov/details/iss064e002482",
-        "license": "Public domain"
+        "title": "Seascape with Open Sky",
+        "creator": "Eugène Boudin",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/2020.116",
+        "license": "CC0"
       },
       "phone": {
-        "url": "bahamas_sandbanks/phone.webp",
-        "size": 386556,
-        "sha256": "da06194c4906553052a918d976d217657d2b1dafe98f0533f923eb64083993a4",
+        "url": "seascape_open_sky/phone.webp",
+        "size": 1905284,
+        "sha256": "9eb73162f76402e2e980dbc2da65702324236cb5ae78e014a117da0aa77e4ad2",
         "w": 1440,
         "h": 3120
       },
       "wide": {
-        "url": "bahamas_sandbanks/wide.webp",
-        "size": 428854,
-        "sha256": "d60444922a7ee4137a00f75371169f59165e2cda34d32055ace5efa32820b726",
+        "url": "seascape_open_sky/wide.webp",
+        "size": 1541336,
+        "sha256": "6e78f19af5cd2dc7d3ef7d4059b999feabacfa4eaa88cf1cabd1df848b2ac63f",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
-        "url": "bahamas_sandbanks/thumb.webp",
-        "size": 29912,
-        "sha256": "f69289ef9e83e5d59d21e3c63ec0142bf00773826743bcd87341ff945ac97bee",
+        "url": "seascape_open_sky/thumb.webp",
+        "size": 48762,
+        "sha256": "f1d6d64a7dcdde2d4acbd071d37f73e8ff602e03c57bd83f53aba53f3ba5d158",
         "w": 270,
         "h": 585
       },
-      "swatch": "#3A91AC",
-      "dark": false
-    },
-    {
-      "id": "grand_canal_venice",
-      "title": "Grand Canal, Venice",
-      "category": "cities",
-      "credit": {
-        "title": "Grand Canal, Venice, Italy",
-        "creator": "Detroit Publishing Co.",
-        "institution": "Library of Congress, Prints and Photographs Division",
-        "url": "https://www.loc.gov/item/2001701076/",
-        "license": "Public domain"
-      },
-      "phone": {
-        "url": "grand_canal_venice/phone.webp",
-        "size": 479698,
-        "sha256": "c9c10c7f377197c5fe34a5aa808cc30c969ed7306f6842c7d1673c016eab7746",
-        "w": 1440,
-        "h": 3120
-      },
-      "wide": {
-        "url": "grand_canal_venice/wide.webp",
-        "size": 385356,
-        "sha256": "fca590f9bd3205fd4d062511f431b1ee9b0bb774a4fd07a146c7901302863f5d",
-        "w": 2560,
-        "h": 1600
-      },
-      "thumb": {
-        "url": "grand_canal_venice/thumb.webp",
-        "size": 20306,
-        "sha256": "6cf019f80da05b325b0fd3841dd8572c80abb4aedad1d8cf7cf32cd4cfb471fd",
-        "w": 270,
-        "h": 585
-      },
-      "swatch": "#A4AE93",
-      "dark": false
-    },
-    {
-      "id": "notre_dame",
-      "title": "Notre-Dame de Paris",
-      "category": "cities",
-      "credit": {
-        "title": "Notre Dame, Paris, France",
-        "creator": "Detroit Publishing Co.",
-        "institution": "Library of Congress, Prints and Photographs Division",
-        "url": "https://www.loc.gov/item/2001698529/",
-        "license": "Public domain"
-      },
-      "phone": {
-        "url": "notre_dame/phone.webp",
-        "size": 633766,
-        "sha256": "c0410022b631f627a1622fbefbe78da7363d3d9aa6f8eb9b9710ff9e75660f6b",
-        "w": 1440,
-        "h": 3120
-      },
-      "wide": {
-        "url": "notre_dame/wide.webp",
-        "size": 476480,
-        "sha256": "491692df860ca4534d76cdb9ab9d7b715cb4a69cbad81e0eeb54b290275a8154",
-        "w": 2560,
-        "h": 1600
-      },
-      "thumb": {
-        "url": "notre_dame/thumb.webp",
-        "size": 58848,
-        "sha256": "576f0723de982dc710d49b5b87d9adb84a29535b91268d058666842299a7f086",
-        "w": 270,
-        "h": 585
-      },
-      "swatch": "#877C5B",
+      "swatch": "#9FA7AA",
       "dark": false
     },
     {
@@ -1802,16 +2535,16 @@
       },
       "phone": {
         "url": "suleymaniye/phone.webp",
-        "size": 512568,
-        "sha256": "517a0fa347d48a44de24f82190a8c1713a623624e1d6865fdb733a3338d476e4",
+        "size": 1327750,
+        "sha256": "b35c07f8988ddc76ea99e7a1b3f6737e132d87b24514800e1a8aca8c77787bad",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "suleymaniye/thumb.webp",
-        "size": 28550,
-        "sha256": "110467d30aca1f9727bdf10a871d6853cf157df9d6b4ca90a1ef2588323229e0",
+        "size": 42726,
+        "sha256": "e601df8da474942a5523257947590d0de93b4a8e6573166a76be2c733b138c56",
         "w": 270,
         "h": 585
       },
@@ -1831,56 +2564,21 @@
       },
       "phone": {
         "url": "three_bridges_venice/phone.webp",
-        "size": 634230,
-        "sha256": "1522c71cc782678cc16adfdd1bbcc6c07c81a68c42cf070204fda4329fe0a764",
+        "size": 1122104,
+        "sha256": "b11c93cc0b14ce0b6387c320a203d3cd4f3a389bac5ed2a6d5cf68845f6c248e",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "three_bridges_venice/thumb.webp",
-        "size": 34608,
-        "sha256": "c6cf451feb70b69a087a21d60241569290ef87677f2aab57a959c82056d56a9c",
+        "size": 51086,
+        "sha256": "194291edece26545320cc279310bb5e63ba8bd7f54f049ba8c8da90748731651",
         "w": 270,
         "h": 585
       },
       "swatch": "#A1947E",
       "dark": false
-    },
-    {
-      "id": "piazza_san_marco",
-      "title": "Piazza San Marco",
-      "category": "cities",
-      "credit": {
-        "title": "Piazza San Marco",
-        "creator": "Canaletto (Giovanni Antonio Canal)",
-        "institution": "The Metropolitan Museum of Art",
-        "url": "https://www.metmuseum.org/art/collection/search/435839",
-        "license": "CC0"
-      },
-      "phone": {
-        "url": "piazza_san_marco/phone.webp",
-        "size": 585298,
-        "sha256": "62e22c4b0dbfc84a28dbf9258406908023234c8e6cc2e65fcc773e89bf170323",
-        "w": 1440,
-        "h": 3120
-      },
-      "wide": {
-        "url": "piazza_san_marco/wide.webp",
-        "size": 466832,
-        "sha256": "beec4c47a917947a0faf6916cb7d1828694e3bdfda7849aafc1b7b41bbc6870a",
-        "w": 2560,
-        "h": 1600
-      },
-      "thumb": {
-        "url": "piazza_san_marco/thumb.webp",
-        "size": 19610,
-        "sha256": "9bb812a7bda734ad8d0fc76316ee973185a48ee4554c4a268df52635d9859434",
-        "w": 270,
-        "h": 585
-      },
-      "swatch": "#6B7166",
-      "dark": true
     },
     {
       "id": "burning_parliament",
@@ -1895,22 +2593,22 @@
       },
       "phone": {
         "url": "burning_parliament/phone.webp",
-        "size": 537326,
-        "sha256": "e7100cf22c30400665e2c44552a5662a85eefcfed347f1e5a4e6505d3a8086e3",
+        "size": 1549994,
+        "sha256": "6dd10c9926cb7a9beacd0cba4356364b07d31f913b8d747902f8d554f7a9be6f",
         "w": 1440,
         "h": 3120
       },
       "wide": {
         "url": "burning_parliament/wide.webp",
-        "size": 412410,
-        "sha256": "a89a4fa0ad7a07a46297b65ba1016dc2411bae6e4a785035c82523885e64252b",
+        "size": 1206392,
+        "sha256": "b3c822f20ae3353c2f4170e68859def3700dd7d7bc91173be3063034d3901857",
         "w": 2560,
         "h": 1600
       },
       "thumb": {
         "url": "burning_parliament/thumb.webp",
-        "size": 29636,
-        "sha256": "3c37c0b5eed21842daf88022805eb8c39a713d9eba37ced776cbab0118054a1a",
+        "size": 51076,
+        "sha256": "2af27beb7f969dc63eaa97ff593f8ab25bb63d53e5fbaaa9a9c5c9d088a31728",
         "w": 270,
         "h": 585
       },
@@ -1930,21 +2628,56 @@
       },
       "phone": {
         "url": "cathedral_interior/phone.webp",
-        "size": 541224,
-        "sha256": "e953b5e5d9e6665490b248a3c2e449496c2938df6adebe3e37a4dcef878b04a6",
+        "size": 1870182,
+        "sha256": "ff91871ccfb409c4649392f1aa0d3b5463003cb9eaa082d027f95284087abb67",
         "w": 1440,
         "h": 3120
       },
       "wide": null,
       "thumb": {
         "url": "cathedral_interior/thumb.webp",
-        "size": 44256,
-        "sha256": "55912f156bc1fc70d3137038e473882e20309a0da18ff8e5b57649bd09195bd6",
+        "size": 64060,
+        "sha256": "ef2d09084e82be5339bb67333e96747940f33d97e982b15948919abff51daa49",
         "w": 270,
         "h": 585
       },
       "swatch": "#6D5D40",
       "dark": true
+    },
+    {
+      "id": "venetian_capriccio",
+      "title": "Venetian Capriccio",
+      "category": "cities",
+      "credit": {
+        "title": "Capriccio: A Palace with a Courtyard by the Lagoon",
+        "creator": "Antonio Canaletto",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1930.23",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "venetian_capriccio/phone.webp",
+        "size": 1902882,
+        "sha256": "439a6170008967ea6efc9252867df4641c15ee14ce7ab87e01424fc11bdd2d8b",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "venetian_capriccio/wide.webp",
+        "size": 1564676,
+        "sha256": "f8c26ce297c32d59f22a116b34cb752b5b5ec8a286ce5f7d0dc2db79e33027b2",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "venetian_capriccio/thumb.webp",
+        "size": 66156,
+        "sha256": "ac45406ebbc33b54a7ee2fb2031e8435be040faaa0b189d432586704e4a48c39",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#868073",
+      "dark": false
     }
   ]
 }
