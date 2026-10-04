@@ -1,19 +1,73 @@
 /* ============================================================================
    An optional soundtrack for the front page.
 
-   On arrival the visitor is asked whether they would like music. Nothing is
-   loaded from YouTube unless they say yes; then the "orbital" playlist starts
-   from its first track, End of Line, in a small player in the corner. YouTube's
-   terms require its player to stay visible, which is why it is a card rather
-   than hidden audio. The answer is remembered for the rest of the visit, so
-   the question is asked once, not on every return to the page.
+   The theme picker's sound switch (pick.js) decides whether there is music.
+   Nothing is loaded from YouTube unless it is on; then the "orbital" playlist
+   plays on the music phone, starting from the song chosen for the picked
+   theme. YouTube's terms require its player to stay visible, which is why it
+   is a widget rather than hidden audio. The answer is remembered for the
+   rest of the visit.
    ========================================================================== */
 
 (function () {
   'use strict';
 
-  var PLAYLIST = 'PLRxK8yQIVa0k';
+  var PLAYLIST = 'PLXKmitZHRJ8c';
   var KEY = 'orbital-music';
+
+  /* The song each theme starts on, by its YouTube video id in the playlist,
+     spread so each song has about eight themes. App themes go by their own
+     ids; theme-store themes by "store:" and theirs. A theme not listed here,
+     or a song since taken out of the playlist, starts from the top. */
+  var TRACKS = {
+    cannedHeat: '-38yJGUvBD8',  // Jamiroquai, Canned Heat: bright, funky, fun
+    paradise: '13XuCgfk1Hg',    // Clementine & the Galaxy, Paradise: soft and dreamy
+    noOne: 'wZAng0z9TdA',       // Above & Beyond, No One On Earth: airy, spacious
+    gravity: 'VsxGptj5Jzg',     // 28mm, Gravity: clean and focused
+    strawberry: 'aiRu9hDrzI8',  // VEAUX, Strawberry Blues: calm, natural, cosy
+    midnight: '8b-ecNhMIyw',    // Caravan Palace, Midnight: vintage, warm, jazzy
+    skeler: 'exoTXpifiHY',      // skeler., Two to the Chest: dark and spooky
+    endOfLine: 'NOMa56y_Was',   // Daft Punk, End of Line: neon and digital
+  };
+  var BY_SONG = {
+    cannedHeat: ['bubble', 'store:candy', 'store:crayon_box', 'store:disco', 'store:sparkles',
+      'store:summer_splash', 'store:golden_countdown', 'store:midnight_fireworks'],
+    paradise: ['blossom', 'lilac', 'rosegold', 'store:cherry_blossom', 'store:spring_bloom',
+      'store:valentines_day', 'store:love_letters', 'store:beach'],
+    noOne: ['galactic', 'fluid', 'glass', 'store:glass', 'store:northern_lights', 'store:constellation',
+      'store:space_cadet', 'store:winter_snow'],
+    gravity: ['professional', 'slate', 'cupertino', 'minimal', 'sleek', 'android', 'store:graphite', 'store:paper'],
+    strawberry: ['sage', 'daylight', 'store:matcha', 'store:forest_floor', 'store:cozy_cabin',
+      'store:cozy_rainy_day', 'store:tropical', 'store:harvest', 'store:autumn_leaves'],
+    midnight: ['clockwork', 'silk', 'dusk', 'honeycomb', 'classic', 'store:midnight_jazz',
+      'store:road_trip', 'store:desert_dusk'],
+    skeler: ['store:halloween_night', 'store:haunted_mansion', 'store:witching_hour', 'store:spider_web',
+      'store:ghost_glow', 'store:jack_o_lantern', 'store:candy_corn', 'store:pumpkin_patch'],
+    endOfLine: ['orbital', 'cybernetic', 'terminal', 'tiles', 'largeprint', 'store:arcade_assistant',
+      'store:tokyo_night'],
+  };
+  var SONG = {};
+  Object.keys(BY_SONG).forEach(function (k) {
+    BY_SONG[k].forEach(function (theme) { SONG[theme] = TRACKS[k]; });
+  });
+
+  function vibe() {
+    var v = window.OrbitalTheme && window.OrbitalTheme.current();
+    return (v && v.id) || 'orbital';
+  }
+
+  /* Plays the theme's song once the playlist has loaded into the player. */
+  function playFor(theme, tries) {
+    if (!player || !player.getPlaylist) return;
+    var list = player.getPlaylist();
+    if (!list || !list.length) {
+      if ((tries || 0) < 20) setTimeout(function () { playFor(theme, (tries || 0) + 1); }, 250);
+      else player.playVideo();
+      return;
+    }
+    var at = list.indexOf(SONG[theme]);
+    player.playVideoAt(at < 0 ? 0 : at);
+  }
 
   function remembered() {
     try { return sessionStorage.getItem(KEY); } catch (e) { return null; }
@@ -21,8 +75,6 @@
   function remember(v) {
     try { sessionStorage.setItem(KEY, v); } catch (e) { /* private mode: ask again next time */ }
   }
-
-  if (remembered() === 'no') return;
 
   var ask = document.createElement('div');
   ask.className = 'music-ask';
@@ -37,8 +89,10 @@
   var player = null;
 
   function start() {
-    /* The player lives on a second phone under the hero one: the lower half of
-       a red home screen, enlarged so the Now playing widget is shown at its
+    if (card) return;
+    remember('yes');
+    /* The player lives on a second phone beside the hero one: the lower half of
+       a home screen in the visitor's vibe (Orbital if they skipped it), enlarged so the Now playing widget is shown at its
        real size. It sits in the open space under the calendar, beside the app
        list and above the orbit dock, the way it would on a phone. */
     var demo = document.querySelector('.hero-demo');
@@ -124,6 +178,8 @@
         zoom.remove();
         document.documentElement.classList.remove('has-music');
         remember('no');
+        card = null;
+        player = null;
       } else if (m === 'prev') {
         player.previousVideo();
       } else if (m === 'next') {
@@ -170,8 +226,8 @@
         host: 'https://www.youtube-nocookie.com',
         width: '100%',
         height: '100%',
-        playerVars: { listType: 'playlist', list: PLAYLIST, index: 0, autoplay: 1, playsinline: 1, rel: 0 },
-        events: { onReady: function (ev) { ev.target.playVideo(); } },
+        playerVars: { listType: 'playlist', list: PLAYLIST, index: 0, autoplay: 0, playsinline: 1, rel: 0 },
+        events: { onReady: function () { playFor(vibe()); } },
       });
     };
     var s = document.createElement('script');
@@ -188,5 +244,14 @@
     if (yes) start();
   });
 
-  document.body.appendChild(ask);
+  /* The vibe screen (vibe.js) starts the soundtrack with its sound switch.
+     A browser will not start music on its own when the visitor comes back to
+     this page from another one, so if it was playing earlier in the visit
+     they are asked whether to pick it up again. */
+  window.OrbitalMusic = { start: start };
+  document.addEventListener('orbital:theme', function (e) { if (player) playFor(e.detail.id || 'orbital'); });
+  if (remembered() === 'yes') {
+    ask.querySelector('p').textContent = 'Pick the soundtrack back up?';
+    document.body.appendChild(ask);
+  }
 })();

@@ -141,6 +141,13 @@
   };
 
   var THEME_ORDER = Object.keys(THEMES);
+  /* For the theme picker and the site colours (pick.js, theme.js). */
+  window.OrbitalThemes = THEMES;
+
+  function pickedTheme() {
+    var v = window.OrbitalTheme && window.OrbitalTheme.current();
+    return v && THEMES[v.id] ? v.id : 'orbital';
+  }
 
   function preset(id) {
     var t = THEMES[id] || THEMES.orbital;
@@ -948,7 +955,7 @@
   /* ---- the hero: a phone that turns over to show another setup ------------ */
 
   var SCENES = [
-    { theme: 'orbital', title: 'The orbit dock', line: 'Your favorite apps on a wheel. Turn it with your thumb; try dragging it.' },
+    { theme: 'orbital', title: 'The orbit dock', line: 'Your favorite apps in a ring at the edge. Turn it with your thumb; try dragging it.' },
     { theme: 'honeycomb', title: 'Honeycomb', line: 'Hexagon icons, laid out edge to edge like a comb.' },
     { theme: 'tiles', title: 'Tiles', line: 'Square tiles that fill the screen, with live tiles that turn over.' },
     { theme: 'terminal', title: 'Terminal', line: 'Named tabs, scan lines and a monospaced clock with seconds.' },
@@ -1192,7 +1199,8 @@
 
   function Builder(root) {
     var id = 'bld' + (++uid);
-    var cfg = preset('orbital');
+    /* It starts on the theme the visitor picked, when it is one of these. */
+    var cfg = preset(pickedTheme());
 
     /* Twenty-six themes are too many to lay out as buttons, so they are a
        dropdown: free ones first, then Premium, each with its two colours. */
@@ -1317,6 +1325,8 @@
       if (k === 'i' && cfg.icons === 'made') cfg.style = 'original';
       draw();
     });
+
+    document.addEventListener('orbital:theme', function (e) { if (e.detail.id) pick(e.detail.id); });
 
     draw();
   }
@@ -1652,6 +1662,268 @@
     mount(scr, preset('bubble'));
   }
 
+  /* ---- Orbit Pad: every app in rings around the thumb ------------------------ */
+
+  /* A small pad where the thumb rests. Hold it and the apps come out in rings
+     around it: the dock's apps closest, most used next, everything else
+     further out. Slide onto one and let go to open it. Positions are in cqw,
+     the screen being 100 wide and H tall. */
+  var PAD_RINGS = [
+    { r: 17, apps: ['Phone', 'Messages', 'Browser', 'Camera', 'Music'] },
+    { r: 31, apps: ['Photos', 'Maps', 'Mail', 'Calendar', 'Notes', 'Video', 'Clock', 'Weather'] },
+    { r: 45, apps: ['Settings', 'Files', 'Store', 'Contacts', 'Podcasts', 'Phone', 'Messages', 'Camera', 'Photos', 'Maps', 'Music', 'Mail'] },
+  ];
+
+  function OrbitPad(root) {
+    var cfg = scene({ theme: root.getAttribute('data-theme') || 'galactic', dock: 'none', cards: ['weather', 'next'] });
+    root.innerHTML = device() + '<p class="pad-hint small muted">Press and hold the pad, slide onto an app, let go.</p>';
+    var scr = root.querySelector('.scr');
+    render(scr, cfg);
+
+    var PX = 66;
+    var PY = H * 0.74;
+    var layer = document.createElement('div');
+    layer.className = 'opad';
+    var html = '';
+    PAD_RINGS.forEach(function (ring, ri) {
+      html += '<span class="opad-ring" style="left:' + PX + 'cqw;top:' + PY + 'cqw;width:' + ring.r * 2 + 'cqw;height:' + ring.r * 2 + 'cqw"></span>';
+      ring.apps.forEach(function (name, i) {
+        var a = (i / ring.apps.length) * Math.PI * 2 - Math.PI / 2 + ri * 0.3;
+        var x = PX + Math.cos(a) * ring.r;
+        var y = PY + Math.sin(a) * ring.r;
+        html += '<span class="opad-app" data-app="' + name + '" style="left:' + x.toFixed(2) + 'cqw;top:' + y.toFixed(2) +
+          'cqw;--d:' + (ri * 60 + i * 18) + 'ms">' + icon(app(name), { icons: 'circle', style: 'original' }) + '</span>';
+      });
+    });
+    html += '<span class="opad-name"></span>' +
+      '<button type="button" class="opad-pad" style="left:' + PX + 'cqw;top:' + PY + 'cqw" aria-label="Orbit Pad: hold and slide onto an app"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/></svg></button>' +
+      '<span class="opad-finger"></span><span class="opad-open"><span class="opad-open-ic"></span><b></b></span>';
+    layer.innerHTML = html;
+    scr.appendChild(layer);
+
+    var pad = layer.querySelector('.opad-pad');
+    var nameEl = layer.querySelector('.opad-name');
+    var finger = layer.querySelector('.opad-finger');
+    var openEl = layer.querySelector('.opad-open');
+    var apps = Array.prototype.slice.call(layer.querySelectorAll('.opad-app'));
+    var on = null;
+    var holding = false;
+    var touched = false;
+
+    function show(yes) {
+      layer.classList.toggle('is-open', yes);
+      if (!yes) hover(null);
+    }
+
+    function hover(el) {
+      if (on === el) return;
+      if (on) on.classList.remove('is-on');
+      on = el;
+      if (on) on.classList.add('is-on');
+      nameEl.textContent = on ? on.getAttribute('data-app') : '';
+      nameEl.classList.toggle('is-on', !!on);
+    }
+
+    /* The app under a point on the page, if the point is near enough to one. */
+    function nearest(cx, cy) {
+      var best = null;
+      var bestD = Infinity;
+      var reach = scr.getBoundingClientRect().width * 0.08;
+      apps.forEach(function (el) {
+        var b = el.getBoundingClientRect();
+        var d = Math.hypot(b.left + b.width / 2 - cx, b.top + b.height / 2 - cy);
+        if (d < bestD) { bestD = d; best = el; }
+      });
+      return bestD < reach ? best : null;
+    }
+
+    function launch(el) {
+      var a = app(el.getAttribute('data-app'));
+      openEl.style.setProperty('--c', a[2]);
+      openEl.querySelector('.opad-open-ic').innerHTML = glyph(a[1]);
+      openEl.querySelector('b').textContent = a[0];
+      openEl.classList.add('is-on');
+      setTimeout(function () { openEl.classList.remove('is-on'); }, 1100);
+    }
+
+    pad.addEventListener('pointerdown', function (e) {
+      e.preventDefault();
+      touched = true;
+      holding = true;
+      try { pad.setPointerCapture(e.pointerId); } catch (err) { /* fine without */ }
+      show(true);
+    });
+    pad.addEventListener('pointermove', function (e) {
+      if (holding) hover(nearest(e.clientX, e.clientY));
+    });
+    function release() {
+      if (!holding) return;
+      holding = false;
+      var pick = on;
+      show(false);
+      if (pick) launch(pick);
+    }
+    pad.addEventListener('pointerup', release);
+    pad.addEventListener('pointercancel', function () { holding = false; show(false); });
+    /* The keyboard: Enter or Space opens the rings, the arrows step round the
+       inner ring, Enter again opens that app. */
+    var k = -1;
+    pad.addEventListener('keydown', function (e) {
+      var inner = apps.slice(0, PAD_RINGS[0].apps.length);
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        touched = true;
+        if (!layer.classList.contains('is-open')) { show(true); k = 0; hover(inner[0]); return; }
+        var pick = on;
+        show(false);
+        if (pick) launch(pick);
+      } else if ((e.key === 'ArrowRight' || e.key === 'ArrowLeft') && layer.classList.contains('is-open')) {
+        e.preventDefault();
+        k = (k + (e.key === 'ArrowRight' ? 1 : inner.length - 1)) % inner.length;
+        hover(inner[k]);
+      } else if (e.key === 'Escape') {
+        show(false);
+      }
+    });
+
+    /* Until someone tries it, it shows itself: a thumb holds the pad, slides
+       to an app and lets go. */
+    var wait = patient(root);
+    var targets = ['Music', 'Maps', 'Camera', 'Calendar', 'Messages', 'Photos'];
+    var turn = 0;
+    (function demo() {
+      wait(turn ? 3600 : 1600, function () {
+        if (touched) return;
+        var name = targets[turn++ % targets.length];
+        var el = apps.filter(function (a) { return a.getAttribute('data-app') === name; })[0];
+        finger.style.left = PX + 'cqw';
+        finger.style.top = PY + 'cqw';
+        finger.classList.add('is-on');
+        show(true);
+        setTimeout(function () {
+          if (touched) { finger.classList.remove('is-on'); return; }
+          finger.style.left = el.style.left;
+          finger.style.top = el.style.top;
+          setTimeout(function () {
+            if (touched) { finger.classList.remove('is-on'); return; }
+            hover(el);
+            setTimeout(function () {
+              finger.classList.remove('is-on');
+              if (touched) return;
+              show(false);
+              launch(el);
+              demo();
+            }, 650);
+          }, 650);
+        }, 700);
+      });
+    })();
+  }
+
+  /* ---- Showcase: big tiles over the focused app's colour ---------------------- */
+
+  var SHELVES = [
+    { name: 'Featured', apps: ['Music', 'Maps', 'Photos', 'Video', 'Messages', 'Camera', 'Podcasts', 'Calendar'] },
+    { name: 'Recent', apps: ['Messages', 'Browser', 'Mail', 'Notes', 'Weather', 'Clock'] },
+    { name: 'Games', apps: ['Store', 'Video', 'Music', 'Files'] },
+    { name: 'Music', apps: ['Music', 'Podcasts', 'Video'] },
+  ];
+  var QUICK = {
+    Music: ['Play', 'Next song', 'Liked'], Maps: ['Home', 'Work', 'Search'], Photos: ['Camera roll', 'Albums'],
+    Video: ['Resume', 'Downloads'], Messages: ['New message', 'Sam'], Camera: ['Selfie', 'Video'],
+    Podcasts: ['Resume episode'], Calendar: ['New event', 'Today'], Browser: ['New tab', 'Bookmarks'],
+    Mail: ['Compose', 'Inbox'], Notes: ['New note'], Weather: ['Hourly'], Clock: ['Timer', 'Alarm'],
+    Store: ['Updates'], Files: ['Recent files'],
+  };
+
+  function ShowcaseHome(root) {
+    root.innerHTML = device() + '<p class="pad-hint small muted">Tap a tile, or a shelf above the row.</p>';
+    var scr = root.querySelector('.scr');
+    render(scr, scene({ theme: root.getAttribute('data-theme') || 'orbital', dock: 'none', cards: [] }));
+    var layer = document.createElement('div');
+    layer.className = 'shw';
+    var hour = new Date().getHours();
+    layer.innerHTML =
+      '<div class="shw-back"><span class="shw-blur"></span></div>' +
+      '<div class="shw-head"><b>' + (hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening') + '</b>' +
+      '<span>' + glyph('cloud') + ' 72&deg; Clear &middot; Lunch with Sam at 1:00</span></div>' +
+      '<div class="shw-tabs" role="tablist">' + SHELVES.map(function (s, i) {
+        return '<button type="button" role="tab" aria-selected="' + (i === 0) + '" data-s="' + i + '">' + s.name + '</button>';
+      }).join('') + '</div>' +
+      '<div class="shw-row"></div>' +
+      '<div class="shw-focus"><b></b><span class="shw-quick"></span></div>' +
+      '<div class="shw-bays">' +
+      '<span class="shw-bay">' + '<em>Now playing</em><b>Midnight Drive</b><i class="shw-bar"><i></i></i></span>' +
+      '<span class="shw-bay"><em>Up next</em><b>Lunch with Sam</b><span>1:00 PM</span></span>' +
+      '</div>';
+    scr.appendChild(layer);
+
+    var row = layer.querySelector('.shw-row');
+    var back = layer.querySelector('.shw-back');
+    var blur = layer.querySelector('.shw-blur');
+    var focusName = layer.querySelector('.shw-focus b');
+    var quick = layer.querySelector('.shw-quick');
+    var shelf = 0;
+    var at = 0;
+    var touched = false;
+
+    function fillRow() {
+      row.innerHTML = SHELVES[shelf].apps.map(function (n, i) {
+        var a = app(n);
+        return '<button type="button" class="shw-tile" data-i="' + i + '" style="--c:' + a[2] + '" aria-label="' + n + '">' + glyph(a[1]) + '</button>';
+      }).join('');
+      focus(0);
+    }
+
+    function focus(i) {
+      var tiles = row.querySelectorAll('.shw-tile');
+      at = (i + tiles.length) % tiles.length;
+      Array.prototype.forEach.call(tiles, function (t, j) { t.classList.toggle('is-on', j === at); });
+      var a = app(SHELVES[shelf].apps[at]);
+      back.style.setProperty('--c', a[2]);
+      blur.innerHTML = glyph(a[1]);
+      focusName.textContent = a[0];
+      quick.innerHTML = (QUICK[a[0]] || ['Open']).map(function (q) { return '<i>' + q + '</i>'; }).join('');
+      /* The focused tile slides to the second place in the row, so the one
+         before it still shows. */
+      row.style.transform = 'translateX(' + (-Math.max(0, at - 1) * 27) + 'cqw)';
+    }
+
+    layer.querySelector('.shw-tabs').addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (!b) return;
+      touched = true;
+      shelf = +b.getAttribute('data-s');
+      Array.prototype.forEach.call(layer.querySelectorAll('.shw-tabs button'), function (x) {
+        x.setAttribute('aria-selected', String(x === b));
+      });
+      fillRow();
+    });
+    row.addEventListener('click', function (e) {
+      var t = e.target.closest('.shw-tile');
+      if (!t) return;
+      touched = true;
+      focus(+t.getAttribute('data-i'));
+    });
+    row.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault();
+      touched = true;
+      focus(at + (e.key === 'ArrowRight' ? 1 : -1));
+      row.querySelectorAll('.shw-tile')[at].focus();
+    });
+
+    fillRow();
+    var wait = patient(root);
+    (function step() {
+      wait(2400, function () {
+        if (touched) return;
+        focus(at + 1);
+        step();
+      });
+    })();
+  }
+
   /* ---- start everything that is on this page ------------------------------ */
 
   function each(sel, fn) {
@@ -1687,4 +1959,6 @@
   later('[data-foldable]', Foldable);
   later('[data-keyboard]', Keyboard);
   later('[data-kids]', Kids);
+  later('[data-orbitpad]', OrbitPad);
+  later('[data-showcase-home]', ShowcaseHome);
 })();
