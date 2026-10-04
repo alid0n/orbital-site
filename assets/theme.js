@@ -30,8 +30,8 @@
 
   apply(stored() || system());
 
-  /* The theme picked on the front page (pick.js) colours the site for the rest
-     of the visit: its accent everywhere, and its background in dark mode (or
+  /* The theme picked on the front page (pick.js) colours the site from then on,
+     on this device: its accent everywhere, and its background in dark mode (or
      in light mode, for the light themes). Kept as colours rather than a name
      so this runs before anything else has loaded. */
   var VIBE = 'orbital-theme-colors';
@@ -50,21 +50,21 @@
     root.classList.add("themed");
   }
 
-  try { paint(JSON.parse(sessionStorage.getItem(VIBE))); } catch (e) { /* nothing picked yet */ }
+  try { paint(JSON.parse(localStorage.getItem(VIBE))); } catch (e) { /* nothing picked yet */ }
 
   window.OrbitalTheme = {
     /* t: { id, name, a, b, bg, panel, light }, an app theme or a store one. */
     apply: function (t, picked) {
       if (!t || !t.a) return;
       var v = { id: t.id, name: t.name, a: t.a, b: t.b, bg: t.bg, panel: t.panel, light: !!t.light };
-      try { sessionStorage.setItem(VIBE, JSON.stringify(v)); } catch (e) { /* this page only */ }
+      try { localStorage.setItem(VIBE, JSON.stringify(v)); } catch (e) { /* this page only */ }
       paint(v);
       /* A light theme reads best on the light site and a dark one on the
          dark site, unless the visitor has already chosen for themselves. */
       if (picked && !stored()) apply(v.light ? 'light' : 'dark');
     },
     current: function () {
-      try { return JSON.parse(sessionStorage.getItem(VIBE)) || null; } catch (e) { return null; }
+      try { return JSON.parse(localStorage.getItem(VIBE)) || null; } catch (e) { return null; }
     },
   };
 

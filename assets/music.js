@@ -16,7 +16,7 @@
   var KEY = 'orbital-music';
 
   /* The song each theme starts on, by its YouTube video id in the playlist,
-     spread so each song has about eight themes. App themes go by their own
+     spread so each song has about ten themes. App themes go by their own
      ids; theme-store themes by "store:" and theirs. A theme not listed here,
      or a song since taken out of the playlist, starts from the top. */
   var TRACKS = {
@@ -31,20 +31,21 @@
   };
   var BY_SONG = {
     cannedHeat: ['bubble', 'store:candy', 'store:crayon_box', 'store:disco', 'store:sparkles',
-      'store:summer_splash', 'store:golden_countdown', 'store:midnight_fireworks'],
-    paradise: ['blossom', 'lilac', 'rosegold', 'store:cherry_blossom', 'store:spring_bloom',
-      'store:valentines_day', 'store:love_letters', 'store:beach'],
-    noOne: ['galactic', 'fluid', 'glass', 'store:glass', 'store:northern_lights', 'store:constellation',
-      'store:space_cadet', 'store:winter_snow'],
-    gravity: ['professional', 'slate', 'cupertino', 'minimal', 'sleek', 'android', 'store:graphite', 'store:paper'],
-    strawberry: ['sage', 'daylight', 'store:matcha', 'store:forest_floor', 'store:cozy_cabin',
-      'store:cozy_rainy_day', 'store:tropical', 'store:harvest', 'store:autumn_leaves'],
-    midnight: ['clockwork', 'silk', 'dusk', 'honeycomb', 'classic', 'store:midnight_jazz',
-      'store:road_trip', 'store:desert_dusk'],
+      'store:summer_splash', 'store:golden_countdown', 'store:midnight_fireworks', 'store:canyon_poster', 'store:solar'],
+    paradise: ['blossom', 'lilac', 'rosegold', 'store:cherry_blossom', 'store:spring_bloom', 'store:valentines_day',
+      'store:love_letters', 'store:beach', 'store:flamingo', 'store:almond_blossom', 'store:water_lilies', 'store:medusae'],
+    noOne: ['galactic', 'fluid', 'glass', 'gravity', 'store:glass', 'store:northern_lights', 'store:constellation',
+      'store:space_cadet', 'store:winter_snow', 'store:earthrise', 'store:saturns_hexagon'],
+    gravity: ['professional', 'slate', 'cupertino', 'minimal', 'sleek', 'android', 'match', 'gallery', 'efficient',
+      'store:graphite', 'store:paper', 'store:rhinoceros'],
+    strawberry: ['sage', 'daylight', 'store:matcha', 'store:forest_floor', 'store:cozy_cabin', 'store:cozy_rainy_day',
+      'store:tropical', 'store:harvest', 'store:autumn_leaves', 'store:willow_bough', 'store:sea_of_fog'],
+    midnight: ['silk', 'dusk', 'honeycomb', 'classic', 'marquee', 'store:midnight_jazz', 'store:road_trip',
+      'store:desert_dusk', 'store:gismonda', 'store:golden_sierra', 'store:great_wave'],
     skeler: ['store:halloween_night', 'store:haunted_mansion', 'store:witching_hour', 'store:spider_web',
       'store:ghost_glow', 'store:jack_o_lantern', 'store:candy_corn', 'store:pumpkin_patch'],
-    endOfLine: ['orbital', 'cybernetic', 'terminal', 'tiles', 'largeprint', 'store:arcade_assistant',
-      'store:tokyo_night'],
+    endOfLine: ['orbital', 'cybernetic', 'terminal', 'tiles', 'largeprint', 'offgrid', 'forcefield',
+      'store:arcade_assistant', 'store:tokyo_night', 'store:night_pass'],
   };
   var SONG = {};
   Object.keys(BY_SONG).forEach(function (k) {
@@ -250,8 +251,12 @@
      they are asked whether to pick it up again. */
   window.OrbitalMusic = { start: start };
   document.addEventListener('orbital:theme', function (e) { if (player) playFor(e.detail.id || 'orbital'); });
-  if (remembered() === 'yes') {
-    ask.querySelector('p').textContent = 'Pick the soundtrack back up?';
+  /* Someone coming back, who picked a theme on an earlier visit with the sound
+     on, is asked too, since the picker will not show again to start it. */
+  function kept(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  var back = !remembered() && kept('orbital-picked') && kept('orbital-pick-sound') !== 'off';
+  if (remembered() === 'yes' || back) {
+    ask.querySelector('p').textContent = back ? 'Play the soundtrack?' : 'Pick the soundtrack back up?';
     document.body.appendChild(ask);
   }
 })();

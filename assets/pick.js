@@ -9,8 +9,8 @@
 
    Picking one colours the whole site in its theme (theme.js), puts it on the
    music phone, and, with the sound switch on, starts the soundtrack on the
-   song chosen for it (music.js). The pick is kept for the rest of the visit,
-   so the screen shows once; "Change theme" in the hero brings it back.
+   song chosen for it (music.js). The pick is remembered on the device, so the
+   screen shows once; "Change theme" in the hero brings it back.
    ========================================================================== */
 
 (function () {
@@ -20,8 +20,10 @@
   var KEY = 'orbital-picked';
   var SOUND = 'orbital-pick-sound';
 
-  function get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
-  function put(k, v) { try { sessionStorage.setItem(k, v); } catch (e) { /* this page only */ } }
+  /* Kept on this device, so someone coming back lands straight on the site in
+     the theme they picked; "Change theme" in the hero opens the picker again. */
+  function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function put(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* this page only */ } }
 
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -35,7 +37,7 @@
   function setups(row) {
     return (window.OrbitalSetups || []).filter(function (s) { return s.row === row; }).map(function (s) {
       var c = s.colors || APP[s.theme] || APP.orbital;
-      return { id: s.key, theme: s.theme, name: s.name, themeName: c.name, img: 'assets/pick/' + s.key + '.webp?v=1',
+      return { id: s.key, theme: s.theme, name: s.name, themeName: c.name, img: 'assets/pick/' + s.key + '.webp?v=2',
         a: c.a, b: c.b, bg: c.bg, panel: c.panel, light: !!c.light };
     });
   }
@@ -248,6 +250,6 @@
   });
 
   /* Anyone arriving on a link to part of the page (#get, #feedback) goes
-     straight there; everyone else gets the picker once per visit. */
+     straight there; everyone else gets the picker the first time they come. */
   if (!get(KEY) && !location.hash) open();
 })();

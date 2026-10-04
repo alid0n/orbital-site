@@ -653,6 +653,16 @@ hr {
 /* ---- the front page's playgrounds -------------------------------------------- */
 
 .play-head { text-align: center; margin-bottom: 28px; }
+
+/* "What is Orbital Launcher?": three plain steps, side by side, then stacked on a phone. */
+.what { text-align: center; }
+.what h2 { margin: 0 0 22px; }
+.what-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; text-align: left; }
+.what-steps > div { padding: 20px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--rule); }
+.what-steps b { display: block; margin-bottom: 6px; color: var(--accent); font-size: 1.05rem; }
+.what-steps p { margin: 0; color: var(--text); font-size: 0.97rem; }
+.what-facts { margin: 18px 0 0; }
+@media (max-width: 760px) { .what-steps { grid-template-columns: minmax(0, 1fr); } }
 .play-head .intro { margin: 0 auto; }
 
 .anchors.big { justify-content: center; gap: 48px; padding: 32px; border-radius: calc(var(--radius) + 4px); background: var(--card); border: 1px solid var(--rule); }

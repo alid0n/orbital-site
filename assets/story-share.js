@@ -18,9 +18,12 @@
 
   var URL = 'https://orbitallauncher.com/';
   var TITLE = 'Orbital Launcher — Home, reimagined.';
-  var V = '1';
+  var V = '2';
   var DESIGNS = [
     ['orbital', 'Orbital'],
+    ['orbitpad', 'Orbit Pad'],
+    ['showcase', 'Showcase'],
+    ['art', 'The Great Wave'],
     ['dusk', 'Dusk'],
     ['cybernetic', 'Cybernetic'],
     ['terminal', 'Terminal'],

@@ -124,12 +124,11 @@
     terminal: { name: 'Terminal', a: '#35E06A', b: '#9BF5B4', bg: '#000000', panel: '#010401', text: '#C9F7D6', icons: 'square', style: 'theme', widgets: 'brackets', clock: 'line', marks: 'tabs', fx: ['scan', 'glow'], font: 'term', radius: 1, cards: ['next', 'note'] },
     tiles: { name: 'Tiles', a: '#2FA8FF', b: '#7CC8FF', bg: '#080B10', panel: '#111822', dock: 'flat', icons: 'tile', style: 'theme', widgets: 'solid', names: 'all', marks: 'none', radius: 0 },
     honeycomb: { name: 'Honeycomb', a: '#FFB627', b: '#FFD27A', bg: '#120C04', panel: '#1E1508', dock: 'flat', icons: 'hex', names: 'none', radius: 3 },
-    clockwork: { name: 'Clockwork', a: '#C9A227', b: '#E6C766', bg: '#0D0B08', panel: '#17130D', icons: 'circle', style: 'theme', widgets: 'outline', clock: 'line', cards: ['cal'] },
     glass: { name: 'Glass', a: '#9FD8FF', b: '#D8BCFF', bg: '#0C1220', panel: '#101829', widgets: 'glass', radius: 7, wall: 'glass', cards: ['weather', 'play'] },
     cupertino: { name: 'Cupertino', a: '#0A84FF', b: '#64B5FF', bg: '#000000', panel: '#1C1C1E', dock: 'flat', icons: 'rounded', names: 'all', radius: 5, cards: ['weather'], appGrid: true },
     slate: { name: 'Slate', a: '#5AA0F8', b: '#F7C66B', bg: '#161C26', panel: '#232C3A', dock: 'flat', anchor: 'right', icons: 'rounded', widgets: 'paper', names: 'all', cards: ['weather', 'next'], appGrid: true },
     daylight: { name: 'Daylight', a: '#0A625E', b: '#9A4210', bg: '#F4F2ED', panel: '#FBFAF7', text: '#1B222A', light: true, dock: 'flat', names: 'all', cards: ['weather', 'cal'] },
-    minimal: { name: 'Minimal', a: '#C9BFAE', b: '#E6DFD2', bg: '#121110', panel: '#1A1917', dock: 'flat', icons: 'rounded', style: 'muted', widgets: 'none', clock: 'stack', names: 'none', marks: 'none', radius: 3, cards: ['agenda'] },
+    minimal: { name: 'Minimal', free: true, a: '#C9BFAE', b: '#E6DFD2', bg: '#121110', panel: '#1A1917', dock: 'flat', icons: 'rounded', style: 'muted', widgets: 'none', clock: 'stack', names: 'none', marks: 'none', radius: 3, cards: ['agenda'] },
     blossom: { name: 'Blossom', a: '#8E2F57', b: '#7C4A22', bg: '#FBF2F4', panel: '#FFF8FA', text: '#261B23', light: true, dock: 'flat', icons: 'circle', names: 'all', font: 'serif', radius: 6, cards: ['next', 'note'] },
     rosegold: { name: 'Rose Gold', a: '#E8B4A0', b: '#D98C8C', bg: '#15100F', panel: '#1C1614', icons: 'rounded', font: 'serif', cards: ['cal'] },
     lilac: { name: 'Lilac', a: '#C8A9E8', b: '#E8B8D4', bg: '#14111A', panel: '#1C1826', icons: 'circle', widgets: 'outline', radius: 5, cards: ['weather', 'next'] },
@@ -137,6 +136,13 @@
     sage: { name: 'Sage', a: '#A8C8A8', b: '#E0CDA8', bg: '#0D120E', panel: '#141A15', dock: 'flat', icons: 'circle', widgets: 'outline', names: 'all', cards: ['weather', 'note'] },
     fluid: { name: 'Fluid', a: '#3FE0C8', b: '#8C9BFF', bg: '#05100F', panel: '#071614', widgets: 'outline', fx: ['glow', 'flow'], radius: 5, cards: ['next', 'play'] },
     bubble: { name: 'Bubble', a: '#FF8FC7', b: '#FFC2A0', bg: '#17091A', panel: '#1F0D24', icons: 'circle', widgets: 'pill', radius: 8, cards: ['weather', 'note'] },
+    offgrid: { name: 'Off Grid', a: '#FF2B2B', b: '#FF7A5C', bg: '#000000', panel: '#1A0406', text: '#FFE6E1', icons: 'rounded', style: 'theme', widgets: 'outline', clock: 'line', fx: ['glow', 'flow'], radius: 1.5, cards: ['next', 'weather'] },
+    forcefield: { name: 'Forcefield', a: '#3DA9FF', b: '#5CF2FF', bg: '#020814', panel: '#0B1D3A', text: '#E4F3FF', dock: 'flat', icons: 'hex', style: 'theme', widgets: 'glass', clock: 'line', names: 'all', fx: ['glow', 'pulse'], radius: 1.5 },
+    gravity: { name: 'Gravity', a: '#9D8BFF', b: '#4DE8C8', bg: '#04030D', panel: '#161236', text: '#EEEBFF', icons: 'circle', widgets: 'glass', clock: 'line', names: 'all', fx: ['glow'], radius: 5, cards: ['weather', 'play'] },
+    marquee: { name: 'Marquee', a: '#F2C14E', b: '#EF5A5F', bg: '#070505', panel: '#1E1714', text: '#F8F1E4', icons: 'rounded', widgets: 'solid', clock: 'stack', names: 'all', radius: 1.5, cards: ['play', 'next'] },
+    gallery: { name: 'Gallery', a: '#1F4FD1', b: '#9C2F5A', bg: '#F3F3F1', panel: '#FDFDFC', text: '#16181D', light: true, dock: 'flat', icons: 'square', widgets: 'paper', clock: 'stack', names: 'all', radius: 1.5, cards: ['weather', 'cal'] },
+    efficient: { name: 'Efficient', a: '#5EA2FF', b: '#8EC1FF', bg: '#0F1318', panel: '#212833', text: '#EEF2F7', dock: 'flat', icons: 'rounded', style: 'muted', clock: 'line', names: 'none', radius: 3, cards: ['next', 'weather'] },
+    match: { name: 'Match my wallpaper', free: true, a: '#7FE7C4', b: '#4FC3A1', bg: '#0A0D11', panel: '#10151B', cards: ['ask', 'weather'] },
     system: { name: "Your phone's colors", a: '#A8C7FA', b: '#C2E7FF', bg: '#111418', panel: '#1D2024', style: 'theme', radius: 5, cards: ['ask', 'weather'] },
   };
 
@@ -956,8 +962,10 @@
 
   var SCENES = [
     { theme: 'orbital', title: 'The orbit dock', line: 'Your favorite apps in a ring at the edge. Turn it with your thumb; try dragging it.' },
+    { theme: 'gravity', layout: 'pad', title: 'Orbit Pad', line: 'Hold the pad where your thumb rests and every app orbits around it.' },
     { theme: 'honeycomb', title: 'Honeycomb', line: 'Hexagon icons, laid out edge to edge like a comb.' },
     { theme: 'tiles', title: 'Tiles', line: 'Square tiles that fill the screen, with live tiles that turn over.' },
+    { theme: 'marquee', layout: 'showcase', title: 'Showcase', line: 'Big tiles over a backdrop in the color of the app in focus.' },
     { theme: 'terminal', title: 'Terminal', line: 'Named tabs, scan lines and a monospaced clock with seconds.' },
     { theme: 'sleek', title: 'Sleek', line: 'Monochrome, with the orbit running down the right-hand edge.' },
     { theme: 'galactic', layout: 'roam', title: 'Free roam', line: 'One open canvas that scrolls in every direction, with folders you can walk into.' },
@@ -965,6 +973,7 @@
     { theme: 'glass', dock: 'container', at: 'start', edge: 'clock', title: 'Container dock', line: 'A compact card of apps, with the clock beside it on the same edge.' },
     { theme: 'cybernetic', holds: 'letters', fx: ['glow', 'matrix'], clock: 'line', title: 'Drawer mode', line: 'The dock becomes an alphabet. Spin to a letter and its apps appear.' },
     { theme: 'dusk', layout: 'app', title: 'Over other apps', line: 'The dock waits at the edge of any app and slides out when you reach for it.' },
+    { theme: 'forcefield', title: 'Forcefield', line: 'Electric blue hexagons over a shield of light.' },
     { theme: 'slate', title: 'Slate', line: 'Bright white widgets, full-color icons and a dock down the side.' },
     { theme: 'largeprint', title: 'Large Print', line: 'High contrast, big buttons and every app named. Free for everyone.' },
     { theme: 'minimal', title: 'Minimal', line: 'Hours over minutes, muted icons, and nothing extra.' },
@@ -1914,6 +1923,8 @@
     });
 
     fillRow();
+    /* A picture of the layout can ask for a different tile in focus. */
+    if (root.getAttribute('data-focus')) focus(+root.getAttribute('data-focus'));
     var wait = patient(root);
     (function step() {
       wait(2400, function () {
