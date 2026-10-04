@@ -51,7 +51,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=11">
+<link rel="stylesheet" href="assets/site.css?v=12">
 <script src="assets/theme.js"></script>
 <link rel="stylesheet" href="assets/phone.css?v=6">
 <script>document.documentElement.classList.remove('no-js');</script>
@@ -205,6 +205,20 @@
             placeholder="you@example.com"
             spellcheck="false"
           >
+          <label class="sr-only" for="heard">How did you hear about Orbital?</label>
+          <select id="heard" name="heard" required>
+            <option value="" disabled selected>How did you hear about us?</option>
+            <option>Instagram</option>
+            <option>TikTok</option>
+            <option>YouTube</option>
+            <option>Reddit</option>
+            <option>Discord</option>
+            <option>X (Twitter)</option>
+            <option>Google search</option>
+            <option>Google Play</option>
+            <option>A friend or family member</option>
+            <option>Somewhere else</option>
+          </select>
           <!-- What the mail says when it arrives, rather than a subject line reading "New form
                submission". -->
           <input type="hidden" name="_subject" value="Orbital tester signup">

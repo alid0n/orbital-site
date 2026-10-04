@@ -53,6 +53,7 @@
 :root[data-theme='light'] .btn:hover,
 :root[data-theme='light'] .top nav .nav-cta:hover { color: #ffffff; background: var(--accent-deep); }
 :root[data-theme='light'] .btn.ghost { color: var(--text-strong); border-color: rgba(15, 23, 42, 0.2); }
+:root[data-theme='light'] .ask select { background-color: #ffffff; border-color: rgba(15, 23, 42, 0.18); }
 :root[data-theme='light'] .ask input[type='email'],
 :root[data-theme='light'] .fb textarea,
 :root[data-theme='light'] .fb input[type='email'],
@@ -964,7 +965,27 @@ hr {
 
 .ask input[type='email']::placeholder { color: var(--muted); }
 
-.ask input[type='email']:focus-visible {
+/* How they heard about Orbital: the same box as the email, with a chevron, and
+   muted while it still shows its question. */
+.ask select {
+  flex: 1 1 17rem;
+  min-width: 0;
+  padding: 13px 40px 13px 16px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.3) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2398a4b5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center / 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.ask select:invalid { color: var(--muted); }
+.ask select option { color: var(--text); background: var(--bg-lift); }
+
+.ask input[type='email']:focus-visible,
+.ask select:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
 }
