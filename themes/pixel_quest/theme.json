@@ -1,0 +1,91 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "pixel_quest",
+  "name": "Pixel Quest",
+  "description": "A moonlit pixel-art mountain range, with blocky square icons and bold retro lettering.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:retro",
+    "vibe:playful",
+    "color:purple",
+    "color:yellow",
+    "era:80s",
+    "style:one-handed",
+    "topic:gaming",
+    "topic:retro"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFD84D",
+    "accentAlt": "#5CE1E6",
+    "ink": "#FBF6FF",
+    "dim": "#B8A6E0",
+    "drawer": "#0E0620",
+    "surface": "#140A2E",
+    "elevated": "#241250",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SQUARE",
+    "iconShape": "SQUARE",
+    "iconStyle": "FLAT",
+    "widgetLook": "SOLID",
+    "widgetCorner": "SQUARE",
+    "widgetEdge": "BOLD",
+    "widgetTint": 0.3,
+    "widgetSolid": 1.0,
+    "font": "vt323",
+    "clockFace": "LINE",
+    "uppercase": true,
+    "panelLook": "LINES",
+    "notch": "PIP"
+  },
+  "mood": [
+    "dark",
+    "playful",
+    "vivid"
+  ],
+  "swatch": "#5B2287",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "RETRO"
+  }
+}

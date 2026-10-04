@@ -1,0 +1,44 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "mint",
+  "name": "Mint",
+  "description": "Mint accents on a soft light base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:chill",
+    "color:green",
+    "color:white",
+    "color:pastel"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#17855A",
+    "accentAlt": "#2B7DE9",
+    "ink": "#12302A",
+    "dim": "#5E7F76",
+    "drawer": "#E9F6F0",
+    "surface": "#F2FBF7",
+    "elevated": "#D8EEE5",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "font": "dm_sans"
+  },
+  "mood": [
+    "light",
+    "pastel",
+    "calm"
+  ],
+  "swatch": "#BFE5D3",
+  "credits": []
+}

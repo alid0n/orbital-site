@@ -1,0 +1,43 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "ocean",
+  "name": "Ocean",
+  "description": "Ocean accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dark",
+    "color:blue",
+    "color:black"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#3B82F6",
+    "accentAlt": "#93C5FD",
+    "ink": "#EEF4FF",
+    "dim": "#8497B8",
+    "drawer": "#060D1C",
+    "surface": "#0A1428",
+    "elevated": "#14223F",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "font": "inter"
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "vivid"
+  ],
+  "swatch": "#2563C9",
+  "credits": []
+}

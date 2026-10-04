@@ -1,0 +1,44 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "lavender",
+  "name": "Lavender",
+  "description": "Lavender accents on a soft light base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:calm",
+    "color:purple",
+    "color:white",
+    "color:pastel"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#7C4DDB",
+    "accentAlt": "#E0589A",
+    "ink": "#2A1F44",
+    "dim": "#7568A0",
+    "drawer": "#F0EBFA",
+    "surface": "#F7F3FD",
+    "elevated": "#E2DAF4",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "font": "outfit"
+  },
+  "mood": [
+    "light",
+    "pastel",
+    "calm"
+  ],
+  "swatch": "#D3C5F0",
+  "credits": []
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "emerald",
+  "name": "Emerald",
+  "description": "Emerald accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dark",
+    "color:green",
+    "color:black"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#2EC27E",
+    "accentAlt": "#8FE3B8",
+    "ink": "#EAFBF2",
+    "dim": "#7FAF97",
+    "drawer": "#04120B",
+    "surface": "#07190F",
+    "elevated": "#0F2A1B",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "font": "outfit"
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "vivid"
+  ],
+  "swatch": "#1B8A57",
+  "credits": []
+}

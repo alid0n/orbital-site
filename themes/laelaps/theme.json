@@ -1,0 +1,78 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "laelaps",
+  "name": "Laelaps",
+  "description": "Charles R. Knight's classic 1897 painting of two dinosaurs, in teal and olive, on the Showcase.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:dark",
+    "color:green",
+    "color:gold",
+    "style:big screen",
+    "topic:dinosaurs",
+    "topic:nature",
+    "topic:art"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#E3C25B",
+    "accentAlt": "#6FC1A8",
+    "ink": "#F6F2E4",
+    "dim": "#B9C4A9",
+    "drawer": "#0A1410",
+    "surface": "#13231D",
+    "elevated": "#1F3A30",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "lora",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "TAPER"
+  },
+  "mood": [
+    "dark",
+    "vivid",
+    "calm"
+  ],
+  "swatch": "#2E5A44",
+  "credits": [
+    {
+      "title": "Laelaps",
+      "author": "Charles R. Knight",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Laelaps-Charles_Knight-1897.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "CONSOLE",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID"
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "easy_reach",
+  "name": "Easy Reach",
+  "description": "Everything sits low on the screen within thumb reach, with big icons, bold edges and clear names.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dark",
+    "color:blue",
+    "color:yellow",
+    "color:black",
+    "style:easy to see",
+    "topic:accessibility"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFC857",
+    "accentAlt": "#7FD1FF",
+    "ink": "#F2F6FF",
+    "dim": "#B4C2DA",
+    "drawer": "#0B1420",
+    "surface": "#101B2A",
+    "elevated": "#1B2C44",
+    "veil": "#00000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "BOLD",
+    "widgetTint": 0.0,
+    "widgetSolid": 1.0,
+    "font": "atkinson_hyperlegible",
+    "clockFace": "BARE",
+    "panelLook": "CARD",
+    "notch": "NONE",
+    "homeIconScale": 1.5,
+    "homeLabels": true
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "bold"
+  ],
+  "swatch": "#101B2A",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "drawerColumns": 3,
+    "drawerIconScale": 1.4,
+    "drawerLabels": true,
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.4,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.3
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.56,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "STANDARD"
+  }
+}

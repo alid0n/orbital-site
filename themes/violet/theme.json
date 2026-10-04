@@ -1,0 +1,43 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "violet",
+  "name": "Violet",
+  "description": "Violet accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:dark",
+    "color:purple",
+    "color:black"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#A855F7",
+    "accentAlt": "#D8B4FE",
+    "ink": "#F7EEFF",
+    "dim": "#A58BC0",
+    "drawer": "#0F0618",
+    "surface": "#160A24",
+    "elevated": "#26143D",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "font": "montserrat"
+  },
+  "mood": [
+    "dark",
+    "bold",
+    "vivid"
+  ],
+  "swatch": "#7E34C9",
+  "credits": []
+}

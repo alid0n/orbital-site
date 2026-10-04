@@ -1,0 +1,101 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "harvest_table",
+  "name": "Harvest Table",
+  "description": "A pumpkin and fallen leaves in warm amber, with leaves drifting down when you tap.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:cozy",
+    "vibe:calm",
+    "color:orange",
+    "color:gold",
+    "style:one-handed",
+    "topic:thanksgiving",
+    "topic:autumn",
+    "topic:family"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#E8872F",
+    "accentAlt": "#C9A25A",
+    "ink": "#FBEFD9",
+    "dim": "#CDB08A",
+    "drawer": "#120A05",
+    "surface": "#1B100A",
+    "elevated": "#2E1C10",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "lora",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "cozy",
+    "calm"
+  ],
+  "swatch": "#7A4A1E",
+  "credits": [
+    {
+      "title": "Leaves Pumpkin",
+      "author": "Cala",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/leaves-pumpkin-AK32PJIS4T"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  },
+  "effect": "falling-leaves",
+  "tap": true,
+  "season": "autumn"
+}

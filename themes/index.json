@@ -3210,6 +3210,2611 @@
       ],
       "swatch": "#C9D1D9",
       "credits": []
+    },
+    {
+      "id": "trex_hall",
+      "name": "T. rex Hall",
+      "description": "A towering skeleton in a museum hall, in bone ivory and amber, with the Orbit Pad.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:elegant",
+        "vibe:dark",
+        "color:gold",
+        "color:black",
+        "style:one-handed",
+        "topic:dinosaurs",
+        "topic:nature"
+      ],
+      "thumbnail": "trex_hall/preview.png",
+      "file": "trex_hall/theme.json",
+      "premium": true,
+      "size": 1974,
+      "sha256": "19099b7da035cef059731d9cfed2a659f712ea28b4a7985fef297b796f935db3",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E8C27A",
+        "accentAlt": "#9FD0C0",
+        "ink": "#F5EEDD",
+        "dim": "#B3A88F",
+        "drawer": "#0A0806",
+        "surface": "#12100C",
+        "elevated": "#241E16",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "bold",
+        "minimal"
+      ],
+      "swatch": "#2A2218",
+      "credits": [
+        {
+          "title": "Tyrannosaurus Rex (Zhengzhou)",
+          "author": "Gary Todd",
+          "source": "Wikimedia Commons",
+          "license": "CC0 1.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Tyrannosaurus_Rex_(Zhengzhou).jpg"
+        }
+      ]
+    },
+    {
+      "id": "laelaps",
+      "name": "Laelaps",
+      "description": "Charles R. Knight's classic 1897 painting of two dinosaurs, in teal and olive, on the Showcase.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dreamy",
+        "vibe:dark",
+        "color:green",
+        "color:gold",
+        "style:big screen",
+        "topic:dinosaurs",
+        "topic:nature",
+        "topic:art"
+      ],
+      "thumbnail": "laelaps/preview.png",
+      "file": "laelaps/theme.json",
+      "premium": true,
+      "size": 1649,
+      "sha256": "f231c97d466263b17bffdfe7e028d71deee8c01aa30cec8d2eb76e8f4a9df17f",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E3C25B",
+        "accentAlt": "#6FC1A8",
+        "ink": "#F6F2E4",
+        "dim": "#B9C4A9",
+        "drawer": "#0A1410",
+        "surface": "#13231D",
+        "elevated": "#1F3A30",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "calm"
+      ],
+      "swatch": "#2E5A44",
+      "credits": [
+        {
+          "title": "Laelaps",
+          "author": "Charles R. Knight",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:Laelaps-Charles_Knight-1897.jpg"
+        }
+      ]
+    },
+    {
+      "id": "in_the_rock",
+      "name": "In the Rock",
+      "description": "Fossil bone still set in sandstone, with every app a stone tile in rust and sand.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:dark",
+        "color:orange",
+        "color:gold",
+        "style:one-handed",
+        "topic:dinosaurs",
+        "topic:nature"
+      ],
+      "thumbnail": "in_the_rock/preview.png",
+      "file": "in_the_rock/theme.json",
+      "premium": false,
+      "size": 2082,
+      "sha256": "dd12b611b7e4bc3966dda10c3f334d24896ac9f7b47e700a675215e265914ce6",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E08A3C",
+        "accentAlt": "#E8CB8A",
+        "ink": "#F6EFE4",
+        "dim": "#C7B9A5",
+        "drawer": "#1B1714",
+        "surface": "#2A2420",
+        "elevated": "#3A322B",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "bold",
+        "cozy"
+      ],
+      "swatch": "#6B4A2A",
+      "credits": [
+        {
+          "title": "Cleveland-Lloyd Dinosaur Quarry",
+          "author": "Bureau of Land Management, Utah",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:Cleveland_Lloyd_Dinosaur_Quarry_(26784733111).jpg"
+        }
+      ]
+    },
+    {
+      "id": "brontosaurus_study",
+      "name": "Brontosaurus Study",
+      "description": "A vintage field illustration on parchment green, in a light theme with the Orbit wheel.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:elegant",
+        "color:green",
+        "color:white",
+        "style:one-handed",
+        "topic:dinosaurs",
+        "topic:nature",
+        "topic:art"
+      ],
+      "thumbnail": "brontosaurus_study/preview.png",
+      "file": "brontosaurus_study/theme.json",
+      "premium": false,
+      "size": 2042,
+      "sha256": "ab98e0d824588fd26ed20d765bfab0739effd98597c6c7318365d985ddf7a455",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#3F6B4A",
+        "accentAlt": "#B5552E",
+        "ink": "#2B2A1E",
+        "dim": "#6B6A55",
+        "drawer": "#EDE6CF",
+        "surface": "#F4EEDA",
+        "elevated": "#E3DABD",
+        "veil": "#33EDE6CF",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "calm",
+        "cozy"
+      ],
+      "swatch": "#C9C29C",
+      "credits": [
+        {
+          "title": "Brontosaurus illustration",
+          "author": "Charles R. Knight",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:Illustration_of_the_Brontosaurus_by_Charles_R._Knight.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ankylosaurus",
+      "name": "Ankylosaurus",
+      "description": "An armoured skeleton in a museum hall, with every app a hexagon plate on an open canvas.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:futuristic",
+        "vibe:dark",
+        "color:gold",
+        "color:green",
+        "style:one-handed",
+        "topic:dinosaurs",
+        "topic:nature"
+      ],
+      "thumbnail": "ankylosaurus/preview.png",
+      "file": "ankylosaurus/theme.json",
+      "premium": true,
+      "size": 1918,
+      "sha256": "87e3c5dea3e2fc00c7fb38a2cf3ac501710aedce2eb5532891a00b67eb291456",
+      "base": "HONEYCOMB",
+      "colors": {
+        "accent": "#D9A441",
+        "accentAlt": "#8FB8A8",
+        "ink": "#F7F1E6",
+        "dim": "#BCAF98",
+        "drawer": "#14100B",
+        "surface": "#1B1610",
+        "elevated": "#2D251B",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "bold",
+        "cozy"
+      ],
+      "swatch": "#4A3A22",
+      "credits": [
+        {
+          "title": "Ankylosaurus Skeleton",
+          "author": "Gary Todd",
+          "source": "Wikimedia Commons",
+          "license": "CC0 1.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Ankylosaurus_Skeleton_(31556851166).jpg"
+        }
+      ]
+    },
+    {
+      "id": "vinyl_nights",
+      "name": "Vinyl Nights",
+      "description": "A record spinning on a wooden shelf, in amber and cream, with your music a swipe away.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:chill",
+        "vibe:dark",
+        "color:orange",
+        "color:gold",
+        "style:one-handed",
+        "topic:music"
+      ],
+      "thumbnail": "vinyl_nights/preview.png",
+      "file": "vinyl_nights/theme.json",
+      "premium": false,
+      "size": 1928,
+      "sha256": "95c43af2ec1430054854b12848e1523eb1c844c9aa2822d2816b018c68d9282e",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFB454",
+        "accentAlt": "#E9D8B4",
+        "ink": "#F8EEDC",
+        "dim": "#BBA98C",
+        "drawer": "#0D0805",
+        "surface": "#140E09",
+        "elevated": "#241A12",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "cozy",
+        "calm"
+      ],
+      "swatch": "#3A2A1A",
+      "credits": [
+        {
+          "title": "Vinyl Record",
+          "author": "Spencer Selover",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/vinyl-record-DILOPNOHDI"
+        }
+      ]
+    },
+    {
+      "id": "courtside",
+      "name": "Courtside",
+      "description": "A basketball hoop against a warm orange wall, with bold sporty lettering.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:sporty",
+        "vibe:energetic",
+        "color:orange",
+        "color:black",
+        "style:one-handed",
+        "topic:sports"
+      ],
+      "thumbnail": "courtside/preview.png",
+      "file": "courtside/theme.json",
+      "premium": false,
+      "size": 1930,
+      "sha256": "8db9a332db77a842c46ca6ddbc79ecb8b64f83f3d60227619e6ae496fef2b12c",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF8A3D",
+        "accentAlt": "#FFD9B0",
+        "ink": "#FFF4EA",
+        "dim": "#E0B898",
+        "drawer": "#150A05",
+        "surface": "#1D0F08",
+        "elevated": "#301A0E",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "bold",
+        "vivid",
+        "dark"
+      ],
+      "swatch": "#C25E1E",
+      "credits": [
+        {
+          "title": "Basketball Hoop",
+          "author": "Steve Johnson",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/basketball-hoop-RJKY5WWS8V"
+        }
+      ]
+    },
+    {
+      "id": "muscle_car",
+      "name": "Muscle Car",
+      "description": "A violet muscle car with chrome lettering, built for people who love the road.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:sporty",
+        "vibe:energetic",
+        "color:purple",
+        "color:black",
+        "style:one-handed",
+        "topic:cars"
+      ],
+      "thumbnail": "muscle_car/preview.png",
+      "file": "muscle_car/theme.json",
+      "premium": false,
+      "size": 1735,
+      "sha256": "d6cd956c4d0f3bcc6fb44f23cce11ee5d149f3b1972708c72fe956e359dff2b1",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#C77DFF",
+        "accentAlt": "#E0E0F0",
+        "ink": "#F6F0FF",
+        "dim": "#B5A8CF",
+        "drawer": "#0B0614",
+        "surface": "#120A1E",
+        "elevated": "#201232",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "bold",
+        "vivid"
+      ],
+      "swatch": "#5A2E8A",
+      "credits": [
+        {
+          "title": "Car Auto",
+          "author": "Jp Valery",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/car-auto-AQPI3EKZ9E"
+        }
+      ]
+    },
+    {
+      "id": "fresh_table",
+      "name": "Fresh Table",
+      "description": "Warm tomatoes, herbs and pasta in a kitchen glow, for people who love to cook.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:cozy",
+        "vibe:energetic",
+        "color:red",
+        "color:orange",
+        "style:one-handed",
+        "topic:food"
+      ],
+      "thumbnail": "fresh_table/preview.png",
+      "file": "fresh_table/theme.json",
+      "premium": false,
+      "size": 1903,
+      "sha256": "42d2c958d019b3251edc0f4153cd46ade3b77465638d08543c01528e63e02be3",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E8553D",
+        "accentAlt": "#8FBF6A",
+        "ink": "#FFF3E4",
+        "dim": "#CDB6A0",
+        "drawer": "#140A07",
+        "surface": "#1C100B",
+        "elevated": "#2E1C14",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "cozy",
+        "vivid"
+      ],
+      "swatch": "#8A3A22",
+      "credits": [
+        {
+          "title": "Cooking Food",
+          "author": "Healthy Living",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/cooking-food-RRAZGYXTZI"
+        }
+      ]
+    },
+    {
+      "id": "strength",
+      "name": "Strength",
+      "description": "Bright blue dumbbells on warm wood, with a weekly view to keep your training on track.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:sporty",
+        "color:blue",
+        "color:orange",
+        "style:one-handed",
+        "topic:fitness",
+        "topic:sports"
+      ],
+      "thumbnail": "strength/preview.png",
+      "file": "strength/theme.json",
+      "premium": false,
+      "size": 1945,
+      "sha256": "bceb746ffb21f25ae608eec3a029daa05f0d3e191d494d98cf0227ec76b1087a",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#2F9BFF",
+        "accentAlt": "#FFB347",
+        "ink": "#F2F6FA",
+        "dim": "#A3B1C2",
+        "drawer": "#06090E",
+        "surface": "#0B1018",
+        "elevated": "#161F2C",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "bold"
+      ],
+      "swatch": "#1F6FBF",
+      "credits": [
+        {
+          "title": "Fitness Weights",
+          "author": "Kristin Hardwick",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/fitness-weights-FVUO0YIMKH"
+        }
+      ]
+    },
+    {
+      "id": "cozy_pug",
+      "name": "Cozy Pug",
+      "description": "A pug wrapped in a blanket, in warm sand and sage, with friendly rounded lettering.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:cozy",
+        "vibe:playful",
+        "color:orange",
+        "color:green",
+        "style:one-handed",
+        "topic:animals",
+        "topic:family"
+      ],
+      "thumbnail": "cozy_pug/preview.png",
+      "file": "cozy_pug/theme.json",
+      "premium": false,
+      "size": 1940,
+      "sha256": "52ac8894b3b1b5b8afc52a027a9c376a205a6dd9317d63fb05ebac9bdbb24155",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E0A56B",
+        "accentAlt": "#8DB38F",
+        "ink": "#FBF3E8",
+        "dim": "#CDB89F",
+        "drawer": "#1A130D",
+        "surface": "#231A12",
+        "elevated": "#352619",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "cozy",
+        "playful",
+        "calm"
+      ],
+      "swatch": "#8A6A45",
+      "credits": [
+        {
+          "title": "Pug Dog",
+          "author": "Matthew Henry",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/pug-dog-JHPVE3XLUE"
+        }
+      ]
+    },
+    {
+      "id": "reading_room",
+      "name": "Reading Room",
+      "description": "Shelves of books in lamplight, with every app listed in a calm library-style index.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:cozy",
+        "vibe:elegant",
+        "color:gold",
+        "color:green",
+        "style:minimal",
+        "topic:books"
+      ],
+      "thumbnail": "reading_room/preview.png",
+      "file": "reading_room/theme.json",
+      "premium": true,
+      "size": 1801,
+      "sha256": "8b6aa462351f491f5000f2454aa0e9ae95ee557d41fce9a8dc4d4995f146a218",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E3B35A",
+        "accentAlt": "#7FB9B0",
+        "ink": "#F7EEDC",
+        "dim": "#BFAE90",
+        "drawer": "#0E0A06",
+        "surface": "#16100A",
+        "elevated": "#2A1E12",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "cozy",
+        "calm"
+      ],
+      "swatch": "#4A3320",
+      "credits": [
+        {
+          "title": "Books Knowledge",
+          "author": "Dakota Corbin",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/books-knowledge-2VENF09ZOW"
+        }
+      ]
+    },
+    {
+      "id": "wardrobe",
+      "name": "Wardrobe",
+      "description": "A neutral rail of clothes in soft sand and espresso, a light theme with a classic serif.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:elegant",
+        "vibe:calm",
+        "color:white",
+        "color:orange",
+        "style:one-handed",
+        "topic:fashion"
+      ],
+      "thumbnail": "wardrobe/preview.png",
+      "file": "wardrobe/theme.json",
+      "premium": false,
+      "size": 1925,
+      "sha256": "5f91cd5c036772bf1911481afdf1db52938f76de4a07b0cb36768798c4a9eeff",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#8A5A3C",
+        "accentAlt": "#2F4F4F",
+        "ink": "#2A211B",
+        "dim": "#7A6A5C",
+        "drawer": "#F1E9DE",
+        "surface": "#F7F1E8",
+        "elevated": "#E6DACB",
+        "veil": "#33F1E9DE",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#D8C6AE",
+      "credits": [
+        {
+          "title": "Fashion Clothes",
+          "author": "Hannah Morgan",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/fashion-clothes-ZN97ZIF3ZU"
+        }
+      ]
+    },
+    {
+      "id": "pixel_quest",
+      "name": "Pixel Quest",
+      "description": "A moonlit pixel-art mountain range, with blocky square icons and bold retro lettering.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:retro",
+        "vibe:playful",
+        "color:purple",
+        "color:yellow",
+        "era:80s",
+        "style:one-handed",
+        "topic:gaming",
+        "topic:retro"
+      ],
+      "thumbnail": "pixel_quest/preview.png",
+      "file": "pixel_quest/theme.json",
+      "premium": false,
+      "size": 1758,
+      "sha256": "8105cf04b38efe94e36c796b6b553b95e2ca0057a470734f983e64319e854c92",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFD84D",
+        "accentAlt": "#5CE1E6",
+        "ink": "#FBF6FF",
+        "dim": "#B8A6E0",
+        "drawer": "#0E0620",
+        "surface": "#140A2E",
+        "elevated": "#241250",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "playful",
+        "vivid"
+      ],
+      "swatch": "#5B2287",
+      "credits": []
+    },
+    {
+      "id": "manga_panel",
+      "name": "Manga Panel",
+      "description": "Ink-black panel borders, screentone dots and a splash of sakura pink, in a light theme.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:playful",
+        "vibe:energetic",
+        "color:white",
+        "color:pink",
+        "color:black",
+        "style:one-handed",
+        "topic:anime",
+        "topic:art"
+      ],
+      "thumbnail": "manga_panel/preview.png",
+      "file": "manga_panel/theme.json",
+      "premium": false,
+      "size": 1769,
+      "sha256": "1533005722ee0076c861356abd3809b24c210bce2e9697d696df4706397517e7",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E8678A",
+        "accentAlt": "#2B2B33",
+        "ink": "#1A1A1F",
+        "dim": "#5C5C66",
+        "drawer": "#FCFBF8",
+        "surface": "#FFFFFF",
+        "elevated": "#F0EEEA",
+        "veil": "#33FFFFFF",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "playful",
+        "bold"
+      ],
+      "swatch": "#F3A9BE",
+      "credits": []
+    },
+    {
+      "id": "christmas_lights",
+      "name": "Christmas Lights",
+      "description": "A tree glowing with colour against the dark, with soft lettering and sparkles when you tap.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:cozy",
+        "vibe:dreamy",
+        "color:red",
+        "color:green",
+        "color:gold",
+        "style:one-handed",
+        "topic:christmas",
+        "topic:winter"
+      ],
+      "thumbnail": "christmas_lights/preview.png",
+      "file": "christmas_lights/theme.json",
+      "premium": true,
+      "size": 2037,
+      "sha256": "3043741a7f0d333d6fb8ae57cd878cdb6ad2af4dfe6618cab41afdc503ca9e67",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF5A5A",
+        "accentAlt": "#7FE08A",
+        "ink": "#FFF4E6",
+        "dim": "#D6B9A0",
+        "drawer": "#0A0504",
+        "surface": "#120806",
+        "elevated": "#24100C",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "cozy",
+        "vivid"
+      ],
+      "swatch": "#6A1E1A",
+      "credits": [
+        {
+          "title": "Christmas Tree",
+          "author": "Dawid Zawiła",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/christmas-tree-GVW1GU9XPS"
+        }
+      ],
+      "season": "winter"
+    },
+    {
+      "id": "festival_of_lights",
+      "name": "Festival of Lights",
+      "description": "Candlelight in deep blue and gold, with twinkling stars, for the eight nights of Hanukkah.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:elegant",
+        "vibe:calm",
+        "color:blue",
+        "color:gold",
+        "color:white",
+        "style:one-handed",
+        "topic:hanukkah",
+        "topic:winter"
+      ],
+      "thumbnail": "festival_of_lights/preview.png",
+      "file": "festival_of_lights/theme.json",
+      "premium": true,
+      "size": 2038,
+      "sha256": "2eecf3334d57be654b33e2ba0c30f89996bc623f62cd8839a5871770699e01e9",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E8C766",
+        "accentAlt": "#8FB4FF",
+        "ink": "#F4F7FF",
+        "dim": "#9FB0D0",
+        "drawer": "#030A1E",
+        "surface": "#06122E",
+        "elevated": "#0E2250",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "bold"
+      ],
+      "swatch": "#0B2A6B",
+      "credits": [
+        {
+          "title": "Candles Light",
+          "author": "Nicola Fioravanti",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/candles-light-W1MD6OXURG"
+        }
+      ],
+      "season": "winter"
+    },
+    {
+      "id": "spring_eggs",
+      "name": "Spring Eggs",
+      "description": "Pastel eggs in soft pink and blue, a light and cheerful theme for Easter.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:playful",
+        "vibe:dreamy",
+        "color:pink",
+        "color:blue",
+        "color:pastel",
+        "style:one-handed",
+        "topic:easter",
+        "topic:spring",
+        "topic:family"
+      ],
+      "thumbnail": "spring_eggs/preview.png",
+      "file": "spring_eggs/theme.json",
+      "premium": false,
+      "size": 1985,
+      "sha256": "ce707fced5070d5779b51eca2ff78b9a369d3d602004be092329865239bc5033",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E0609A",
+        "accentAlt": "#4FA7D8",
+        "ink": "#3A2A44",
+        "dim": "#8A7596",
+        "drawer": "#FFF6FB",
+        "surface": "#FFFBFD",
+        "elevated": "#F6E4EE",
+        "veil": "#33FFF6FB",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "pastel",
+        "playful"
+      ],
+      "swatch": "#F2B6CF",
+      "credits": [
+        {
+          "title": "Easter Eggs",
+          "author": "Altered Reality",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/easter-eggs-APP4WJVPUC"
+        }
+      ],
+      "season": "spring"
+    },
+    {
+      "id": "mothers_day",
+      "name": "Mother's Day",
+      "description": "Pink roses on a deep plum background, with graceful lettering, for the people who raised us.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:elegant",
+        "vibe:dreamy",
+        "color:pink",
+        "color:red",
+        "style:one-handed",
+        "topic:mothers day",
+        "topic:family"
+      ],
+      "thumbnail": "mothers_day/preview.png",
+      "file": "mothers_day/theme.json",
+      "premium": false,
+      "size": 1983,
+      "sha256": "913683b28d3c1974af8672164571f604dbf38204221b83b6737699d1f93777c7",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#F2789F",
+        "accentAlt": "#F5D0DC",
+        "ink": "#FFF0F5",
+        "dim": "#D9A7B8",
+        "drawer": "#160610",
+        "surface": "#1F0A16",
+        "elevated": "#34142A",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "calm"
+      ],
+      "swatch": "#7A2C4A",
+      "credits": [
+        {
+          "title": "Flowers Nature",
+          "author": "Alex Blăjan",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/flowers-nature-7LDGQBUWDM"
+        }
+      ],
+      "season": "spring"
+    },
+    {
+      "id": "independence_day",
+      "name": "Independence Day",
+      "description": "Fireworks lighting a night sky in red, white and blue, with a burst when you tap.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:dark",
+        "color:red",
+        "color:blue",
+        "color:white",
+        "style:one-handed",
+        "topic:independence day",
+        "topic:summer"
+      ],
+      "thumbnail": "independence_day/preview.png",
+      "file": "independence_day/theme.json",
+      "premium": true,
+      "size": 2034,
+      "sha256": "a71026e916abfaee94c8a37f4e21244e1206a8b11b4068a52d8ca2bc0185c06e",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF4D5E",
+        "accentAlt": "#6FA8FF",
+        "ink": "#FFFFFF",
+        "dim": "#B8C4E0",
+        "drawer": "#050A1C",
+        "surface": "#0A1230",
+        "elevated": "#16224A",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "bold"
+      ],
+      "swatch": "#0A1230",
+      "credits": [
+        {
+          "title": "Fireworks Lights",
+          "author": "Aaron Burden",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/fireworks-lights-FJKMZCB8FG"
+        }
+      ],
+      "season": "summer"
+    },
+    {
+      "id": "fathers_day",
+      "name": "Father's Day",
+      "description": "A workbench of well-used tools in walnut and brass, with sturdy lettering.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:cozy",
+        "vibe:elegant",
+        "color:gold",
+        "color:black",
+        "style:one-handed",
+        "topic:fathers day",
+        "topic:family"
+      ],
+      "thumbnail": "fathers_day/preview.png",
+      "file": "fathers_day/theme.json",
+      "premium": false,
+      "size": 1967,
+      "sha256": "cb6610daa1ddd8f3367b489383626209f81d560d6202e68c46c14a90d985f121",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#D9A441",
+        "accentAlt": "#7FA6BF",
+        "ink": "#F3ECE0",
+        "dim": "#BDAE96",
+        "drawer": "#0D0A07",
+        "surface": "#15100B",
+        "elevated": "#271D14",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "cozy",
+        "bold"
+      ],
+      "swatch": "#4A3520",
+      "credits": [
+        {
+          "title": "Wood Tools",
+          "author": "Todd Quackenbush",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/wood-tools-00F7DB5857"
+        }
+      ],
+      "season": "summer"
+    },
+    {
+      "id": "harvest_table",
+      "name": "Harvest Table",
+      "description": "A pumpkin and fallen leaves in warm amber, with leaves drifting down when you tap.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:cozy",
+        "vibe:calm",
+        "color:orange",
+        "color:gold",
+        "style:one-handed",
+        "topic:thanksgiving",
+        "topic:autumn",
+        "topic:family"
+      ],
+      "thumbnail": "harvest_table/preview.png",
+      "file": "harvest_table/theme.json",
+      "premium": true,
+      "size": 2016,
+      "sha256": "d323acbb097bf7660c9bab04900a35bb95f279885c66597a9b00010f0524c8b9",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E8872F",
+        "accentAlt": "#C9A25A",
+        "ink": "#FBEFD9",
+        "dim": "#CDB08A",
+        "drawer": "#120A05",
+        "surface": "#1B100A",
+        "elevated": "#2E1C10",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "cozy",
+        "calm"
+      ],
+      "swatch": "#7A4A1E",
+      "credits": [
+        {
+          "title": "Leaves Pumpkin",
+          "author": "Cala",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/leaves-pumpkin-AK32PJIS4T"
+        }
+      ],
+      "season": "autumn"
+    },
+    {
+      "id": "lucky_clover",
+      "name": "Lucky Clover",
+      "description": "Dewy clover leaves in rich green, with friendly rounded lettering for St Patrick's Day.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:playful",
+        "vibe:calm",
+        "color:green",
+        "color:gold",
+        "style:one-handed",
+        "topic:st patricks day",
+        "topic:nature"
+      ],
+      "thumbnail": "lucky_clover/preview.png",
+      "file": "lucky_clover/theme.json",
+      "premium": false,
+      "size": 1814,
+      "sha256": "86ec4a4cc1a956fa0a45992dfabce74940fa75227411c368bcede8c495a5fca1",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#3DDC84",
+        "accentAlt": "#F2D45C",
+        "ink": "#F1FFF4",
+        "dim": "#9FC9AC",
+        "drawer": "#04130A",
+        "surface": "#07200E",
+        "elevated": "#103A1C",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "playful"
+      ],
+      "swatch": "#1F7A3A",
+      "credits": [
+        {
+          "title": "Green Clover",
+          "author": "Quentin REY",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/green-clover-UI30ICNGU6"
+        }
+      ],
+      "season": "march_festivals"
+    },
+    {
+      "id": "holi_colors",
+      "name": "Festival of Colors",
+      "description": "Powder clouds of pink, gold and turquoise drifting through the dark, for the spring festival of Holi.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:playful",
+        "vibe:energetic",
+        "color:pink",
+        "color:yellow",
+        "color:purple",
+        "style:one-handed",
+        "topic:holi",
+        "topic:spring"
+      ],
+      "thumbnail": "holi_colors/preview.png",
+      "file": "holi_colors/theme.json",
+      "premium": false,
+      "size": 1648,
+      "sha256": "9d7a5d27b8844f00c181134ebfc6a026a0daeb64c3dbea897b5159cd2ef52813",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF4D9A",
+        "accentAlt": "#FFD23A",
+        "ink": "#FFFFFF",
+        "dim": "#D9C8F0",
+        "drawer": "#100824",
+        "surface": "#180C34",
+        "elevated": "#2A1658",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "playful"
+      ],
+      "swatch": "#B0307A",
+      "credits": [],
+      "season": "march_festivals"
+    },
+    {
+      "id": "crescent_night",
+      "name": "Crescent Night",
+      "description": "A golden crescent and star over lanterns, in deep emerald, with twinkling stars, for Eid.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:elegant",
+        "vibe:dreamy",
+        "color:green",
+        "color:gold",
+        "style:one-handed",
+        "topic:eid",
+        "topic:ramadan"
+      ],
+      "thumbnail": "crescent_night/preview.png",
+      "file": "crescent_night/theme.json",
+      "premium": true,
+      "size": 1657,
+      "sha256": "f4c6d8c6bc1224ce0b4a822cb79f753c480026f839f8fd33e8911fed0cd4c3a0",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#ECBE60",
+        "accentAlt": "#6FD3C0",
+        "ink": "#F4FBF8",
+        "dim": "#9FC8C0",
+        "drawer": "#03181A",
+        "surface": "#062226",
+        "elevated": "#0D3A40",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "vivid"
+      ],
+      "swatch": "#0B4A4A",
+      "credits": [],
+      "season": "march_festivals"
+    },
+    {
+      "id": "lantern_festival",
+      "name": "Lantern Festival",
+      "description": "Red lanterns glowing against the sky, in gold and crimson, for Lunar New Year.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:elegant",
+        "color:red",
+        "color:gold",
+        "style:one-handed",
+        "topic:lunar new year"
+      ],
+      "thumbnail": "lantern_festival/preview.png",
+      "file": "lantern_festival/theme.json",
+      "premium": true,
+      "size": 2007,
+      "sha256": "1ebb1ccfe1eca6ef5c29687ecd730d15bc61b9f084986dce96304d3868d6e89c",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFC857",
+        "accentAlt": "#FF6B5E",
+        "ink": "#FFF3E0",
+        "dim": "#E0B896",
+        "drawer": "#1A0506",
+        "surface": "#260A0B",
+        "elevated": "#431416",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "bold"
+      ],
+      "swatch": "#8A1A1E",
+      "credits": [
+        {
+          "title": "Chinese Lanterns",
+          "author": "Humphrey Muleba",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/chinese-lanterns-1VZO8DDCHZ"
+        }
+      ],
+      "season": "lunar_new_year"
+    },
+    {
+      "id": "golden_fortune",
+      "name": "Golden Fortune",
+      "description": "Lucky red with a golden lattice and a rising sun, for Lunar New Year.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:elegant",
+        "vibe:energetic",
+        "color:red",
+        "color:gold",
+        "style:one-handed",
+        "topic:lunar new year"
+      ],
+      "thumbnail": "golden_fortune/preview.png",
+      "file": "golden_fortune/theme.json",
+      "premium": false,
+      "size": 1738,
+      "sha256": "dedc2ec1e64450b0d9189f1ef26ea8682ac2ec3920cfde5b2d4cea6df92aaa20",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFD27A",
+        "accentAlt": "#FF8A6B",
+        "ink": "#FFF5E1",
+        "dim": "#E8B79A",
+        "drawer": "#2A0508",
+        "surface": "#38090E",
+        "elevated": "#5A1018",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "bold",
+        "vivid"
+      ],
+      "swatch": "#962028",
+      "credits": [],
+      "season": "lunar_new_year"
+    },
+    {
+      "id": "festival_of_lamps",
+      "name": "Festival of Lamps",
+      "description": "A row of clay lamps glowing in the dark, in gold and rose, with sparkles when you tap, for Diwali.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dreamy",
+        "vibe:elegant",
+        "color:orange",
+        "color:gold",
+        "color:pink",
+        "style:one-handed",
+        "topic:diwali"
+      ],
+      "thumbnail": "festival_of_lamps/preview.png",
+      "file": "festival_of_lamps/theme.json",
+      "premium": true,
+      "size": 1659,
+      "sha256": "81a8d433b5d8525a2d60bda08ce37717938b8e105dd1231b795ace2a71ff4f6b",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFB347",
+        "accentAlt": "#FF6F91",
+        "ink": "#FFF1DC",
+        "dim": "#E3B98F",
+        "drawer": "#1C0508",
+        "surface": "#26080C",
+        "elevated": "#42101A",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "cozy"
+      ],
+      "swatch": "#7A1A22",
+      "credits": [],
+      "season": "diwali"
+    },
+    {
+      "id": "marigold_glow",
+      "name": "Marigold Glow",
+      "description": "Orange, gold and magenta lights drifting in the dark, a warm and festive theme for Diwali.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:dreamy",
+        "color:orange",
+        "color:pink",
+        "color:gold",
+        "style:one-handed",
+        "topic:diwali"
+      ],
+      "thumbnail": "marigold_glow/preview.png",
+      "file": "marigold_glow/theme.json",
+      "premium": false,
+      "size": 1758,
+      "sha256": "184f5c42dd52522ad37f97c5f4d961f8098ef379e7a4e8c3cf9ff8d91e0e162f",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFC247",
+        "accentAlt": "#FF5E8A",
+        "ink": "#FFF4E0",
+        "dim": "#E6B994",
+        "drawer": "#1A0610",
+        "surface": "#240A18",
+        "elevated": "#3C1228",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "bold"
+      ],
+      "swatch": "#B03060",
+      "credits": [],
+      "season": "diwali"
+    },
+    {
+      "id": "high_contrast_dark",
+      "name": "High Contrast Dark",
+      "description": "Pure white lettering on black with yellow highlights. The strongest contrast Orbital offers, with big icons and clear names.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:black",
+        "color:white",
+        "color:yellow",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "high_contrast_dark/preview.png",
+      "file": "high_contrast_dark/theme.json",
+      "premium": false,
+      "size": 1951,
+      "sha256": "685fe234c8562a4a86abc124653b8574b1586b8c8710f7bdd4682ee4d7afe9cc",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFE600",
+        "accentAlt": "#00E5FF",
+        "ink": "#FFFFFF",
+        "dim": "#D0D0D0",
+        "drawer": "#000000",
+        "surface": "#000000",
+        "elevated": "#1C1C1C",
+        "veil": "#00000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "bold",
+        "minimal"
+      ],
+      "swatch": "#000000",
+      "credits": []
+    },
+    {
+      "id": "high_contrast_light",
+      "name": "High Contrast Light",
+      "description": "Black lettering on white with deep blue highlights. Maximum contrast in bright light, with big icons and clear names.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:elegant",
+        "color:white",
+        "color:black",
+        "color:blue",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "high_contrast_light/preview.png",
+      "file": "high_contrast_light/theme.json",
+      "premium": false,
+      "size": 1947,
+      "sha256": "5ea64800b4196189579a8a39b4ca431f0afef77edc994e2d9fa60ce067273d5b",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#0033CC",
+        "accentAlt": "#B00020",
+        "ink": "#000000",
+        "dim": "#2B2B2B",
+        "drawer": "#FFFFFF",
+        "surface": "#FFFFFF",
+        "elevated": "#E6E6E6",
+        "veil": "#00000000",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "bold",
+        "minimal"
+      ],
+      "swatch": "#FFFFFF",
+      "credits": []
+    },
+    {
+      "id": "yellow_on_black",
+      "name": "Yellow on Black",
+      "description": "Bright yellow lettering on black, a classic high-visibility pairing that many people with low vision find easiest to read.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:yellow",
+        "color:black",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "yellow_on_black/preview.png",
+      "file": "yellow_on_black/theme.json",
+      "premium": false,
+      "size": 1924,
+      "sha256": "8c642eb124c2d954131f6292b563e5ad0e7779fab8f976dc74bf591786420f2d",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFFFFF",
+        "accentAlt": "#FFB000",
+        "ink": "#FFFF33",
+        "dim": "#D9D900",
+        "drawer": "#000000",
+        "surface": "#000000",
+        "elevated": "#1A1A00",
+        "veil": "#00000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "bold",
+        "minimal"
+      ],
+      "swatch": "#1A1A00",
+      "credits": []
+    },
+    {
+      "id": "black_on_yellow",
+      "name": "Black on Yellow",
+      "description": "Black lettering on a sunny yellow page, with deep blue highlights. Strong contrast that stays easy on the eyes.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:energetic",
+        "color:yellow",
+        "color:black",
+        "color:blue",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "black_on_yellow/preview.png",
+      "file": "black_on_yellow/theme.json",
+      "premium": false,
+      "size": 1934,
+      "sha256": "c5b1d2dbd650a90f16176dd8f5d425aa3d22923f91d23238e8fdbc776c329981",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#0A1F8F",
+        "accentAlt": "#7A0019",
+        "ink": "#000000",
+        "dim": "#333300",
+        "drawer": "#FFE600",
+        "surface": "#FFEE55",
+        "elevated": "#F2D600",
+        "veil": "#00000000",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "bold",
+        "vivid"
+      ],
+      "swatch": "#FFE600",
+      "credits": []
+    },
+    {
+      "id": "amber_night",
+      "name": "Amber Night",
+      "description": "Warm amber on black, gentle in a dark room and kind to your eyes in the evening.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:orange",
+        "color:black",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "amber_night/preview.png",
+      "file": "amber_night/theme.json",
+      "premium": false,
+      "size": 1861,
+      "sha256": "0be0a924022d751a3c4d2300c6ca57920fa247c026ed015a32afe01d0e3036b8",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF9A1F",
+        "accentAlt": "#D96A00",
+        "ink": "#FFB454",
+        "dim": "#C98A3A",
+        "drawer": "#000000",
+        "surface": "#0A0600",
+        "elevated": "#1F1200",
+        "veil": "#00000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#1F1200",
+      "credits": []
+    },
+    {
+      "id": "reading_cream",
+      "name": "Reading Cream",
+      "description": "Soft cream paper and dark ink in a typeface designed for easy reading, with no harsh white glare.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:calm",
+        "color:white",
+        "color:blue",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "reading_cream/preview.png",
+      "file": "reading_cream/theme.json",
+      "premium": false,
+      "size": 1893,
+      "sha256": "e95e7df9fe51ad5fe2d049a6b9e50a29d1fb46b60831e1a8413b76659e7a1a39",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#1D4E89",
+        "accentAlt": "#8A3B12",
+        "ink": "#1F2933",
+        "dim": "#4A5560",
+        "drawer": "#FAF3DC",
+        "surface": "#FFF9E6",
+        "elevated": "#EFE5C6",
+        "veil": "#00000000",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#FAF3DC",
+      "credits": []
+    },
+    {
+      "id": "reading_dark",
+      "name": "Reading Dark",
+      "description": "Warm off-white lettering on soft charcoal in a clear, evenly spaced typeface. Easy reading without the glare.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:black",
+        "color:blue",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "reading_dark/preview.png",
+      "file": "reading_dark/theme.json",
+      "premium": false,
+      "size": 1888,
+      "sha256": "3250f979a43c9037a26356105b9720ef4982cceccc56bbe010d418ef72d1a4cd",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#8CC0FF",
+        "accentAlt": "#F2B880",
+        "ink": "#EDE6D3",
+        "dim": "#B9B2A0",
+        "drawer": "#17171C",
+        "surface": "#1B1B21",
+        "elevated": "#2A2A33",
+        "veil": "#00000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#17171C",
+      "credits": []
+    },
+    {
+      "id": "colour_blind_dark",
+      "name": "Colour-Blind Safe Dark",
+      "description": "A dark theme in blue and orange, a pairing that stays clear for every common kind of colour blindness.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:blue",
+        "color:orange",
+        "color:black",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "colour_blind_dark/preview.png",
+      "file": "colour_blind_dark/theme.json",
+      "premium": false,
+      "size": 1928,
+      "sha256": "2491a5ce6b7b40d26d773a5659859057f53a7e95d137b207708efe2c4ccaa3e6",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#56B4E9",
+        "accentAlt": "#E69F00",
+        "ink": "#F5F5F5",
+        "dim": "#BDBDBD",
+        "drawer": "#0B0B0F",
+        "surface": "#101015",
+        "elevated": "#1D1D26",
+        "veil": "#00000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "bold"
+      ],
+      "swatch": "#101015",
+      "credits": []
+    },
+    {
+      "id": "colour_blind_light",
+      "name": "Colour-Blind Safe Light",
+      "description": "A light theme in deep blue and burnt orange, a pairing that stays clear for every common kind of colour blindness.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:elegant",
+        "color:blue",
+        "color:orange",
+        "color:white",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "colour_blind_light/preview.png",
+      "file": "colour_blind_light/theme.json",
+      "premium": false,
+      "size": 1945,
+      "sha256": "fcd25b8eba6691676f0678cf25b5206823667050f9d3f73de68776959a68f660",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#005A8C",
+        "accentAlt": "#A84300",
+        "ink": "#111111",
+        "dim": "#444444",
+        "drawer": "#F8F8F4",
+        "surface": "#FFFFFF",
+        "elevated": "#ECECE6",
+        "veil": "#00000000",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "calm",
+        "bold"
+      ],
+      "swatch": "#F8F8F4",
+      "credits": []
+    },
+    {
+      "id": "red_teal_safe",
+      "name": "Red and Teal Safe",
+      "description": "A dark theme in coral red and teal, chosen to stay distinct for people who find blue and yellow hard to tell apart.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:red",
+        "color:green",
+        "color:black",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "red_teal_safe/preview.png",
+      "file": "red_teal_safe/theme.json",
+      "premium": false,
+      "size": 1930,
+      "sha256": "f2b15e5e0deebd31e92844360ecd8a95c769a3076e08ead08f0b077134a56ac5",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF6B6B",
+        "accentAlt": "#2EC4B6",
+        "ink": "#F2F2F2",
+        "dim": "#BFC4C8",
+        "drawer": "#101214",
+        "surface": "#14171A",
+        "elevated": "#22272B",
+        "veil": "#00000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "bold"
+      ],
+      "swatch": "#14171A",
+      "credits": []
+    },
+    {
+      "id": "big_and_simple",
+      "name": "Big and Simple",
+      "description": "Large icons with their names, a big clock and warm white pages, for anyone who wants the phone to be easy to read at a glance.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:elegant",
+        "color:white",
+        "color:blue",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "big_and_simple/preview.png",
+      "file": "big_and_simple/theme.json",
+      "premium": false,
+      "size": 1931,
+      "sha256": "ecb050d437e3416fc1bef7f3282d94fa0d44b6ce9104f46845d8d10cb6183c79",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#0B5CAD",
+        "accentAlt": "#B3261E",
+        "ink": "#1A1A1A",
+        "dim": "#4D4D4D",
+        "drawer": "#FFFDF7",
+        "surface": "#FFFFFF",
+        "elevated": "#F0EEE6",
+        "veil": "#00000000",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#FFFDF7",
+      "credits": []
+    },
+    {
+      "id": "calm_low_stimulation",
+      "name": "Calm Low Stimulation",
+      "description": "Muted sage and soft grey with no bright colours or busy detail, for a quiet, restful phone.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "vibe:chill",
+        "color:green",
+        "color:black",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "calm_low_stimulation/preview.png",
+      "file": "calm_low_stimulation/theme.json",
+      "premium": false,
+      "size": 1750,
+      "sha256": "6a376ec36678c2b6e0e1a6ebc144d2bb4360c7f9a325f10a785cee9cd8c172b9",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#8FBFA8",
+        "accentAlt": "#C8B88A",
+        "ink": "#E4EAE6",
+        "dim": "#A9B8B0",
+        "drawer": "#262D2A",
+        "surface": "#2B3330",
+        "elevated": "#38423E",
+        "veil": "#00000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#2B3330",
+      "credits": []
+    },
+    {
+      "id": "easy_reach",
+      "name": "Easy Reach",
+      "description": "Everything sits low on the screen within thumb reach, with big icons, bold edges and clear names.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:blue",
+        "color:yellow",
+        "color:black",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "easy_reach/preview.png",
+      "file": "easy_reach/theme.json",
+      "premium": false,
+      "size": 1903,
+      "sha256": "4c4b8f9fff35dd80c65d045f20a987b2ecc1a0e70ef99ea56d0edd05768130f9",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFC857",
+        "accentAlt": "#7FD1FF",
+        "ink": "#F2F6FF",
+        "dim": "#B4C2DA",
+        "drawer": "#0B1420",
+        "surface": "#101B2A",
+        "elevated": "#1B2C44",
+        "veil": "#00000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "bold"
+      ],
+      "swatch": "#101B2A",
+      "credits": []
+    },
+    {
+      "id": "glare_free_grey",
+      "name": "Glare-Free Grey",
+      "description": "Mid-dark neutral grey with soft white lettering and no colour at all, easy on sensitive eyes.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:black",
+        "color:white",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "glare_free_grey/preview.png",
+      "file": "glare_free_grey/theme.json",
+      "premium": false,
+      "size": 1878,
+      "sha256": "679bdf965e2b40ec9b45db95f2d8350eef178d5591d79d4f9aeceb4d5753fd79",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFFFFF",
+        "accentAlt": "#D0D0D0",
+        "ink": "#F2F2F2",
+        "dim": "#C0C0C0",
+        "drawer": "#2A2A2A",
+        "surface": "#303030",
+        "elevated": "#444444",
+        "veil": "#00000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "minimal",
+        "calm"
+      ],
+      "swatch": "#303030",
+      "credits": []
+    },
+    {
+      "id": "clear_day",
+      "name": "Clear Day",
+      "description": "Pale sky blue with deep navy lettering and big icons, bright and crisp without being harsh.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:elegant",
+        "color:blue",
+        "color:white",
+        "style:easy to see",
+        "topic:accessibility"
+      ],
+      "thumbnail": "clear_day/preview.png",
+      "file": "clear_day/theme.json",
+      "premium": false,
+      "size": 1868,
+      "sha256": "b4a287e58ad7c0fc6adc499bf7032467ea0dabb12d5005012e11a5ae2a3d6d5e",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#0A58CA",
+        "accentAlt": "#B3541E",
+        "ink": "#0B1F33",
+        "dim": "#3D5873",
+        "drawer": "#EEF5FC",
+        "surface": "#F7FBFE",
+        "elevated": "#DCE9F6",
+        "veil": "#00000000",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#EEF5FC",
+      "credits": []
+    },
+    {
+      "id": "crimson",
+      "name": "Crimson",
+      "description": "Crimson accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:dark",
+        "color:red",
+        "color:black"
+      ],
+      "thumbnail": "crimson/preview.png",
+      "file": "crimson/theme.json",
+      "premium": false,
+      "size": 856,
+      "sha256": "9836645fb18eccd4953bfac70ac2de6714aed272c4ccfde31f28f908aefb1a88",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E5484D",
+        "accentAlt": "#FF9A8B",
+        "ink": "#FBEFEF",
+        "dim": "#B58E90",
+        "drawer": "#130708",
+        "surface": "#1A0A0C",
+        "elevated": "#2A1316",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "accent",
+      "mood": [
+        "dark",
+        "bold",
+        "vivid"
+      ],
+      "swatch": "#B3262C",
+      "credits": []
+    },
+    {
+      "id": "tangerine",
+      "name": "Tangerine",
+      "description": "Tangerine accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:dark",
+        "color:orange",
+        "color:black"
+      ],
+      "thumbnail": "tangerine/preview.png",
+      "file": "tangerine/theme.json",
+      "premium": false,
+      "size": 865,
+      "sha256": "396579ec125f609a07f9577cc6187e9bfa2555d33c33f86a51249397282ac89c",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF8A3D",
+        "accentAlt": "#FFC27A",
+        "ink": "#FFF3E8",
+        "dim": "#C2A088",
+        "drawer": "#140B05",
+        "surface": "#1B0F07",
+        "elevated": "#2B1A0E",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "accent",
+      "mood": [
+        "dark",
+        "bold",
+        "vivid"
+      ],
+      "swatch": "#E0701F",
+      "credits": []
+    },
+    {
+      "id": "sunflower",
+      "name": "Sunflower",
+      "description": "Sunflower accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:dark",
+        "color:yellow",
+        "color:black"
+      ],
+      "thumbnail": "sunflower/preview.png",
+      "file": "sunflower/theme.json",
+      "premium": false,
+      "size": 865,
+      "sha256": "021708460f2d53880afb9293ce3eca9b41f444ab4035660785ed41188a06a702",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#F5C518",
+        "accentAlt": "#FFE580",
+        "ink": "#FFF9E0",
+        "dim": "#C9B76B",
+        "drawer": "#131005",
+        "surface": "#1A1507",
+        "elevated": "#2A230C",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "accent",
+      "mood": [
+        "dark",
+        "bold",
+        "vivid"
+      ],
+      "swatch": "#C79E0C",
+      "credits": []
+    },
+    {
+      "id": "emerald",
+      "name": "Emerald",
+      "description": "Emerald accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:green",
+        "color:black"
+      ],
+      "thumbnail": "emerald/preview.png",
+      "file": "emerald/theme.json",
+      "premium": false,
+      "size": 852,
+      "sha256": "220920678c2570813032cdec017235e49024b3f49916cb66e2758bc7b40c5715",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#2EC27E",
+        "accentAlt": "#8FE3B8",
+        "ink": "#EAFBF2",
+        "dim": "#7FAF97",
+        "drawer": "#04120B",
+        "surface": "#07190F",
+        "elevated": "#0F2A1B",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "accent",
+      "mood": [
+        "dark",
+        "calm",
+        "vivid"
+      ],
+      "swatch": "#1B8A57",
+      "credits": []
+    },
+    {
+      "id": "teal",
+      "name": "Teal",
+      "description": "Teal accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:green",
+        "color:blue",
+        "color:black"
+      ],
+      "thumbnail": "teal/preview.png",
+      "file": "teal/theme.json",
+      "premium": false,
+      "size": 864,
+      "sha256": "85906933f163ba43b843e9076c67c903f6ff891680299f532c1dc4ce9766fa33",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#14B8A6",
+        "accentAlt": "#7FE3D6",
+        "ink": "#E8FBF8",
+        "dim": "#78B3AC",
+        "drawer": "#041413",
+        "surface": "#071B1A",
+        "elevated": "#0E2E2C",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "accent",
+      "mood": [
+        "dark",
+        "calm",
+        "vivid"
+      ],
+      "swatch": "#0E8579",
+      "credits": []
+    },
+    {
+      "id": "ocean",
+      "name": "Ocean",
+      "description": "Ocean accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:blue",
+        "color:black"
+      ],
+      "thumbnail": "ocean/preview.png",
+      "file": "ocean/theme.json",
+      "premium": false,
+      "size": 844,
+      "sha256": "14ae5011615bab6aa7d3ec2132fc2e143f1b559190ab751e12608a8964bc8649",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#3B82F6",
+        "accentAlt": "#93C5FD",
+        "ink": "#EEF4FF",
+        "dim": "#8497B8",
+        "drawer": "#060D1C",
+        "surface": "#0A1428",
+        "elevated": "#14223F",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "accent",
+      "mood": [
+        "dark",
+        "calm",
+        "vivid"
+      ],
+      "swatch": "#2563C9",
+      "credits": []
+    },
+    {
+      "id": "indigo",
+      "name": "Indigo",
+      "description": "Indigo accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dreamy",
+        "vibe:dark",
+        "color:blue",
+        "color:purple",
+        "color:black"
+      ],
+      "thumbnail": "indigo/preview.png",
+      "file": "indigo/theme.json",
+      "premium": false,
+      "size": 876,
+      "sha256": "e9699e021d3cca8b2e2f4a908357461d3c4c7dd7a0cfd33078c977c0bdd3e91e",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#6366F1",
+        "accentAlt": "#A5B4FC",
+        "ink": "#F0F0FF",
+        "dim": "#8E91C0",
+        "drawer": "#0A0A1E",
+        "surface": "#0F0F2A",
+        "elevated": "#1B1B45",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "accent",
+      "mood": [
+        "dark",
+        "calm",
+        "bold"
+      ],
+      "swatch": "#4547C2",
+      "credits": []
+    },
+    {
+      "id": "violet",
+      "name": "Violet",
+      "description": "Violet accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dreamy",
+        "vibe:dark",
+        "color:purple",
+        "color:black"
+      ],
+      "thumbnail": "violet/preview.png",
+      "file": "violet/theme.json",
+      "premium": false,
+      "size": 856,
+      "sha256": "cb51b5a2df6c65faaa57b03de2772ba308fdf3be1a1f87e803e418b36c22c03b",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#A855F7",
+        "accentAlt": "#D8B4FE",
+        "ink": "#F7EEFF",
+        "dim": "#A58BC0",
+        "drawer": "#0F0618",
+        "surface": "#160A24",
+        "elevated": "#26143D",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "accent",
+      "mood": [
+        "dark",
+        "bold",
+        "vivid"
+      ],
+      "swatch": "#7E34C9",
+      "credits": []
+    },
+    {
+      "id": "rose",
+      "name": "Rose",
+      "description": "Rose accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dreamy",
+        "vibe:dark",
+        "color:pink",
+        "color:black"
+      ],
+      "thumbnail": "rose/preview.png",
+      "file": "rose/theme.json",
+      "premium": false,
+      "size": 844,
+      "sha256": "12ffe54672ab1d85474a0547571ea7d0d683d153f3a51e5d1c5169aac7a55203",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#F43F7E",
+        "accentAlt": "#FDA4C0",
+        "ink": "#FFEEF4",
+        "dim": "#C48EA3",
+        "drawer": "#170610",
+        "surface": "#1F0A16",
+        "elevated": "#341425",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "accent",
+      "mood": [
+        "dark",
+        "bold",
+        "vivid"
+      ],
+      "swatch": "#C42A60",
+      "credits": []
+    },
+    {
+      "id": "cocoa",
+      "name": "Cocoa",
+      "description": "Cocoa accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:cozy",
+        "vibe:dark",
+        "color:orange",
+        "color:black"
+      ],
+      "thumbnail": "cocoa/preview.png",
+      "file": "cocoa/theme.json",
+      "premium": false,
+      "size": 844,
+      "sha256": "13e34e1014e6dde4fbe805108479e1d14703fecd065835935ca02defe0ddc328",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#C08552",
+        "accentAlt": "#E3B98F",
+        "ink": "#F8EEE4",
+        "dim": "#AD9582",
+        "drawer": "#120C08",
+        "surface": "#1A110B",
+        "elevated": "#2C1D13",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "accent",
+      "mood": [
+        "dark",
+        "cozy",
+        "calm"
+      ],
+      "swatch": "#8A5A33",
+      "credits": []
+    },
+    {
+      "id": "slate",
+      "name": "Slate",
+      "description": "Slate accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:blue",
+        "color:white",
+        "color:black"
+      ],
+      "thumbnail": "slate/preview.png",
+      "file": "slate/theme.json",
+      "premium": false,
+      "size": 873,
+      "sha256": "1cce345ec161b4eace27f7794d187cf86313847ce86cdacd4317f4d713f94a0a",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#94A3B8",
+        "accentAlt": "#CBD5E1",
+        "ink": "#F1F5F9",
+        "dim": "#8391A6",
+        "drawer": "#0B0F14",
+        "surface": "#10161D",
+        "elevated": "#1C2530",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "accent",
+      "mood": [
+        "dark",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#566274",
+      "credits": []
+    },
+    {
+      "id": "sand",
+      "name": "Sand",
+      "description": "Sand accents on a soft light base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:cozy",
+        "color:orange",
+        "color:white"
+      ],
+      "thumbnail": "sand/preview.png",
+      "file": "sand/theme.json",
+      "premium": false,
+      "size": 854,
+      "sha256": "3076f93403c2e3aac32e4cc332cd3d15346bdbb272154ae8f0b8c4be674a2c47",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#9A5A1A",
+        "accentAlt": "#5B8A72",
+        "ink": "#2B2118",
+        "dim": "#7A6A58",
+        "drawer": "#F4EBDD",
+        "surface": "#FAF4E9",
+        "elevated": "#EADFCB",
+        "veil": "#11FFFFFF",
+        "light": true
+      },
+      "kind": "accent",
+      "mood": [
+        "light",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#E6D3B3",
+      "credits": []
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "description": "Mint accents on a soft light base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:chill",
+        "color:green",
+        "color:white",
+        "color:pastel"
+      ],
+      "thumbnail": "mint/preview.png",
+      "file": "mint/theme.json",
+      "premium": false,
+      "size": 867,
+      "sha256": "78691f86509ebb005bb96176ed1ef24d52cf3fb7d757a5bcba426c4bf2d7b555",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#17855A",
+        "accentAlt": "#2B7DE9",
+        "ink": "#12302A",
+        "dim": "#5E7F76",
+        "drawer": "#E9F6F0",
+        "surface": "#F2FBF7",
+        "elevated": "#D8EEE5",
+        "veil": "#11FFFFFF",
+        "light": true
+      },
+      "kind": "accent",
+      "mood": [
+        "light",
+        "pastel",
+        "calm"
+      ],
+      "swatch": "#BFE5D3",
+      "credits": []
+    },
+    {
+      "id": "lavender",
+      "name": "Lavender",
+      "description": "Lavender accents on a soft light base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dreamy",
+        "vibe:calm",
+        "color:purple",
+        "color:white",
+        "color:pastel"
+      ],
+      "thumbnail": "lavender/preview.png",
+      "file": "lavender/theme.json",
+      "premium": false,
+      "size": 880,
+      "sha256": "f4c6453cdb175817a598a57aabce95551d627e7bb27539b4a01bd4fbbd495e56",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#7C4DDB",
+        "accentAlt": "#E0589A",
+        "ink": "#2A1F44",
+        "dim": "#7568A0",
+        "drawer": "#F0EBFA",
+        "surface": "#F7F3FD",
+        "elevated": "#E2DAF4",
+        "veil": "#11FFFFFF",
+        "light": true
+      },
+      "kind": "accent",
+      "mood": [
+        "light",
+        "pastel",
+        "calm"
+      ],
+      "swatch": "#D3C5F0",
+      "credits": []
+    },
+    {
+      "id": "sky",
+      "name": "Sky",
+      "description": "Sky accents on a soft light base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:chill",
+        "color:blue",
+        "color:white",
+        "color:pastel"
+      ],
+      "thumbnail": "sky/preview.png",
+      "file": "sky/theme.json",
+      "premium": false,
+      "size": 863,
+      "sha256": "0eaa479c340a2437179cd9edec70a70a843e885991c11fb8b54807c0670c5f83",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#1E7FD6",
+        "accentAlt": "#F28C28",
+        "ink": "#10243A",
+        "dim": "#5C7490",
+        "drawer": "#E8F2FB",
+        "surface": "#F2F8FD",
+        "elevated": "#D6E7F6",
+        "veil": "#11FFFFFF",
+        "light": true
+      },
+      "kind": "accent",
+      "mood": [
+        "light",
+        "pastel",
+        "calm"
+      ],
+      "swatch": "#BBD8F2",
+      "credits": []
+    },
+    {
+      "id": "blush",
+      "name": "Blush",
+      "description": "Blush accents on a soft light base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dreamy",
+        "vibe:elegant",
+        "color:pink",
+        "color:white",
+        "color:pastel"
+      ],
+      "thumbnail": "blush/preview.png",
+      "file": "blush/theme.json",
+      "premium": false,
+      "size": 872,
+      "sha256": "d142adb48de55f438d67c3e36ccd7a413f2e5d69e2f9726c630bfd229006ce2f",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#D6537A",
+        "accentAlt": "#3D8F85",
+        "ink": "#3A1B27",
+        "dim": "#8A5B6C",
+        "drawer": "#FBEDF1",
+        "surface": "#FDF4F7",
+        "elevated": "#F4DCE4",
+        "veil": "#11FFFFFF",
+        "light": true
+      },
+      "kind": "accent",
+      "mood": [
+        "light",
+        "pastel",
+        "calm"
+      ],
+      "swatch": "#F0C4D2",
+      "credits": []
     }
   ],
   "featured": {
@@ -3332,7 +5937,8 @@
         "themes": [
           "harvest",
           "autumn_leaves",
-          "cozy_cabin"
+          "cozy_cabin",
+          "harvest_table"
         ]
       },
       {
@@ -3344,7 +5950,9 @@
         "earlyDays": 3,
         "themes": [
           "winter_snow",
-          "northern_lights"
+          "northern_lights",
+          "christmas_lights",
+          "festival_of_lights"
         ]
       },
       {
@@ -3382,7 +5990,9 @@
         "earlyDays": 3,
         "themes": [
           "spring_bloom",
-          "cherry_blossom"
+          "cherry_blossom",
+          "spring_eggs",
+          "mothers_day"
         ]
       },
       {
@@ -3395,7 +6005,46 @@
         "themes": [
           "summer_splash",
           "tropical",
-          "beach"
+          "beach",
+          "independence_day",
+          "fathers_day"
+        ]
+      },
+      {
+        "id": "march_festivals",
+        "name": "March festivals",
+        "from": "02-28",
+        "until": "03-31",
+        "teaseDays": 5,
+        "earlyDays": 3,
+        "themes": [
+          "lucky_clover",
+          "holi_colors",
+          "crescent_night"
+        ]
+      },
+      {
+        "id": "lunar_new_year",
+        "name": "Lunar New Year",
+        "from": "01-15",
+        "until": "02-21",
+        "teaseDays": 5,
+        "earlyDays": 3,
+        "themes": [
+          "lantern_festival",
+          "golden_fortune"
+        ]
+      },
+      {
+        "id": "diwali",
+        "name": "Diwali",
+        "from": "10-15",
+        "until": "11-15",
+        "teaseDays": 5,
+        "earlyDays": 3,
+        "themes": [
+          "festival_of_lamps",
+          "marigold_glow"
         ]
       }
     ]
@@ -3429,6 +6078,113 @@
       ],
       "start": "2026-10-05",
       "end": "2027-03-31"
+    },
+    {
+      "id": "easy_to_see",
+      "name": "Easy to see",
+      "description": "High-contrast, large-print and colour-blind-safe themes, with big icons and clear names. All free.",
+      "themes": [
+        "high_contrast_dark",
+        "high_contrast_light",
+        "yellow_on_black",
+        "black_on_yellow",
+        "amber_night",
+        "reading_cream",
+        "reading_dark",
+        "colour_blind_dark",
+        "colour_blind_light",
+        "red_teal_safe",
+        "big_and_simple",
+        "calm_low_stimulation",
+        "easy_reach",
+        "glare_free_grey",
+        "clear_day"
+      ],
+      "start": "2026-10-05",
+      "end": "2027-12-31"
+    },
+    {
+      "id": "made_for_programmers",
+      "name": "Made for programmers",
+      "description": "Terminal looks, editor palettes, monospaced type and command-line drawers.",
+      "themes": [
+        "matrix",
+        "command_prompt",
+        "dos_blue",
+        "solarized_dark",
+        "monokai",
+        "nord",
+        "gruvbox",
+        "paper_terminal",
+        "dev_dark",
+        "night_pass",
+        "vintage_logic",
+        "mesh_network",
+        "pico",
+        "overclock"
+      ],
+      "start": "2026-10-05",
+      "end": "2027-12-31"
+    },
+    {
+      "id": "colour_only",
+      "name": "Just the colours",
+      "description": "Change your colours and font and keep your layout and wallpaper exactly as they are.",
+      "themes": [
+        "graphite",
+        "matcha",
+        "crimson",
+        "tangerine",
+        "sunflower",
+        "emerald",
+        "teal",
+        "ocean",
+        "indigo",
+        "violet",
+        "rose",
+        "cocoa",
+        "slate",
+        "sand",
+        "mint",
+        "lavender",
+        "sky",
+        "blush"
+      ],
+      "start": "2026-10-05",
+      "end": "2027-12-31"
+    },
+    {
+      "id": "hobbies_and_passions",
+      "name": "Hobbies and passions",
+      "description": "Music, sport, cars, cooking, fitness, pets, books, fashion, gaming and manga.",
+      "themes": [
+        "vinyl_nights",
+        "courtside",
+        "muscle_car",
+        "fresh_table",
+        "strength",
+        "cozy_pug",
+        "reading_room",
+        "wardrobe",
+        "pixel_quest",
+        "manga_panel"
+      ],
+      "start": "2026-10-05",
+      "end": "2027-12-31"
+    },
+    {
+      "id": "dinosaur_fossils",
+      "name": "Dinosaur fossils",
+      "description": "Museum skeletons, a working quarry and classic paintings of the age of dinosaurs.",
+      "themes": [
+        "trex_hall",
+        "laelaps",
+        "in_the_rock",
+        "brontosaurus_study",
+        "ankylosaurus"
+      ],
+      "start": "2026-10-05",
+      "end": "2027-12-31"
     }
   ]
 }

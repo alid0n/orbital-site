@@ -1,0 +1,44 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "slate",
+  "name": "Slate",
+  "description": "Slate accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dark",
+    "color:blue",
+    "color:white",
+    "color:black"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#94A3B8",
+    "accentAlt": "#CBD5E1",
+    "ink": "#F1F5F9",
+    "dim": "#8391A6",
+    "drawer": "#0B0F14",
+    "surface": "#10161D",
+    "elevated": "#1C2530",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "font": "ibm_plex_sans"
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "minimal"
+  ],
+  "swatch": "#566274",
+  "credits": []
+}

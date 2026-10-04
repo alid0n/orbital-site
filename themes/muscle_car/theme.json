@@ -1,0 +1,87 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "muscle_car",
+  "name": "Muscle Car",
+  "description": "A violet muscle car with chrome lettering, built for people who love the road.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:sporty",
+    "vibe:energetic",
+    "color:purple",
+    "color:black",
+    "style:one-handed",
+    "topic:cars"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#C77DFF",
+    "accentAlt": "#E0E0F0",
+    "ink": "#F6F0FF",
+    "dim": "#B5A8CF",
+    "drawer": "#0B0614",
+    "surface": "#120A1E",
+    "elevated": "#201232",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "oxanium",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "bold",
+    "vivid"
+  ],
+  "swatch": "#5A2E8A",
+  "credits": [
+    {
+      "title": "Car Auto",
+      "author": "Jp Valery",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/car-auto-AQPI3EKZ9E"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      }
+    ]
+  },
+  "assistant": {
+    "look": "HUD"
+  }
+}

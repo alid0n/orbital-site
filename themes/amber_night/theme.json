@@ -1,0 +1,94 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "amber_night",
+  "name": "Amber Night",
+  "description": "Warm amber on black, gentle in a dark room and kind to your eyes in the evening.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dark",
+    "color:orange",
+    "color:black",
+    "style:easy to see",
+    "topic:accessibility"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FF9A1F",
+    "accentAlt": "#D96A00",
+    "ink": "#FFB454",
+    "dim": "#C98A3A",
+    "drawer": "#000000",
+    "surface": "#0A0600",
+    "elevated": "#1F1200",
+    "veil": "#00000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "BOLD",
+    "widgetTint": 0.0,
+    "widgetSolid": 1.0,
+    "font": "lexend",
+    "clockFace": "BARE",
+    "panelLook": "CARD",
+    "notch": "NONE",
+    "homeIconScale": 1.5,
+    "homeLabels": true
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "minimal"
+  ],
+  "swatch": "#1F1200",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "drawerColumns": 3,
+    "drawerIconScale": 1.4,
+    "drawerLabels": true,
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.3
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.24,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "STANDARD"
+  }
+}

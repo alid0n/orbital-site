@@ -1,0 +1,95 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "high_contrast_dark",
+  "name": "High Contrast Dark",
+  "description": "Pure white lettering on black with yellow highlights. The strongest contrast Orbital offers, with big icons and clear names.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dark",
+    "color:black",
+    "color:white",
+    "color:yellow",
+    "style:easy to see",
+    "topic:accessibility"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFE600",
+    "accentAlt": "#00E5FF",
+    "ink": "#FFFFFF",
+    "dim": "#D0D0D0",
+    "drawer": "#000000",
+    "surface": "#000000",
+    "elevated": "#1C1C1C",
+    "veil": "#00000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "BOLD",
+    "widgetTint": 0.0,
+    "widgetSolid": 1.0,
+    "font": "atkinson_hyperlegible",
+    "clockFace": "BARE",
+    "panelLook": "CARD",
+    "notch": "NONE",
+    "homeIconScale": 1.5,
+    "homeLabels": true
+  },
+  "mood": [
+    "dark",
+    "bold",
+    "minimal"
+  ],
+  "swatch": "#000000",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "drawerColumns": 3,
+    "drawerIconScale": 1.4,
+    "drawerLabels": true,
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.3
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.24,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "STANDARD"
+  }
+}

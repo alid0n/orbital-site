@@ -1,0 +1,86 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "calm_low_stimulation",
+  "name": "Calm Low Stimulation",
+  "description": "Muted sage and soft grey with no bright colours or busy detail, for a quiet, restful phone.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dark",
+    "vibe:chill",
+    "color:green",
+    "color:black",
+    "style:easy to see",
+    "topic:accessibility"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#8FBFA8",
+    "accentAlt": "#C8B88A",
+    "ink": "#E4EAE6",
+    "dim": "#A9B8B0",
+    "drawer": "#262D2A",
+    "surface": "#2B3330",
+    "elevated": "#38423E",
+    "veil": "#00000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "BOLD",
+    "widgetTint": 0.0,
+    "widgetSolid": 1.0,
+    "font": "nunito",
+    "clockFace": "BARE",
+    "panelLook": "CARD",
+    "notch": "NONE",
+    "homeIconScale": 1.5,
+    "homeLabels": true
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "minimal"
+  ],
+  "swatch": "#2B3330",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "drawerColumns": 3,
+    "drawerIconScale": 1.4,
+    "drawerLabels": true,
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.08,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.2
+      }
+    ]
+  },
+  "assistant": {
+    "look": "STANDARD"
+  }
+}

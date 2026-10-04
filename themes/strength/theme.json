@@ -1,0 +1,97 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "strength",
+  "name": "Strength",
+  "description": "Bright blue dumbbells on warm wood, with a weekly view to keep your training on track.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:sporty",
+    "color:blue",
+    "color:orange",
+    "style:one-handed",
+    "topic:fitness",
+    "topic:sports"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#2F9BFF",
+    "accentAlt": "#FFB347",
+    "ink": "#F2F6FA",
+    "dim": "#A3B1C2",
+    "drawer": "#06090E",
+    "surface": "#0B1018",
+    "elevated": "#161F2C",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "outfit",
+    "clockFace": "DIGITS",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "vivid",
+    "bold"
+  ],
+  "swatch": "#1F6FBF",
+  "credits": [
+    {
+      "title": "Fitness Weights",
+      "author": "Kristin Hardwick",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/fitness-weights-FVUO0YIMKH"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.05,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "week",
+        "kind": "CALENDAR_WEEK",
+        "x": 0.04,
+        "y": 0.3,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "VOICE"
+  }
+}

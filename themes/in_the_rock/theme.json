@@ -1,0 +1,100 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "in_the_rock",
+  "name": "In the Rock",
+  "description": "Fossil bone still set in sandstone, with every app a stone tile in rust and sand.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:dark",
+    "color:orange",
+    "color:gold",
+    "style:one-handed",
+    "topic:dinosaurs",
+    "topic:nature"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#E08A3C",
+    "accentAlt": "#E8CB8A",
+    "ink": "#F6EFE4",
+    "dim": "#C7B9A5",
+    "drawer": "#1B1714",
+    "surface": "#2A2420",
+    "elevated": "#3A322B",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SQUARE",
+    "iconShape": "TILE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "SQUARE",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.2,
+    "widgetSolid": 1.0,
+    "font": "dm_sans",
+    "clockFace": "LINE",
+    "uppercase": true,
+    "panelLook": "CARD",
+    "notch": "NONE"
+  },
+  "mood": [
+    "dark",
+    "bold",
+    "cozy"
+  ],
+  "swatch": "#6B4A2A",
+  "credits": [
+    {
+      "title": "Cleveland-Lloyd Dinosaur Quarry",
+      "author": "Bureau of Land Management, Utah",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Cleveland_Lloyd_Dinosaur_Quarry_(26784733111).jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "tiledDrawer": true,
+    "drawerColumns": 4,
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.05,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.18,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  }
+}

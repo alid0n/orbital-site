@@ -1,0 +1,43 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "tangerine",
+  "name": "Tangerine",
+  "description": "Tangerine accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:dark",
+    "color:orange",
+    "color:black"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FF8A3D",
+    "accentAlt": "#FFC27A",
+    "ink": "#FFF3E8",
+    "dim": "#C2A088",
+    "drawer": "#140B05",
+    "surface": "#1B0F07",
+    "elevated": "#2B1A0E",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "font": "poppins"
+  },
+  "mood": [
+    "dark",
+    "bold",
+    "vivid"
+  ],
+  "swatch": "#E0701F",
+  "credits": []
+}

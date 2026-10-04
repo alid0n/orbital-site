@@ -1,0 +1,96 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "wardrobe",
+  "name": "Wardrobe",
+  "description": "A neutral rail of clothes in soft sand and espresso, a light theme with a classic serif.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:elegant",
+    "vibe:calm",
+    "color:white",
+    "color:orange",
+    "style:one-handed",
+    "topic:fashion"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#8A5A3C",
+    "accentAlt": "#2F4F4F",
+    "ink": "#2A211B",
+    "dim": "#7A6A5C",
+    "drawer": "#F1E9DE",
+    "surface": "#F7F1E8",
+    "elevated": "#E6DACB",
+    "veil": "#33F1E9DE",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "cormorant",
+    "clockFace": "LINE",
+    "panelLook": "LINES",
+    "notch": "DOT"
+  },
+  "mood": [
+    "light",
+    "calm",
+    "minimal"
+  ],
+  "swatch": "#D8C6AE",
+  "credits": [
+    {
+      "title": "Fashion Clothes",
+      "author": "Hannah Morgan",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/fashion-clothes-ZN97ZIF3ZU"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "CARD",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
+  }
+}

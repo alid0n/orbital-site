@@ -1,0 +1,101 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "christmas_lights",
+  "name": "Christmas Lights",
+  "description": "A tree glowing with colour against the dark, with soft lettering and sparkles when you tap.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:cozy",
+    "vibe:dreamy",
+    "color:red",
+    "color:green",
+    "color:gold",
+    "style:one-handed",
+    "topic:christmas",
+    "topic:winter"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FF5A5A",
+    "accentAlt": "#7FE08A",
+    "ink": "#FFF4E6",
+    "dim": "#D6B9A0",
+    "drawer": "#0A0504",
+    "surface": "#120806",
+    "elevated": "#24100C",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "cormorant",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "cozy",
+    "vivid"
+  ],
+  "swatch": "#6A1E1A",
+  "credits": [
+    {
+      "title": "Christmas Tree",
+      "author": "Dawid Zawiła",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/christmas-tree-GVW1GU9XPS"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
+  },
+  "effect": "sparkles",
+  "tap": true,
+  "season": "winter"
+}

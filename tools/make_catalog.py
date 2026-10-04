@@ -2232,5 +2232,16 @@ def check_written():
                 assert max(picture.size) <= 4096, (item["id"], picture.size)
 
 
+# THE LATER BATCHES live in their own modules, each adding its themes, credits, layouts and (for the
+# holidays) seasons to the tables above. Painters first, shelves last.
+import importlib
+
+for _module in ("themes_painters", "themes_dino", "themes_interests", "themes_holidays", "themes_access",
+                "themes_colour", "themes_shelves"):
+    _loaded = importlib.import_module(_module)
+    if hasattr(_loaded, "register"):
+        _loaded.register(globals())
+
+
 if __name__ == "__main__":
     main()

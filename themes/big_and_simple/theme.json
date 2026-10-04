@@ -1,0 +1,94 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "big_and_simple",
+  "name": "Big and Simple",
+  "description": "Large icons with their names, a big clock and warm white pages, for anyone who wants the phone to be easy to read at a glance.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:elegant",
+    "color:white",
+    "color:blue",
+    "style:easy to see",
+    "topic:accessibility"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#0B5CAD",
+    "accentAlt": "#B3261E",
+    "ink": "#1A1A1A",
+    "dim": "#4D4D4D",
+    "drawer": "#FFFDF7",
+    "surface": "#FFFFFF",
+    "elevated": "#F0EEE6",
+    "veil": "#00000000",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "BOLD",
+    "widgetTint": 0.0,
+    "widgetSolid": 1.0,
+    "font": "atkinson_hyperlegible",
+    "clockFace": "BARE",
+    "panelLook": "CARD",
+    "notch": "NONE",
+    "homeIconScale": 1.5,
+    "homeLabels": true
+  },
+  "mood": [
+    "light",
+    "calm",
+    "minimal"
+  ],
+  "swatch": "#FFFDF7",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "drawerColumns": 3,
+    "drawerIconScale": 1.4,
+    "drawerLabels": true,
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.05,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.5
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.26,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "STANDARD"
+  }
+}

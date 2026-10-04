@@ -1,0 +1,43 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "crimson",
+  "name": "Crimson",
+  "description": "Crimson accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:dark",
+    "color:red",
+    "color:black"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#E5484D",
+    "accentAlt": "#FF9A8B",
+    "ink": "#FBEFEF",
+    "dim": "#B58E90",
+    "drawer": "#130708",
+    "surface": "#1A0A0C",
+    "elevated": "#2A1316",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "font": "manrope"
+  },
+  "mood": [
+    "dark",
+    "bold",
+    "vivid"
+  ],
+  "swatch": "#B3262C",
+  "credits": []
+}

@@ -1,0 +1,99 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "fathers_day",
+  "name": "Father's Day",
+  "description": "A workbench of well-used tools in walnut and brass, with sturdy lettering.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:cozy",
+    "vibe:elegant",
+    "color:gold",
+    "color:black",
+    "style:one-handed",
+    "topic:fathers day",
+    "topic:family"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#D9A441",
+    "accentAlt": "#7FA6BF",
+    "ink": "#F3ECE0",
+    "dim": "#BDAE96",
+    "drawer": "#0D0A07",
+    "surface": "#15100B",
+    "elevated": "#271D14",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "rajdhani",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT",
+    "uppercase": true
+  },
+  "mood": [
+    "dark",
+    "cozy",
+    "bold"
+  ],
+  "swatch": "#4A3520",
+  "credits": [
+    {
+      "title": "Wood Tools",
+      "author": "Todd Quackenbush",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/wood-tools-00F7DB5857"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  },
+  "season": "summer"
+}

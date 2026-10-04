@@ -1,0 +1,101 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "independence_day",
+  "name": "Independence Day",
+  "description": "Fireworks lighting a night sky in red, white and blue, with a burst when you tap.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:dark",
+    "color:red",
+    "color:blue",
+    "color:white",
+    "style:one-handed",
+    "topic:independence day",
+    "topic:summer"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FF4D5E",
+    "accentAlt": "#6FA8FF",
+    "ink": "#FFFFFF",
+    "dim": "#B8C4E0",
+    "drawer": "#050A1C",
+    "surface": "#0A1230",
+    "elevated": "#16224A",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "montserrat",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "vivid",
+    "bold"
+  ],
+  "swatch": "#0A1230",
+  "credits": [
+    {
+      "title": "Fireworks Lights",
+      "author": "Aaron Burden",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/fireworks-lights-FJKMZCB8FG"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "HUD"
+  },
+  "effect": "fireworks",
+  "tap": true,
+  "season": "summer"
+}

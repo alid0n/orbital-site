@@ -1,0 +1,83 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "festival_of_lamps",
+  "name": "Festival of Lamps",
+  "description": "A row of clay lamps glowing in the dark, in gold and rose, with sparkles when you tap, for Diwali.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:elegant",
+    "color:orange",
+    "color:gold",
+    "color:pink",
+    "style:one-handed",
+    "topic:diwali"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFB347",
+    "accentAlt": "#FF6F91",
+    "ink": "#FFF1DC",
+    "dim": "#E3B98F",
+    "drawer": "#1C0508",
+    "surface": "#26080C",
+    "elevated": "#42101A",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "marcellus",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "vivid",
+    "cozy"
+  ],
+  "swatch": "#7A1A22",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      }
+    ]
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
+  },
+  "effect": "sparkles",
+  "tap": true,
+  "season": "diwali"
+}

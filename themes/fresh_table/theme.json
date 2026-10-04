@@ -1,0 +1,96 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "fresh_table",
+  "name": "Fresh Table",
+  "description": "Warm tomatoes, herbs and pasta in a kitchen glow, for people who love to cook.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:cozy",
+    "vibe:energetic",
+    "color:red",
+    "color:orange",
+    "style:one-handed",
+    "topic:food"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#E8553D",
+    "accentAlt": "#8FBF6A",
+    "ink": "#FFF3E4",
+    "dim": "#CDB6A0",
+    "drawer": "#140A07",
+    "surface": "#1C100B",
+    "elevated": "#2E1C14",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "nunito",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "cozy",
+    "vivid"
+  ],
+  "swatch": "#8A3A22",
+  "credits": [
+    {
+      "title": "Cooking Food",
+      "author": "Healthy Living",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/cooking-food-RRAZGYXTZI"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "CARD",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  }
+}

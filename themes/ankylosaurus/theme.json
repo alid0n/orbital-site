@@ -1,0 +1,92 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "ankylosaurus",
+  "name": "Ankylosaurus",
+  "description": "An armoured skeleton in a museum hall, with every app a hexagon plate on an open canvas.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:futuristic",
+    "vibe:dark",
+    "color:gold",
+    "color:green",
+    "style:one-handed",
+    "topic:dinosaurs",
+    "topic:nature"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "HONEYCOMB",
+  "colors": {
+    "accent": "#D9A441",
+    "accentAlt": "#8FB8A8",
+    "ink": "#F7F1E6",
+    "dim": "#BCAF98",
+    "drawer": "#14100B",
+    "surface": "#1B1610",
+    "elevated": "#2D251B",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "HEX",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "exo_2",
+    "clockFace": "LINE",
+    "panelLook": "LINES",
+    "notch": "CHEVRON"
+  },
+  "mood": [
+    "dark",
+    "bold",
+    "cozy"
+  ],
+  "swatch": "#4A3A22",
+  "credits": [
+    {
+      "title": "Ankylosaurus Skeleton",
+      "author": "Gary Todd",
+      "source": "Wikimedia Commons",
+      "license": "CC0 1.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Ankylosaurus_Skeleton_(31556851166).jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "FREE_ROAM",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "tiledDrawer": true,
+    "drawerColumns": 5,
+    "drawerRail": false,
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "HUD"
+  }
+}

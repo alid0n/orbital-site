@@ -1,0 +1,43 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "sand",
+  "name": "Sand",
+  "description": "Sand accents on a soft light base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:cozy",
+    "color:orange",
+    "color:white"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#9A5A1A",
+    "accentAlt": "#5B8A72",
+    "ink": "#2B2118",
+    "dim": "#7A6A58",
+    "drawer": "#F4EBDD",
+    "surface": "#FAF4E9",
+    "elevated": "#EADFCB",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "font": "source_sans_3"
+  },
+  "mood": [
+    "light",
+    "calm",
+    "minimal"
+  ],
+  "swatch": "#E6D3B3",
+  "credits": []
+}

@@ -1,0 +1,98 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "brontosaurus_study",
+  "name": "Brontosaurus Study",
+  "description": "A vintage field illustration on parchment green, in a light theme with the Orbit wheel.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:elegant",
+    "color:green",
+    "color:white",
+    "style:one-handed",
+    "topic:dinosaurs",
+    "topic:nature",
+    "topic:art"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#3F6B4A",
+    "accentAlt": "#B5552E",
+    "ink": "#2B2A1E",
+    "dim": "#6B6A55",
+    "drawer": "#EDE6CF",
+    "surface": "#F4EEDA",
+    "elevated": "#E3DABD",
+    "veil": "#33EDE6CF",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.9,
+    "font": "marcellus",
+    "clockFace": "LINE",
+    "panelLook": "LINES",
+    "notch": "TAPER"
+  },
+  "mood": [
+    "light",
+    "calm",
+    "cozy"
+  ],
+  "swatch": "#C9C29C",
+  "credits": [
+    {
+      "title": "Brontosaurus illustration",
+      "author": "Charles R. Knight",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Illustration_of_the_Brontosaurus_by_Charles_R._Knight.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "note",
+        "kind": "NOTE",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  }
+}

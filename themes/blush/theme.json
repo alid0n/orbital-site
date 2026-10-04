@@ -1,0 +1,44 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "blush",
+  "name": "Blush",
+  "description": "Blush accents on a soft light base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:elegant",
+    "color:pink",
+    "color:white",
+    "color:pastel"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#D6537A",
+    "accentAlt": "#3D8F85",
+    "ink": "#3A1B27",
+    "dim": "#8A5B6C",
+    "drawer": "#FBEDF1",
+    "surface": "#FDF4F7",
+    "elevated": "#F4DCE4",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "font": "nunito"
+  },
+  "mood": [
+    "light",
+    "pastel",
+    "calm"
+  ],
+  "swatch": "#F0C4D2",
+  "credits": []
+}

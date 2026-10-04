@@ -1,0 +1,44 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "indigo",
+  "name": "Indigo",
+  "description": "Indigo accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:dark",
+    "color:blue",
+    "color:purple",
+    "color:black"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#6366F1",
+    "accentAlt": "#A5B4FC",
+    "ink": "#F0F0FF",
+    "dim": "#8E91C0",
+    "drawer": "#0A0A1E",
+    "surface": "#0F0F2A",
+    "elevated": "#1B1B45",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "font": "space_grotesk"
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "bold"
+  ],
+  "swatch": "#4547C2",
+  "credits": []
+}

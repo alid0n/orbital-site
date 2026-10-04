@@ -1,0 +1,100 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "spring_eggs",
+  "name": "Spring Eggs",
+  "description": "Pastel eggs in soft pink and blue, a light and cheerful theme for Easter.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:playful",
+    "vibe:dreamy",
+    "color:pink",
+    "color:blue",
+    "color:pastel",
+    "style:one-handed",
+    "topic:easter",
+    "topic:spring",
+    "topic:family"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#E0609A",
+    "accentAlt": "#4FA7D8",
+    "ink": "#3A2A44",
+    "dim": "#8A7596",
+    "drawer": "#FFF6FB",
+    "surface": "#FFFBFD",
+    "elevated": "#F6E4EE",
+    "veil": "#33FFF6FB",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "quicksand",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "light",
+    "pastel",
+    "playful"
+  ],
+  "swatch": "#F2B6CF",
+  "credits": [
+    {
+      "title": "Easter Eggs",
+      "author": "Altered Reality",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/easter-eggs-APP4WJVPUC"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  },
+  "season": "spring"
+}

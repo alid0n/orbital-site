@@ -1,0 +1,99 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "lantern_festival",
+  "name": "Lantern Festival",
+  "description": "Red lanterns glowing against the sky, in gold and crimson, for Lunar New Year.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:elegant",
+    "color:red",
+    "color:gold",
+    "style:one-handed",
+    "topic:lunar new year"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFC857",
+    "accentAlt": "#FF6B5E",
+    "ink": "#FFF3E0",
+    "dim": "#E0B896",
+    "drawer": "#1A0506",
+    "surface": "#260A0B",
+    "elevated": "#431416",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "cinzel",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "vivid",
+    "bold"
+  ],
+  "swatch": "#8A1A1E",
+  "credits": [
+    {
+      "title": "Chinese Lanterns",
+      "author": "Humphrey Muleba",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/chinese-lanterns-1VZO8DDCHZ"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
+  },
+  "effect": "sparkles",
+  "tap": true,
+  "season": "lunar_new_year"
+}

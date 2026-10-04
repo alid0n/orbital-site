@@ -1,0 +1,44 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "teal",
+  "name": "Teal",
+  "description": "Teal accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dark",
+    "color:green",
+    "color:blue",
+    "color:black"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#14B8A6",
+    "accentAlt": "#7FE3D6",
+    "ink": "#E8FBF8",
+    "dim": "#78B3AC",
+    "drawer": "#041413",
+    "surface": "#071B1A",
+    "elevated": "#0E2E2C",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "font": "quicksand"
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "vivid"
+  ],
+  "swatch": "#0E8579",
+  "credits": []
+}

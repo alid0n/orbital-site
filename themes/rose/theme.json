@@ -1,0 +1,43 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "rose",
+  "name": "Rose",
+  "description": "Rose accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:dark",
+    "color:pink",
+    "color:black"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#F43F7E",
+    "accentAlt": "#FDA4C0",
+    "ink": "#FFEEF4",
+    "dim": "#C48EA3",
+    "drawer": "#170610",
+    "surface": "#1F0A16",
+    "elevated": "#341425",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "font": "nunito"
+  },
+  "mood": [
+    "dark",
+    "bold",
+    "vivid"
+  ],
+  "swatch": "#C42A60",
+  "credits": []
+}

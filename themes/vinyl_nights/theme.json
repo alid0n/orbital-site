@@ -1,0 +1,97 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "vinyl_nights",
+  "name": "Vinyl Nights",
+  "description": "A record spinning on a wooden shelf, in amber and cream, with your music a swipe away.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:chill",
+    "vibe:dark",
+    "color:orange",
+    "color:gold",
+    "style:one-handed",
+    "topic:music"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFB454",
+    "accentAlt": "#E9D8B4",
+    "ink": "#F8EEDC",
+    "dim": "#BBA98C",
+    "drawer": "#0D0805",
+    "surface": "#140E09",
+    "elevated": "#241A12",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "dm_sans",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "cozy",
+    "calm"
+  ],
+  "swatch": "#3A2A1A",
+  "credits": [
+    {
+      "title": "Vinyl Record",
+      "author": "Spencer Selover",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/vinyl-record-DILOPNOHDI"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.06,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.88,
+        "tint": 1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  }
+}

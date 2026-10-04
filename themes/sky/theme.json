@@ -1,0 +1,44 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "sky",
+  "name": "Sky",
+  "description": "Sky accents on a soft light base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:chill",
+    "color:blue",
+    "color:white",
+    "color:pastel"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#1E7FD6",
+    "accentAlt": "#F28C28",
+    "ink": "#10243A",
+    "dim": "#5C7490",
+    "drawer": "#E8F2FB",
+    "surface": "#F2F8FD",
+    "elevated": "#D6E7F6",
+    "veil": "#11FFFFFF",
+    "light": true
+  },
+  "look": {
+    "font": "manrope"
+  },
+  "mood": [
+    "light",
+    "pastel",
+    "calm"
+  ],
+  "swatch": "#BBD8F2",
+  "credits": []
+}

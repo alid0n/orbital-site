@@ -1,0 +1,43 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "cocoa",
+  "name": "Cocoa",
+  "description": "Cocoa accents on a deep dark base. Refreshes your colours and font, and keeps your layout and wallpaper just as they are.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:cozy",
+    "vibe:dark",
+    "color:orange",
+    "color:black"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#C08552",
+    "accentAlt": "#E3B98F",
+    "ink": "#F8EEE4",
+    "dim": "#AD9582",
+    "drawer": "#120C08",
+    "surface": "#1A110B",
+    "elevated": "#2C1D13",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "font": "lora"
+  },
+  "mood": [
+    "dark",
+    "cozy",
+    "calm"
+  ],
+  "swatch": "#8A5A33",
+  "credits": []
+}

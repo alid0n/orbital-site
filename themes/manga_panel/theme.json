@@ -1,0 +1,91 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "manga_panel",
+  "name": "Manga Panel",
+  "description": "Ink-black panel borders, screentone dots and a splash of sakura pink, in a light theme.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:playful",
+    "vibe:energetic",
+    "color:white",
+    "color:pink",
+    "color:black",
+    "style:one-handed",
+    "topic:anime",
+    "topic:art"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#E8678A",
+    "accentAlt": "#2B2B33",
+    "ink": "#1A1A1F",
+    "dim": "#5C5C66",
+    "drawer": "#FCFBF8",
+    "surface": "#FFFFFF",
+    "elevated": "#F0EEEA",
+    "veil": "#33FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "SQUARE",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "SQUARE",
+    "widgetEdge": "BOLD",
+    "widgetTint": 0.2,
+    "widgetSolid": 1.0,
+    "font": "kalam",
+    "clockFace": "BARE",
+    "panelLook": "CARD",
+    "notch": "NONE"
+  },
+  "mood": [
+    "light",
+    "playful",
+    "bold"
+  ],
+  "swatch": "#F3A9BE",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.22,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  }
+}
