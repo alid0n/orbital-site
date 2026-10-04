@@ -1,0 +1,2055 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "space",
+      "name": "Space"
+    },
+    {
+      "id": "earth",
+      "name": "Earth from Orbit"
+    },
+    {
+      "id": "landscapes",
+      "name": "Landscapes"
+    },
+    {
+      "id": "botanical",
+      "name": "Botanical"
+    },
+    {
+      "id": "japanese",
+      "name": "Japanese Prints"
+    },
+    {
+      "id": "patterns",
+      "name": "Patterns"
+    },
+    {
+      "id": "oceans",
+      "name": "Oceans"
+    },
+    {
+      "id": "cities",
+      "name": "Cities"
+    }
+  ],
+  "wallpapers": [
+    {
+      "id": "milky_way_from_orbit",
+      "title": "Milky Way from Orbit",
+      "category": "space",
+      "credit": {
+        "title": "The Milky Way appears behind the SpaceX Dragon Endeavour",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss071e256593",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "milky_way_from_orbit/phone.webp",
+        "size": 517022,
+        "sha256": "e93c054ac08e162a741cb0b692a7b5965b62f9f9cbf23debc151dafe137cbd69",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "milky_way_from_orbit/wide.webp",
+        "size": 519194,
+        "sha256": "d374cbacf936c372946344f317cd521a1a2d8ec371b3ec1749ebe496ee1133eb",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "milky_way_from_orbit/thumb.webp",
+        "size": 32230,
+        "sha256": "311070e51b812c20e525046800a87b554c19c95d298e080a455e7bbf90064b0e",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#322F2D",
+      "dark": true
+    },
+    {
+      "id": "earthrise",
+      "title": "Earthrise",
+      "category": "space",
+      "credit": {
+        "title": "Apollo 8 Mission image, Earth over the horizon of the moon",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/as08-14-2383",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "earthrise/phone.webp",
+        "size": 86526,
+        "sha256": "3ae8db36354166a40b3f737134501b72bfe79ddb4ba63bd7eac3ca3608f9499a",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "earthrise/wide.webp",
+        "size": 80556,
+        "sha256": "0899e13885c5608b65ffb625f07704c638f35e1240be6dd76294ca9412c60c88",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "earthrise/thumb.webp",
+        "size": 6750,
+        "sha256": "1ec34f87f149ba1b674423c886ce4b510e9d33edd28b961a5034826f912abcf2",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#202021",
+      "dark": true
+    },
+    {
+      "id": "earthset",
+      "title": "Earthset",
+      "category": "space",
+      "credit": {
+        "title": "A Breathtaking Earthset from Orion",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/art002e021278",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "earthset/phone.webp",
+        "size": 141532,
+        "sha256": "b658de188f6893c4116f394e7a7fdfdcc4f7983289322de8debcf29632aa746d",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "earthset/wide.webp",
+        "size": 131876,
+        "sha256": "f8f84369ea427b22ab379c732b324e480ab8ae1ffd722b6c96b8c9f557c5c612",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "earthset/thumb.webp",
+        "size": 12542,
+        "sha256": "433900bde7221a9f49f492d38fa4325bf521f1978715c9b2f1263709ccb8e83e",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#252424",
+      "dark": true
+    },
+    {
+      "id": "diamond_ring",
+      "title": "Diamond Ring",
+      "category": "space",
+      "credit": {
+        "title": "2017 Total Solar Eclipse",
+        "creator": "NASA/Carla Thomas",
+        "institution": "NASA, Armstrong Flight Research Center",
+        "url": "https://images.nasa.gov/details/AFRC2017-0233-009",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "diamond_ring/phone.webp",
+        "size": 53288,
+        "sha256": "71bddb5257e6d7e232de7435fb66e70f442d8172a007ad627a01653c70b9051a",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "diamond_ring/wide.webp",
+        "size": 20054,
+        "sha256": "3965f53e9e10689510283fc5779b934443e5d2339fde983705056418d0cc9974",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "diamond_ring/thumb.webp",
+        "size": 3492,
+        "sha256": "2cee0fb20ffdd6605f307a880827733e42a13dafb70f2d53bfa59abf84dfc036",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#212427",
+      "dark": true
+    },
+    {
+      "id": "eclipse_from_orion",
+      "title": "Eclipse from Orion",
+      "category": "space",
+      "credit": {
+        "title": "Solar Eclipse During Artemis II",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/art002e016324",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "eclipse_from_orion/phone.webp",
+        "size": 121472,
+        "sha256": "d4f2cfe74e2fcf28b4ddf79797b87154650e683c2be0011a7face852876bdfc2",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "eclipse_from_orion/thumb.webp",
+        "size": 6818,
+        "sha256": "f869f8d53d508687656b6406b254630b21e8f822d3fd0e19de10603132b999fc",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#353E3F",
+      "dark": true
+    },
+    {
+      "id": "moon_crescent_eclipse",
+      "title": "Lunar Silhouette",
+      "category": "space",
+      "credit": {
+        "title": "Artemis II Total Solar Eclipse, Partial Frame",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/art002e009298",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "moon_crescent_eclipse/phone.webp",
+        "size": 607754,
+        "sha256": "ff690ad42fa238532cfa7a3e2eb0f5bbaf767f7c9ab39fac8291ad04a7f0c792",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "moon_crescent_eclipse/wide.webp",
+        "size": 487014,
+        "sha256": "9d9e865c4e920fbeb19872c9781219bb03a0124f3f2afd897c369d04c2148af3",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "moon_crescent_eclipse/thumb.webp",
+        "size": 9068,
+        "sha256": "1f8be0e9e944dbd9a33a028e858fca4ce88adf7f2612bd836884076fdf7d29d4",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#13191A",
+      "dark": true
+    },
+    {
+      "id": "blue_marble",
+      "title": "The Blue Marble",
+      "category": "earth",
+      "credit": {
+        "title": "View of the Earth seen by the Apollo 17 crew traveling toward the moon",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/as17-148-22727",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "blue_marble/phone.webp",
+        "size": 364386,
+        "sha256": "5037fcb69de855e5bd0fc1f8d839955c412183b8e8cdfbc7b2a1f058e1ce7669",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "blue_marble/wide.webp",
+        "size": 405416,
+        "sha256": "9dd6defb29fc0904082b6d26b0b403aa16b6dc08bacc7efd474e1861224b7df8",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "blue_marble/thumb.webp",
+        "size": 21352,
+        "sha256": "c1b13b9c95854ac09ec7d1a67dfc3a4cbee86a66ad3d881d99a7fcfd1d348cbf",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#272A30",
+      "dark": true
+    },
+    {
+      "id": "green_aurora",
+      "title": "Green Aurora",
+      "category": "earth",
+      "credit": {
+        "title": "Green aurora dance above the Indian Ocean",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss071e570863",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "green_aurora/phone.webp",
+        "size": 637670,
+        "sha256": "24c96c6e8fa017571e358d6e0242d5a2d690bece3b80f21dc1a20d83f09a3246",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "green_aurora/wide.webp",
+        "size": 394894,
+        "sha256": "70a413491c9a230a53230bcc60fa6cb81678e9e313576c745ccb4ae81738f879",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "green_aurora/thumb.webp",
+        "size": 6360,
+        "sha256": "e64dccf236eeb5a8d569d0db8ceb8f51700be192aeec0e2fa6484e533cd0289d",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#1B2A20",
+      "dark": true
+    },
+    {
+      "id": "aurora_and_city_lights",
+      "title": "Aurora and City Lights",
+      "category": "earth",
+      "credit": {
+        "title": "View of the Earth's limb with an aurora",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss058e005282",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "aurora_and_city_lights/phone.webp",
+        "size": 549074,
+        "sha256": "a5750f864dbb4a52b100618ba4e7bc60df9f2ad6bad08ee3473d8b3660f00b28",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "aurora_and_city_lights/wide.webp",
+        "size": 514502,
+        "sha256": "cf75c2fa7b667be1d148b7f6035b103032597f6141a871dc7ca0b866eb47a2d0",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "aurora_and_city_lights/thumb.webp",
+        "size": 23950,
+        "sha256": "5ea1a481cf9fb03846079bbe78d53863c0eaf8611f4eac0e3c331de3a1f09c9b",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#3C4245",
+      "dark": true
+    },
+    {
+      "id": "airglow",
+      "title": "Airglow at Orbital Sunset",
+      "category": "earth",
+      "credit": {
+        "title": "City lights sparkle underneath an atmospheric glow and a starry night sky",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss062e103874",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "airglow/phone.webp",
+        "size": 604182,
+        "sha256": "c7ad2c8e4cbd180ea2b0a543471c98eb34bf1a45cea2efdd14a1156bb0e4cb8b",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "airglow/wide.webp",
+        "size": 279398,
+        "sha256": "49b76608531c100385f99543bc4468091411201d2cdee1f9eeeacfed3b24ede1",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "airglow/thumb.webp",
+        "size": 13114,
+        "sha256": "756ca91fa4c40573fefdf775d4ea570068bcacac0ce632f4c5b174546dcecda8",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#1B171D",
+      "dark": true
+    },
+    {
+      "id": "bahamas_from_orbit",
+      "title": "The Bahamas",
+      "category": "earth",
+      "credit": {
+        "title": "The clear blue waters surrounding The Bahamas",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss071e449837",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "bahamas_from_orbit/phone.webp",
+        "size": 434254,
+        "sha256": "9f722b3d7981a217a4cfa1b8194789456b3fe7b23247d963e408674c6fd40e87",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "bahamas_from_orbit/wide.webp",
+        "size": 448084,
+        "sha256": "e05b3c0af4820825802f135a6562255e57d8bc0d4267d707cd5ebb6e172ba690",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "bahamas_from_orbit/thumb.webp",
+        "size": 39426,
+        "sha256": "b4848c51168ad1ff0150b6f5bd9a39b357d59b9b17ef6204715809e524365bf0",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#698FB7",
+      "dark": false
+    },
+    {
+      "id": "himalayas",
+      "title": "The Himalayas",
+      "category": "earth",
+      "credit": {
+        "title": "The Himalayas and Mount Everest in Nepal",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss069e003192",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "himalayas/phone.webp",
+        "size": 597270,
+        "sha256": "88ffbc016b76442261384ebacf461f4c6942a3100e41e17b46cfa52a30e3e384",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "himalayas/wide.webp",
+        "size": 535104,
+        "sha256": "2cf66d60a709081c509f7cfa66ae57ec3f8d5448ecf35be90163a7c4e3655c5a",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "himalayas/thumb.webp",
+        "size": 55384,
+        "sha256": "86f267a96cd654f7e2404a9fffdf4ae89ec543972c19a66bdc4d053af124da13",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#8B8882",
+      "dark": false
+    },
+    {
+      "id": "tibetan_glaciers",
+      "title": "Himalayan Glaciers",
+      "category": "earth",
+      "credit": {
+        "title": "Glaciers flow downhill from the Himalayas' northern slopes onto China's Tibetan Plateau",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss074e0603585",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "tibetan_glaciers/phone.webp",
+        "size": 536874,
+        "sha256": "08b36bd325e2d3e84744e47dfa3e3da4fa770cbdd8f81b1412f1b834d1f0564d",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "tibetan_glaciers/wide.webp",
+        "size": 523878,
+        "sha256": "0fecae40e09f07c011c8b244ebdeb40178ac6ea9dc4cb59b25887441b483387a",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "tibetan_glaciers/thumb.webp",
+        "size": 34840,
+        "sha256": "ebe4ef3e635e6f7dbe92f6fba6b7a7c5d1b608eb67f391a4119210d93d75deeb",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#5F5F61",
+      "dark": true
+    },
+    {
+      "id": "sahara_dunes",
+      "title": "Sahara Dunes",
+      "category": "earth",
+      "credit": {
+        "title": "Sand dunes in the Sahara Desert in Algeria",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss070e090117",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "sahara_dunes/phone.webp",
+        "size": 650502,
+        "sha256": "32139bac9774399711d5d60fe54308bb804724d6ae25496603dc7a4004689558",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "sahara_dunes/wide.webp",
+        "size": 472620,
+        "sha256": "101fa6c5aa793fd18c38cbc3452db8d572fe6a3b84b8231d649feb8c70455814",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "sahara_dunes/thumb.webp",
+        "size": 29874,
+        "sha256": "a14cdf5b26a83497392e4565a6990a63633b95e6f6ce6a78cbe8e082cf82e296",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#8E6C5C",
+      "dark": false
+    },
+    {
+      "id": "hurricane_eye",
+      "title": "Eye of the Storm",
+      "category": "earth",
+      "credit": {
+        "title": "A hurricane's ragged eye over the Atlantic Ocean",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss069e090102",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "hurricane_eye/phone.webp",
+        "size": 185252,
+        "sha256": "ec6753623a689f10ca2465ee286cc26dc10305ec860cd15217e0222fa2e99dd5",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "hurricane_eye/wide.webp",
+        "size": 192422,
+        "sha256": "c79b51bb240b792e13b6465188bb3132bf185a843918fc5586de3d597a8bf2ae",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "hurricane_eye/thumb.webp",
+        "size": 14664,
+        "sha256": "0cb74e47aeefee21de685c28fff7162a4e33758cbe11e6de77e57949de9b2c4a",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#A0A6AC",
+      "dark": false
+    },
+    {
+      "id": "wheat_field_cypresses",
+      "title": "Wheat Field with Cypresses",
+      "category": "landscapes",
+      "credit": {
+        "title": "Wheat Field with Cypresses",
+        "creator": "Vincent van Gogh",
+        "institution": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/436535",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "wheat_field_cypresses/phone.webp",
+        "size": 613294,
+        "sha256": "b2b9971604158b87d6addaef784398e49a62875a70fedc59293192c699a62e6c",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "wheat_field_cypresses/wide.webp",
+        "size": 534586,
+        "sha256": "e6253a4a991b0e0c61cf10c11039b3b37c500564c39445db8337b8ca5b9e17ed",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "wheat_field_cypresses/thumb.webp",
+        "size": 58578,
+        "sha256": "d91f66d5bc63d24357b367d7a0d793c9d2266e69aea8c4bdb2dc6c8aa5fde8d1",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#65735F",
+      "dark": true
+    },
+    {
+      "id": "the_oxbow",
+      "title": "The Oxbow",
+      "category": "landscapes",
+      "credit": {
+        "title": "View from Mount Holyoke, Northampton, Massachusetts, after a Thunderstorm (The Oxbow)",
+        "creator": "Thomas Cole",
+        "institution": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/10497",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "the_oxbow/phone.webp",
+        "size": 419542,
+        "sha256": "712c37dae161a2893e2b061202fc5994302f5b675caa5c61b436af442aa3b3e3",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "the_oxbow/wide.webp",
+        "size": 420432,
+        "sha256": "8084eb1fee98cbeb96e2b0849ade9c7b8de33eeb76b0ac0ba0279764ea645a9d",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "the_oxbow/thumb.webp",
+        "size": 17976,
+        "sha256": "72164dbd66fd1db016a4e37453f77ef4090aaa9bf9c746c4fd731b93ab4feb36",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#8B806A",
+      "dark": false
+    },
+    {
+      "id": "twilight_in_the_wilderness",
+      "title": "Twilight in the Wilderness",
+      "category": "landscapes",
+      "credit": {
+        "title": "Twilight in the Wilderness",
+        "creator": "Frederic Edwin Church",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1965.233",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "twilight_in_the_wilderness/phone.webp",
+        "size": 156340,
+        "sha256": "64ce932bf93225c962229bd49922c3588718734117c993e48a6f8f06a26c585d",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "twilight_in_the_wilderness/wide.webp",
+        "size": 283052,
+        "sha256": "afaf598ef889abd4b258bbfde23504379512f60aff653016849a5f2e95799ef2",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "twilight_in_the_wilderness/thumb.webp",
+        "size": 10872,
+        "sha256": "abb88b2a2188a4384de554a76c0f72263d29f38f95812a737ed0511d51d8d3a1",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#543C29",
+      "dark": true
+    },
+    {
+      "id": "two_poplars",
+      "title": "Two Poplars",
+      "category": "landscapes",
+      "credit": {
+        "title": "Two Poplars in the Alpilles near Saint-Rémy",
+        "creator": "Vincent van Gogh",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1958.32",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "two_poplars/phone.webp",
+        "size": 653104,
+        "sha256": "a63c9bb621f2ce2b57aff6ee48b50f2ec6a45d0bcca218b50a94f35f9bd566d9",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "two_poplars/thumb.webp",
+        "size": 50842,
+        "sha256": "b07735f966b93e18444681da181d3ad69715fdbe8a53ddb3f9ec0868fd3ee0a7",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#6C8466",
+      "dark": false
+    },
+    {
+      "id": "denali_aurora",
+      "title": "Aurora over Denali",
+      "category": "landscapes",
+      "credit": {
+        "title": "North to Alaska Aurora in Denali",
+        "creator": "NPS / Jacob W. Frank",
+        "institution": "National Park Service",
+        "url": "https://commons.wikimedia.org/wiki/File:North_to_Alaska_Aurora_in_Denali_(7957749870).jpg",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "denali_aurora/phone.webp",
+        "size": 260232,
+        "sha256": "9c89d622322488a7203d256a18624aef939f1c00e2822ea75d9a60c208d5e342",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "denali_aurora/wide.webp",
+        "size": 83106,
+        "sha256": "196a5bd28bc75abde93faa82005773cb226a4cad2985bb205fb085862c95c3c7",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "denali_aurora/thumb.webp",
+        "size": 4684,
+        "sha256": "a15b94d7c54f035f063f5cb030d459b46746882f36b868bd8f33b480ff756d7b",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#0D240C",
+      "dark": true
+    },
+    {
+      "id": "mount_moran",
+      "title": "Mount Moran",
+      "category": "landscapes",
+      "credit": {
+        "title": "Mt. Moran, Teton National Park",
+        "creator": "Ansel Adams",
+        "institution": "U.S. National Archives (National Park Service)",
+        "url": "https://commons.wikimedia.org/wiki/File:Grand_Teton_Aag05.jpg",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "mount_moran/phone.webp",
+        "size": 241614,
+        "sha256": "8397a360e2c30c66c39878dcc38d32af9e9e82f7a2bf799fe067298027524e4c",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "mount_moran/wide.webp",
+        "size": 287326,
+        "sha256": "4d64778111d3ca216b575e0f3dc839127571c19945e44ef1410e29b41a8ea56a",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "mount_moran/thumb.webp",
+        "size": 24668,
+        "sha256": "fe39b8bfa5016c8787e772c0af60d39653a97d832f5738d4abd56afbeab2aa1a",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#383838",
+      "dark": true
+    },
+    {
+      "id": "arctic_mountain_light",
+      "title": "Arctic Mountain Light",
+      "category": "landscapes",
+      "credit": {
+        "title": "Mountain light, Arctic National Wildlife Refuge",
+        "creator": "Danielle Brigida / USFWS",
+        "institution": "U.S. Fish and Wildlife Service",
+        "url": "https://commons.wikimedia.org/wiki/File:Mountain_light_(48771994623).jpg",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "arctic_mountain_light/phone.webp",
+        "size": 673144,
+        "sha256": "94f455adfd7fead8d1d7a2a2db5f1cbe1ee8bf889b8effe7ae1bc381dec86f7f",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "arctic_mountain_light/wide.webp",
+        "size": 559888,
+        "sha256": "86157026bc59ab662355f3c7bef07d17a16adbaeaad51a4db4f8e52dc6a7f9eb",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "arctic_mountain_light/thumb.webp",
+        "size": 39654,
+        "sha256": "f6a4ce9590356c3e7acb026c1b4254fec3cb10c4db55da9251343566cafb5dfe",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#7B8D92",
+      "dark": false
+    },
+    {
+      "id": "ornithogalum",
+      "title": "Ornithogalum",
+      "category": "botanical",
+      "credit": {
+        "title": "Les Liliacées: Ornithogalum longibracteatum",
+        "creator": "Pierre-Joseph Redouté",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1955.327",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "ornithogalum/phone.webp",
+        "size": 199524,
+        "sha256": "c1bae6cdb5e60dd1f5e437f52e256174e364125277a6bb2631f4ce3b3dd0dae0",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "ornithogalum/wide.webp",
+        "size": 128130,
+        "sha256": "7342261f7c4de289d3dc00edb453666dd7d6918454277697dc150658a1c5c9f7",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "ornithogalum/thumb.webp",
+        "size": 11042,
+        "sha256": "5fd510cdf4aac4b72782773eb984ff93fbefa1f48a37ec3dca899bb5910adcff",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#D7D3C6",
+      "dark": false
+    },
+    {
+      "id": "pasture_rose",
+      "title": "Pasture Rose",
+      "category": "botanical",
+      "credit": {
+        "title": "Pasture Rose (Rosa Carolina Corymbosa)",
+        "creator": "Pierre-Joseph Redouté",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1959.15",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "pasture_rose/phone.webp",
+        "size": 286746,
+        "sha256": "f665b7aebcf56628ff7fa43f6ee71836461220299800dc8843073ad88ef3d524",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "pasture_rose/wide.webp",
+        "size": 198702,
+        "sha256": "738a9b085a43df29da80db06073358616deb61ac66f6f8be7fe8e747782ee0b4",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "pasture_rose/thumb.webp",
+        "size": 14696,
+        "sha256": "48ef2e6021832bfc98d698e36f7987bc3b686dbd8b558f78ffcf411660d53dfa",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#C4BEB2",
+      "dark": false
+    },
+    {
+      "id": "tiger_lily",
+      "title": "Lily",
+      "category": "botanical",
+      "credit": {
+        "title": "Plantae Selectae: No. 11 - Lily",
+        "creator": "Georg Dionysius Ehret; Christoph Jacob Trew",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1955.332",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "tiger_lily/phone.webp",
+        "size": 429558,
+        "sha256": "eb3ff6f6d0423c1b3bfeb3e3fba90eb9ec4d3b15a2dab9c5e6c69f1c91840e48",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "tiger_lily/wide.webp",
+        "size": 334650,
+        "sha256": "15da0ba10b8ebd2a1047fd6dfb3776ec89f3086477fe9054cb7564d842fbda65",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "tiger_lily/thumb.webp",
+        "size": 23314,
+        "sha256": "5df9870be660189cdd26e56eb8ae4778038766737fd6b086f6e085b9a8619bf8",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#DDD6C9",
+      "dark": false
+    },
+    {
+      "id": "flowers_in_a_glass",
+      "title": "Flowers in a Glass",
+      "category": "botanical",
+      "credit": {
+        "title": "Flowers in a Glass",
+        "creator": "Ambrosius Bosschaert",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1960.108",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "flowers_in_a_glass/phone.webp",
+        "size": 411296,
+        "sha256": "b7d7f6ea3d9c978e7992bc90d10f64a09ba1812cad88e448d93224b80efaea9f",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "flowers_in_a_glass/wide.webp",
+        "size": 373350,
+        "sha256": "f7a526f7830795c0f88a8f07f7624fda77a8b5dde8ba5076e385f8bf29fbc891",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "flowers_in_a_glass/thumb.webp",
+        "size": 31934,
+        "sha256": "507c960a49ee364b546fff4dd686df857fc7a8e0ccd3205d807c90d43ebc0d48",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#50463B",
+      "dark": true
+    },
+    {
+      "id": "morning_glory",
+      "title": "Morning Glory",
+      "category": "botanical",
+      "credit": {
+        "title": "Star-glory Morning-glory",
+        "creator": "Henri Joseph Redouté",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1939.292",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "morning_glory/phone.webp",
+        "size": 326152,
+        "sha256": "63367a6f03ad47afb135c87815f7abcfd404fc09d302c2c35771d2cfaf7a005b",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "morning_glory/wide.webp",
+        "size": 220890,
+        "sha256": "8c6ab135ebba8b0942c4f1d0a87a1895037e552e1dfd874158630325709e31d2",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "morning_glory/thumb.webp",
+        "size": 11854,
+        "sha256": "c66b2589b846c9dd9f470c449d273a5431de4df1c33d7c8b5a017840855be4f5",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#C4BDAE",
+      "dark": false
+    },
+    {
+      "id": "crown_imperial",
+      "title": "Crown Imperial",
+      "category": "botanical",
+      "credit": {
+        "title": "Crown Imperial (Fritillaria imperialis), from \"Les Liliacées\"",
+        "creator": "Pierre Joseph Redouté",
+        "institution": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/762064",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "crown_imperial/phone.webp",
+        "size": 270818,
+        "sha256": "6a176bcc7faea63adbec1d66a30a4214e79aa45cda2c4db8dd21a5e842ea35ba",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "crown_imperial/wide.webp",
+        "size": 125032,
+        "sha256": "bee7f68ee12070e067dfe6e072084ae7f205396c7a74eef5e35fe7bf7786edc6",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "crown_imperial/thumb.webp",
+        "size": 14216,
+        "sha256": "9112dd83a9f4d7bba8fc06236ba5580f56b92a9cc61ced09ee61782b2ea6dd4b",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#D8D4C9",
+      "dark": false
+    },
+    {
+      "id": "spiraea_cyanotype",
+      "title": "Spiraea Cyanotype",
+      "category": "botanical",
+      "credit": {
+        "title": "Spiraea aruncus (Tyrol)",
+        "creator": "Anna Atkins",
+        "institution": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/285421",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "spiraea_cyanotype/phone.webp",
+        "size": 451362,
+        "sha256": "ce349a855e3d8dda0f7969a7fce874c2fdd388a060ea4b8483c36ef79e52bb67",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "spiraea_cyanotype/thumb.webp",
+        "size": 29296,
+        "sha256": "a4bbce6650f020227ae05d3d3e9c5cdf066a57b4b2db7205b8e43ef63ea752a8",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#7BA5B4",
+      "dark": false
+    },
+    {
+      "id": "plums",
+      "title": "Plums",
+      "category": "botanical",
+      "credit": {
+        "title": "Pomona Britannica: No. 17 - Plums",
+        "creator": "George Brookshaw",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1955.310",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "plums/phone.webp",
+        "size": 429346,
+        "sha256": "0b15bd2f8c0bec65c650c855d9c1fd86e220e5d99993512e7620e81177386fd2",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "plums/wide.webp",
+        "size": 333258,
+        "sha256": "d0349a3381569e0b766651b942c374617d994360d27a605ba5287d4473dabf7e",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "plums/thumb.webp",
+        "size": 10102,
+        "sha256": "0efcf2de98edde998005fe8ee5223ec6670aabf2b86a2f80fa853fc1d3c25cf0",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#4B473E",
+      "dark": true
+    },
+    {
+      "id": "great_wave",
+      "title": "The Great Wave",
+      "category": "japanese",
+      "credit": {
+        "title": "Under the Wave off Kanagawa (Kanagawa oki nami ura), also known as The Great Wave",
+        "creator": "Katsushika Hokusai",
+        "institution": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/45434",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "great_wave/phone.webp",
+        "size": 547790,
+        "sha256": "2875abce0886c03a3ba54d050c6c36b652305fe8bc90e3e34eb277d0915c83dd",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "great_wave/wide.webp",
+        "size": 528734,
+        "sha256": "bdc45381bdb9b86b0dc1988ff0d909e045b0269f6965f7aaa3ce47e74dea48b2",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "great_wave/thumb.webp",
+        "size": 55584,
+        "sha256": "0ee67b8ac8c5d253b0efa0dbcff30dabf716afe22a3d0ab11ffe61ecaa61527b",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#AFB8B4",
+      "dark": false
+    },
+    {
+      "id": "red_fuji",
+      "title": "Red Fuji",
+      "category": "japanese",
+      "credit": {
+        "title": "South Wind, Clear Sky (Gaifū kaisei), also known as Red Fuji",
+        "creator": "Katsushika Hokusai",
+        "institution": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/36490",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "red_fuji/phone.webp",
+        "size": 583100,
+        "sha256": "24a01621f6ee60c59c1e7b32741514bbe5b852985da5949692f270e909c30c2d",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "red_fuji/wide.webp",
+        "size": 512230,
+        "sha256": "473bfd8b5211623954b45ade652a5451c7cac9fda7364b403cdfae2f666df5e9",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "red_fuji/thumb.webp",
+        "size": 29456,
+        "sha256": "21231c7943139cfad15194dd87fdf4a343eadd0454edae5ef5548d56ceaf6b3e",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#937C75",
+      "dark": false
+    },
+    {
+      "id": "eagle_over_fukagawa",
+      "title": "Eagle over Fukagawa",
+      "category": "japanese",
+      "credit": {
+        "title": "Jūmantsubo Plain at Fukagawa Susaki, from One Hundred Famous Views of Edo",
+        "creator": "Utagawa Hiroshige",
+        "institution": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/55733",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "eagle_over_fukagawa/phone.webp",
+        "size": 570658,
+        "sha256": "3282230701d6ddd4bf6dfb2b090b90bbe1275ff558b4f1c929292c50d0e51b94",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "eagle_over_fukagawa/thumb.webp",
+        "size": 43150,
+        "sha256": "cdd5a6efb96e822344f39245c08d75998732dad00230a129a9bfa520697bfc04",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#9EA396",
+      "dark": false
+    },
+    {
+      "id": "sudden_shower",
+      "title": "Sudden Shower",
+      "category": "japanese",
+      "credit": {
+        "title": "Sudden Shower over Shin-Ōhashi Bridge and Atake, from One Hundred Famous Views of Edo",
+        "creator": "Utagawa Hiroshige",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1921.318",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "sudden_shower/phone.webp",
+        "size": 623528,
+        "sha256": "14d90974866f1372862a053cda37364b9cff24864ebd056ce26e1daa1d4b5816",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "sudden_shower/thumb.webp",
+        "size": 40126,
+        "sha256": "76ed588c97dabae9dcb88b5a1d61f12134ed5fee3c02477ae4c637655e94fbb1",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#818078",
+      "dark": false
+    },
+    {
+      "id": "fireworks_at_ryogoku",
+      "title": "Fireworks at Ryōgoku",
+      "category": "japanese",
+      "credit": {
+        "title": "Fireworks at Ryōgoku, from One Hundred Views of Famous Places in Edo",
+        "creator": "Utagawa Hiroshige",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1940.986",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "fireworks_at_ryogoku/phone.webp",
+        "size": 615172,
+        "sha256": "1f035ebac45621b3a74190b825ed2eda915a9398883903eb910edbe2c2634b2e",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "fireworks_at_ryogoku/thumb.webp",
+        "size": 35718,
+        "sha256": "905f48f3c46f2b2673aa4833dc463cc1dfc8a7ee083ca6477343603341341756",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#3B4B4C",
+      "dark": true
+    },
+    {
+      "id": "meguro_in_snow",
+      "title": "Meguro in Snow",
+      "category": "japanese",
+      "credit": {
+        "title": "Meguro Drum Bridge and Sunset Hill, from One Hundred Views of Famous Places in Edo",
+        "creator": "Utagawa Hiroshige",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1924.971",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "meguro_in_snow/phone.webp",
+        "size": 610746,
+        "sha256": "ef9f208d9077de293c2b771e545ee60a51fd6cb63a6382a5162c2652523c662b",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "meguro_in_snow/thumb.webp",
+        "size": 52374,
+        "sha256": "052103ba88253cbead7edc174c065ccecdfe84e0db4ad7a038ec78aab5b02f99",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#99968B",
+      "dark": false
+    },
+    {
+      "id": "whirlpools_of_awa",
+      "title": "Whirlpools of Awa",
+      "category": "japanese",
+      "credit": {
+        "title": "The Whirlpools of Awa",
+        "creator": "Utagawa Hiroshige",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1930.183.b",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "whirlpools_of_awa/phone.webp",
+        "size": 625862,
+        "sha256": "79f7227c6a88d0215d8e531c0f57d2cd8b08c34008ad2412384bb7aa1a29e1e9",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "whirlpools_of_awa/thumb.webp",
+        "size": 42240,
+        "sha256": "d76d25c372cf998062d4230e8da1f3370ff9ca0dad9d97f4835ea64d7dbfb6f8",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#A7A392",
+      "dark": false
+    },
+    {
+      "id": "kiso_road_in_snow",
+      "title": "Kiso Road in Snow",
+      "category": "japanese",
+      "credit": {
+        "title": "Mountain and River on the Kiso Road",
+        "creator": "Utagawa Hiroshige",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1930.180.a",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "kiso_road_in_snow/phone.webp",
+        "size": 608748,
+        "sha256": "f8d25b623cd01f7992e96337e983a6de26fd73d297aee8d1215d135df5ed8180",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "kiso_road_in_snow/thumb.webp",
+        "size": 35326,
+        "sha256": "0d2d9425ae5a376292acc28857a58a074e9eb22bb2d69b25b7ef67e99f2c5fd5",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#ABA290",
+      "dark": false
+    },
+    {
+      "id": "strawberry_thief",
+      "title": "Strawberry Thief",
+      "category": "patterns",
+      "credit": {
+        "title": "Strawberry Thief",
+        "creator": "William Morris",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1937.696",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "strawberry_thief/phone.webp",
+        "size": 598334,
+        "sha256": "4dff0a90059c8265d29a80ad47b2d2e11fd0a8366994a7fffb8d203ca93c6538",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "strawberry_thief/wide.webp",
+        "size": 543722,
+        "sha256": "fbc30723e00914da0b20292d650adcc772f81f23c87460d0a1484f06239eb4c9",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "strawberry_thief/thumb.webp",
+        "size": 57592,
+        "sha256": "757286ad8f497797bec6d5b182d837af0182ca7a215243a81246034a150daa85",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#686961",
+      "dark": true
+    },
+    {
+      "id": "honeysuckle",
+      "title": "Honeysuckle",
+      "category": "patterns",
+      "credit": {
+        "title": "Honeysuckle",
+        "creator": "William Morris",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1937.697",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "honeysuckle/phone.webp",
+        "size": 636458,
+        "sha256": "e9d39cce7ed8383f22edec38de273d08a0a935f8cddbe74bf0571a452d9b9bc1",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "honeysuckle/wide.webp",
+        "size": 526602,
+        "sha256": "cb72844996e1610e3b0d6cc726cf24b87a209b9550e15a35e52c04d9ed9924a7",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "honeysuckle/thumb.webp",
+        "size": 50582,
+        "sha256": "c5da356720ae845ee7adb19daa409a3131a46039cde4f6b2b9386589326d9915",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#91766C",
+      "dark": false
+    },
+    {
+      "id": "kennet",
+      "title": "Kennet",
+      "category": "patterns",
+      "credit": {
+        "title": "Kennet",
+        "creator": "William Morris",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1937.698",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "kennet/phone.webp",
+        "size": 584588,
+        "sha256": "0eeaa438e530f9ca68ee77798a1997acb2c0d91811716dab0eb509fdb1f4e1b3",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "kennet/wide.webp",
+        "size": 544266,
+        "sha256": "b6ad8286bb38565004ec086264ee66ece85e353d8def12c72f382367c64d43c5",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "kennet/thumb.webp",
+        "size": 57930,
+        "sha256": "7c881faa7325e6f790e8e92c98224da8220cac7e7e8079d1b139d16934e502bd",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#656254",
+      "dark": true
+    },
+    {
+      "id": "snakeshead",
+      "title": "Snakeshead",
+      "category": "patterns",
+      "credit": {
+        "title": "Snakeshead",
+        "creator": "William Morris",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1937.695",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "snakeshead/phone.webp",
+        "size": 621560,
+        "sha256": "6f647e011e2a8f101f8953afe12d996fe83c3bcd471a9fd6e9192c58afdf8ea5",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "snakeshead/wide.webp",
+        "size": 564528,
+        "sha256": "62bc9076f56c8cd96b5a775a879f446a17cef21653cbf3983aed3342c19ae7de",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "snakeshead/thumb.webp",
+        "size": 56072,
+        "sha256": "40ce5de97b229e01c0a76fc28111573eff424c45569db391ae0c90241ead1d3f",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#6C6B69",
+      "dark": true
+    },
+    {
+      "id": "peacock_and_dragon",
+      "title": "Peacock and Dragon",
+      "category": "patterns",
+      "credit": {
+        "title": "Peacock and Dragon",
+        "creator": "William Morris",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1953.330",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "peacock_and_dragon/phone.webp",
+        "size": 633948,
+        "sha256": "26bb8e363046d7fb62a3e2f9e39a2b138d92375c0ce7f0421ef74d19de687770",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "peacock_and_dragon/wide.webp",
+        "size": 569536,
+        "sha256": "ca855b1a40c70846b67f3dc7f2d26965bcd96a6ae011e38c2e8bb9479a57b5b9",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "peacock_and_dragon/thumb.webp",
+        "size": 50412,
+        "sha256": "e38c6c6e3a703aef11b831ec0510f603999349ae204de9bd7e6c33903ea785e5",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#8A7255",
+      "dark": false
+    },
+    {
+      "id": "ikat_hanging",
+      "title": "Ikat",
+      "category": "patterns",
+      "credit": {
+        "title": "Wall Hanging (pardah)",
+        "creator": "Unknown maker, Central Asia",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/2006.150",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "ikat_hanging/phone.webp",
+        "size": 636114,
+        "sha256": "e747d2ab44bcf824b2040f4b5b69c4d3b50f3add97d9aeff66a1205bdf9b8583",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "ikat_hanging/thumb.webp",
+        "size": 58466,
+        "sha256": "50a40ec71c5c371d8fc04726fa8e6d5b62acae1fcf0a29b8725b47bee7c7dfba",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#8E4348",
+      "dark": true
+    },
+    {
+      "id": "velvet_sunbursts",
+      "title": "Sunburst Velvet",
+      "category": "patterns",
+      "credit": {
+        "title": "Brocaded velvet cover with sunbursts",
+        "creator": "Unknown maker, Ottoman Turkey",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/2008.146",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "velvet_sunbursts/phone.webp",
+        "size": 636168,
+        "sha256": "d8ccdc54180e2df44e3fd0f297ae9cc156eb59b17f57351f1a576c9820452e06",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "velvet_sunbursts/thumb.webp",
+        "size": 58940,
+        "sha256": "d7227b74d87051c931aebe4898536cc0316e6901305e14261fdc0b44713fb90f",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#A2866E",
+      "dark": false
+    },
+    {
+      "id": "coral_and_fish",
+      "title": "Coral and Fish",
+      "category": "oceans",
+      "credit": {
+        "title": "Coral and Fish",
+        "creator": "Greg McFall / NOAA",
+        "institution": "NOAA, National Marine Sanctuary of American Samoa",
+        "url": "https://commons.wikimedia.org/wiki/File:Coral_And_Fish_(39506096061).jpg",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "coral_and_fish/phone.webp",
+        "size": 226858,
+        "sha256": "7c81656025ca7cee4e6da6ec205a4dc2dbdaa335f8a4d055c111d2f046ec8980",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "coral_and_fish/wide.webp",
+        "size": 207412,
+        "sha256": "f79085fc82f36b019aa3eceda87c1a000c2e00087c9dba885987934375d2bfd4",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "coral_and_fish/thumb.webp",
+        "size": 25238,
+        "sha256": "8895ad6a7b47301949655b3193ab92780b757b3240f34081be63905a7b5b67e5",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#3A95AD",
+      "dark": false
+    },
+    {
+      "id": "reef_in_sunlight",
+      "title": "Reef in Sunlight",
+      "category": "oceans",
+      "credit": {
+        "title": "Reef in Sunlight",
+        "creator": "Greg McFall / NOAA",
+        "institution": "NOAA, National Marine Sanctuary of American Samoa",
+        "url": "https://commons.wikimedia.org/wiki/File:NMSAS_-_Reef_In_Sunlight_(31782520361).jpg",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "reef_in_sunlight/phone.webp",
+        "size": 470296,
+        "sha256": "0c4cd3b397fa4f3bab685ff733f6947e7fe3923365ac4cc2ead6b1392efb063e",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "reef_in_sunlight/wide.webp",
+        "size": 486770,
+        "sha256": "b9052b83f002dddd4f74eedd494817615cda79805f32ba6c60ed9df3b0d55241",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "reef_in_sunlight/thumb.webp",
+        "size": 37154,
+        "sha256": "fd84ca8a90a3c44220fd14b462473bef6f98678c2fd09fcf101c79807f58a7e3",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#417987",
+      "dark": true
+    },
+    {
+      "id": "florida_keys_reef",
+      "title": "Florida Keys Reef",
+      "category": "oceans",
+      "credit": {
+        "title": "Reef",
+        "creator": "Matt McIntosh / NOAA",
+        "institution": "NOAA, Florida Keys National Marine Sanctuary",
+        "url": "https://commons.wikimedia.org/wiki/File:FKNMS_-_Reef_(34136062951).jpg",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "florida_keys_reef/phone.webp",
+        "size": 584538,
+        "sha256": "f037cf62e216c37bc17c0809ef4fb5611be12031f754170f0d6d1875ce51b223",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "florida_keys_reef/wide.webp",
+        "size": 531558,
+        "sha256": "0062416cc7d4e2e2b5c2ad1a36e20871d859e4b7b515f8ff87ba9f16d72f0bc4",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "florida_keys_reef/thumb.webp",
+        "size": 50988,
+        "sha256": "01895946c9e7ad621b149b73e6c3a01f9b45d3381308a8799930b4ed5bdc5b52",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#767865",
+      "dark": false
+    },
+    {
+      "id": "northeaster",
+      "title": "Northeaster",
+      "category": "oceans",
+      "credit": {
+        "title": "Northeaster",
+        "creator": "Winslow Homer",
+        "institution": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/11130",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "northeaster/phone.webp",
+        "size": 492304,
+        "sha256": "fe4a65f7e75e5cb1419eb602f71a71a9a18a786e2eda4d28830316beaebbaa91",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "northeaster/wide.webp",
+        "size": 446638,
+        "sha256": "8a7adf574a0cf0dbafdba6d80d72bef4b8adb70000ada4b8ef071a6489c85e3b",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "northeaster/thumb.webp",
+        "size": 22052,
+        "sha256": "294d10598db248db6499498b5d2ceb73047605280d33080df9bd85e1b6672425",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#5E7176",
+      "dark": true
+    },
+    {
+      "id": "wood_island_moonlight",
+      "title": "Moonlight, Wood Island",
+      "category": "oceans",
+      "credit": {
+        "title": "Moonlight, Wood Island Light",
+        "creator": "Winslow Homer",
+        "institution": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/11127",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "wood_island_moonlight/phone.webp",
+        "size": 529542,
+        "sha256": "8d8d7c054d96be739a8c90994a7d214f01eb2859162e5ff0665c251e2db7ef5b",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "wood_island_moonlight/wide.webp",
+        "size": 441036,
+        "sha256": "3e02ea8e322ac902227a80bea0eba515a30098a933f7ab9c3653c581c2e6f424",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "wood_island_moonlight/thumb.webp",
+        "size": 18050,
+        "sha256": "c311aeedbf3d191699b8170e62a80db4167dd600d102573454ea7b8ccd52ab4b",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#4F5048",
+      "dark": true
+    },
+    {
+      "id": "north_cape_moonlight",
+      "title": "North Cape by Moonlight",
+      "category": "oceans",
+      "credit": {
+        "title": "The North Cape by Moonlight",
+        "creator": "Peder Balke",
+        "institution": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/441379",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "north_cape_moonlight/phone.webp",
+        "size": 453788,
+        "sha256": "8b626232597734db0fffaf787f1992be62f8890cddea2552885fe4b454f40f1c",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "north_cape_moonlight/wide.webp",
+        "size": 376914,
+        "sha256": "f48803b03ada4cbb24cb5074d09ddcb6ce1d0df325e0cbc5e867595b43a8911e",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "north_cape_moonlight/thumb.webp",
+        "size": 18286,
+        "sha256": "e86d4ee0a431a3213f561002cd176c0d1d26e4ebf1c3da4b3a385ee87cd025d0",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#4A4533",
+      "dark": true
+    },
+    {
+      "id": "morning_after_a_storm",
+      "title": "Morning after a Storm",
+      "category": "oceans",
+      "credit": {
+        "title": "Early Morning After a Storm at Sea",
+        "creator": "Winslow Homer",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1924.195",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "morning_after_a_storm/phone.webp",
+        "size": 594350,
+        "sha256": "8089c86e6986a03ed4340e7c617858ade79defcd40b29d37ab1546eee614d06b",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "morning_after_a_storm/wide.webp",
+        "size": 527836,
+        "sha256": "092f6eb70515eeb9ac376c12447ab00273161209d39f6c1d36261c8c5eadf297",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "morning_after_a_storm/thumb.webp",
+        "size": 20830,
+        "sha256": "33d0ac233ec60ca8b23a4acfd95fef23d12df535fc57905886f7c1096ed02fb6",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#7C7C7A",
+      "dark": false
+    },
+    {
+      "id": "bahamas_sandbanks",
+      "title": "Bahamas Sandbanks",
+      "category": "oceans",
+      "credit": {
+        "title": "A portion of the Atlantic Ocean off the coast of the Bahamas",
+        "creator": "NASA",
+        "institution": "NASA, Johnson Space Center",
+        "url": "https://images.nasa.gov/details/iss064e002482",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "bahamas_sandbanks/phone.webp",
+        "size": 386556,
+        "sha256": "da06194c4906553052a918d976d217657d2b1dafe98f0533f923eb64083993a4",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "bahamas_sandbanks/wide.webp",
+        "size": 428854,
+        "sha256": "d60444922a7ee4137a00f75371169f59165e2cda34d32055ace5efa32820b726",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "bahamas_sandbanks/thumb.webp",
+        "size": 29912,
+        "sha256": "f69289ef9e83e5d59d21e3c63ec0142bf00773826743bcd87341ff945ac97bee",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#3A91AC",
+      "dark": false
+    },
+    {
+      "id": "grand_canal_venice",
+      "title": "Grand Canal, Venice",
+      "category": "cities",
+      "credit": {
+        "title": "Grand Canal, Venice, Italy",
+        "creator": "Detroit Publishing Co.",
+        "institution": "Library of Congress, Prints and Photographs Division",
+        "url": "https://www.loc.gov/item/2001701076/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "grand_canal_venice/phone.webp",
+        "size": 479698,
+        "sha256": "c9c10c7f377197c5fe34a5aa808cc30c969ed7306f6842c7d1673c016eab7746",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "grand_canal_venice/wide.webp",
+        "size": 385356,
+        "sha256": "fca590f9bd3205fd4d062511f431b1ee9b0bb774a4fd07a146c7901302863f5d",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "grand_canal_venice/thumb.webp",
+        "size": 20306,
+        "sha256": "6cf019f80da05b325b0fd3841dd8572c80abb4aedad1d8cf7cf32cd4cfb471fd",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#A4AE93",
+      "dark": false
+    },
+    {
+      "id": "notre_dame",
+      "title": "Notre-Dame de Paris",
+      "category": "cities",
+      "credit": {
+        "title": "Notre Dame, Paris, France",
+        "creator": "Detroit Publishing Co.",
+        "institution": "Library of Congress, Prints and Photographs Division",
+        "url": "https://www.loc.gov/item/2001698529/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "notre_dame/phone.webp",
+        "size": 633766,
+        "sha256": "c0410022b631f627a1622fbefbe78da7363d3d9aa6f8eb9b9710ff9e75660f6b",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "notre_dame/wide.webp",
+        "size": 476480,
+        "sha256": "491692df860ca4534d76cdb9ab9d7b715cb4a69cbad81e0eeb54b290275a8154",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "notre_dame/thumb.webp",
+        "size": 58848,
+        "sha256": "576f0723de982dc710d49b5b87d9adb84a29535b91268d058666842299a7f086",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#877C5B",
+      "dark": false
+    },
+    {
+      "id": "suleymaniye",
+      "title": "Süleymaniye Mosque",
+      "category": "cities",
+      "credit": {
+        "title": "Süleymaniye Camii (mosque), Constantinople, Turkey",
+        "creator": "Detroit Publishing Co.",
+        "institution": "Library of Congress, Prints and Photographs Division",
+        "url": "https://www.loc.gov/item/2003653113/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "suleymaniye/phone.webp",
+        "size": 512568,
+        "sha256": "517a0fa347d48a44de24f82190a8c1713a623624e1d6865fdb733a3338d476e4",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "suleymaniye/thumb.webp",
+        "size": 28550,
+        "sha256": "110467d30aca1f9727bdf10a871d6853cf157df9d6b4ca90a1ef2588323229e0",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#A6A39F",
+      "dark": false
+    },
+    {
+      "id": "three_bridges_venice",
+      "title": "Three Bridges, Venice",
+      "category": "cities",
+      "credit": {
+        "title": "Three Bridges, Venice, Italy",
+        "creator": "Detroit Publishing Co.",
+        "institution": "Library of Congress, Prints and Photographs Division",
+        "url": "https://www.loc.gov/item/2001701040/",
+        "license": "Public domain"
+      },
+      "phone": {
+        "url": "three_bridges_venice/phone.webp",
+        "size": 634230,
+        "sha256": "1522c71cc782678cc16adfdd1bbcc6c07c81a68c42cf070204fda4329fe0a764",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "three_bridges_venice/thumb.webp",
+        "size": 34608,
+        "sha256": "c6cf451feb70b69a087a21d60241569290ef87677f2aab57a959c82056d56a9c",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#A1947E",
+      "dark": false
+    },
+    {
+      "id": "piazza_san_marco",
+      "title": "Piazza San Marco",
+      "category": "cities",
+      "credit": {
+        "title": "Piazza San Marco",
+        "creator": "Canaletto (Giovanni Antonio Canal)",
+        "institution": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/435839",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "piazza_san_marco/phone.webp",
+        "size": 585298,
+        "sha256": "62e22c4b0dbfc84a28dbf9258406908023234c8e6cc2e65fcc773e89bf170323",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "piazza_san_marco/wide.webp",
+        "size": 466832,
+        "sha256": "beec4c47a917947a0faf6916cb7d1828694e3bdfda7849aafc1b7b41bbc6870a",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "piazza_san_marco/thumb.webp",
+        "size": 19610,
+        "sha256": "9bb812a7bda734ad8d0fc76316ee973185a48ee4554c4a268df52635d9859434",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#6B7166",
+      "dark": true
+    },
+    {
+      "id": "burning_parliament",
+      "title": "The Burning of Parliament",
+      "category": "cities",
+      "credit": {
+        "title": "The Burning of the Houses of Lords and Commons, 16 October 1834",
+        "creator": "Joseph Mallord William Turner",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1942.647",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "burning_parliament/phone.webp",
+        "size": 537326,
+        "sha256": "e7100cf22c30400665e2c44552a5662a85eefcfed347f1e5a4e6505d3a8086e3",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": {
+        "url": "burning_parliament/wide.webp",
+        "size": 412410,
+        "sha256": "a89a4fa0ad7a07a46297b65ba1016dc2411bae6e4a785035c82523885e64252b",
+        "w": 2560,
+        "h": 1600
+      },
+      "thumb": {
+        "url": "burning_parliament/thumb.webp",
+        "size": 29636,
+        "sha256": "3c37c0b5eed21842daf88022805eb8c39a713d9eba37ced776cbab0118054a1a",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#9A7748",
+      "dark": false
+    },
+    {
+      "id": "cathedral_interior",
+      "title": "Interior of a Cathedral",
+      "category": "cities",
+      "credit": {
+        "title": "Interior of a Cathedral",
+        "creator": "Samuel Prout",
+        "institution": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1940.560",
+        "license": "CC0"
+      },
+      "phone": {
+        "url": "cathedral_interior/phone.webp",
+        "size": 541224,
+        "sha256": "e953b5e5d9e6665490b248a3c2e449496c2938df6adebe3e37a4dcef878b04a6",
+        "w": 1440,
+        "h": 3120
+      },
+      "wide": null,
+      "thumb": {
+        "url": "cathedral_interior/thumb.webp",
+        "size": 44256,
+        "sha256": "55912f156bc1fc70d3137038e473882e20309a0da18ff8e5b57649bd09195bd6",
+        "w": 270,
+        "h": 585
+      },
+      "swatch": "#6D5D40",
+      "dark": true
+    }
+  ]
+}
