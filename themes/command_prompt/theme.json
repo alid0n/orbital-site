@@ -1,0 +1,83 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "command_prompt",
+  "name": "Command Prompt",
+  "description": "Black, light grey and a waiting cursor, like the console you know, with a drawer that opens the assistant.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:retro",
+    "vibe:dark",
+    "color:black",
+    "color:white",
+    "style:power user",
+    "topic:technology",
+    "topic:retro"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#F2F2F2",
+    "accentAlt": "#61D6D6",
+    "ink": "#E6E6E6",
+    "dim": "#8A8A8A",
+    "drawer": "#0C0C0C",
+    "surface": "#0C0C0C",
+    "elevated": "#1C1C1C",
+    "veil": "#22000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SQUARE",
+    "iconShape": "SQUARE",
+    "iconStyle": "FLAT",
+    "widgetLook": "OUTLINE",
+    "widgetCorner": "SQUARE",
+    "widgetEdge": "FINE",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.6,
+    "font": "jetbrains_mono",
+    "clockFace": "LINE",
+    "panelLook": "LINES",
+    "notch": "NONE"
+  },
+  "mood": [
+    "dark",
+    "minimal",
+    "calm"
+  ],
+  "swatch": "#2A2A2A",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "DRAWER",
+    "dockStyle": "NONE",
+    "anchor": "BOTTOM",
+    "drawerLayout": "LIST",
+    "drawerSearch": "ASSISTANT",
+    "drawerListAlign": "LEFT",
+    "drawerWidgets": [
+      {
+        "kind": "COMMAND",
+        "end": "TOP",
+        "tint": 0
+      },
+      {
+        "kind": "CLOCK",
+        "end": "SIDE",
+        "tint": 0
+      }
+    ]
+  },
+  "assistant": {
+    "look": "COMMAND_PROMPT"
+  }
+}

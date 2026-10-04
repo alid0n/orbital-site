@@ -1,0 +1,89 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "paper_terminal",
+  "name": "Paper Terminal",
+  "description": "A light, crisp editor look: ink on white with blue and green accents and a sidebar dock.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:elegant",
+    "color:white",
+    "color:blue",
+    "color:green",
+    "style:minimal",
+    "topic:technology"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#0969DA",
+    "accentAlt": "#1A7F37",
+    "ink": "#1F2328",
+    "dim": "#656D76",
+    "drawer": "#F6F8FA",
+    "surface": "#FFFFFF",
+    "elevated": "#E6EAEF",
+    "veil": "#22FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "SLIGHT",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.9,
+    "font": "jetbrains_mono",
+    "clockFace": "LINE",
+    "panelLook": "LINES",
+    "notch": "RUNG"
+  },
+  "mood": [
+    "light",
+    "minimal",
+    "calm"
+  ],
+  "swatch": "#C9D1D9",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "LEFT",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "cmd",
+        "kind": "COMMAND",
+        "x": 0.2,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.76
+      }
+    ]
+  },
+  "assistant": {
+    "look": "MINIMAL_LINE"
+  }
+}

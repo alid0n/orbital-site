@@ -10,6 +10,7 @@ import json
 import math
 import os
 import random
+import re
 import sys
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
@@ -948,6 +949,85 @@ THEMES = [
                widgetCorner="SLIGHT", widgetEdge="FINE", widgetTint=0.25, widgetSolid=0.5,
                font="orbitron", clockFace="LINE", panelLook="FADE", notch="CHEVRON", glow=True),
           premium=True),
+    # Terminal and programmer themes: Matrix, a command prompt, DOS and five classic editor palettes,
+    # each wallpaper drawn from original text (see the painters), so none needs a photo credit.
+    theme("matrix", "Matrix",
+          "Digital rain in phosphor green behind a command line, in Share Tech Mono.",
+          ["audience:general", "vibe:futuristic", "vibe:retro", "vibe:dark", "color:green", "color:black"],
+          pal("#00FF66", "#B6FF3C", "#C9FFD8", "#4FA36B", "#010603", "#020A04", "#06200E", "#44000000"),
+          picture("matrix", wash=[(0.0, "#010603", 0.6), (0.18, "#010603", 0.45), (0.3, "#010603", 0.1),
+                                  (0.62, "#010603", 0.1), (0.8, "#010603", 0.7), (1.0, "#010603", 0.85)],
+                  vignette=0.3, grain=0.03),
+          dict(corner="SLIGHT", iconShape="SQUARE", iconStyle="FLAT", widgetLook="OUTLINE",
+               widgetCorner="SQUARE", widgetEdge="FINE", widgetTint=0.2, widgetSolid=0.6,
+               font="share_tech_mono", clockFace="LINE", panelLook="LINES", notch="NONE", glow=True)),
+    theme("command_prompt", "Command Prompt",
+          "Black, light grey and a waiting cursor, like the console you know, with a drawer that opens the assistant.",
+          ["audience:general", "vibe:retro", "vibe:dark", "color:black", "color:white"],
+          pal("#F2F2F2", "#61D6D6", "#E6E6E6", "#8A8A8A", "#0C0C0C", "#0C0C0C", "#1C1C1C", "#22000000"),
+          picture("console", wash=[(0.0, "#0C0C0C", 0.55), (0.2, "#0C0C0C", 0.4), (0.62, "#0C0C0C", 0.4),
+                                   (0.8, "#0C0C0C", 0.78), (1.0, "#0C0C0C", 0.9)], vignette=0.2, grain=0.02),
+          dict(corner="SQUARE", iconShape="SQUARE", iconStyle="FLAT", widgetLook="OUTLINE",
+               widgetCorner="SQUARE", widgetEdge="FINE", widgetTint=0.2, widgetSolid=0.6,
+               font="jetbrains_mono", clockFace="LINE", panelLook="LINES", notch="NONE"),
+          premium=True),
+    theme("dos_blue", "DOS Blue",
+          "Blue panels with double-line frames and cyan capitals, with every app a tile.",
+          ["audience:general", "vibe:retro", "vibe:energetic", "color:blue", "color:neon", "era:80s"],
+          pal("#55FFFF", "#FFFF55", "#FFFFFF", "#9CC9FF", "#00007A", "#0000AA", "#0000DD", "#22000000"),
+          picture("dos", wash=[(0.0, "#00007A", 0.5), (0.2, "#00007A", 0.3), (0.62, "#00007A", 0.3),
+                               (0.8, "#00007A", 0.7), (1.0, "#00007A", 0.85)], vignette=0.15, grain=0.02),
+          dict(corner="SQUARE", iconShape="TILE", iconStyle="ORIGINAL", widgetLook="OUTLINE",
+               widgetCorner="SQUARE", widgetEdge="BOLD", widgetTint=0.2, widgetSolid=0.6,
+               font="vt323", clockFace="LINE", uppercase=True, panelLook="LINES", notch="NONE")),
+    theme("solarized_dark", "Solarized Dark",
+          "The classic teal-black editor palette, tuned for long reading, with the Orbit wheel.",
+          ["audience:general", "vibe:calm", "vibe:dark", "color:blue", "color:gold"],
+          pal("#B58900", "#2AA198", "#EEE8D5", "#93A1A1", "#00212B", "#073642", "#0A4A5A", "#33000000"),
+          picture("solarized", wash=[(0.0, "#002B36", 0.55), (0.2, "#002B36", 0.4), (0.62, "#002B36", 0.4),
+                                     (0.8, "#002B36", 0.78), (1.0, "#002B36", 0.9)], vignette=0.2, grain=0.02),
+          dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
+               font="jetbrains_mono", clockFace="LINE", panelLook="FADE", notch="DOT")),
+    theme("monokai", "Monokai",
+          "Charcoal with hot pink, lime and gold, in Space Mono, on an open canvas with a container dock.",
+          ["audience:general", "vibe:energetic", "vibe:dark", "color:pink", "color:green"],
+          pal("#F92672", "#A6E22E", "#F8F8F2", "#A59F85", "#1A1B17", "#1E1F1C", "#3E3D32", "#33000000"),
+          picture("monokai", wash=[(0.0, "#272822", 0.55), (0.2, "#272822", 0.4), (0.62, "#272822", 0.4),
+                                   (0.8, "#272822", 0.78), (1.0, "#272822", 0.9)], vignette=0.2, grain=0.02),
+          dict(corner="SLIGHT", iconShape="ROUNDED", iconStyle="ORIGINAL", widgetLook="SOLID",
+               widgetCorner="SLIGHT", widgetEdge="NONE", widgetTint=0.2, widgetSolid=1.0,
+               font="space_mono", clockFace="LINE", panelLook="CARD", notch="RUNG"),
+          premium=True),
+    theme("nord", "Nord",
+          "Calm arctic blue-greys, easy on the eyes, with the Orbit Pad under your thumb.",
+          ["audience:general", "vibe:calm", "vibe:chill", "vibe:dark", "color:blue", "color:white"],
+          pal("#88C0D0", "#A3BE8C", "#ECEFF4", "#9AA5B8", "#2B303B", "#3B4252", "#434C5E", "#33000000"),
+          picture("nord", wash=[(0.0, "#2E3440", 0.55), (0.2, "#2E3440", 0.4), (0.62, "#2E3440", 0.4),
+                                (0.8, "#2E3440", 0.78), (1.0, "#2E3440", 0.9)], vignette=0.2, grain=0.02),
+          dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
+               font="jetbrains_mono", clockFace="LINE", panelLook="FADE", notch="DOT"),
+          premium=True),
+    theme("gruvbox", "Gruvbox",
+          "Warm retro browns with mustard and sage, in Space Mono, on the Showcase.",
+          ["audience:general", "vibe:retro", "vibe:dark", "color:gold", "color:green", "color:orange"],
+          pal("#FABD2F", "#B8BB26", "#EBDBB2", "#A89984", "#1D2021", "#282828", "#3C3836", "#33000000"),
+          picture("gruvbox", wash=[(0.0, "#282828", 0.55), (0.2, "#282828", 0.4), (0.62, "#282828", 0.4),
+                                   (0.8, "#282828", 0.78), (1.0, "#282828", 0.9)], vignette=0.2, grain=0.02),
+          dict(corner="ROUNDED", iconShape="ROUNDED", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
+               font="space_mono", clockFace="LINE", panelLook="FADE", notch="CHEVRON"),
+          premium=True),
+    theme("paper_terminal", "Paper Terminal",
+          "A light, crisp editor look: ink on white with blue and green accents and a sidebar dock.",
+          ["audience:general", "vibe:calm", "vibe:elegant", "color:white", "color:blue", "color:green"],
+          pal("#0969DA", "#1A7F37", "#1F2328", "#656D76", "#F6F8FA", "#FFFFFF", "#E6EAEF", "#22FFFFFF", light=True),
+          picture("paper", wash=[(0.0, "#FFFFFF", 0.6), (0.2, "#FFFFFF", 0.5), (0.62, "#FFFFFF", 0.5),
+                                 (0.8, "#FFFFFF", 0.82), (1.0, "#FFFFFF", 0.9)], vignette=0.03, grain=0.015),
+          dict(corner="SLIGHT", iconShape="ROUNDED", iconStyle="ORIGINAL", widgetLook="CARD",
+               widgetCorner="SLIGHT", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.9,
+               font="jetbrains_mono", clockFace="LINE", panelLook="LINES", notch="RUNG")),
 ]
 
 # EACH THEME'S MOOD (the words the store's mood filter offers) and its swatch, the one colour it is
@@ -1018,6 +1098,14 @@ MOODS = {
     "mesh_network": (["dark", "vivid", "bold"], "#1B4F8A"),
     "dev_dark": (["dark", "minimal", "calm"], "#2B2D3C"),
     "overclock": (["dark", "bold", "vivid"], "#6A1020"),
+    "matrix": (["dark", "vivid", "bold"], "#0B6B2A"),
+    "command_prompt": (["dark", "minimal", "calm"], "#2A2A2A"),
+    "dos_blue": (["bold", "vivid", "dark"], "#0000AA"),
+    "solarized_dark": (["dark", "calm", "minimal"], "#0A4A5A"),
+    "monokai": (["dark", "vivid", "bold"], "#F92672"),
+    "nord": (["dark", "calm", "minimal"], "#4C566A"),
+    "gruvbox": (["dark", "cozy", "bold"], "#B57614"),
+    "paper_terminal": (["light", "minimal", "calm"], "#C9D1D9"),
 }
 
 # THE CURATED COLLECTIONS the store shows as shelves of their own, each from its first to its last
@@ -1212,6 +1300,24 @@ LAYOUTS = {
                      widgets=[CLOCK(0.12, 1.0), w("cmd", "COMMAND", 0.04, 0.22, 0.92),
                               w("next", "AGENDA", 0.04, 0.32, 0.92), w("batt", "BATTERY", 0.04, 0.44, 0.45)]),
     "overclock": dict(homeLayout="CONSOLE", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID"),
+    # Terminal and programmer themes, each on a different setup.
+    "matrix": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
+                   widgets=[CLOCK(0.07, 1.0), w("cmd", "COMMAND", 0.04, 0.2, 0.92)]),
+    "command_prompt": dict(homeLayout="DRAWER", dockStyle="NONE", anchor="BOTTOM", drawerLayout="LIST",
+                           drawerSearch="ASSISTANT", drawerListAlign="LEFT",
+                           drawerWidgets=[side("COMMAND", end="TOP"), side("CLOCK")]),
+    "dos_blue": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
+                     widgets=[CLOCK(0.05, 1.0), w("next", "AGENDA", 0.04, 0.18, 0.92)]),
+    "solarized_dark": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
+                           widgets=[CLOCK(0.06, 1.0), MEDIA(0.2)]),
+    "monokai": dict(homeLayout="FREE_ROAM", dockStyle="CARD", anchor="BOTTOM", drawerLayout="GRID",
+                    widgets=[CLOCK(0.07, 1.1), w("cmd", "COMMAND", 0.04, 0.22, 0.92),
+                             w("batt", "BATTERY", 0.04, 0.34, 0.45)]),
+    "nord": dict(homeLayout="ORBIT_PAD", dockStyle="PAD", anchor="BOTTOM", drawerLayout="GRID",
+                 widgets=[CLOCK(0.06, 1.0), w("next", "AGENDA", 0.04, 0.22, 0.92)]),
+    "gruvbox": dict(homeLayout="CONSOLE", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID"),
+    "paper_terminal": dict(homeLayout="PAGES", dockStyle="ROW", anchor="LEFT", drawerLayout="GRID",
+                           widgets=[CLOCK(0.06, 1.0), w("cmd", "COMMAND", 0.2, 0.2, 0.76)]),
 }
 
 ASSISTANTS = {
@@ -1236,6 +1342,9 @@ ASSISTANTS = {
     "skyline": "HUD",
     "pico": "VOICE", "vintage_logic": "COMMAND_PROMPT", "mesh_network": "HUD", "dev_dark": "COMMAND_PROMPT",
     "overclock": "HUD",
+    "matrix": "COMMAND_PROMPT", "command_prompt": "COMMAND_PROMPT", "dos_blue": "RETRO",
+    "solarized_dark": "MINIMAL_LINE", "monokai": "HUD", "nord": "SPOTLIGHT", "gruvbox": "CHAT",
+    "paper_terminal": "MINIMAL_LINE",
 }
 
 # The phone-use style each layout is for. Kept consistent with the layouts above by the app's tests.
@@ -1264,6 +1373,9 @@ STYLES = {
     "midnight": ["minimal"], "skyline": ["one-handed"],
     "pico": ["one-handed"], "vintage_logic": ["power user"], "mesh_network": ["power user"],
     "dev_dark": ["power user"], "overclock": ["big screen"],
+    "matrix": ["power user"], "command_prompt": ["power user"], "dos_blue": ["power user"],
+    "solarized_dark": ["power user"], "monokai": ["power user"], "nord": ["one-handed"],
+    "gruvbox": ["big screen"], "paper_terminal": ["minimal"],
 }
 
 EFFECTS = {}
@@ -1306,6 +1418,9 @@ TOPICS = {
     "skyline": ["city", "travel"],
     "pico": ["technology"], "vintage_logic": ["retro", "technology"], "mesh_network": ["technology"],
     "dev_dark": ["technology"], "overclock": ["gaming", "technology"],
+    "matrix": ["technology", "retro"], "command_prompt": ["technology", "retro"],
+    "dos_blue": ["technology", "retro"], "solarized_dark": ["technology"], "monokai": ["technology"],
+    "nord": ["technology"], "gruvbox": ["technology", "retro"], "paper_terminal": ["technology"],
 }
 
 # THE FEATURED SECTION of the index: the theme of each week, the drops, and the seasons.
@@ -1738,7 +1853,157 @@ def paint_webs(entry, rnd):
     return img
 
 
-PAINTERS = {"ghosts": paint_ghosts, "moon": paint_moon, "webs": paint_webs}
+# THE PROGRAMMER WALLPAPERS: terminal and editor screens drawn from original text in Cascadia Mono
+# (SIL Open Font License), so there is no photograph to credit. ORBITAL_MONO names another monospaced
+# font file where this one is not installed.
+MONO_FONT = r"C:\Windows\Fonts\CascadiaMono.ttf"
+
+
+def mono(size):
+    return ImageFont.truetype(os.environ.get("ORBITAL_MONO", MONO_FONT), size)
+
+
+# Original snippets, written for these pictures, in the languages programmers read all day.
+CODE_LINES = [
+    "// Turn the wheel with one thumb",
+    "class Orbit(val radius: Float) {",
+    "    fun spin(delta: Float): Float {",
+    "        val next = radius + delta * 0.4f",
+    "        return next.coerceIn(0f, MAX)",
+    "    }",
+    "}",
+    "",
+    "const apps = launcher.list()",
+    "  .filter(a => a.pinned)",
+    "  .map(a => place(a, wheel));",
+    "",
+    "def tick(state, dt):",
+    "    # advance one frame",
+    "    state.angle += 0.02 * dt",
+    "    return render(state)",
+    "",
+    "if (ready && !paused) {",
+    "    home.show(\"dock\", 12);",
+    "}",
+    "",
+    "SELECT name, opened FROM apps",
+    "WHERE pinned = 1 ORDER BY opened;",
+    "",
+    "fn main() -> Result<(), Error> {",
+    "    let theme = Theme::load(\"dark\")?;",
+    "    println!(\"{}\", theme.name);",
+    "    Ok(())",
+    "}",
+]
+CODE_KEYWORDS = {"class", "fun", "val", "return", "const", "def", "if", "let", "fn", "SELECT", "FROM", "WHERE",
+                 "ORDER", "BY", "Ok", "true", "false", "and", "not"}
+
+
+def paint_matrix(entry, rnd):
+    """Digital rain: columns of glyphs falling in the theme's green, each with a white-hot head."""
+    green = hex_rgb(entry["colors"]["accent"])
+    img = Image.new("RGBA", (WALL_W, WALL_H), (0, 6, 2, 255))
+    layer = Image.new("RGBA", (WALL_W, WALL_H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    font = mono(24)
+    cell_w, cell_h = 18, 27
+    glyphs = "0123456789ABCDEFabcdef<>{}[]/\\|=+*#$%&:;"
+    for column in range(WALL_W // cell_w + 1):
+        length = rnd.randint(8, 34)
+        head = rnd.randint(0, WALL_H // cell_h + 12)
+        for j in range(length):
+            y = (head - j) * cell_h
+            if y < -cell_h or y > WALL_H:
+                continue
+            fade = 1 - j / length
+            fill = (225, 255, 235, 255) if j == 0 else green + (int(255 * max(0.1, fade * 0.95)),)
+            d.text((column * cell_w + 2, y), rnd.choice(glyphs), font=font, fill=fill)
+    return Image.alpha_composite(img, layer)
+
+
+def paint_console(entry, rnd):
+    """A command window: a session in light grey on black, with the cursor waiting."""
+    grey = hex_rgb(entry["colors"]["dim"])
+    img = Image.new("RGBA", (WALL_W, WALL_H), (12, 12, 12, 255))
+    layer = Image.new("RGBA", (WALL_W, WALL_H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    font = mono(25)
+    session = ["Orbital [Version 1.0]", "(c) Orbital Launcher.", "", "C:\\Users\\you> orbital --launch",
+               "Starting launcher... OK", "C:\\Users\\you> dir apps", " Volume has 24 apps", "",
+               "  Calendar    Camera      Clock", "  Docs        Files       Mail", "  Maps        Music       Notes",
+               "  Phone       Photos      Web", "", "C:\\Users\\you> cd home", "C:\\Users\\you\\home> git status",
+               "On branch main", "nothing to commit, working tree clean", "", "C:\\Users\\you\\home> _"]
+    rows = WALL_H // 36
+    for i in range(rows):
+        d.text((26, 40 + i * 36), session[i % len(session)], font=font, fill=grey + (150,))
+    return Image.alpha_composite(img, layer)
+
+
+def paint_dos(entry, rnd):
+    """A text-mode file manager: blue panels with double-line frames and a column of file names."""
+    img = Image.new("RGBA", (WALL_W, WALL_H), (0, 0, 170, 255))
+    layer = Image.new("RGBA", (WALL_W, WALL_H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    line = (170, 200, 255, 150)
+    for box in ((22, 40, WALL_W - 22, WALL_H // 2 - 20), (22, WALL_H // 2 + 10, WALL_W - 22, WALL_H - 40)):
+        d.rectangle(box, outline=line, width=4)
+        d.rectangle((box[0] + 12, box[1] + 12, box[2] - 12, box[3] - 12), outline=line, width=4)
+    font = mono(25)
+    names = ["ORBITAL.EXE", "HOME.CFG", "DOCK.DAT", "THEMES.DIR", "README.TXT", "WHEEL.SYS", "PADS.BIN", "APPS.LST"]
+    for i in range(12):
+        d.text((56, 70 + i * 34), "%-12s %7d  04-10-26" % (names[i % len(names)], 1200 + i * 937), font=font, fill=(200, 222, 255, 140))
+    for i in range(12):
+        d.text((56, WALL_H // 2 + 40 + i * 34), "%-12s %7d  03-09-26" % (names[(i + 3) % len(names)], 800 + i * 411), font=font, fill=(200, 222, 255, 110))
+    return Image.alpha_composite(img, layer)
+
+
+def code_painter(background, keyword, string, kind, function, comment, plain, strength=0.55):
+    """A painter for a code editor in one colour scheme: a listing of CODE_LINES, line numbers
+    beside it, dimmed by [strength] so the screen's furniture stays readable on top."""
+    palette = [hex_rgb(c) for c in (keyword, string, kind, function, comment, plain)]
+
+    def paint(entry, rnd):
+        img = Image.new("RGBA", (WALL_W, WALL_H), hex_rgb(background) + (255,))
+        layer = Image.new("RGBA", (WALL_W, WALL_H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(layer)
+        font = mono(25)
+        advance = font.getlength("M")
+        alpha = int(255 * strength)
+        first = rnd.randrange(len(CODE_LINES))
+        for row in range(WALL_H // 38 + 1):
+            y = 24 + row * 38
+            d.text((12, y), str(row + 1).rjust(2), font=font, fill=palette[4] + (int(alpha * 0.6),))
+            text = CODE_LINES[(first + row) % len(CODE_LINES)]
+            x = 70.0
+            for token in re.findall(r'//.*$|#.*$|"[^"]*"|\d+|\w+|\s+|.', text):
+                if token.startswith("//") or token.startswith("#"):
+                    color = palette[4]
+                elif token.startswith('"') or token.isdigit():
+                    color = palette[1]
+                elif token in CODE_KEYWORDS:
+                    color = palette[0]
+                elif token[:1].isupper():
+                    color = palette[2]
+                elif token.isidentifier() and text[text.find(token) + len(token):][:1] == "(":
+                    color = palette[3]
+                else:
+                    color = palette[5]
+                d.text((x, y), token, font=font, fill=color + (alpha,))
+                x += advance * len(token)
+        return Image.alpha_composite(img, layer)
+
+    return paint
+
+
+PAINTERS = {
+    "ghosts": paint_ghosts, "moon": paint_moon, "webs": paint_webs,
+    "matrix": paint_matrix, "console": paint_console, "dos": paint_dos,
+    "solarized": code_painter("#002B36", "#859900", "#2AA198", "#B58900", "#268BD2", "#586E75", "#93A1A1"),
+    "monokai": code_painter("#272822", "#F92672", "#E6DB74", "#66D9EF", "#A6E22E", "#75715E", "#F8F8F2"),
+    "nord": code_painter("#2E3440", "#81A1C1", "#A3BE8C", "#8FBCBB", "#88C0D0", "#616E88", "#D8DEE9"),
+    "gruvbox": code_painter("#282828", "#FB4934", "#B8BB26", "#FABD2F", "#83A598", "#928374", "#EBDBB2"),
+    "paper": code_painter("#FFFFFF", "#CF222E", "#0A3069", "#8250DF", "#0550AE", "#6E7781", "#1F2328", strength=0.6),
+}
 
 
 # How readable the screen's furniture must stay over a wallpaper made here, as contrast ratios

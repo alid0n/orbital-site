@@ -1,0 +1,98 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "monokai",
+  "name": "Monokai",
+  "description": "Charcoal with hot pink, lime and gold, in Space Mono, on an open canvas with a container dock.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:dark",
+    "color:pink",
+    "color:green",
+    "style:power user",
+    "topic:technology"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#F92672",
+    "accentAlt": "#A6E22E",
+    "ink": "#F8F8F2",
+    "dim": "#A59F85",
+    "drawer": "#1A1B17",
+    "surface": "#1E1F1C",
+    "elevated": "#3E3D32",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "SLIGHT",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.2,
+    "widgetSolid": 1.0,
+    "font": "space_mono",
+    "clockFace": "LINE",
+    "panelLook": "CARD",
+    "notch": "RUNG"
+  },
+  "mood": [
+    "dark",
+    "vivid",
+    "bold"
+  ],
+  "swatch": "#F92672",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "FREE_ROAM",
+    "dockStyle": "CARD",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.07,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      },
+      {
+        "id": "cmd",
+        "kind": "COMMAND",
+        "x": 0.04,
+        "y": 0.22,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "batt",
+        "kind": "BATTERY",
+        "x": 0.04,
+        "y": 0.34,
+        "col": 0,
+        "row": 0,
+        "w": 0.45
+      }
+    ]
+  },
+  "assistant": {
+    "look": "HUD"
+  }
+}

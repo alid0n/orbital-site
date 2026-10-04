@@ -2881,6 +2881,335 @@
       ],
       "swatch": "#6A1020",
       "credits": []
+    },
+    {
+      "id": "matrix",
+      "name": "Matrix",
+      "description": "Digital rain in phosphor green behind a command line, in Share Tech Mono.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:futuristic",
+        "vibe:retro",
+        "vibe:dark",
+        "color:green",
+        "color:black",
+        "style:power user",
+        "topic:technology",
+        "topic:retro"
+      ],
+      "thumbnail": "matrix/preview.png",
+      "file": "matrix/theme.json",
+      "premium": false,
+      "size": 1756,
+      "sha256": "fd61507eec7208ba6a832bc13e5198ac0b4e521734c0d9d2b02fbdc3d771c66f",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#00FF66",
+        "accentAlt": "#B6FF3C",
+        "ink": "#C9FFD8",
+        "dim": "#4FA36B",
+        "drawer": "#010603",
+        "surface": "#020A04",
+        "elevated": "#06200E",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "bold"
+      ],
+      "swatch": "#0B6B2A",
+      "credits": []
+    },
+    {
+      "id": "command_prompt",
+      "name": "Command Prompt",
+      "description": "Black, light grey and a waiting cursor, like the console you know, with a drawer that opens the assistant.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:retro",
+        "vibe:dark",
+        "color:black",
+        "color:white",
+        "style:power user",
+        "topic:technology",
+        "topic:retro"
+      ],
+      "thumbnail": "command_prompt/preview.png",
+      "file": "command_prompt/theme.json",
+      "premium": true,
+      "size": 1692,
+      "sha256": "0acf3fa23a4845747eeaab5662bfe518bb231cebbd930497f0de1287b3a84e64",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#F2F2F2",
+        "accentAlt": "#61D6D6",
+        "ink": "#E6E6E6",
+        "dim": "#8A8A8A",
+        "drawer": "#0C0C0C",
+        "surface": "#0C0C0C",
+        "elevated": "#1C1C1C",
+        "veil": "#22000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "minimal",
+        "calm"
+      ],
+      "swatch": "#2A2A2A",
+      "credits": []
+    },
+    {
+      "id": "dos_blue",
+      "name": "DOS Blue",
+      "description": "Blue panels with double-line frames and cyan capitals, with every app a tile.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:retro",
+        "vibe:energetic",
+        "color:blue",
+        "color:neon",
+        "era:80s",
+        "style:power user",
+        "topic:technology",
+        "topic:retro"
+      ],
+      "thumbnail": "dos_blue/preview.png",
+      "file": "dos_blue/theme.json",
+      "premium": false,
+      "size": 1748,
+      "sha256": "0966b06221517cd99d98dc6324dd9e39316085c8d73d3a481d89064e27349dab",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#55FFFF",
+        "accentAlt": "#FFFF55",
+        "ink": "#FFFFFF",
+        "dim": "#9CC9FF",
+        "drawer": "#00007A",
+        "surface": "#0000AA",
+        "elevated": "#0000DD",
+        "veil": "#22000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "bold",
+        "vivid",
+        "dark"
+      ],
+      "swatch": "#0000AA",
+      "credits": []
+    },
+    {
+      "id": "solarized_dark",
+      "name": "Solarized Dark",
+      "description": "The classic teal-black editor palette, tuned for long reading, with the Orbit wheel.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:blue",
+        "color:gold",
+        "style:power user",
+        "topic:technology"
+      ],
+      "thumbnail": "solarized_dark/preview.png",
+      "file": "solarized_dark/theme.json",
+      "premium": false,
+      "size": 1724,
+      "sha256": "88a43f09815a021320fa7e8d11c170336e7421b8d8665f30b861dc041000e8c2",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#B58900",
+        "accentAlt": "#2AA198",
+        "ink": "#EEE8D5",
+        "dim": "#93A1A1",
+        "drawer": "#00212B",
+        "surface": "#073642",
+        "elevated": "#0A4A5A",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#0A4A5A",
+      "credits": []
+    },
+    {
+      "id": "monokai",
+      "name": "Monokai",
+      "description": "Charcoal with hot pink, lime and gold, in Space Mono, on an open canvas with a container dock.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:dark",
+        "color:pink",
+        "color:green",
+        "style:power user",
+        "topic:technology"
+      ],
+      "thumbnail": "monokai/preview.png",
+      "file": "monokai/theme.json",
+      "premium": true,
+      "size": 1893,
+      "sha256": "a758257bccb02587e6acac8da7cc21b234b13e7882c63381d73f04e7822bd977",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#F92672",
+        "accentAlt": "#A6E22E",
+        "ink": "#F8F8F2",
+        "dim": "#A59F85",
+        "drawer": "#1A1B17",
+        "surface": "#1E1F1C",
+        "elevated": "#3E3D32",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "bold"
+      ],
+      "swatch": "#F92672",
+      "credits": []
+    },
+    {
+      "id": "nord",
+      "name": "Nord",
+      "description": "Calm arctic blue-greys, easy on the eyes, with the Orbit Pad under your thumb.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:chill",
+        "vibe:dark",
+        "color:blue",
+        "color:white",
+        "style:one-handed",
+        "topic:technology"
+      ],
+      "thumbnail": "nord/preview.png",
+      "file": "nord/theme.json",
+      "premium": true,
+      "size": 1716,
+      "sha256": "f1d67d93cf6337ad97e0be319e2b31347110305cd042c07a550a654c6acfeb94",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#88C0D0",
+        "accentAlt": "#A3BE8C",
+        "ink": "#ECEFF4",
+        "dim": "#9AA5B8",
+        "drawer": "#2B303B",
+        "surface": "#3B4252",
+        "elevated": "#434C5E",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#4C566A",
+      "credits": []
+    },
+    {
+      "id": "gruvbox",
+      "name": "Gruvbox",
+      "description": "Warm retro browns with mustard and sage, in Space Mono, on the Showcase.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:retro",
+        "vibe:dark",
+        "color:gold",
+        "color:green",
+        "color:orange",
+        "style:big screen",
+        "topic:technology",
+        "topic:retro"
+      ],
+      "thumbnail": "gruvbox/preview.png",
+      "file": "gruvbox/theme.json",
+      "premium": true,
+      "size": 1396,
+      "sha256": "f70169396fa3be772fb7cd82f8cd548131b073d65d6a339f49c0e6e1736051d9",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FABD2F",
+        "accentAlt": "#B8BB26",
+        "ink": "#EBDBB2",
+        "dim": "#A89984",
+        "drawer": "#1D2021",
+        "surface": "#282828",
+        "elevated": "#3C3836",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "cozy",
+        "bold"
+      ],
+      "swatch": "#B57614",
+      "credits": []
+    },
+    {
+      "id": "paper_terminal",
+      "name": "Paper Terminal",
+      "description": "A light, crisp editor look: ink on white with blue and green accents and a sidebar dock.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:elegant",
+        "color:white",
+        "color:blue",
+        "color:green",
+        "style:minimal",
+        "topic:technology"
+      ],
+      "thumbnail": "paper_terminal/preview.png",
+      "file": "paper_terminal/theme.json",
+      "premium": false,
+      "size": 1742,
+      "sha256": "e00c1b3a28503cb350723401c04959ff65941fbdc0b7d25210f1d75ae1968e03",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#0969DA",
+        "accentAlt": "#1A7F37",
+        "ink": "#1F2328",
+        "dim": "#656D76",
+        "drawer": "#F6F8FA",
+        "surface": "#FFFFFF",
+        "elevated": "#E6EAEF",
+        "veil": "#22FFFFFF",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "minimal",
+        "calm"
+      ],
+      "swatch": "#C9D1D9",
+      "credits": []
     }
   ],
   "featured": {

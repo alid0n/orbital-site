@@ -1,0 +1,88 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "solarized_dark",
+  "name": "Solarized Dark",
+  "description": "The classic teal-black editor palette, tuned for long reading, with the Orbit wheel.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dark",
+    "color:blue",
+    "color:gold",
+    "style:power user",
+    "topic:technology"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#B58900",
+    "accentAlt": "#2AA198",
+    "ink": "#EEE8D5",
+    "dim": "#93A1A1",
+    "drawer": "#00212B",
+    "surface": "#073642",
+    "elevated": "#0A4A5A",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "jetbrains_mono",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "minimal"
+  ],
+  "swatch": "#0A4A5A",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "MINIMAL_LINE"
+  }
+}

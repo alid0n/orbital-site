@@ -1,0 +1,91 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "dos_blue",
+  "name": "DOS Blue",
+  "description": "Blue panels with double-line frames and cyan capitals, with every app a tile.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:retro",
+    "vibe:energetic",
+    "color:blue",
+    "color:neon",
+    "era:80s",
+    "style:power user",
+    "topic:technology",
+    "topic:retro"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#55FFFF",
+    "accentAlt": "#FFFF55",
+    "ink": "#FFFFFF",
+    "dim": "#9CC9FF",
+    "drawer": "#00007A",
+    "surface": "#0000AA",
+    "elevated": "#0000DD",
+    "veil": "#22000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SQUARE",
+    "iconShape": "TILE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "OUTLINE",
+    "widgetCorner": "SQUARE",
+    "widgetEdge": "BOLD",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.6,
+    "font": "vt323",
+    "clockFace": "LINE",
+    "uppercase": true,
+    "panelLook": "LINES",
+    "notch": "NONE"
+  },
+  "mood": [
+    "bold",
+    "vivid",
+    "dark"
+  ],
+  "swatch": "#0000AA",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.05,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.18,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "RETRO"
+  }
+}
