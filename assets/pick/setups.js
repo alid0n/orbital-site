@@ -320,6 +320,38 @@ window.OrbitalSetups = [
   "colors": null
  },
  {
+  "key": "r1-31",
+  "row": 0,
+  "name": "Container dock",
+  "theme": "store:shoreline",
+  "colors": {
+   "name": "Shoreline",
+   "free": true,
+   "a": "#6FE0D0",
+   "b": "#F2D9A8",
+   "bg": "#0E3A40",
+   "panel": "#1B5560",
+   "text": "#FFFFFF",
+   "light": false
+  }
+ },
+ {
+  "key": "r1-32",
+  "row": 0,
+  "name": "Classic row",
+  "theme": "store:midnight",
+  "colors": {
+   "name": "Midnight",
+   "free": true,
+   "a": "#9B7BFF",
+   "b": "#4DD6C4",
+   "bg": "#07060F",
+   "panel": "#14122B",
+   "text": "#F2F0FF",
+   "light": false
+  }
+ },
+ {
   "key": "r2-01",
   "row": 1,
   "name": "Side row",
@@ -644,6 +676,22 @@ window.OrbitalSetups = [
  {
   "key": "r2-29",
   "row": 1,
+  "name": "Classic row",
+  "theme": "store:daybreak",
+  "colors": {
+   "name": "Daybreak",
+   "free": true,
+   "a": "#E0607E",
+   "b": "#5A8DEE",
+   "bg": "#FAF7FB",
+   "panel": "#EAE3F0",
+   "text": "#23304A",
+   "light": true
+  }
+ },
+ {
+  "key": "r2-30",
+  "row": 1,
   "name": "Frosted dock",
   "theme": "store:space_cadet",
   "colors": {
@@ -654,6 +702,38 @@ window.OrbitalSetups = [
    "bg": "#0C1230",
    "panel": "#182253",
    "text": "#FFFFFF",
+   "light": false
+  }
+ },
+ {
+  "key": "r2-31",
+  "row": 1,
+  "name": "The orbit",
+  "theme": "store:afterglow",
+  "colors": {
+   "name": "Afterglow",
+   "free": true,
+   "a": "#FF9A4D",
+   "b": "#C08BFF",
+   "bg": "#1A0B2C",
+   "panel": "#2E1747",
+   "text": "#FFF6EE",
+   "light": false
+  }
+ },
+ {
+  "key": "r2-32",
+  "row": 1,
+  "name": "Orbit Pad",
+  "theme": "store:skyline",
+  "colors": {
+   "name": "Skyline",
+   "free": false,
+   "a": "#FFB35C",
+   "b": "#7DB2FF",
+   "bg": "#0C1020",
+   "panel": "#1B2138",
+   "text": "#F4F6FB",
    "light": false
   }
  }

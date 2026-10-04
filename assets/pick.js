@@ -37,7 +37,7 @@
   function setups(row) {
     return (window.OrbitalSetups || []).filter(function (s) { return s.row === row; }).map(function (s) {
       var c = s.colors || APP[s.theme] || APP.orbital;
-      return { id: s.key, theme: s.theme, name: s.name, themeName: c.name, img: 'assets/pick/' + s.key + '.webp?v=2',
+      return { id: s.key, theme: s.theme, name: s.name, themeName: c.name, img: 'assets/pick/' + s.key + '.webp?v=3',
         a: c.a, b: c.b, bg: c.bg, panel: c.panel, light: !!c.light };
     });
   }
