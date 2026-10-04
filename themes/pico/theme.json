@@ -1,0 +1,107 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "pico",
+  "name": "Pico",
+  "description": "A Raspberry Pi Pico board in full colour, with bold coral cards, big numerals and the Orbit Pad.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:playful",
+    "color:red",
+    "color:white",
+    "color:green",
+    "style:one-handed",
+    "topic:technology"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFFFFF",
+    "accentAlt": "#7DE3A8",
+    "ink": "#FFFFFF",
+    "dim": "#FFD3CE",
+    "drawer": "#2A0C0E",
+    "surface": "#D6453B",
+    "elevated": "#B8362F",
+    "veil": "#22000000",
+    "light": false
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "PILL",
+    "widgetEdge": "NONE",
+    "widgetTint": 0.3,
+    "widgetSolid": 1.0,
+    "font": "lexend",
+    "clockFace": "DIGITS",
+    "panelLook": "CARD",
+    "notch": "DOT"
+  },
+  "mood": [
+    "vivid",
+    "bold",
+    "playful"
+  ],
+  "swatch": "#D6453B",
+  "credits": [
+    {
+      "title": "Top view of a Raspberry Pi Pico 2 microcontroller board",
+      "author": "Profpcde",
+      "source": "Wikimedia Commons",
+      "license": "CC0 1.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Top_view_of_a_Raspberry_Pi_Pico_2_microcontroller_board.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "ORBIT_PAD",
+    "dockStyle": "PAD",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.05,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.22,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "batt",
+        "kind": "BATTERY",
+        "x": 0.04,
+        "y": 0.32,
+        "col": 0,
+        "row": 0,
+        "w": 0.5
+      }
+    ]
+  },
+  "assistant": {
+    "look": "VOICE"
+  }
+}

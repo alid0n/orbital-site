@@ -177,6 +177,20 @@ PHOTOS = {
     "stocksnap-city-skyline-VDAAVU9YTE.jpg": dict(
         title="City Skyline", author="Matt Bango", source="StockSnap.io", license="CC0 1.0",
         url="https://stocksnap.io/photo/city-skyline-VDAAVU9YTE", retrieved="2026-10-04"),
+    "commons-pico2-top-view.jpg": dict(
+        title="Top view of a Raspberry Pi Pico 2 microcontroller board", author="Profpcde",
+        source="Wikimedia Commons", license="CC0 1.0",
+        url="https://commons.wikimedia.org/wiki/File:Top_view_of_a_Raspberry_Pi_Pico_2_microcontroller_board.jpg",
+        retrieved="2026-10-04"),
+    "commons-abner-circuit-board-1951.jpg": dict(
+        title="Circuit board, believed to be part of ABNER, the NSA's first digital computer", author="Daderot",
+        source="Wikimedia Commons", license="CC0 1.0",
+        url="https://commons.wikimedia.org/wiki/File:Circuit_board,_believed_to_be_part_of_ABNER,_the_NSA%27s_first_digital_computer_designed_in_house,_delivered_1951_-_National_Cryptologic_Museum_-_DSC07665.JPG",
+        retrieved="2026-10-04"),
+    "commons-turris-omnia-router-interior.jpg": dict(
+        title="Interior of Turris Omnia router", author="Tom Brossman",
+        source="Wikimedia Commons", license="CC0 1.0",
+        url="https://commons.wikimedia.org/wiki/File:Interior_of_Turris_Omnia_router.jpg", retrieved="2026-10-04"),
 }
 
 
@@ -871,6 +885,69 @@ THEMES = [
                widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
                font="manrope", clockFace="LINE", panelLook="FADE", notch="DOT"),
           premium=True),
+    # Themes for people who like their phone to feel like a tool: a command-line drawer, hexagon icons,
+    # a tab-bar dock, the Showcase for a game controller, and a bold Orbit Pad.
+    theme("pico", "Pico",
+          "A Raspberry Pi Pico board in full colour, with bold coral cards, big numerals and the Orbit Pad.",
+          ["audience:general", "vibe:energetic", "vibe:playful", "color:red", "color:white", "color:green"],
+          pal("#FFFFFF", "#7DE3A8", "#FFFFFF", "#FFD3CE", "#2A0C0E", "#D6453B", "#B8362F", "#22000000"),
+          rendered(photo=dict(file="commons-pico2-top-view.jpg", focus=(0.5, 0.45), blur=0.3, saturation=1.1),
+                   wash=[(0.0, "#1A0709", 0.4), (0.18, "#1A0709", 0.3), (0.62, "#1A0709", 0.1),
+                         (0.8, "#1A0709", 0.55), (1.0, "#1A0709", 0.75)],
+                   vignette=0.15, grain=0.03),
+          dict(corner="PILL", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="SOLID",
+               widgetCorner="PILL", widgetEdge="NONE", widgetTint=0.3, widgetSolid=1.0,
+               font="lexend", clockFace="DIGITS", panelLook="CARD", notch="DOT"),
+          premium=True),
+    theme("vintage_logic", "Vintage Logic",
+          "Circuitry from a 1951 computer in amber phosphor, with a command-line drawer that opens the assistant.",
+          ["audience:general", "vibe:retro", "vibe:dark", "color:orange", "color:black", "era:50s"],
+          pal("#FFB347", "#FF6B3D", "#FFE9C7", "#B58A55", "#050301", "#0B0703", "#1C1208", "#44000000"),
+          rendered(photo=dict(file="commons-abner-circuit-board-1951.jpg", focus=(0.5, 0.5), blur=0.5, saturation=0.9,
+                              map=[(0.0, "#050301"), (0.4, "#2A1706"), (0.75, "#D9892B"), (1.0, "#FFE2B0")], mapAmount=0.9),
+                   wash=[(0.0, "#050301", 0.6), (0.2, "#050301", 0.45), (0.62, "#050301", 0.3),
+                         (0.8, "#050301", 0.78), (1.0, "#050301", 0.9)],
+                   vignette=0.3, grain=0.04),
+          dict(corner="SQUARE", iconShape="SQUARE", iconStyle="FLAT", widgetLook="OUTLINE",
+               widgetCorner="SQUARE", widgetEdge="FINE", widgetTint=0.2, widgetSolid=0.6,
+               font="space_mono", clockFace="LINE", panelLook="LINES", notch="NONE", glow=True),
+          premium=True),
+    theme("mesh_network", "Mesh Network",
+          "The inside of a router in electric blue, with every app a hexagon node on an open canvas.",
+          ["audience:general", "vibe:futuristic", "vibe:dark", "color:blue", "color:neon"],
+          pal("#4DB8FF", "#7CFFB2", "#EAF6FF", "#7FA3C0", "#040B14", "#050E1A", "#0C2038", "#44000000"),
+          rendered(photo=dict(file="commons-turris-omnia-router-interior.jpg", focus=(0.5, 0.5), blur=0.6, saturation=0.9,
+                              map=[(0.0, "#02060C"), (0.4, "#0A2A4D"), (0.75, "#2F9BFF"), (1.0, "#D9F0FF")], mapAmount=0.85),
+                   wash=[(0.0, "#040B14", 0.6), (0.2, "#040B14", 0.45), (0.62, "#040B14", 0.3),
+                         (0.8, "#040B14", 0.75), (1.0, "#040B14", 0.88)],
+                   vignette=0.25, grain=0.035),
+          dict(corner="ROUNDED", iconShape="HEX", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
+               font="oxanium", clockFace="LINE", panelLook="LINES", notch="CHEVRON", glow=True),
+          premium=True, base="HONEYCOMB"),
+    theme("dev_dark", "Dev Dark",
+          "An editor-dark palette in violet and green, with monospaced type and a tab-bar dock along the top.",
+          ["audience:general", "vibe:futuristic", "vibe:dark", "color:purple", "color:green"],
+          pal("#BD93F9", "#50FA7B", "#F8F8F2", "#8A8FA8", "#14151D", "#1E1F29", "#2B2D3C", "#22000000"),
+          rendered(mesh=[(0.2, 0.0, "#2F2A4A", 0.6), (0.5, 0.4, "#1E1F29", 0.6), (0.5, 0.9, "#14151D", 0.6),
+                         (0.9, 0.5, "#1B1C26", 0.4)],
+                   blobs=[(0.2, 0.05, 0.3, "#6B4FE0", 0.25)],
+                   vignette=0.1, grain=0.03),
+          dict(corner="SLIGHT", iconShape="ROUNDED", iconStyle="ORIGINAL", widgetLook="OUTLINE",
+               widgetCorner="SLIGHT", widgetEdge="FINE", widgetTint=0.2, widgetSolid=0.6,
+               font="jetbrains_mono", clockFace="LINE", panelLook="LINES", notch="RUNG")),
+    theme("overclock", "Overclock",
+          "Black and red with a glow behind your apps, lettered in Orbitron and built on the Showcase for a game controller.",
+          ["audience:general", "vibe:energetic", "vibe:futuristic", "vibe:dark", "color:red", "color:black"],
+          pal("#FF3B4F", "#FFB02E", "#FFEDEE", "#B07A80", "#050203", "#0B0406", "#1C0A10", "#33000000"),
+          rendered(mesh=[(0.7, 0.3, "#5A0F1C", 0.6), (0.3, 0.1, "#1A060B", 0.6), (0.5, 0.7, "#0B0406", 0.6),
+                         (0.2, 0.95, "#050203", 0.4), (0.9, 0.9, "#050203", 0.4)],
+                   blobs=[(0.7, 0.3, 0.3, "#FF3B4F", 0.3)],
+                   vignette=0.15, grain=0.03),
+          dict(corner="SLIGHT", iconShape="ROUNDED", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="SLIGHT", widgetEdge="FINE", widgetTint=0.25, widgetSolid=0.5,
+               font="orbitron", clockFace="LINE", panelLook="FADE", notch="CHEVRON", glow=True),
+          premium=True),
 ]
 
 # EACH THEME'S MOOD (the words the store's mood filter offers) and its swatch, the one colour it is
@@ -936,6 +1013,11 @@ MOODS = {
     "afterglow": (["dark", "vivid", "bold"], "#E0662E"),
     "midnight": (["dark", "minimal", "calm"], "#1B1440"),
     "skyline": (["dark", "bold", "minimal"], "#C9772E"),
+    "pico": (["vivid", "bold", "playful"], "#D6453B"),
+    "vintage_logic": (["dark", "minimal", "bold"], "#6B3F0D"),
+    "mesh_network": (["dark", "vivid", "bold"], "#1B4F8A"),
+    "dev_dark": (["dark", "minimal", "calm"], "#2B2D3C"),
+    "overclock": (["dark", "bold", "vivid"], "#6A1020"),
 }
 
 # THE CURATED COLLECTIONS the store shows as shelves of their own, each from its first to its last
@@ -1116,6 +1198,20 @@ LAYOUTS = {
                      widgets=[CLOCK(0.08, 1.2), WEATHER(0.04, 0.22, 0.92)]),
     "skyline": dict(homeLayout="ORBIT_PAD", dockStyle="PAD", anchor="BOTTOM", drawerLayout="GRID",
                     widgets=[CLOCK(0.06, 1.0), w("next", "AGENDA", 0.04, 0.22, 0.92)]),
+    # For tech users: the Orbit Pad; a command-line drawer; a honeycomb on an open canvas; a tab-bar
+    # dock along the top; and the Showcase.
+    "pico": dict(homeLayout="ORBIT_PAD", dockStyle="PAD", anchor="BOTTOM", drawerLayout="GRID",
+                 widgets=[CLOCK(0.05, 1.1), WEATHER(0.04, 0.22, 0.92), w("batt", "BATTERY", 0.04, 0.32, 0.5)]),
+    "vintage_logic": dict(homeLayout="DRAWER", dockStyle="ROW", anchor="BOTTOM", drawerLayout="LIST",
+                          drawerSearch="ASSISTANT", drawerListAlign="LEFT",
+                          drawerWidgets=[side("COMMAND", end="TOP"), side("CLOCK")]),
+    "mesh_network": dict(homeLayout="FREE_ROAM", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
+                         tiledDrawer=True, drawerColumns=5, drawerRail=False,
+                         widgets=[CLOCK(0.06, 1.1)]),
+    "dev_dark": dict(homeLayout="PAGES", dockStyle="ROW", anchor="TOP", drawerLayout="GRID",
+                     widgets=[CLOCK(0.12, 1.0), w("cmd", "COMMAND", 0.04, 0.22, 0.92),
+                              w("next", "AGENDA", 0.04, 0.32, 0.92), w("batt", "BATTERY", 0.04, 0.44, 0.45)]),
+    "overclock": dict(homeLayout="CONSOLE", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID"),
 }
 
 ASSISTANTS = {
@@ -1138,6 +1234,8 @@ ASSISTANTS = {
     "golden_sierra": "SPOTLIGHT",
     "daybreak": "CHAT", "shoreline": "CHAT", "afterglow": "SPOTLIGHT", "midnight": "MINIMAL_LINE",
     "skyline": "HUD",
+    "pico": "VOICE", "vintage_logic": "COMMAND_PROMPT", "mesh_network": "HUD", "dev_dark": "COMMAND_PROMPT",
+    "overclock": "HUD",
 }
 
 # The phone-use style each layout is for. Kept consistent with the layouts above by the app's tests.
@@ -1164,6 +1262,8 @@ STYLES = {
     "flamingo": ["minimal"], "golden_sierra": ["one-handed"],
     "daybreak": ["one-handed"], "shoreline": ["one-handed"], "afterglow": ["one-handed"],
     "midnight": ["minimal"], "skyline": ["one-handed"],
+    "pico": ["one-handed"], "vintage_logic": ["power user"], "mesh_network": ["power user"],
+    "dev_dark": ["power user"], "overclock": ["big screen"],
 }
 
 EFFECTS = {}
@@ -1204,6 +1304,8 @@ TOPICS = {
     "flamingo": ["animals", "nature", "art"], "golden_sierra": ["nature", "travel", "art"],
     "daybreak": ["nature"], "shoreline": ["beach", "travel", "summer"], "afterglow": ["nature"],
     "skyline": ["city", "travel"],
+    "pico": ["technology"], "vintage_logic": ["retro", "technology"], "mesh_network": ["technology"],
+    "dev_dark": ["technology"], "overclock": ["gaming", "technology"],
 }
 
 # THE FEATURED SECTION of the index: the theme of each week, the drops, and the seasons.

@@ -1,0 +1,106 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "dev_dark",
+  "name": "Dev Dark",
+  "description": "An editor-dark palette in violet and green, with monospaced type and a tab-bar dock along the top.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:futuristic",
+    "vibe:dark",
+    "color:purple",
+    "color:green",
+    "style:power user",
+    "topic:technology"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#BD93F9",
+    "accentAlt": "#50FA7B",
+    "ink": "#F8F8F2",
+    "dim": "#8A8FA8",
+    "drawer": "#14151D",
+    "surface": "#1E1F29",
+    "elevated": "#2B2D3C",
+    "veil": "#22000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "OUTLINE",
+    "widgetCorner": "SLIGHT",
+    "widgetEdge": "FINE",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.6,
+    "font": "jetbrains_mono",
+    "clockFace": "LINE",
+    "panelLook": "LINES",
+    "notch": "RUNG"
+  },
+  "mood": [
+    "dark",
+    "minimal",
+    "calm"
+  ],
+  "swatch": "#2B2D3C",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "TOP",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.12,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "cmd",
+        "kind": "COMMAND",
+        "x": 0.04,
+        "y": 0.22,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.32,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "batt",
+        "kind": "BATTERY",
+        "x": 0.04,
+        "y": 0.44,
+        "col": 0,
+        "row": 0,
+        "w": 0.45
+      }
+    ]
+  },
+  "assistant": {
+    "look": "COMMAND_PROMPT"
+  }
+}

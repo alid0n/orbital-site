@@ -2652,6 +2652,235 @@
           "url": "https://stocksnap.io/photo/city-skyline-VDAAVU9YTE"
         }
       ]
+    },
+    {
+      "id": "pico",
+      "name": "Pico",
+      "description": "A Raspberry Pi Pico board in full colour, with bold coral cards, big numerals and the Orbit Pad.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:playful",
+        "color:red",
+        "color:white",
+        "color:green",
+        "style:one-handed",
+        "topic:technology"
+      ],
+      "thumbnail": "pico/preview.png",
+      "file": "pico/theme.json",
+      "premium": true,
+      "size": 2206,
+      "sha256": "0667d54311c9ee0469ed4f570af4878f90e6c7bd0e0b32b6fbf1b6f6ddb4931a",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFFFFF",
+        "accentAlt": "#7DE3A8",
+        "ink": "#FFFFFF",
+        "dim": "#FFD3CE",
+        "drawer": "#2A0C0E",
+        "surface": "#D6453B",
+        "elevated": "#B8362F",
+        "veil": "#22000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "vivid",
+        "bold",
+        "playful"
+      ],
+      "swatch": "#D6453B",
+      "credits": [
+        {
+          "title": "Top view of a Raspberry Pi Pico 2 microcontroller board",
+          "author": "Profpcde",
+          "source": "Wikimedia Commons",
+          "license": "CC0 1.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Top_view_of_a_Raspberry_Pi_Pico_2_microcontroller_board.jpg"
+        }
+      ]
+    },
+    {
+      "id": "vintage_logic",
+      "name": "Vintage Logic",
+      "description": "Circuitry from a 1951 computer in amber phosphor, with a command-line drawer that opens the assistant.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:retro",
+        "vibe:dark",
+        "color:orange",
+        "color:black",
+        "era:50s",
+        "style:power user",
+        "topic:retro",
+        "topic:technology"
+      ],
+      "thumbnail": "vintage_logic/preview.png",
+      "file": "vintage_logic/theme.json",
+      "premium": true,
+      "size": 2132,
+      "sha256": "5dbe0dd726bc116b7c1bdee9732a94c6972fa0430bada3d485f27d89c3d081be",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFB347",
+        "accentAlt": "#FF6B3D",
+        "ink": "#FFE9C7",
+        "dim": "#B58A55",
+        "drawer": "#050301",
+        "surface": "#0B0703",
+        "elevated": "#1C1208",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "minimal",
+        "bold"
+      ],
+      "swatch": "#6B3F0D",
+      "credits": [
+        {
+          "title": "Circuit board, believed to be part of ABNER, the NSA's first digital computer",
+          "author": "Daderot",
+          "source": "Wikimedia Commons",
+          "license": "CC0 1.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Circuit_board,_believed_to_be_part_of_ABNER,_the_NSA%27s_first_digital_computer_designed_in_house,_delivered_1951_-_National_Cryptologic_Museum_-_DSC07665.JPG"
+        }
+      ]
+    },
+    {
+      "id": "mesh_network",
+      "name": "Mesh Network",
+      "description": "The inside of a router in electric blue, with every app a hexagon node on an open canvas.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:futuristic",
+        "vibe:dark",
+        "color:blue",
+        "color:neon",
+        "style:power user",
+        "topic:technology"
+      ],
+      "thumbnail": "mesh_network/preview.png",
+      "file": "mesh_network/theme.json",
+      "premium": true,
+      "size": 1929,
+      "sha256": "ccdde325697221d62b240ee3aa837af771f7550ac8cfc73f53cbca648068f9ba",
+      "base": "HONEYCOMB",
+      "colors": {
+        "accent": "#4DB8FF",
+        "accentAlt": "#7CFFB2",
+        "ink": "#EAF6FF",
+        "dim": "#7FA3C0",
+        "drawer": "#040B14",
+        "surface": "#050E1A",
+        "elevated": "#0C2038",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "bold"
+      ],
+      "swatch": "#1B4F8A",
+      "credits": [
+        {
+          "title": "Interior of Turris Omnia router",
+          "author": "Tom Brossman",
+          "source": "Wikimedia Commons",
+          "license": "CC0 1.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Interior_of_Turris_Omnia_router.jpg"
+        }
+      ]
+    },
+    {
+      "id": "dev_dark",
+      "name": "Dev Dark",
+      "description": "An editor-dark palette in violet and green, with monospaced type and a tab-bar dock along the top.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:futuristic",
+        "vibe:dark",
+        "color:purple",
+        "color:green",
+        "style:power user",
+        "topic:technology"
+      ],
+      "thumbnail": "dev_dark/preview.png",
+      "file": "dev_dark/theme.json",
+      "premium": false,
+      "size": 2050,
+      "sha256": "5bc5cda3234173507fb4e677db1e4f08f1957a3332563f1fa0d213d2502765c6",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#BD93F9",
+        "accentAlt": "#50FA7B",
+        "ink": "#F8F8F2",
+        "dim": "#8A8FA8",
+        "drawer": "#14151D",
+        "surface": "#1E1F29",
+        "elevated": "#2B2D3C",
+        "veil": "#22000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "minimal",
+        "calm"
+      ],
+      "swatch": "#2B2D3C",
+      "credits": []
+    },
+    {
+      "id": "overclock",
+      "name": "Overclock",
+      "description": "Black and red with a glow behind your apps, lettered in Orbitron and built on the Showcase for a game controller.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:futuristic",
+        "vibe:dark",
+        "color:red",
+        "color:black",
+        "style:big screen",
+        "topic:gaming",
+        "topic:technology"
+      ],
+      "thumbnail": "overclock/preview.png",
+      "file": "overclock/theme.json",
+      "premium": true,
+      "size": 1462,
+      "sha256": "3d450586d65fe66b5f73afb734c61b0885cc90935fac9501e7d6ffc8a6d8e2b2",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF3B4F",
+        "accentAlt": "#FFB02E",
+        "ink": "#FFEDEE",
+        "dim": "#B07A80",
+        "drawer": "#050203",
+        "surface": "#0B0406",
+        "elevated": "#1C0A10",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "bold",
+        "vivid"
+      ],
+      "swatch": "#6A1020",
+      "credits": []
     }
   ],
   "featured": {
