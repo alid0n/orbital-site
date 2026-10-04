@@ -1,0 +1,89 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "earthrise",
+  "name": "Earthrise",
+  "description": "The Earth rising over the Moon, as the Apollo 8 crew saw it in 1968, with quiet lettering and a free-roaming canvas.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dark",
+    "vibe:futuristic",
+    "color:blue",
+    "color:black",
+    "style:minimal",
+    "topic:space"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#7FB3E6",
+    "accentAlt": "#D9C9A8",
+    "ink": "#F2F4F7",
+    "dim": "#8A94A3",
+    "drawer": "#07090D",
+    "surface": "#0D1117",
+    "elevated": "#161C25",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.4,
+    "font": "inter",
+    "clockFace": "BARE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "minimal"
+  ],
+  "swatch": "#1E3552",
+  "credits": [
+    {
+      "title": "Earthrise (Apollo 8, AS08-14-2383)",
+      "author": "NASA / Bill Anders",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:NASA-Apollo8-Dec24-Earthrise.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "FREE_ROAM",
+    "dockStyle": "CARD",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.07,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.2
+      }
+    ]
+  },
+  "assistant": {
+    "look": "MINIMAL_LINE"
+  }
+}

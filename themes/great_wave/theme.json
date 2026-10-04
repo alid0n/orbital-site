@@ -1,0 +1,91 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "great_wave",
+  "name": "Great Wave",
+  "description": "Hokusai's wave over warm paper, with indigo lettering and a vermilion seal, and every app on one drawer home.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:elegant",
+    "vibe:calm",
+    "color:blue",
+    "color:white",
+    "color:red",
+    "style:minimal",
+    "topic:art",
+    "topic:travel"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#1F4E8C",
+    "accentAlt": "#C2452D",
+    "ink": "#14233F",
+    "dim": "#5A6781",
+    "drawer": "#F1E8D4",
+    "surface": "#F5EDDA",
+    "elevated": "#E7DBBE",
+    "veil": "#22F1E8D4",
+    "light": true
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "OUTLINE",
+    "widgetCorner": "SLIGHT",
+    "widgetEdge": "FINE",
+    "widgetTint": 0.1,
+    "widgetSolid": 0.8,
+    "font": "cormorant",
+    "clockFace": "ANALOGUE",
+    "panelLook": "LINES",
+    "notch": "TAPER"
+  },
+  "mood": [
+    "light",
+    "calm",
+    "minimal"
+  ],
+  "swatch": "#1F4E8C",
+  "credits": [
+    {
+      "title": "The Great Wave off Kanagawa",
+      "author": "Katsushika Hokusai",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:The_Great_Wave_off_Kanagawa.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "DRAWER",
+    "dockStyle": "NONE",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "drawerRail": true,
+    "drawerWidgets": [
+      {
+        "kind": "CLOCK",
+        "end": "TOP",
+        "tint": 0
+      },
+      {
+        "kind": "COMMAND",
+        "end": "SIDE",
+        "tint": 0
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  }
+}

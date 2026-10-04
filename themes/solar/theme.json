@@ -1,0 +1,78 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "solar",
+  "name": "Solar",
+  "description": "The Sun in extreme ultraviolet from NASA's Solar Dynamics Observatory, in ember orange, with the Showcase layout.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:futuristic",
+    "vibe:dark",
+    "color:orange",
+    "color:gold",
+    "style:big screen",
+    "topic:space"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FF7A1A",
+    "accentAlt": "#FFC24A",
+    "ink": "#FFF1E0",
+    "dim": "#C99B73",
+    "drawer": "#050302",
+    "surface": "#0A0605",
+    "elevated": "#1B0F09",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "oxanium",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "CHEVRON",
+    "glow": true
+  },
+  "mood": [
+    "dark",
+    "vivid",
+    "bold"
+  ],
+  "swatch": "#FF7A1A",
+  "credits": [
+    {
+      "title": "Full-disk Sun in extreme ultraviolet",
+      "author": "NASA / Solar Dynamics Observatory",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:446667main1_sdo-fulldisk-670.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "CONSOLE",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID"
+  },
+  "assistant": {
+    "look": "HUD"
+  }
+}

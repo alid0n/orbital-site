@@ -1,0 +1,101 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "canyon_poster",
+  "name": "Canyon Poster",
+  "description": "A 1930s national park poster of the Grand Canyon, in sunset rust and gold with bold capitals and a flat dock along the right edge.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:retro",
+    "vibe:energetic",
+    "color:orange",
+    "color:gold",
+    "era:30s",
+    "style:one-handed",
+    "topic:travel",
+    "topic:nature",
+    "topic:art"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#F0A03C",
+    "accentAlt": "#D2552B",
+    "ink": "#FBEBD0",
+    "dim": "#D9B98F",
+    "drawer": "#1F100A",
+    "surface": "#2A1710",
+    "elevated": "#3B2318",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "SQUARE",
+    "iconShape": "ROUNDED",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "SOLID",
+    "widgetCorner": "SQUARE",
+    "widgetEdge": "BOLD",
+    "widgetTint": 0.3,
+    "widgetSolid": 1.0,
+    "font": "montserrat",
+    "clockFace": "DIGITS",
+    "uppercase": true,
+    "panelLook": "CARD",
+    "notch": "CHEVRON"
+  },
+  "mood": [
+    "bold",
+    "vivid",
+    "dark"
+  ],
+  "swatch": "#D2552B",
+  "credits": [
+    {
+      "title": "Grand Canyon National Park, a free government service",
+      "author": "Work Projects Administration Poster Collection",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_National_Park,_a_free_government_service_LCCN2007676131.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "RIGHT",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.22,
+        "col": 0,
+        "row": 0,
+        "w": 0.78
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  }
+}

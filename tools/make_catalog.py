@@ -98,6 +98,28 @@ PHOTOS = {
         title="Alaska Aurora Borealis", author="Justin Connaher, U.S. Air Force",
         source="Wikimedia Commons", license="Public domain",
         url="https://commons.wikimedia.org/wiki/File:Alaska_Aurora_Borealis.jpg", retrieved="2026-10-03"),
+    "commons-nasa-apollo8-earthrise.jpg": dict(
+        title="Earthrise (Apollo 8, AS08-14-2383)", author="NASA / Bill Anders",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:NASA-Apollo8-Dec24-Earthrise.jpg", retrieved="2026-10-04"),
+    "commons-hokusai-great-wave-off-kanagawa.jpg": dict(
+        title="The Great Wave off Kanagawa", author="Katsushika Hokusai",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:The_Great_Wave_off_Kanagawa.jpg", retrieved="2026-10-04"),
+    "commons-wpa-grand-canyon-national-park-lccn2007676131.jpg": dict(
+        title="Grand Canyon National Park, a free government service", author="Work Projects Administration Poster Collection",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:Grand_Canyon_National_Park,_a_free_government_service_LCCN2007676131.jpg",
+        retrieved="2026-10-04"),
+    "commons-nasa-sdo-fulldisk-670.jpg": dict(
+        title="Full-disk Sun in extreme ultraviolet", author="NASA / Solar Dynamics Observatory",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:446667main1_sdo-fulldisk-670.jpg", retrieved="2026-10-04"),
+    "commons-mucha-gismonda-1894.jpg": dict(
+        title="Poster for Victorien Sardou's Gismonda starring Sarah Bernhardt", author="Alphonse Mucha",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:Alphonse_Mucha_-_Poster_for_Victorien_Sardou%27s_Gismonda_starring_Sarah_Bernhardt_-_Original.jpg",
+        retrieved="2026-10-04"),
 }
 
 
@@ -538,6 +560,71 @@ THEMES = [
           dict(corner="PILL", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="SOLID",
                widgetCorner="PILL", widgetEdge="BOLD", widgetTint=0.3, widgetSolid=1.0,
                font="fredoka", clockFace="DIGITS", panelLook="CARD", notch="DOT")),
+    # Five themes from public-domain art and NASA pictures, each on a different layout and dock.
+    theme("earthrise", "Earthrise",
+          "The Earth rising over the Moon, as the Apollo 8 crew saw it in 1968, with quiet lettering "
+          "and a free-roaming canvas.",
+          ["audience:general", "vibe:calm", "vibe:dark", "vibe:futuristic", "color:blue", "color:black"],
+          pal("#7FB3E6", "#D9C9A8", "#F2F4F7", "#8A94A3", "#07090D", "#0D1117", "#161C25", "#33000000"),
+          rendered(photo=dict(file="commons-nasa-apollo8-earthrise.jpg", focus=(0.68, 0.5), blur=0.6, saturation=0.95),
+                   wash=[(0.0, "#05070B", 0.45), (0.22, "#05070B", 0.0), (0.7, "#05070B", 0.2),
+                         (0.82, "#05070B", 0.78), (1.0, "#05070B", 0.9)],
+                   vignette=0.25, grain=0.03),
+          dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.4,
+               font="inter", clockFace="BARE", panelLook="FADE", notch="DOT"),
+          premium=True),
+    theme("great_wave", "Great Wave",
+          "Hokusai's wave over warm paper, with indigo lettering and a vermilion seal, and every app "
+          "on one drawer home.",
+          ["audience:general", "vibe:elegant", "vibe:calm", "color:blue", "color:white", "color:red"],
+          pal("#1F4E8C", "#C2452D", "#14233F", "#5A6781", "#F1E8D4", "#F5EDDA", "#E7DBBE", "#22F1E8D4", light=True),
+          rendered(photo=dict(file="commons-hokusai-great-wave-off-kanagawa.jpg", focus=(0.3, 0.5), blur=0.4, saturation=0.9),
+                   wash=[(0.0, "#F1E8D4", 0.5), (0.2, "#F1E8D4", 0.2), (0.6, "#F1E8D4", 0.3),
+                         (0.8, "#F1E8D4", 0.8), (1.0, "#F1E8D4", 0.9)],
+                   texture="paper", textureAmount=0.012, vignette=0.08, grain=0.03),
+          dict(corner="SLIGHT", iconShape="ROUNDED", iconStyle="ORIGINAL", widgetLook="OUTLINE",
+               widgetCorner="SLIGHT", widgetEdge="FINE", widgetTint=0.1, widgetSolid=0.8,
+               font="cormorant", clockFace="ANALOGUE", panelLook="LINES", notch="TAPER"),
+          premium=True),
+    theme("canyon_poster", "Canyon Poster",
+          "A 1930s national park poster of the Grand Canyon, in sunset rust and gold with bold capitals "
+          "and a flat dock along the right edge.",
+          ["audience:general", "vibe:retro", "vibe:energetic", "color:orange", "color:gold", "era:30s"],
+          pal("#F0A03C", "#D2552B", "#FBEBD0", "#D9B98F", "#1F100A", "#2A1710", "#3B2318", "#33000000"),
+          rendered(photo=dict(file="commons-wpa-grand-canyon-national-park-lccn2007676131.jpg", focus=(0.5, 0.5), blur=0.5, saturation=0.95),
+                   wash=[(0.0, "#1F100A", 0.55), (0.22, "#1F100A", 0.3), (0.6, "#1F100A", 0.4),
+                         (0.8, "#1F100A", 0.8), (1.0, "#1F100A", 0.9)],
+                   vignette=0.2, grain=0.04),
+          dict(corner="SQUARE", iconShape="ROUNDED", iconStyle="ORIGINAL", widgetLook="SOLID",
+               widgetCorner="SQUARE", widgetEdge="BOLD", widgetTint=0.3, widgetSolid=1.0,
+               font="montserrat", clockFace="DIGITS", uppercase=True, panelLook="CARD", notch="CHEVRON")),
+    theme("solar", "Solar",
+          "The Sun in extreme ultraviolet from NASA's Solar Dynamics Observatory, in ember orange, with "
+          "the Showcase layout.",
+          ["audience:general", "vibe:energetic", "vibe:futuristic", "vibe:dark", "color:orange", "color:gold"],
+          pal("#FF7A1A", "#FFC24A", "#FFF1E0", "#C99B73", "#050302", "#0A0605", "#1B0F09", "#33000000"),
+          rendered(photo=dict(file="commons-nasa-sdo-fulldisk-670.jpg", focus=(0.5, 0.5), blur=0.8, saturation=1.0,
+                              map=[(0.0, "#050302"), (0.4, "#4A1604"), (0.75, "#FF7A1A"), (1.0, "#FFE7B0")], mapAmount=0.85),
+                   wash=[(0.0, "#050302", 0.7), (0.18, "#050302", 0.6), (0.3, "#050302", 0.0), (0.7, "#050302", 0.1),
+                         (0.82, "#050302", 0.72), (1.0, "#050302", 0.88)],
+                   vignette=0.3, grain=0.03),
+          dict(corner="ROUNDED", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
+               font="oxanium", clockFace="LINE", panelLook="FADE", notch="CHEVRON", glow=True),
+          premium=True),
+    theme("gismonda", "Gismonda",
+          "Mucha's 1894 Art Nouveau poster in gold and sage, with a serif clock and the Orbit Pad.",
+          ["audience:general", "vibe:elegant", "vibe:dreamy", "color:gold", "color:green"],
+          pal("#D8A93C", "#8FA47A", "#F5E9C8", "#BDAE86", "#17130A", "#231E12", "#322A19", "#44000000"),
+          rendered(photo=dict(file="commons-mucha-gismonda-1894.jpg", focus=(0.5, 0.4), zoom=1.5, blur=0.4, saturation=1.0),
+                   wash=[(0.0, "#17130A", 0.55), (0.2, "#17130A", 0.3), (0.6, "#17130A", 0.3),
+                         (0.8, "#17130A", 0.82), (1.0, "#17130A", 0.9)],
+                   vignette=0.25, grain=0.035),
+          dict(corner="PILL", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="CARD",
+               widgetCorner="PILL", widgetEdge="HAIR", widgetTint=0.3, widgetSolid=0.8,
+               font="playfair_display", clockFace="STACK", panelLook="CARD", notch="DOT"),
+          premium=True),
 ]
 
 # EACH THEME'S MOOD (the words the store's mood filter offers) and its swatch, the one colour it is
@@ -583,6 +670,11 @@ MOODS = {
     "constellation": (["dark", "calm", "minimal"], "#1B2440"),
     "glass": (["dark", "minimal", "vivid"], "#3D4F8F"),
     "space_cadet": (["dark", "playful", "vivid"], "#1E3A8A"),
+    "earthrise": (["dark", "calm", "minimal"], "#1E3552"),
+    "great_wave": (["light", "calm", "minimal"], "#1F4E8C"),
+    "canyon_poster": (["bold", "vivid", "dark"], "#D2552B"),
+    "solar": (["dark", "vivid", "bold"], "#FF7A1A"),
+    "gismonda": (["dark", "calm", "bold"], "#8C6A24"),
 }
 
 # THE CURATED COLLECTIONS the store shows as shelves of their own, each from its first to its last
@@ -707,6 +799,17 @@ LAYOUTS = {
                   widgets=[CLOCK(0.06, 1.1)]),
     "space_cadet": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
                         widgets=[CLOCK(scale=1.2), WEATHER(0.04, 0.2, 0.92)]),
+    # Five more, each a different layout and dock: a free canvas with a container dock, a drawer home
+    # with no dock, pages with a flat dock down the right edge, the Showcase, and the Orbit Pad.
+    "earthrise": dict(homeLayout="FREE_ROAM", dockStyle="CARD", anchor="BOTTOM", drawerLayout="GRID",
+                      widgets=[CLOCK(0.07, 1.2)]),
+    "great_wave": dict(homeLayout="DRAWER", dockStyle="NONE", anchor="BOTTOM", drawerLayout="GRID",
+                       drawerRail=True, drawerWidgets=[side("CLOCK", end="TOP"), side("COMMAND")]),
+    "canyon_poster": dict(homeLayout="PAGES", dockStyle="ROW", anchor="RIGHT", drawerLayout="GRID",
+                          widgets=[CLOCK(0.06, 1.1), WEATHER(0.04, 0.22, 0.78)]),
+    "solar": dict(homeLayout="CONSOLE", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID"),
+    "gismonda": dict(homeLayout="ORBIT_PAD", dockStyle="PAD", anchor="BOTTOM", drawerLayout="GRID",
+                     widgets=[CLOCK(0.07, 1.1)]),
 }
 
 ASSISTANTS = {
@@ -721,6 +824,8 @@ ASSISTANTS = {
     "love_letters": "NOTEPAD", "cherry_blossom": "NOTEPAD", "tropical": "CHAT",
     "paper": "NOTEPAD", "forest_floor": "NOTEPAD", "desert_dusk": "SPOTLIGHT", "cozy_rainy_day": "NOTEPAD",
     "tokyo_night": "HUD", "constellation": "SPOTLIGHT", "glass": "MINIMAL_LINE", "space_cadet": "VOICE",
+    "earthrise": "MINIMAL_LINE", "great_wave": "NOTEPAD", "canyon_poster": "CHAT", "solar": "HUD",
+    "gismonda": "SPOTLIGHT",
 }
 
 # The phone-use style each layout is for. Kept consistent with the layouts above by the app's tests.
@@ -739,6 +844,8 @@ STYLES = {
     "paper": ["minimal"], "forest_floor": ["one-handed"], "desert_dusk": ["one-handed"],
     "cozy_rainy_day": ["one-handed"], "tokyo_night": ["one-handed"], "constellation": ["big screen"],
     "glass": ["one-handed"], "space_cadet": ["easy to see"],
+    "earthrise": ["minimal"], "great_wave": ["minimal"], "canyon_poster": ["one-handed"],
+    "solar": ["big screen"], "gismonda": ["one-handed"],
 }
 
 EFFECTS = {}
@@ -770,6 +877,8 @@ TOPICS = {
     "forest_floor": ["nature"], "desert_dusk": ["nature", "travel"], "cozy_rainy_day": ["autumn"],
     "tokyo_night": ["travel", "city"], "constellation": ["space"], "glass": ["orbit pad"],
     "space_cadet": ["space", "family"],
+    "earthrise": ["space"], "great_wave": ["art", "travel"], "canyon_poster": ["travel", "nature", "art"],
+    "solar": ["space"], "gismonda": ["art"],
 }
 
 # THE FEATURED SECTION of the index: the theme of each week, the drops, and the seasons.

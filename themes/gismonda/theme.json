@@ -1,0 +1,88 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "gismonda",
+  "name": "Gismonda",
+  "description": "Mucha's 1894 Art Nouveau poster in gold and sage, with a serif clock and the Orbit Pad.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:elegant",
+    "vibe:dreamy",
+    "color:gold",
+    "color:green",
+    "style:one-handed",
+    "topic:art"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#D8A93C",
+    "accentAlt": "#8FA47A",
+    "ink": "#F5E9C8",
+    "dim": "#BDAE86",
+    "drawer": "#17130A",
+    "surface": "#231E12",
+    "elevated": "#322A19",
+    "veil": "#44000000",
+    "light": false
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "PILL",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.3,
+    "widgetSolid": 0.8,
+    "font": "playfair_display",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "calm",
+    "bold"
+  ],
+  "swatch": "#8C6A24",
+  "credits": [
+    {
+      "title": "Poster for Victorien Sardou's Gismonda starring Sarah Bernhardt",
+      "author": "Alphonse Mucha",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Alphonse_Mucha_-_Poster_for_Victorien_Sardou%27s_Gismonda_starring_Sarah_Bernhardt_-_Original.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "ORBIT_PAD",
+    "dockStyle": "PAD",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.07,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      }
+    ]
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
+  }
+}

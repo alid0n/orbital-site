@@ -1668,6 +1668,253 @@
           "url": "https://images.nasa.gov/details/iss075e0144232"
         }
       ]
+    },
+    {
+      "id": "earthrise",
+      "name": "Earthrise",
+      "description": "The Earth rising over the Moon, as the Apollo 8 crew saw it in 1968, with quiet lettering and a free-roaming canvas.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "vibe:futuristic",
+        "color:blue",
+        "color:black",
+        "style:minimal",
+        "topic:space"
+      ],
+      "thumbnail": "earthrise/preview.png",
+      "file": "earthrise/theme.json",
+      "premium": true,
+      "size": 1885,
+      "sha256": "bd44f6a53ffc83abfd2bee0d3e7b253f5691ab97abaecf244f5462ca9db05ebd",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#7FB3E6",
+        "accentAlt": "#D9C9A8",
+        "ink": "#F2F4F7",
+        "dim": "#8A94A3",
+        "drawer": "#07090D",
+        "surface": "#0D1117",
+        "elevated": "#161C25",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#1E3552",
+      "credits": [
+        {
+          "title": "Earthrise (Apollo 8, AS08-14-2383)",
+          "author": "NASA / Bill Anders",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:NASA-Apollo8-Dec24-Earthrise.jpg"
+        }
+      ]
+    },
+    {
+      "id": "great_wave",
+      "name": "Great Wave",
+      "description": "Hokusai's wave over warm paper, with indigo lettering and a vermilion seal, and every app on one drawer home.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:elegant",
+        "vibe:calm",
+        "color:blue",
+        "color:white",
+        "color:red",
+        "style:minimal",
+        "topic:art",
+        "topic:travel"
+      ],
+      "thumbnail": "great_wave/preview.png",
+      "file": "great_wave/theme.json",
+      "premium": true,
+      "size": 1911,
+      "sha256": "c8f669049f83a67cc48caee873ee9803e93cc256e22aac0c649f7c4cc7556eb8",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#1F4E8C",
+        "accentAlt": "#C2452D",
+        "ink": "#14233F",
+        "dim": "#5A6781",
+        "drawer": "#F1E8D4",
+        "surface": "#F5EDDA",
+        "elevated": "#E7DBBE",
+        "veil": "#22F1E8D4",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "calm",
+        "minimal"
+      ],
+      "swatch": "#1F4E8C",
+      "credits": [
+        {
+          "title": "The Great Wave off Kanagawa",
+          "author": "Katsushika Hokusai",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:The_Great_Wave_off_Kanagawa.jpg"
+        }
+      ]
+    },
+    {
+      "id": "canyon_poster",
+      "name": "Canyon Poster",
+      "description": "A 1930s national park poster of the Grand Canyon, in sunset rust and gold with bold capitals and a flat dock along the right edge.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:retro",
+        "vibe:energetic",
+        "color:orange",
+        "color:gold",
+        "era:30s",
+        "style:one-handed",
+        "topic:travel",
+        "topic:nature",
+        "topic:art"
+      ],
+      "thumbnail": "canyon_poster/preview.png",
+      "file": "canyon_poster/theme.json",
+      "premium": false,
+      "size": 2213,
+      "sha256": "32625241c3d5998543614958a3401612c6c3ca833529a9f687418be97306eb9b",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#F0A03C",
+        "accentAlt": "#D2552B",
+        "ink": "#FBEBD0",
+        "dim": "#D9B98F",
+        "drawer": "#1F100A",
+        "surface": "#2A1710",
+        "elevated": "#3B2318",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "bold",
+        "vivid",
+        "dark"
+      ],
+      "swatch": "#D2552B",
+      "credits": [
+        {
+          "title": "Grand Canyon National Park, a free government service",
+          "author": "Work Projects Administration Poster Collection",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_National_Park,_a_free_government_service_LCCN2007676131.jpg"
+        }
+      ]
+    },
+    {
+      "id": "solar",
+      "name": "Solar",
+      "description": "The Sun in extreme ultraviolet from NASA's Solar Dynamics Observatory, in ember orange, with the Showcase layout.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:futuristic",
+        "vibe:dark",
+        "color:orange",
+        "color:gold",
+        "style:big screen",
+        "topic:space"
+      ],
+      "thumbnail": "solar/preview.png",
+      "file": "solar/theme.json",
+      "premium": true,
+      "size": 1715,
+      "sha256": "7f301ef992743d59e6ad1168f5a3b4f30420ff5f022d747afceab62c7d4e43cc",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF7A1A",
+        "accentAlt": "#FFC24A",
+        "ink": "#FFF1E0",
+        "dim": "#C99B73",
+        "drawer": "#050302",
+        "surface": "#0A0605",
+        "elevated": "#1B0F09",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "bold"
+      ],
+      "swatch": "#FF7A1A",
+      "credits": [
+        {
+          "title": "Full-disk Sun in extreme ultraviolet",
+          "author": "NASA / Solar Dynamics Observatory",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:446667main1_sdo-fulldisk-670.jpg"
+        }
+      ]
+    },
+    {
+      "id": "gismonda",
+      "name": "Gismonda",
+      "description": "Mucha's 1894 Art Nouveau poster in gold and sage, with a serif clock and the Orbit Pad.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:elegant",
+        "vibe:dreamy",
+        "color:gold",
+        "color:green",
+        "style:one-handed",
+        "topic:art"
+      ],
+      "thumbnail": "gismonda/preview.png",
+      "file": "gismonda/theme.json",
+      "premium": true,
+      "size": 1925,
+      "sha256": "00569e76b8145ffe70253d4c360b13be2916a4fe14e33a05e4b4a8baa92fbed1",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#D8A93C",
+        "accentAlt": "#8FA47A",
+        "ink": "#F5E9C8",
+        "dim": "#BDAE86",
+        "drawer": "#17130A",
+        "surface": "#231E12",
+        "elevated": "#322A19",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "calm",
+        "bold"
+      ],
+      "swatch": "#8C6A24",
+      "credits": [
+        {
+          "title": "Poster for Victorien Sardou's Gismonda starring Sarah Bernhardt",
+          "author": "Alphonse Mucha",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:Alphonse_Mucha_-_Poster_for_Victorien_Sardou%27s_Gismonda_starring_Sarah_Bernhardt_-_Original.jpg"
+        }
+      ]
     }
   ],
   "featured": {
