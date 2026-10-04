@@ -196,15 +196,6 @@ WALLPAPERS = [
          crop(0.33, 0.5), crop(0.5, 0.5, 1.0)),
 
     # BOTANICAL AND NATURAL HISTORY
-    wall("ornithogalum", "botanical", "Ornithogalum",
-         cma(132868, "1955.327", "Les Liliacées: Ornithogalum longibracteatum", "Pierre-Joseph Redouté"),
-         fit(0.06, 0.03, 0.92, 0.86), fit(0.06, 0.03, 0.92, 0.86)),
-    wall("pasture_rose", "botanical", "Pasture Rose",
-         cma(135614, "1959.15", "Pasture Rose (Rosa Carolina Corymbosa)", "Pierre-Joseph Redouté"),
-         fit(0.08, 0.02, 0.97, 0.84), fit(0.08, 0.02, 0.97, 0.84)),
-    wall("tiger_lily", "botanical", "Lily",
-         cma(132874, "1955.332", "Plantae Selectae: No. 11 - Lily", "Georg Dionysius Ehret; Christoph Jacob Trew"),
-         fit(0.08, 0.04, 0.98, 0.84), fit(0.08, 0.04, 0.98, 0.84)),
     wall("flowers_in_a_glass", "botanical", "Flowers in a Glass",
          cma(136207, "1960.108", "Flowers in a Glass", "Ambrosius Bosschaert"),
          crop(0.52, 0.42, 0.92, (0.02, 0.0, 0.98, 0.98)), crop(0.5, 0.35, 0.5, (0.02, 0.0, 0.98, 0.98))),
