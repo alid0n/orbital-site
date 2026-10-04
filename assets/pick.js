@@ -1,13 +1,13 @@
 /* ============================================================================
    "Pick a theme": the first thing a visitor sees on the front page.
 
-   A full screen with the logo, the slogan and two rows of Orbital's themes
-   drifting in opposite directions: the themes built into the app on one row,
-   the theme store's on the other (only the ones in season, as in the app).
-   Scrolling or swiping on a row pushes it along faster, or back the other
+   A full screen with the logo, the slogan and two rows of home screens
+   drifting in opposite directions, each a theme set up a different way: the
+   orbit, Orbit Pad, Showcase, free roam, tiles, a letter dock, a dock on any
+   edge. Scrolling or swiping on a row pushes it along faster, or back the other
    way, and it eases back to its drift when let go.
 
-   Picking one colours the whole site in that theme (theme.js), puts it on the
+   Picking one colours the whole site in its theme (theme.js), puts it on the
    music phone, and, with the sound switch on, starts the soundtrack on the
    song chosen for it (music.js). The pick is kept for the rest of the visit,
    so the screen shows once; "Change theme" in the hero brings it back.
@@ -19,7 +19,6 @@
   var APP = window.OrbitalThemes || {};
   var KEY = 'orbital-picked';
   var SOUND = 'orbital-pick-sound';
-  var CATALOG = 'themes/index.json';
 
   function get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
   function put(k, v) { try { sessionStorage.setItem(k, v); } catch (e) { /* this page only */ } }
@@ -28,43 +27,16 @@
 
   /* ---- the two rows ---------------------------------------------------------- */
 
-  /* The app's own themes, pictured by the site's phone renderer
-     (assets/pick/<id>.webp). "Your phone's colors" is left out: it has no
-     colours of its own until it is on a phone. */
-  function appThemes() {
-    return Object.keys(APP).filter(function (id) { return id !== 'system'; }).map(function (id) {
-      var t = APP[id];
-      return { id: id, name: t.name, free: !!t.free, img: 'assets/pick/' + id + '.webp',
-        a: t.a, b: t.b, bg: t.bg, panel: t.panel, light: !!t.light };
-    });
-  }
-
-  /* A seasonal theme shows only inside its window, which may run over New
-     Year (from 12-26 until 01-07). */
-  function inSeason(win, now) {
-    var md = function (s) { var p = s.split('-'); return +p[0] * 100 + +p[1]; };
-    var today = (now.getMonth() + 1) * 100 + now.getDate();
-    var from = md(win.from);
-    var until = md(win.until);
-    return from <= until ? today >= from && today <= until : today >= from || today <= until;
-  }
-
-  function storeThemes(catalog) {
-    var now = new Date();
-    var seasonal = {};
-    var open = {};
-    ((catalog.featured && catalog.featured.seasonal) || catalog.seasonal || []).forEach(function (s) {
-      (s.themes || []).forEach(function (id) {
-        seasonal[id] = true;
-        if (inSeason(s, now)) open[id] = true;
-      });
-    });
-    return (catalog.themes || []).filter(function (t) {
-      return t.colors && t.thumbnail && (!seasonal[t.id] || open[t.id]);
-    }).map(function (t) {
-      var c = t.colors;
-      return { id: 'store:' + t.id, name: t.name, free: !t.premium, img: 'themes/' + t.thumbnail,
-        a: c.accent, b: c.accentAlt || c.accent, bg: c.surface, panel: c.elevated || c.surface, light: !!c.light };
+  /* Each card is a setup: a theme together with a way of using Orbital (a
+     layout, a dock, an edge, icon shapes), so the rows show the range of what
+     Orbital can be. The setups and their pictures come from
+     tools/make_picker.py (assets/pick/setups.js). App themes take their
+     colours from phone.js; store themes carry theirs. */
+  function setups(row) {
+    return (window.OrbitalSetups || []).filter(function (s) { return s.row === row; }).map(function (s) {
+      var c = s.colors || APP[s.theme] || APP.orbital;
+      return { id: s.key, theme: s.theme, name: s.name, themeName: c.name, img: 'assets/pick/' + s.key + '.webp?v=1',
+        a: c.a, b: c.b, bg: c.bg, panel: c.panel, light: !!c.light };
     });
   }
 
@@ -73,10 +45,10 @@
   function card(t, quiet) {
     byId[t.id] = t;
     return '<button type="button" class="vibe" data-pick="' + t.id + '"' + (quiet ? ' tabindex="-1"' : '') +
-      ' aria-label="' + t.name + (t.free ? ', free' : ', Orbital Premium') + '">' +
-      '<span class="vp-img"><img src="' + t.img + '" alt="" width="240" height="480" loading="lazy" decoding="async" draggable="false">' +
-      '<em class="vp-tag' + (t.free ? '' : ' is-premium') + '">' + (t.free ? 'Free' : 'Premium') + '</em></span>' +
+      ' aria-label="' + t.name + ', in the ' + t.themeName + ' theme">' +
+      '<span class="vp-img"><img src="' + t.img + '" alt="" width="240" height="480"' + (quiet ? ' loading="lazy"' : '') + ' decoding="async" draggable="false"></span>' +
       '<span class="vibe-name">' + t.name + '</span>' +
+      '<span class="vibe-theme">' + t.themeName + '</span>' +
       '</button>';
   }
 
@@ -103,6 +75,7 @@
     screen.setAttribute('aria-labelledby', 'vibes-h');
     var soundOn = get(SOUND) !== 'off';
     screen.innerHTML =
+      '<div class="vibes-main">' +
       '<div class="vibes-top">' +
       '<svg class="vibes-logo" viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="19" rx="12" ry="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="12.5" r="3.4" fill="currentColor"/><circle cx="4.6" cy="20.4" r="2.1" fill="currentColor"/><circle cx="27.4" cy="20.4" r="2.1" fill="currentColor"/></svg>' +
       '<p class="vibes-brand">Orbital Launcher</p>' +
@@ -110,32 +83,33 @@
       '<h1 class="vibes-h" id="vibes-h">Pick a theme</h1>' +
       '</div>' +
       '<div class="vibes-rows">' +
-      '<div class="vibe-row" data-row="app" aria-label="Themes in the app"><div class="vibe-track"></div></div>' +
-      '<div class="vibe-row" data-row="store" aria-label="Themes from the theme store"><div class="vibe-track"></div></div>' +
+      '<div class="vibe-row" aria-label="Setups"><div class="vibe-track"></div></div>' +
+      '<div class="vibe-row" aria-label="More setups"><div class="vibe-track"></div></div>' +
       '</div>' +
       '<div class="vibes-foot">' +
       '<label class="vibes-sound"><input type="checkbox" role="switch"' + (soundOn ? ' checked' : '') + '>' +
       '<span class="sw" aria-hidden="true"></span><span class="vibes-sound-l">Soundtrack</span></label>' +
       '<button type="button" class="vibes-skip">Skip</button>' +
-      '</div>';
+      '<button type="button" class="vibes-what" aria-controls="vibes-about">What is this?</button>' +
+      '</div>' +
+      '</div>' +
+      /* For anybody who has never changed their home screen: what Orbital is,
+         in plain words, just below the rows. */
+      '<section class="vibes-about" id="vibes-about" aria-labelledby="vibes-about-h">' +
+      '<h2 id="vibes-about-h">What is Orbital Launcher?</h2>' +
+      '<p>Your phone&rsquo;s <b>home screen</b> is what you see when you unlock it: your apps, your wallpaper, and things like the clock and the weather.</p>' +
+      '<p><b>Orbital Launcher is an app that gives you a new home screen.</b> You choose how it looks and works: your favorite apps right under your thumb, the layout you like, and colors and styles from dozens of themes. The pictures above are all real ways to set it up.</p>' +
+      '<p>It doesn&rsquo;t change your other apps, your photos or your settings. You can go back to your old home screen whenever you like, in your phone&rsquo;s settings or by uninstalling Orbital.</p>' +
+      '<ul class="vibes-facts"><li>Free</li><li>For Android phones, Android 8.0 and later</li><li>No account needed</li></ul>' +
+      '<button type="button" class="btn vibes-in">Show me around</button>' +
+      '</section>';
     document.body.appendChild(screen);
     document.documentElement.classList.add('vibes-open');
 
     var rowEls = screen.querySelectorAll('.vibe-row');
-    fill(rowEls[0], appThemes());
-    rows = [Row(rowEls[0], -1)];
-
-    /* The store row fills in when the catalog arrives; until then it shows
-       the app's themes the other way round, so it is never empty. */
-    var appBack = appThemes().reverse();
-    fill(rowEls[1], appBack);
-    rows.push(Row(rowEls[1], 1));
-    fetch(CATALOG).then(function (r) { return r.ok ? r.json() : null; }).then(function (cat) {
-      var list = cat ? storeThemes(cat) : [];
-      if (list.length < 6 || !screen) return;
-      fill(rowEls[1], list);
-      rows[1].measure();
-    }).catch(function () { /* keeps the app themes */ });
+    fill(rowEls[0], setups(0));
+    fill(rowEls[1], setups(1));
+    rows = [Row(rowEls[0], -1), Row(rowEls[1], 1)];
 
     var last = 0;
     raf = requestAnimationFrame(function tick(now) {
@@ -149,6 +123,10 @@
       put(SOUND, e.target.checked ? 'on' : 'off');
     });
     screen.querySelector('.vibes-skip').addEventListener('click', function () { choose(null); });
+    screen.querySelector('.vibes-in').addEventListener('click', function () { choose(null); });
+    screen.querySelector('.vibes-what').addEventListener('click', function () {
+      screen.querySelector('.vibes-about').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    });
     screen.addEventListener('keydown', function (e) { if (e.key === 'Escape') choose(null); });
     var first = screen.querySelector('.vibe');
     if (first) first.focus({ preventScroll: true });
@@ -241,7 +219,9 @@
   function choose(id, from) {
     if (!screen) return;
     var t = id ? byId[id] : null;
-    if (t && window.OrbitalTheme) window.OrbitalTheme.apply(t, true);
+    if (t && window.OrbitalTheme) {
+      window.OrbitalTheme.apply({ id: t.theme, name: t.themeName, a: t.a, b: t.b, bg: t.bg, panel: t.panel, light: t.light }, true);
+    }
     put(KEY, t ? t.id : 'skip');
     var sound = screen.querySelector('.vibes-sound input').checked;
     if (from) from.classList.add('is-picked');
@@ -255,7 +235,7 @@
       cancelAnimationFrame(raf);
       s.remove();
     }, reduced ? 0 : 650);
-    document.dispatchEvent(new CustomEvent('orbital:theme', { detail: { id: t ? t.id : null, sound: sound } }));
+    document.dispatchEvent(new CustomEvent('orbital:theme', { detail: { id: t ? t.theme : null, sound: sound } }));
     if (sound && window.OrbitalMusic) window.OrbitalMusic.start();
   }
 

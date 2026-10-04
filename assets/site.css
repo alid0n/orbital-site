@@ -1707,15 +1707,10 @@ dl.rows dd {
 html.vibes-open, html.vibes-open body { overflow: hidden; }
 
 .vibes {
-  --cw: clamp(92px, min(30vw, 13vh), 160px);
+  --cw: clamp(88px, min(30vw, 12vh), 160px);
   position: fixed;
   inset: 0;
   z-index: 100;
-  display: flex;
-  flex-direction: column;
-  justify-content: safe center;
-  gap: clamp(14px, 3vh, 30px);
-  padding: max(18px, env(safe-area-inset-top)) 0 max(16px, env(safe-area-inset-bottom));
   overflow-y: auto;
   overscroll-behavior: contain;
   background:
@@ -1724,6 +1719,15 @@ html.vibes-open, html.vibes-open body { overflow: hidden; }
   animation: vibes-in 0.5s ease;
 }
 
+.vibes-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;
+  gap: clamp(14px, 3vh, 30px);
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: max(18px, env(safe-area-inset-top)) 0 max(16px, env(safe-area-inset-bottom));
+}
 .vibes-top { padding: 0 16px; text-align: center; }
 .vibes-logo { width: 38px; height: 38px; color: var(--accent); }
 .vibes-brand { margin: 6px 0 0; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
@@ -1777,11 +1781,10 @@ html.vibes-open, html.vibes-open body { overflow: hidden; }
 .vibe.is-picked .vp-img { transform: scale(1.06); box-shadow: 0 0 0 3px var(--accent), 0 0 40px color-mix(in srgb, var(--accent) 50%, transparent); }
 
 .vibe-name { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 8px; font-size: 0.92rem; font-weight: 600; line-height: 1.25; color: var(--text-strong); }
-/* Free or Premium, on the picture itself. */
-.vp-tag { position: absolute; left: 6px; top: 6px; padding: 1px 7px; border-radius: 999px; font-style: normal; font-size: 0.66rem; font-weight: 600; line-height: 1.5; color: #fff; background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(4px); }
-.vp-tag.is-premium { color: #1b1400; background: #f2c14e; }
+@media (max-width: 480px) { .vibe-name { font-size: 0.82rem; } }
+.vibe-theme { display: block; margin-top: 1px; font-size: 0.78rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-.vibes-foot { display: flex; align-items: center; justify-content: center; gap: 22px; padding: 0 16px; }
+.vibes-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 18px; padding: 0 16px; }
 .vibes-sound { position: relative; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-weight: 500; color: var(--text-strong); }
 .vibes-sound input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .vibes-sound .sw { position: relative; width: 46px; height: 28px; border-radius: 999px; background: color-mix(in srgb, var(--text) 18%, transparent); transition: background 0.2s; }
@@ -1791,6 +1794,16 @@ html.vibes-open, html.vibes-open body { overflow: hidden; }
 .vibes-sound input:focus-visible + .sw { outline: 2px solid var(--accent); outline-offset: 3px; }
 .vibes-skip { padding: 8px 4px; border: 0; background: none; font: inherit; font-size: 0.92rem; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .vibes-skip:hover { color: var(--text-strong); }
+.vibes-what { padding: 8px 4px; border: 0; background: none; font: inherit; font-size: 0.92rem; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+
+/* What Orbital is, in plain words, below the rows. */
+.vibes-about { max-width: 38rem; margin: 0 auto; padding: 40px 20px max(48px, env(safe-area-inset-bottom)); border-top: 1px solid var(--rule); }
+.vibes-about h2 { margin: 0 0 14px; font-size: clamp(1.4rem, 5.5vw, 1.9rem); color: var(--text-strong); }
+.vibes-about p { margin: 0 0 14px; color: var(--text); line-height: 1.6; }
+.vibes-about b { color: var(--text-strong); }
+.vibes-facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 22px; padding: 0; list-style: none; }
+.vibes-facts li { padding: 4px 12px; border-radius: 999px; font-size: 0.86rem; color: var(--text-strong); background: color-mix(in srgb, var(--accent) 12%, transparent); border: 1px solid var(--card-edge); }
+.vibes-in { cursor: pointer; font: inherit; font-weight: 600; }
 
 .vibes.is-leaving { pointer-events: none; animation: vibes-out 0.6s ease forwards; }
 @keyframes vibes-in { from { opacity: 0; } }
@@ -1798,8 +1811,9 @@ html.vibes-open, html.vibes-open body { overflow: hidden; }
 
 /* Short screens, such as a phone on its side: smaller cards, no brand line. */
 @media (max-height: 560px) {
-  .vibes { --cw: clamp(70px, 13vh, 110px); justify-content: flex-start; }
-  .vibes-brand, .vibe-tags { display: none; }
+  .vibes { --cw: clamp(70px, 13vh, 110px); }
+  .vibes-main { justify-content: flex-start; }
+  .vibes-brand, .vibe-theme { display: none; }
   .vibes-slogan { font-size: 1.6rem; }
 }
 
