@@ -1,0 +1,97 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "skyline",
+  "name": "Skyline",
+  "description": "A city at dusk, with amber lettering and the Orbit Pad under your thumb.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:elegant",
+    "vibe:dark",
+    "color:orange",
+    "color:blue",
+    "style:one-handed",
+    "topic:city",
+    "topic:travel"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFB35C",
+    "accentAlt": "#7DB2FF",
+    "ink": "#F4F6FB",
+    "dim": "#A9B1C6",
+    "drawer": "#080A18",
+    "surface": "#0C1020",
+    "elevated": "#1B2138",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "manrope",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "bold",
+    "minimal"
+  ],
+  "swatch": "#C9772E",
+  "credits": [
+    {
+      "title": "City Skyline",
+      "author": "Matt Bango",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/city-skyline-VDAAVU9YTE"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "ORBIT_PAD",
+    "dockStyle": "PAD",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.22,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "HUD"
+  }
+}

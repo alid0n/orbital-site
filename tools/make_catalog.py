@@ -165,6 +165,18 @@ PHOTOS = {
         source="Wikimedia Commons", license="Public domain",
         url="https://commons.wikimedia.org/wiki/File:Albert_Bierstadt_-_Among_the_Sierra_Nevada,_California_-_Google_Art_Project.jpg",
         retrieved="2026-10-04"),
+    "stocksnap-mountain-sunrise-7QDY2XTHEQ.jpg": dict(
+        title="Mountain Sunrise", author="Free Nature Stock", source="StockSnap.io", license="CC0 1.0",
+        url="https://stocksnap.io/photo/mountain-sunrise-7QDY2XTHEQ", retrieved="2026-10-04"),
+    "stocksnap-sea-ocean-WMLEHDPGX1.jpg": dict(
+        title="Sea Ocean", author="Matt Bango", source="StockSnap.io", license="CC0 1.0",
+        url="https://stocksnap.io/photo/sea-ocean-WMLEHDPGX1", retrieved="2026-10-04"),
+    "stocksnap-sunrise-mountains-HLQSR4VMVA.jpg": dict(
+        title="Sunrise Mountains", author="Free Nature Stock", source="StockSnap.io", license="CC0 1.0",
+        url="https://stocksnap.io/photo/sunrise-mountains-HLQSR4VMVA", retrieved="2026-10-04"),
+    "stocksnap-city-skyline-VDAAVU9YTE.jpg": dict(
+        title="City Skyline", author="Matt Bango", source="StockSnap.io", license="CC0 1.0",
+        url="https://stocksnap.io/photo/city-skyline-VDAAVU9YTE", retrieved="2026-10-04"),
 }
 
 
@@ -802,6 +814,63 @@ THEMES = [
                widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
                font="outfit", clockFace="STACK", panelLook="FADE", notch="DOT"),
           premium=True),
+    # Modern, broadly appealing themes: clean pages with an everyday dock, one on the Orbit Pad.
+    theme("daybreak", "Daybreak",
+          "Soft pink and blue morning light behind clean, easy-to-read lettering.",
+          ["audience:general", "vibe:calm", "vibe:dreamy", "color:pink", "color:blue", "color:pastel"],
+          pal("#E0607E", "#5A8DEE", "#23304A", "#66708A", "#F6F2F8", "#FAF7FB", "#EAE3F0", "#22FFFFFF", light=True),
+          rendered(photo=dict(file="stocksnap-mountain-sunrise-7QDY2XTHEQ.jpg", focus=(0.5, 0.5), blur=0.4, saturation=1.0),
+                   wash=[(0.0, "#F6F2F8", 0.55), (0.2, "#F6F2F8", 0.4), (0.62, "#F6F2F8", 0.12),
+                         (0.8, "#F6F2F8", 0.7), (1.0, "#F6F2F8", 0.85)],
+                   vignette=0.05, grain=0.025),
+          dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="CARD",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.9,
+               font="outfit", clockFace="LINE", panelLook="CARD", notch="DOT")),
+    theme("shoreline", "Shoreline",
+          "Surf rolling onto pale sand, seen from above, in fresh teal with soft glass widgets.",
+          ["audience:general", "vibe:chill", "vibe:calm", "color:blue", "color:white", "color:pastel"],
+          pal("#6FE0D0", "#F2D9A8", "#FFFFFF", "#CFE8EA", "#082A30", "#0E3A40", "#1B5560", "#33000000"),
+          rendered(photo=dict(file="stocksnap-sea-ocean-WMLEHDPGX1.jpg", focus=(0.5, 0.45), blur=0.4, saturation=1.0),
+                   wash=[(0.0, "#082A30", 0.55), (0.2, "#082A30", 0.4), (0.62, "#082A30", 0.12),
+                         (0.8, "#082A30", 0.7), (1.0, "#082A30", 0.85)],
+                   vignette=0.15, grain=0.03),
+          dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
+               font="dm_sans", clockFace="BARE", panelLook="FADE", notch="DOT")),
+    theme("afterglow", "Afterglow",
+          "A violet and orange sunset behind a ridge, with bold lettering and the Orbit wheel.",
+          ["audience:general", "vibe:energetic", "vibe:dreamy", "color:orange", "color:purple"],
+          pal("#FF9A4D", "#C08BFF", "#FFF6EE", "#E8C9C0", "#14062A", "#1A0B2C", "#2E1747", "#33000000"),
+          rendered(photo=dict(file="stocksnap-sunrise-mountains-HLQSR4VMVA.jpg", focus=(0.5, 0.5), blur=0.4, saturation=1.0),
+                   wash=[(0.0, "#14062A", 0.5), (0.2, "#14062A", 0.35), (0.62, "#14062A", 0.1),
+                         (0.8, "#14062A", 0.65), (1.0, "#14062A", 0.82)],
+                   vignette=0.2, grain=0.03),
+          dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
+               font="poppins", clockFace="LINE", panelLook="FADE", notch="DOT")),
+    theme("midnight", "Midnight",
+          "True black with a single violet glow. Minimal, easy on the eyes and kind to your battery.",
+          ["audience:general", "vibe:calm", "vibe:dark", "color:purple", "color:black"],
+          pal("#9B7BFF", "#4DD6C4", "#F2F0FF", "#8E89B5", "#000000", "#07060F", "#14122B", "#22000000"),
+          rendered(mesh=[(0.5, 0.1, "#3B2A7A", 0.5), (0.5, 0.4, "#12102A", 0.5), (0.5, 0.75, "#000000", 0.6),
+                         (0.1, 0.95, "#000000", 0.4), (0.9, 0.95, "#000000", 0.4)],
+                   blobs=[(0.5, 0.1, 0.3, "#6B4FE0", 0.45)],
+                   vignette=0.1, grain=0.03),
+          dict(corner="ROUNDED", iconShape="SQUIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.5,
+               font="inter", clockFace="BARE", panelLook="LINES", notch="TAPER")),
+    theme("skyline", "Skyline",
+          "A city at dusk, with amber lettering and the Orbit Pad under your thumb.",
+          ["audience:general", "vibe:elegant", "vibe:dark", "color:orange", "color:blue"],
+          pal("#FFB35C", "#7DB2FF", "#F4F6FB", "#A9B1C6", "#080A18", "#0C1020", "#1B2138", "#33000000"),
+          rendered(photo=dict(file="stocksnap-city-skyline-VDAAVU9YTE.jpg", focus=(0.5, 0.6), blur=0.4, saturation=1.0),
+                   wash=[(0.0, "#080A18", 0.55), (0.2, "#080A18", 0.4), (0.62, "#080A18", 0.12),
+                         (0.8, "#080A18", 0.65), (1.0, "#080A18", 0.82)],
+                   vignette=0.2, grain=0.03),
+          dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.5,
+               font="manrope", clockFace="LINE", panelLook="FADE", notch="DOT"),
+          premium=True),
 ]
 
 # EACH THEME'S MOOD (the words the store's mood filter offers) and its swatch, the one colour it is
@@ -862,6 +931,11 @@ MOODS = {
     "saturns_hexagon": (["dark", "vivid", "bold"], "#C99A3C"),
     "flamingo": (["light", "vivid", "bold"], "#E26A7E"),
     "golden_sierra": (["dark", "cozy", "vivid"], "#B97A2E"),
+    "daybreak": (["light", "pastel", "calm"], "#E9B8C8"),
+    "shoreline": (["calm", "vivid", "light"], "#2BA5A0"),
+    "afterglow": (["dark", "vivid", "bold"], "#E0662E"),
+    "midnight": (["dark", "minimal", "calm"], "#1B1440"),
+    "skyline": (["dark", "bold", "minimal"], "#C9772E"),
 }
 
 # THE CURATED COLLECTIONS the store shows as shelves of their own, each from its first to its last
@@ -1031,6 +1105,17 @@ LAYOUTS = {
     "golden_sierra": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="TOP", drawerLayout="GRID",
                           widgets=[CLOCK(0.17, 1.1), w("batt", "BATTERY", 0.04, 0.34, 0.92),
                                    w("people", "PEOPLE", 0.04, 0.46, 0.92)]),
+    # Modern and broadly appealing: pages with a flat row, a container, the Orbit wheel and the Orbit Pad.
+    "daybreak": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
+                     widgets=[CLOCK(0.06, 1.0), WEATHER(0.04, 0.2, 0.92), w("next", "AGENDA", 0.04, 0.32, 0.92)]),
+    "shoreline": dict(homeLayout="PAGES", dockStyle="CARD", anchor="BOTTOM", drawerLayout="GRID",
+                      widgets=[CLOCK(0.07, 1.2), WEATHER(0.04, 0.22, 0.92)]),
+    "afterglow": dict(homeLayout="PAGES", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID",
+                      widgets=[CLOCK(0.06, 1.0), MEDIA(0.2)]),
+    "midnight": dict(homeLayout="PAGES", dockStyle="ROW", anchor="BOTTOM", drawerLayout="GRID",
+                     widgets=[CLOCK(0.08, 1.2), WEATHER(0.04, 0.22, 0.92)]),
+    "skyline": dict(homeLayout="ORBIT_PAD", dockStyle="PAD", anchor="BOTTOM", drawerLayout="GRID",
+                    widgets=[CLOCK(0.06, 1.0), w("next", "AGENDA", 0.04, 0.22, 0.92)]),
 }
 
 ASSISTANTS = {
@@ -1051,6 +1136,8 @@ ASSISTANTS = {
     "water_lilies": "NOTEPAD",
     "sea_of_fog": "SPOTLIGHT", "willow_bough": "NOTEPAD", "saturns_hexagon": "HUD", "flamingo": "CHAT",
     "golden_sierra": "SPOTLIGHT",
+    "daybreak": "CHAT", "shoreline": "CHAT", "afterglow": "SPOTLIGHT", "midnight": "MINIMAL_LINE",
+    "skyline": "HUD",
 }
 
 # The phone-use style each layout is for. Kept consistent with the layouts above by the app's tests.
@@ -1075,6 +1162,8 @@ STYLES = {
     "medusae": ["one-handed"], "water_lilies": ["traditional"],
     "sea_of_fog": ["big screen"], "willow_bough": ["traditional"], "saturns_hexagon": ["one-handed"],
     "flamingo": ["minimal"], "golden_sierra": ["one-handed"],
+    "daybreak": ["one-handed"], "shoreline": ["one-handed"], "afterglow": ["one-handed"],
+    "midnight": ["minimal"], "skyline": ["one-handed"],
 }
 
 EFFECTS = {}
@@ -1113,6 +1202,8 @@ TOPICS = {
     "water_lilies": ["nature", "art"],
     "sea_of_fog": ["nature", "art"], "willow_bough": ["nature", "art"], "saturns_hexagon": ["space"],
     "flamingo": ["animals", "nature", "art"], "golden_sierra": ["nature", "travel", "art"],
+    "daybreak": ["nature"], "shoreline": ["beach", "travel", "summer"], "afterglow": ["nature"],
+    "skyline": ["city", "travel"],
 }
 
 # THE FEATURED SECTION of the index: the theme of each week, the drops, and the seasons.

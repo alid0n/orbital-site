@@ -2416,6 +2416,242 @@
           "url": "https://commons.wikimedia.org/wiki/File:Albert_Bierstadt_-_Among_the_Sierra_Nevada,_California_-_Google_Art_Project.jpg"
         }
       ]
+    },
+    {
+      "id": "daybreak",
+      "name": "Daybreak",
+      "description": "Soft pink and blue morning light behind clean, easy-to-read lettering.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dreamy",
+        "color:pink",
+        "color:blue",
+        "color:pastel",
+        "style:one-handed",
+        "topic:nature"
+      ],
+      "thumbnail": "daybreak/preview.png",
+      "file": "daybreak/theme.json",
+      "premium": false,
+      "size": 2073,
+      "sha256": "1b3d48338e3d3f92287b02ed3ca12a993a35867e13601008dc8d75ad66d82e7b",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#E0607E",
+        "accentAlt": "#5A8DEE",
+        "ink": "#23304A",
+        "dim": "#66708A",
+        "drawer": "#F6F2F8",
+        "surface": "#FAF7FB",
+        "elevated": "#EAE3F0",
+        "veil": "#22FFFFFF",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "pastel",
+        "calm"
+      ],
+      "swatch": "#E9B8C8",
+      "credits": [
+        {
+          "title": "Mountain Sunrise",
+          "author": "Free Nature Stock",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/mountain-sunrise-7QDY2XTHEQ"
+        }
+      ]
+    },
+    {
+      "id": "shoreline",
+      "name": "Shoreline",
+      "description": "Surf rolling onto pale sand, seen from above, in fresh teal with soft glass widgets.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:chill",
+        "vibe:calm",
+        "color:blue",
+        "color:white",
+        "color:pastel",
+        "style:one-handed",
+        "topic:beach",
+        "topic:travel",
+        "topic:summer"
+      ],
+      "thumbnail": "shoreline/preview.png",
+      "file": "shoreline/theme.json",
+      "premium": false,
+      "size": 1977,
+      "sha256": "1402bfceaeb06c9c5157a10ef422f983018297d10fde8e8b0cefad6be31a6ea3",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#6FE0D0",
+        "accentAlt": "#F2D9A8",
+        "ink": "#FFFFFF",
+        "dim": "#CFE8EA",
+        "drawer": "#082A30",
+        "surface": "#0E3A40",
+        "elevated": "#1B5560",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "calm",
+        "vivid",
+        "light"
+      ],
+      "swatch": "#2BA5A0",
+      "credits": [
+        {
+          "title": "Sea Ocean",
+          "author": "Matt Bango",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/sea-ocean-WMLEHDPGX1"
+        }
+      ]
+    },
+    {
+      "id": "afterglow",
+      "name": "Afterglow",
+      "description": "A violet and orange sunset behind a ridge, with bold lettering and the Orbit wheel.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:energetic",
+        "vibe:dreamy",
+        "color:orange",
+        "color:purple",
+        "style:one-handed",
+        "topic:nature"
+      ],
+      "thumbnail": "afterglow/preview.png",
+      "file": "afterglow/theme.json",
+      "premium": false,
+      "size": 1927,
+      "sha256": "1bae1ee313cd3a849f0cf4dd3502d29a40ca827267eb4f1d2fb077933039f940",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FF9A4D",
+        "accentAlt": "#C08BFF",
+        "ink": "#FFF6EE",
+        "dim": "#E8C9C0",
+        "drawer": "#14062A",
+        "surface": "#1A0B2C",
+        "elevated": "#2E1747",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "vivid",
+        "bold"
+      ],
+      "swatch": "#E0662E",
+      "credits": [
+        {
+          "title": "Sunrise Mountains",
+          "author": "Free Nature Stock",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/sunrise-mountains-HLQSR4VMVA"
+        }
+      ]
+    },
+    {
+      "id": "midnight",
+      "name": "Midnight",
+      "description": "True black with a single violet glow. Minimal, easy on the eyes and kind to your battery.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dark",
+        "color:purple",
+        "color:black",
+        "style:minimal"
+      ],
+      "thumbnail": "midnight/preview.png",
+      "file": "midnight/theme.json",
+      "premium": false,
+      "size": 1713,
+      "sha256": "1e119eebf549648fb4997732d89e4721e2aca83e4c7cdab3c5c12babb312ca6e",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#9B7BFF",
+        "accentAlt": "#4DD6C4",
+        "ink": "#F2F0FF",
+        "dim": "#8E89B5",
+        "drawer": "#000000",
+        "surface": "#07060F",
+        "elevated": "#14122B",
+        "veil": "#22000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "minimal",
+        "calm"
+      ],
+      "swatch": "#1B1440",
+      "credits": []
+    },
+    {
+      "id": "skyline",
+      "name": "Skyline",
+      "description": "A city at dusk, with amber lettering and the Orbit Pad under your thumb.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:elegant",
+        "vibe:dark",
+        "color:orange",
+        "color:blue",
+        "style:one-handed",
+        "topic:city",
+        "topic:travel"
+      ],
+      "thumbnail": "skyline/preview.png",
+      "file": "skyline/theme.json",
+      "premium": true,
+      "size": 1905,
+      "sha256": "6ac5e3eb283b17814d1b14d536546200cacfa6e48a9622e1ae308cfd285d7439",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFB35C",
+        "accentAlt": "#7DB2FF",
+        "ink": "#F4F6FB",
+        "dim": "#A9B1C6",
+        "drawer": "#080A18",
+        "surface": "#0C1020",
+        "elevated": "#1B2138",
+        "veil": "#33000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "bold",
+        "minimal"
+      ],
+      "swatch": "#C9772E",
+      "credits": [
+        {
+          "title": "City Skyline",
+          "author": "Matt Bango",
+          "source": "StockSnap.io",
+          "license": "CC0 1.0",
+          "url": "https://stocksnap.io/photo/city-skyline-VDAAVU9YTE"
+        }
+      ]
     }
   ],
   "featured": {

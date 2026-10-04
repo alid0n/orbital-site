@@ -1,0 +1,96 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "afterglow",
+  "name": "Afterglow",
+  "description": "A violet and orange sunset behind a ridge, with bold lettering and the Orbit wheel.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:energetic",
+    "vibe:dreamy",
+    "color:orange",
+    "color:purple",
+    "style:one-handed",
+    "topic:nature"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FF9A4D",
+    "accentAlt": "#C08BFF",
+    "ink": "#FFF6EE",
+    "dim": "#E8C9C0",
+    "drawer": "#14062A",
+    "surface": "#1A0B2C",
+    "elevated": "#2E1747",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "poppins",
+    "clockFace": "LINE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "dark",
+    "vivid",
+    "bold"
+  ],
+  "swatch": "#E0662E",
+  "credits": [
+    {
+      "title": "Sunrise Mountains",
+      "author": "Free Nature Stock",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/sunrise-mountains-HLQSR4VMVA"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ORBIT",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "music",
+        "kind": "MEDIA",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "SPOTLIGHT"
+  }
+}

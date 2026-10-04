@@ -1,0 +1,100 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "shoreline",
+  "name": "Shoreline",
+  "description": "Surf rolling onto pale sand, seen from above, in fresh teal with soft glass widgets.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:chill",
+    "vibe:calm",
+    "color:blue",
+    "color:white",
+    "color:pastel",
+    "style:one-handed",
+    "topic:beach",
+    "topic:travel",
+    "topic:summer"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#6FE0D0",
+    "accentAlt": "#F2D9A8",
+    "ink": "#FFFFFF",
+    "dim": "#CFE8EA",
+    "drawer": "#082A30",
+    "surface": "#0E3A40",
+    "elevated": "#1B5560",
+    "veil": "#33000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.5,
+    "font": "dm_sans",
+    "clockFace": "BARE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "calm",
+    "vivid",
+    "light"
+  ],
+  "swatch": "#2BA5A0",
+  "credits": [
+    {
+      "title": "Sea Ocean",
+      "author": "Matt Bango",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/sea-ocean-WMLEHDPGX1"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "CARD",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.07,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.2
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.22,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  }
+}

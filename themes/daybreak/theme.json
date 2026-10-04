@@ -1,0 +1,106 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "daybreak",
+  "name": "Daybreak",
+  "description": "Soft pink and blue morning light behind clean, easy-to-read lettering.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dreamy",
+    "color:pink",
+    "color:blue",
+    "color:pastel",
+    "style:one-handed",
+    "topic:nature"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#E0607E",
+    "accentAlt": "#5A8DEE",
+    "ink": "#23304A",
+    "dim": "#66708A",
+    "drawer": "#F6F2F8",
+    "surface": "#FAF7FB",
+    "elevated": "#EAE3F0",
+    "veil": "#22FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.9,
+    "font": "outfit",
+    "clockFace": "LINE",
+    "panelLook": "CARD",
+    "notch": "DOT"
+  },
+  "mood": [
+    "light",
+    "pastel",
+    "calm"
+  ],
+  "swatch": "#E9B8C8",
+  "credits": [
+    {
+      "title": "Mountain Sunrise",
+      "author": "Free Nature Stock",
+      "source": "StockSnap.io",
+      "license": "CC0 1.0",
+      "url": "https://stocksnap.io/photo/mountain-sunrise-7QDY2XTHEQ"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.2,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.32,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  }
+}

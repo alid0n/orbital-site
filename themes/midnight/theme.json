@@ -1,0 +1,88 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "midnight",
+  "name": "Midnight",
+  "description": "True black with a single violet glow. Minimal, easy on the eyes and kind to your battery.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dark",
+    "color:purple",
+    "color:black",
+    "style:minimal"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#9B7BFF",
+    "accentAlt": "#4DD6C4",
+    "ink": "#F2F0FF",
+    "dim": "#8E89B5",
+    "drawer": "#000000",
+    "surface": "#07060F",
+    "elevated": "#14122B",
+    "veil": "#22000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "SQUIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.5,
+    "font": "inter",
+    "clockFace": "BARE",
+    "panelLook": "LINES",
+    "notch": "TAPER"
+  },
+  "mood": [
+    "dark",
+    "minimal",
+    "calm"
+  ],
+  "swatch": "#1B1440",
+  "credits": [],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.08,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.2
+      },
+      {
+        "id": "weather",
+        "kind": "WEATHER",
+        "x": 0.04,
+        "y": 0.22,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "MINIMAL_LINE"
+  }
+}
