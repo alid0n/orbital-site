@@ -1,0 +1,111 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "water_lilies",
+  "name": "Water Lilies",
+  "description": "Monet's soft pond in teal and rose, with a tiled drawer that slides in from the right.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dreamy",
+    "color:green",
+    "color:pastel",
+    "color:pink",
+    "style:traditional",
+    "topic:nature",
+    "topic:art"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#2F7F7A",
+    "accentAlt": "#B2557A",
+    "ink": "#1E3A3A",
+    "dim": "#4F6B68",
+    "drawer": "#E8F1EC",
+    "surface": "#EDF5F0",
+    "elevated": "#D7E7DF",
+    "veil": "#22FFFFFF",
+    "light": true
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "CARD",
+    "widgetCorner": "PILL",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.2,
+    "widgetSolid": 0.85,
+    "font": "nunito",
+    "clockFace": "STACK",
+    "panelLook": "CARD",
+    "notch": "PIP"
+  },
+  "mood": [
+    "light",
+    "pastel",
+    "calm"
+  ],
+  "swatch": "#8FC1B2",
+  "credits": [
+    {
+      "title": "Water Lilies (1906)",
+      "author": "Claude Monet",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Water_Lilies_-_1906,_Ryerson.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "CARD",
+    "anchor": "BOTTOM",
+    "drawerLayout": "GRID",
+    "drawerFrom": "RIGHT",
+    "tiledDrawer": true,
+    "drawerColumns": 4,
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.06,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      },
+      {
+        "id": "cal",
+        "kind": "CALENDAR",
+        "x": 0.04,
+        "y": 0.22,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "people",
+        "kind": "PEOPLE",
+        "x": 0.04,
+        "y": 0.45,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  }
+}

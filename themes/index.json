@@ -1915,6 +1915,258 @@
           "url": "https://commons.wikimedia.org/wiki/File:Alphonse_Mucha_-_Poster_for_Victorien_Sardou%27s_Gismonda_starring_Sarah_Bernhardt_-_Original.jpg"
         }
       ]
+    },
+    {
+      "id": "rhinoceros",
+      "name": "Durer's Rhinoceros",
+      "description": "Dürer's 1515 woodcut on warm parchment, with ink-brown lettering and a flat dock across the top.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:retro",
+        "vibe:elegant",
+        "color:white",
+        "color:orange",
+        "style:traditional",
+        "topic:animals",
+        "topic:art"
+      ],
+      "thumbnail": "rhinoceros/preview.png",
+      "file": "rhinoceros/theme.json",
+      "premium": false,
+      "size": 2255,
+      "sha256": "93310d90c8aa5d5987c9c524214d065d7fe486e13790881748842df4ea0a627b",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#8A3B1E",
+        "accentAlt": "#3C5A3C",
+        "ink": "#2A1E12",
+        "dim": "#6E5A40",
+        "drawer": "#EFE3C6",
+        "surface": "#F3E9D0",
+        "elevated": "#E3D3AE",
+        "veil": "#22EFE3C6",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "cozy",
+        "minimal"
+      ],
+      "swatch": "#D9C79B",
+      "credits": [
+        {
+          "title": "The Rhinoceros",
+          "author": "Albrecht Dürer (National Gallery of Art, Rosenwald Collection)",
+          "source": "Wikimedia Commons",
+          "license": "CC0 1.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer,_The_Rhinoceros,_1515,_NGA_47903.jpg"
+        }
+      ]
+    },
+    {
+      "id": "almond_blossom",
+      "name": "Almond Blossom",
+      "description": "Van Gogh's white blossom against a bright blue sky, on an open canvas with the Orbit wheel along the right edge.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dreamy",
+        "color:blue",
+        "color:white",
+        "color:pink",
+        "style:one-handed",
+        "topic:nature",
+        "topic:spring",
+        "topic:art"
+      ],
+      "thumbnail": "almond_blossom/preview.png",
+      "file": "almond_blossom/theme.json",
+      "premium": true,
+      "size": 2398,
+      "sha256": "0fddb7d294da935b97c0108cf52105004bccc93d43173273a4f8610199443ef8",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#FFFFFF",
+        "accentAlt": "#F4B6C6",
+        "ink": "#FFFFFF",
+        "dim": "#C9DDF2",
+        "drawer": "#0B2E57",
+        "surface": "#0F3E73",
+        "elevated": "#1B5598",
+        "veil": "#22000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "vivid",
+        "calm",
+        "light"
+      ],
+      "swatch": "#2F73B8",
+      "credits": [
+        {
+          "title": "Almond Blossom",
+          "author": "Vincent van Gogh",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg"
+        }
+      ]
+    },
+    {
+      "id": "night_pass",
+      "name": "Night Pass",
+      "description": "City lights seen from orbit in phosphor green, with a command-line drawer that slides in from the left.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:futuristic",
+        "vibe:retro",
+        "vibe:dark",
+        "color:green",
+        "color:black",
+        "style:power user",
+        "topic:space",
+        "topic:city",
+        "topic:retro"
+      ],
+      "thumbnail": "night_pass/preview.png",
+      "file": "night_pass/theme.json",
+      "premium": true,
+      "size": 2139,
+      "sha256": "f43b969be784b31f452080f222b8566acca8295d9d65a0a5b004e8bbeec6c1c9",
+      "base": "TERMINAL",
+      "colors": {
+        "accent": "#3CFF7A",
+        "accentAlt": "#FFD34A",
+        "ink": "#C8FFD4",
+        "dim": "#5FB07A",
+        "drawer": "#020A05",
+        "surface": "#040E08",
+        "elevated": "#08180E",
+        "veil": "#44000000",
+        "light": false
+      },
+      "kind": "full",
+      "mood": [
+        "dark",
+        "minimal",
+        "bold"
+      ],
+      "swatch": "#0B4A22",
+      "credits": [
+        {
+          "title": "City lights at the intersection of Europe and Asia, seen from the International Space Station",
+          "author": "NASA",
+          "source": "NASA Image and Video Library",
+          "license": "Public domain",
+          "url": "https://images.nasa.gov/details/iss062e103874"
+        }
+      ]
+    },
+    {
+      "id": "medusae",
+      "name": "Medusae",
+      "description": "Haeckel's glowing jellyfish plate with bubbles drifting up, built for the left thumb with the Orbit Pad on the left.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:dreamy",
+        "vibe:elegant",
+        "color:blue",
+        "color:pink",
+        "color:white",
+        "style:one-handed",
+        "topic:animals",
+        "topic:nature",
+        "topic:art"
+      ],
+      "thumbnail": "medusae/preview.png",
+      "file": "medusae/theme.json",
+      "premium": true,
+      "size": 2095,
+      "sha256": "5c8a3e466c7148a7873f0a88b06003a373f788cc452d444fed7cd1c7d9e1eba4",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#0E7C86",
+        "accentAlt": "#D9467A",
+        "ink": "#0F2236",
+        "dim": "#4F6A80",
+        "drawer": "#F3EEE2",
+        "surface": "#F7F2E6",
+        "elevated": "#E8E0CE",
+        "veil": "#33F3EEE2",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "calm",
+        "vivid"
+      ],
+      "swatch": "#E6A98A",
+      "credits": [
+        {
+          "title": "Discomedusae, Kunstformen der Natur, plate 8",
+          "author": "Ernst Haeckel",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:Haeckel_Discomedusae_8.jpg"
+        }
+      ]
+    },
+    {
+      "id": "water_lilies",
+      "name": "Water Lilies",
+      "description": "Monet's soft pond in teal and rose, with a tiled drawer that slides in from the right.",
+      "version": 1,
+      "tags": [
+        "audience:general",
+        "vibe:calm",
+        "vibe:dreamy",
+        "color:green",
+        "color:pastel",
+        "color:pink",
+        "style:traditional",
+        "topic:nature",
+        "topic:art"
+      ],
+      "thumbnail": "water_lilies/preview.png",
+      "file": "water_lilies/theme.json",
+      "premium": true,
+      "size": 2255,
+      "sha256": "e67cb288a51c211c2ba03bd353d548d36721d557fcc9f765f64e7812bcb0c777",
+      "base": "ORBITAL",
+      "colors": {
+        "accent": "#2F7F7A",
+        "accentAlt": "#B2557A",
+        "ink": "#1E3A3A",
+        "dim": "#4F6B68",
+        "drawer": "#E8F1EC",
+        "surface": "#EDF5F0",
+        "elevated": "#D7E7DF",
+        "veil": "#22FFFFFF",
+        "light": true
+      },
+      "kind": "full",
+      "mood": [
+        "light",
+        "pastel",
+        "calm"
+      ],
+      "swatch": "#8FC1B2",
+      "credits": [
+        {
+          "title": "Water Lilies (1906)",
+          "author": "Claude Monet",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Water_Lilies_-_1906,_Ryerson.jpg"
+        }
+      ]
     }
   ],
   "featured": {

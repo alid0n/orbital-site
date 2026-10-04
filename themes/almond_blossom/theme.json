@@ -1,0 +1,118 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "almond_blossom",
+  "name": "Almond Blossom",
+  "description": "Van Gogh's white blossom against a bright blue sky, on an open canvas with the Orbit wheel along the right edge.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:calm",
+    "vibe:dreamy",
+    "color:blue",
+    "color:white",
+    "color:pink",
+    "style:one-handed",
+    "topic:nature",
+    "topic:spring",
+    "topic:art"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#FFFFFF",
+    "accentAlt": "#F4B6C6",
+    "ink": "#FFFFFF",
+    "dim": "#C9DDF2",
+    "drawer": "#0B2E57",
+    "surface": "#0F3E73",
+    "elevated": "#1B5598",
+    "veil": "#22000000",
+    "light": false
+  },
+  "look": {
+    "corner": "ROUNDED",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "ROUNDED",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.25,
+    "widgetSolid": 0.45,
+    "font": "quicksand",
+    "clockFace": "BARE",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "vivid",
+    "calm",
+    "light"
+  ],
+  "swatch": "#2F73B8",
+  "credits": [
+    {
+      "title": "Almond Blossom",
+      "author": "Vincent van Gogh",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "FREE_ROAM",
+    "dockStyle": "ORBIT",
+    "anchor": "RIGHT",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.07,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.2
+      },
+      {
+        "id": "cal",
+        "kind": "CALENDAR",
+        "x": 0.04,
+        "y": 0.22,
+        "col": 0,
+        "row": 0,
+        "w": 0.55
+      },
+      {
+        "id": "note",
+        "kind": "NOTE",
+        "x": 0.5,
+        "y": 0.4,
+        "col": 0,
+        "row": 0,
+        "w": 0.45
+      },
+      {
+        "id": "batt",
+        "kind": "BATTERY",
+        "x": 0.04,
+        "y": 0.46,
+        "col": 0,
+        "row": 0,
+        "w": 0.4
+      }
+    ]
+  },
+  "assistant": {
+    "look": "CHAT"
+  }
+}

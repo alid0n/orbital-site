@@ -1,0 +1,108 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "rhinoceros",
+  "name": "Durer's Rhinoceros",
+  "description": "Dürer's 1515 woodcut on warm parchment, with ink-brown lettering and a flat dock across the top.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": false,
+  "tags": [
+    "audience:general",
+    "vibe:retro",
+    "vibe:elegant",
+    "color:white",
+    "color:orange",
+    "style:traditional",
+    "topic:animals",
+    "topic:art"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#8A3B1E",
+    "accentAlt": "#3C5A3C",
+    "ink": "#2A1E12",
+    "dim": "#6E5A40",
+    "drawer": "#EFE3C6",
+    "surface": "#F3E9D0",
+    "elevated": "#E3D3AE",
+    "veil": "#22EFE3C6",
+    "light": true
+  },
+  "look": {
+    "corner": "SLIGHT",
+    "iconShape": "SQUARE",
+    "iconStyle": "FLAT",
+    "widgetLook": "OUTLINE",
+    "widgetCorner": "SQUARE",
+    "widgetEdge": "FINE",
+    "widgetTint": 0.1,
+    "widgetSolid": 0.8,
+    "font": "lora",
+    "clockFace": "DIGITS",
+    "panelLook": "LINES",
+    "notch": "RUNG"
+  },
+  "mood": [
+    "light",
+    "cozy",
+    "minimal"
+  ],
+  "swatch": "#D9C79B",
+  "credits": [
+    {
+      "title": "The Rhinoceros",
+      "author": "Albrecht Dürer (National Gallery of Art, Rosenwald Collection)",
+      "source": "Wikimedia Commons",
+      "license": "CC0 1.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer,_The_Rhinoceros,_1515,_NGA_47903.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "PAGES",
+    "dockStyle": "ROW",
+    "anchor": "TOP",
+    "drawerLayout": "LIST",
+    "drawerListAlign": "RIGHT",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.12,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      },
+      {
+        "id": "next",
+        "kind": "AGENDA",
+        "x": 0.04,
+        "y": 0.3,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      },
+      {
+        "id": "note",
+        "kind": "NOTE",
+        "x": 0.04,
+        "y": 0.43,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "NOTEPAD"
+  }
+}

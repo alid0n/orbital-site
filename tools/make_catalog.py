@@ -120,6 +120,29 @@ PHOTOS = {
         source="Wikimedia Commons", license="Public domain",
         url="https://commons.wikimedia.org/wiki/File:Alphonse_Mucha_-_Poster_for_Victorien_Sardou%27s_Gismonda_starring_Sarah_Bernhardt_-_Original.jpg",
         retrieved="2026-10-04"),
+    "commons-durer-rhinoceros-nga-47903.jpg": dict(
+        title="The Rhinoceros", author="Albrecht Dürer (National Gallery of Art, Rosenwald Collection)",
+        source="Wikimedia Commons", license="CC0 1.0",
+        url="https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer,_The_Rhinoceros,_1515,_NGA_47903.jpg",
+        retrieved="2026-10-04"),
+    "commons-van-gogh-almond-blossom-1890.jpg": dict(
+        title="Almond Blossom", author="Vincent van Gogh",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg",
+        retrieved="2026-10-04"),
+    "nasa-iss062e103874.jpg": dict(
+        title="City lights at the intersection of Europe and Asia, seen from the International Space Station",
+        author="NASA", source="NASA Image and Video Library", license="Public domain",
+        url="https://images.nasa.gov/details/iss062e103874", retrieved="2026-10-04"),
+    "commons-haeckel-discomedusae-8.jpg": dict(
+        title="Discomedusae, Kunstformen der Natur, plate 8", author="Ernst Haeckel",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:Haeckel_Discomedusae_8.jpg", retrieved="2026-10-04"),
+    "commons-monet-water-lilies-1906-ryerson.jpg": dict(
+        title="Water Lilies (1906)", author="Claude Monet",
+        source="Wikimedia Commons", license="Public domain",
+        url="https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Water_Lilies_-_1906,_Ryerson.jpg",
+        retrieved="2026-10-04"),
 }
 
 
@@ -625,6 +648,72 @@ THEMES = [
                widgetCorner="PILL", widgetEdge="HAIR", widgetTint=0.3, widgetSolid=0.8,
                font="playfair_display", clockFace="STACK", panelLook="CARD", notch="DOT"),
           premium=True),
+    # Five more, built around setups the catalog rarely uses: a dock on the top, left or right edge,
+    # an Orbit wheel on a side, a drawer that slides in from the left or right, a left-handed Orbit
+    # Pad, and the Note, Calendar, Battery and People widgets.
+    theme("rhinoceros", "Durer's Rhinoceros",
+          "Dürer's 1515 woodcut on warm parchment, with ink-brown lettering and a flat dock across the top.",
+          ["audience:general", "vibe:retro", "vibe:elegant", "color:white", "color:orange"],
+          pal("#8A3B1E", "#3C5A3C", "#2A1E12", "#6E5A40", "#EFE3C6", "#F3E9D0", "#E3D3AE", "#22EFE3C6", light=True),
+          rendered(photo=dict(file="commons-durer-rhinoceros-nga-47903.jpg", focus=(0.5, 0.5), blur=0.4, saturation=0.9),
+                   wash=[(0.0, "#EFE3C6", 0.45), (0.2, "#EFE3C6", 0.35), (0.6, "#EFE3C6", 0.3),
+                         (0.8, "#EFE3C6", 0.8), (1.0, "#EFE3C6", 0.9)],
+                   texture="paper", textureAmount=0.012, vignette=0.1, grain=0.03),
+          dict(corner="SLIGHT", iconShape="SQUARE", iconStyle="FLAT", widgetLook="OUTLINE",
+               widgetCorner="SQUARE", widgetEdge="FINE", widgetTint=0.1, widgetSolid=0.8,
+               font="lora", clockFace="DIGITS", panelLook="LINES", notch="RUNG")),
+    theme("almond_blossom", "Almond Blossom",
+          "Van Gogh's white blossom against a bright blue sky, on an open canvas with the Orbit wheel "
+          "along the right edge.",
+          ["audience:general", "vibe:calm", "vibe:dreamy", "color:blue", "color:white", "color:pink"],
+          pal("#FFFFFF", "#F4B6C6", "#FFFFFF", "#C9DDF2", "#0B2E57", "#0F3E73", "#1B5598", "#22000000"),
+          rendered(photo=dict(file="commons-van-gogh-almond-blossom-1890.jpg", focus=(0.38, 0.5), blur=0.5, saturation=1.0),
+                   wash=[(0.0, "#0B2E57", 0.65), (0.18, "#0B2E57", 0.5), (0.32, "#0B2E57", 0.2), (0.65, "#0B2E57", 0.15),
+                         (0.82, "#0B2E57", 0.7), (1.0, "#0B2E57", 0.85)],
+                   vignette=0.15, grain=0.03),
+          dict(corner="ROUNDED", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="ROUNDED", widgetEdge="HAIR", widgetTint=0.25, widgetSolid=0.45,
+               font="quicksand", clockFace="BARE", panelLook="FADE", notch="DOT"),
+          premium=True),
+    theme("night_pass", "Night Pass",
+          "City lights seen from orbit in phosphor green, with a command-line drawer that slides in "
+          "from the left.",
+          ["audience:general", "vibe:futuristic", "vibe:retro", "vibe:dark", "color:green", "color:black"],
+          pal("#3CFF7A", "#FFD34A", "#C8FFD4", "#5FB07A", "#020A05", "#040E08", "#08180E", "#44000000"),
+          rendered(photo=dict(file="nasa-iss062e103874.jpg", focus=(0.42, 0.5), blur=0.5, saturation=0.9,
+                              map=[(0.0, "#010603"), (0.4, "#06361A"), (0.75, "#1FD25A"), (1.0, "#D8FFE2")], mapAmount=0.9),
+                   wash=[(0.0, "#010603", 0.3), (0.2, "#010603", 0.2), (0.7, "#010603", 0.0),
+                         (0.84, "#010603", 0.25), (1.0, "#010603", 0.5)],
+                   vignette=0.3, grain=0.04),
+          dict(corner="SQUARE", iconShape="SQUARE", iconStyle="FLAT", widgetLook="OUTLINE",
+               widgetCorner="SQUARE", widgetEdge="FINE", widgetTint=0.2, widgetSolid=0.6,
+               font="share_tech_mono", clockFace="LINE", panelLook="LINES", notch="NONE", glow=True),
+          premium=True, base="TERMINAL"),
+    theme("medusae", "Medusae",
+          "Haeckel's glowing jellyfish plate with bubbles drifting up, built for the left thumb with "
+          "the Orbit Pad on the left.",
+          ["audience:general", "vibe:dreamy", "vibe:elegant", "color:blue", "color:pink", "color:white"],
+          pal("#0E7C86", "#D9467A", "#0F2236", "#4F6A80", "#F3EEE2", "#F7F2E6", "#E8E0CE", "#33F3EEE2", light=True),
+          rendered(photo=dict(file="commons-haeckel-discomedusae-8.jpg", focus=(0.5, 0.4), blur=0.5, saturation=1.0),
+                   wash=[(0.0, "#F3EEE2", 0.6), (0.2, "#F3EEE2", 0.3), (0.62, "#F3EEE2", 0.2),
+                         (0.8, "#F3EEE2", 0.75), (1.0, "#F3EEE2", 0.88)],
+                   texture="paper", textureAmount=0.01, vignette=0.1, grain=0.03),
+          dict(corner="PILL", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="GLASS",
+               widgetCorner="PILL", widgetEdge="HAIR", widgetTint=0.3, widgetSolid=0.6,
+               font="exo_2", clockFace="STACK", panelLook="FADE", notch="DOT"),
+          premium=True, effect="floating-bubbles"),
+    theme("water_lilies", "Water Lilies",
+          "Monet's soft pond in teal and rose, with a tiled drawer that slides in from the right.",
+          ["audience:general", "vibe:calm", "vibe:dreamy", "color:green", "color:pastel", "color:pink"],
+          pal("#2F7F7A", "#B2557A", "#1E3A3A", "#4F6B68", "#E8F1EC", "#EDF5F0", "#D7E7DF", "#22FFFFFF", light=True),
+          rendered(photo=dict(file="commons-monet-water-lilies-1906-ryerson.jpg", focus=(0.5, 0.5), blur=0.4, saturation=1.25),
+                   wash=[(0.0, "#E8F1EC", 0.5), (0.18, "#E8F1EC", 0.35), (0.6, "#E8F1EC", 0.05),
+                         (0.8, "#E8F1EC", 0.7), (1.0, "#E8F1EC", 0.85)],
+                   vignette=0.08, grain=0.03),
+          dict(corner="PILL", iconShape="CIRCLE", iconStyle="ORIGINAL", widgetLook="CARD",
+               widgetCorner="PILL", widgetEdge="HAIR", widgetTint=0.2, widgetSolid=0.85,
+               font="nunito", clockFace="STACK", panelLook="CARD", notch="PIP"),
+          premium=True),
 ]
 
 # EACH THEME'S MOOD (the words the store's mood filter offers) and its swatch, the one colour it is
@@ -675,6 +764,11 @@ MOODS = {
     "canyon_poster": (["bold", "vivid", "dark"], "#D2552B"),
     "solar": (["dark", "vivid", "bold"], "#FF7A1A"),
     "gismonda": (["dark", "calm", "bold"], "#8C6A24"),
+    "rhinoceros": (["light", "cozy", "minimal"], "#D9C79B"),
+    "almond_blossom": (["vivid", "calm", "light"], "#2F73B8"),
+    "night_pass": (["dark", "minimal", "bold"], "#0B4A22"),
+    "medusae": (["light", "calm", "vivid"], "#E6A98A"),
+    "water_lilies": (["light", "pastel", "calm"], "#8FC1B2"),
 }
 
 # THE CURATED COLLECTIONS the store shows as shelves of their own, each from its first to its last
@@ -810,6 +904,24 @@ LAYOUTS = {
     "solar": dict(homeLayout="CONSOLE", dockStyle="ORBIT", anchor="BOTTOM", drawerLayout="GRID"),
     "gismonda": dict(homeLayout="ORBIT_PAD", dockStyle="PAD", anchor="BOTTOM", drawerLayout="GRID",
                      widgets=[CLOCK(0.07, 1.1)]),
+    # Setups the catalog rarely uses: a dock along the top edge, an Orbit wheel on the right edge, a
+    # left-edge dock with a drawer that slides in from the left, a left-handed Orbit Pad, and a tiled
+    # drawer that slides in from the right.
+    "rhinoceros": dict(homeLayout="PAGES", dockStyle="ROW", anchor="TOP", drawerLayout="LIST",
+                       drawerListAlign="RIGHT",
+                       widgets=[CLOCK(0.12, 1.1), w("next", "AGENDA", 0.04, 0.3, 0.92), w("note", "NOTE", 0.04, 0.43, 0.92)]),
+    "almond_blossom": dict(homeLayout="FREE_ROAM", dockStyle="ORBIT", anchor="RIGHT", drawerLayout="GRID",
+                           widgets=[CLOCK(0.07, 1.2), w("cal", "CALENDAR", 0.04, 0.22, 0.55),
+                                    w("note", "NOTE", 0.5, 0.4, 0.45), w("batt", "BATTERY", 0.04, 0.46, 0.4)]),
+    "night_pass": dict(homeLayout="DRAWER", dockStyle="ROW", anchor="LEFT", drawerLayout="LIST",
+                       drawerFrom="LEFT", drawerSearch="ASSISTANT", drawerListAlign="LEFT",
+                       drawerWidgets=[side("COMMAND", end="TOP"), side("BATTERY"), side("CLOCK")]),
+    "medusae": dict(homeLayout="ORBIT_PAD", dockStyle="PAD", anchor="LEFT", drawerLayout="GRID",
+                    widgets=[CLOCK(0.07, 1.1), w("batt", "BATTERY", 0.04, 0.22, 0.92)]),
+    "water_lilies": dict(homeLayout="PAGES", dockStyle="CARD", anchor="BOTTOM", drawerLayout="GRID",
+                         drawerFrom="RIGHT", tiledDrawer=True, drawerColumns=4,
+                         widgets=[CLOCK(0.06, 1.1), w("cal", "CALENDAR", 0.04, 0.22, 0.92),
+                                  w("people", "PEOPLE", 0.04, 0.45, 0.92)]),
 }
 
 ASSISTANTS = {
@@ -826,6 +938,8 @@ ASSISTANTS = {
     "tokyo_night": "HUD", "constellation": "SPOTLIGHT", "glass": "MINIMAL_LINE", "space_cadet": "VOICE",
     "earthrise": "MINIMAL_LINE", "great_wave": "NOTEPAD", "canyon_poster": "CHAT", "solar": "HUD",
     "gismonda": "SPOTLIGHT",
+    "rhinoceros": "NOTEPAD", "almond_blossom": "CHAT", "night_pass": "COMMAND_PROMPT", "medusae": "VOICE",
+    "water_lilies": "NOTEPAD",
 }
 
 # The phone-use style each layout is for. Kept consistent with the layouts above by the app's tests.
@@ -846,6 +960,8 @@ STYLES = {
     "glass": ["one-handed"], "space_cadet": ["easy to see"],
     "earthrise": ["minimal"], "great_wave": ["minimal"], "canyon_poster": ["one-handed"],
     "solar": ["big screen"], "gismonda": ["one-handed"],
+    "rhinoceros": ["traditional"], "almond_blossom": ["one-handed"], "night_pass": ["power user"],
+    "medusae": ["one-handed"], "water_lilies": ["traditional"],
 }
 
 EFFECTS = {}
@@ -879,6 +995,9 @@ TOPICS = {
     "space_cadet": ["space", "family"],
     "earthrise": ["space"], "great_wave": ["art", "travel"], "canyon_poster": ["travel", "nature", "art"],
     "solar": ["space"], "gismonda": ["art"],
+    "rhinoceros": ["animals", "art"], "almond_blossom": ["nature", "spring", "art"],
+    "night_pass": ["space", "city", "retro"], "medusae": ["animals", "nature", "art"],
+    "water_lilies": ["nature", "art"],
 }
 
 # THE FEATURED SECTION of the index: the theme of each week, the drops, and the seasons.

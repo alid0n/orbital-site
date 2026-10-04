@@ -1,0 +1,101 @@
+{
+  "kind": "orbital-theme",
+  "format": 1,
+  "id": "medusae",
+  "name": "Medusae",
+  "description": "Haeckel's glowing jellyfish plate with bubbles drifting up, built for the left thumb with the Orbit Pad on the left.",
+  "author": "Orbital",
+  "version": 1,
+  "minAppVersion": 10,
+  "premium": true,
+  "tags": [
+    "audience:general",
+    "vibe:dreamy",
+    "vibe:elegant",
+    "color:blue",
+    "color:pink",
+    "color:white",
+    "style:one-handed",
+    "topic:animals",
+    "topic:nature",
+    "topic:art"
+  ],
+  "previews": [
+    "preview.png"
+  ],
+  "base": "ORBITAL",
+  "colors": {
+    "accent": "#0E7C86",
+    "accentAlt": "#D9467A",
+    "ink": "#0F2236",
+    "dim": "#4F6A80",
+    "drawer": "#F3EEE2",
+    "surface": "#F7F2E6",
+    "elevated": "#E8E0CE",
+    "veil": "#33F3EEE2",
+    "light": true
+  },
+  "look": {
+    "corner": "PILL",
+    "iconShape": "CIRCLE",
+    "iconStyle": "ORIGINAL",
+    "widgetLook": "GLASS",
+    "widgetCorner": "PILL",
+    "widgetEdge": "HAIR",
+    "widgetTint": 0.3,
+    "widgetSolid": 0.6,
+    "font": "exo_2",
+    "clockFace": "STACK",
+    "panelLook": "FADE",
+    "notch": "DOT"
+  },
+  "mood": [
+    "light",
+    "calm",
+    "vivid"
+  ],
+  "swatch": "#E6A98A",
+  "credits": [
+    {
+      "title": "Discomedusae, Kunstformen der Natur, plate 8",
+      "author": "Ernst Haeckel",
+      "source": "Wikimedia Commons",
+      "license": "Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Haeckel_Discomedusae_8.jpg"
+    }
+  ],
+  "wallpaper": {
+    "image": "wallpaper.webp"
+  },
+  "layout": {
+    "homeLayout": "ORBIT_PAD",
+    "dockStyle": "PAD",
+    "anchor": "LEFT",
+    "drawerLayout": "GRID",
+    "widgets": [
+      {
+        "id": "clock",
+        "kind": "CLOCK",
+        "x": 0.0,
+        "y": 0.07,
+        "col": 0,
+        "row": 0,
+        "w": 1.0,
+        "scale": 1.1
+      },
+      {
+        "id": "batt",
+        "kind": "BATTERY",
+        "x": 0.04,
+        "y": 0.22,
+        "col": 0,
+        "row": 0,
+        "w": 0.92
+      }
+    ]
+  },
+  "assistant": {
+    "look": "VOICE"
+  },
+  "effect": "floating-bubbles"
+}
