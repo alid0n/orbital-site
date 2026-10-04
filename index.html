@@ -51,7 +51,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=12">
+<link rel="stylesheet" href="assets/site.css?v=13">
 <script src="assets/theme.js"></script>
 <link rel="stylesheet" href="assets/phone.css?v=6">
 <script>document.documentElement.classList.remove('no-js');</script>
@@ -219,6 +219,28 @@
             <option>A friend or family member</option>
             <option>Somewhere else</option>
           </select>
+          <!-- Shown for "Somewhere else"; ask.js then sends what is typed here as the answer. -->
+          <label class="sr-only" for="heard-other">Where did you hear about Orbital?</label>
+          <input id="heard-other" class="ask-other" type="text" maxlength="100" placeholder="Where did you hear about us?" hidden disabled>
+          <script>
+            (function () {
+              var pick = document.getElementById('heard');
+              var other = document.getElementById('heard-other');
+              pick.addEventListener('change', function () {
+                var on = pick.value === 'Somewhere else';
+                other.hidden = !on;
+                other.disabled = !on;
+                other.required = on;
+                /* Only one field is sent as the answer: the typed one, when shown. */
+                pick.name = on ? '' : 'heard';
+                other.name = on ? 'heard' : '';
+                if (on) other.focus();
+              });
+              pick.form.addEventListener('reset', function () {
+                setTimeout(function () { pick.dispatchEvent(new Event('change')); });
+              });
+            })();
+          </script>
           <!-- What the mail says when it arrives, rather than a subject line reading "New form
                submission". -->
           <input type="hidden" name="_subject" value="Orbital tester signup">
